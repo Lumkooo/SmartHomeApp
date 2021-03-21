@@ -9,7 +9,14 @@ import UIKit
 
 enum MainScreenAssembly {
     static func createVC() -> UIViewController {
-        let viewController = MainViewController()
+
+        let router = MainRouter()
+        let interactor = MainInteractor()
+        let presenter = MainPresenter(interactor: interactor, router: router)
+        let viewController = MainViewController(presenter: presenter)
+
+        router.vc = viewController
+        interactor.presenter = presenter
 
         return viewController
     }

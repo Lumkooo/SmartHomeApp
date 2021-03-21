@@ -17,6 +17,17 @@
 		CE54A5B42605E15300352C46 /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5B32605E15200352C46 /* MainScreenAssembly.swift */; };
 		CE54A5BC2605E18D00352C46 /* NavigationControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5BB2605E18D00352C46 /* NavigationControllerAssembly.swift */; };
 		CE54A5C12605E1D600352C46 /* TabBarControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5C02605E1D600352C46 /* TabBarControllerAssembly.swift */; };
+		CEBBF7BC2606EDFE00BD9F13 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7BB2606EDFE00BD9F13 /* MainView.swift */; };
+		CEBBF7C12606EE0500BD9F13 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7C02606EE0500BD9F13 /* MainPresenter.swift */; };
+		CEBBF7C62606EE0C00BD9F13 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7C52606EE0C00BD9F13 /* MainInteractor.swift */; };
+		CEBBF7CB2606EE1100BD9F13 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7CA2606EE1100BD9F13 /* MainRouter.swift */; };
+		CEBBF7D02606F08B00BD9F13 /* SmartHomeItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7CF2606F08B00BD9F13 /* SmartHomeItemCollectionViewCell.swift */; };
+		CEBE41D92606F2FD00E370AB /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE41D82606F2FD00E370AB /* AppConstants.swift */; };
+		CEBE41E12606F3B100E370AB /* SmartHomeItemCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE41E02606F3B100E370AB /* SmartHomeItemCollectionViewDataSource.swift */; };
+		CEBE41E62606F3CD00E370AB /* SmartHomeItemCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE41E52606F3CD00E370AB /* SmartHomeItemCollectionViewDelegate.swift */; };
+		CEBE41F32606F52500E370AB /* SmartHomeDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE41F22606F52500E370AB /* SmartHomeDevice.swift */; };
+		CEBE41F82606F87D00E370AB /* Lamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE41F72606F87D00E370AB /* Lamp.swift */; };
+		CEBE4209260706AC00E370AB /* ElectricalSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE4208260706AC00E370AB /* ElectricalSocket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +64,17 @@
 		CE54A5B32605E15200352C46 /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
 		CE54A5BB2605E18D00352C46 /* NavigationControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerAssembly.swift; sourceTree = "<group>"; };
 		CE54A5C02605E1D600352C46 /* TabBarControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerAssembly.swift; sourceTree = "<group>"; };
+		CEBBF7BB2606EDFE00BD9F13 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CEBBF7C02606EE0500BD9F13 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		CEBBF7C52606EE0C00BD9F13 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		CEBBF7CA2606EE1100BD9F13 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		CEBBF7CF2606F08B00BD9F13 /* SmartHomeItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHomeItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		CEBE41D82606F2FD00E370AB /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		CEBE41E02606F3B100E370AB /* SmartHomeItemCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHomeItemCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		CEBE41E52606F3CD00E370AB /* SmartHomeItemCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHomeItemCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		CEBE41F22606F52500E370AB /* SmartHomeDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHomeDevice.swift; sourceTree = "<group>"; };
+		CEBE41F72606F87D00E370AB /* Lamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lamp.swift; sourceTree = "<group>"; };
+		CEBE4208260706AC00E370AB /* ElectricalSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalSocket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +127,11 @@
 			children = (
 				CE54A5B22605E14500352C46 /* Assembly */,
 				CE54A5A72605E11F00352C46 /* App */,
+				CEBBF7D42606F09000BD9F13 /* Views */,
+				CEBE41F12606F51400E370AB /* Entities */,
+				CEBE41D72606F2EE00E370AB /* Model */,
 				CE54A5AB2605E12800352C46 /* Main Screen */,
-				CE54A57A2605E0F500352C46 /* Assets.xcassets */,
-				CE54A57C2605E0F500352C46 /* LaunchScreen.storyboard */,
-				CE54A57F2605E0F500352C46 /* Info.plist */,
+				CE54A5CB2605E4FC00352C46 /* Resources */,
 			);
 			path = "Smart Home App";
 			sourceTree = "<group>";
@@ -143,7 +166,11 @@
 		CE54A5AB2605E12800352C46 /* Main Screen */ = {
 			isa = PBXGroup;
 			children = (
+				CEBBF7BA2606EDF600BD9F13 /* Views */,
 				CE54A5752605E0F400352C46 /* MainViewController.swift */,
+				CEBBF7C02606EE0500BD9F13 /* MainPresenter.swift */,
+				CEBBF7C52606EE0C00BD9F13 /* MainInteractor.swift */,
+				CEBBF7CA2606EE1100BD9F13 /* MainRouter.swift */,
 			);
 			path = "Main Screen";
 			sourceTree = "<group>";
@@ -156,6 +183,60 @@
 				CE54A5BB2605E18D00352C46 /* NavigationControllerAssembly.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		CE54A5CB2605E4FC00352C46 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE54A57A2605E0F500352C46 /* Assets.xcassets */,
+				CE54A57C2605E0F500352C46 /* LaunchScreen.storyboard */,
+				CE54A57F2605E0F500352C46 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CEBBF7BA2606EDF600BD9F13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEBBF7BB2606EDFE00BD9F13 /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEBBF7D42606F09000BD9F13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEBBF7CF2606F08B00BD9F13 /* SmartHomeItemCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEBE41D72606F2EE00E370AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEBE41D82606F2FD00E370AB /* AppConstants.swift */,
+				CEBE41EA2606F3F700E370AB /* SmartHomeItemsCollectionViewModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEBE41EA2606F3F700E370AB /* SmartHomeItemsCollectionViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CEBE41E02606F3B100E370AB /* SmartHomeItemCollectionViewDataSource.swift */,
+				CEBE41E52606F3CD00E370AB /* SmartHomeItemCollectionViewDelegate.swift */,
+			);
+			path = SmartHomeItemsCollectionViewModel;
+			sourceTree = "<group>";
+		};
+		CEBE41F12606F51400E370AB /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CEBE41F22606F52500E370AB /* SmartHomeDevice.swift */,
+				CEBE41F72606F87D00E370AB /* Lamp.swift */,
+				CEBE4208260706AC00E370AB /* ElectricalSocket.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,10 +369,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE54A5B42605E15300352C46 /* MainScreenAssembly.swift in Sources */,
+				CEBBF7BC2606EDFE00BD9F13 /* MainView.swift in Sources */,
 				CE54A5BC2605E18D00352C46 /* NavigationControllerAssembly.swift in Sources */,
+				CEBBF7C12606EE0500BD9F13 /* MainPresenter.swift in Sources */,
 				CE54A5762605E0F400352C46 /* MainViewController.swift in Sources */,
+				CEBBF7D02606F08B00BD9F13 /* SmartHomeItemCollectionViewCell.swift in Sources */,
+				CEBBF7CB2606EE1100BD9F13 /* MainRouter.swift in Sources */,
+				CEBE41F32606F52500E370AB /* SmartHomeDevice.swift in Sources */,
+				CEBE41E12606F3B100E370AB /* SmartHomeItemCollectionViewDataSource.swift in Sources */,
+				CEBE41D92606F2FD00E370AB /* AppConstants.swift in Sources */,
+				CEBBF7C62606EE0C00BD9F13 /* MainInteractor.swift in Sources */,
 				CE54A5C12605E1D600352C46 /* TabBarControllerAssembly.swift in Sources */,
+				CEBE41E62606F3CD00E370AB /* SmartHomeItemCollectionViewDelegate.swift in Sources */,
+				CEBE4209260706AC00E370AB /* ElectricalSocket.swift in Sources */,
 				CE54A5722605E0F400352C46 /* AppDelegate.swift in Sources */,
+				CEBE41F82606F87D00E370AB /* Lamp.swift in Sources */,
 				CE54A5742605E0F400352C46 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,7 +554,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DB9UTG3H5X;
-				INFOPLIST_FILE = "Smart Home App/Info.plist";
+				INFOPLIST_FILE = "Smart Home App/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -481,7 +573,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DB9UTG3H5X;
-				INFOPLIST_FILE = "Smart Home App/Info.plist";
+				INFOPLIST_FILE = "Smart Home App/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
