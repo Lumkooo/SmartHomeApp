@@ -17,6 +17,12 @@
 		CE54A5B42605E15300352C46 /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5B32605E15200352C46 /* MainScreenAssembly.swift */; };
 		CE54A5BC2605E18D00352C46 /* NavigationControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5BB2605E18D00352C46 /* NavigationControllerAssembly.swift */; };
 		CE54A5C12605E1D600352C46 /* TabBarControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5C02605E1D600352C46 /* TabBarControllerAssembly.swift */; };
+		CE83062526083CE7005CE030 /* AirConditioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83062426083CE7005CE030 /* AirConditioner.swift */; };
+		CE83062A260841AF005CE030 /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE830629260841AF005CE030 /* TemperatureUnit.swift */; };
+		CE83062F260848EF005CE030 /* Curtains.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83062E260848EF005CE030 /* Curtains.swift */; };
+		CE83063726084DD8005CE030 /* Ventilator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83063626084DD8005CE030 /* Ventilator.swift */; };
+		CE83064626085115005CE030 /* GarageDoor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83064526085115005CE030 /* GarageDoor.swift */; };
+		CE83064B26085533005CE030 /* IrrigationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83064A26085533005CE030 /* IrrigationSystem.swift */; };
 		CEBBF7BC2606EDFE00BD9F13 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7BB2606EDFE00BD9F13 /* MainView.swift */; };
 		CEBBF7C12606EE0500BD9F13 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7C02606EE0500BD9F13 /* MainPresenter.swift */; };
 		CEBBF7C62606EE0C00BD9F13 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7C52606EE0C00BD9F13 /* MainInteractor.swift */; };
@@ -64,6 +70,12 @@
 		CE54A5B32605E15200352C46 /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
 		CE54A5BB2605E18D00352C46 /* NavigationControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerAssembly.swift; sourceTree = "<group>"; };
 		CE54A5C02605E1D600352C46 /* TabBarControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerAssembly.swift; sourceTree = "<group>"; };
+		CE83062426083CE7005CE030 /* AirConditioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditioner.swift; sourceTree = "<group>"; };
+		CE830629260841AF005CE030 /* TemperatureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUnit.swift; sourceTree = "<group>"; };
+		CE83062E260848EF005CE030 /* Curtains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curtains.swift; sourceTree = "<group>"; };
+		CE83063626084DD8005CE030 /* Ventilator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ventilator.swift; sourceTree = "<group>"; };
+		CE83064526085115005CE030 /* GarageDoor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageDoor.swift; sourceTree = "<group>"; };
+		CE83064A26085533005CE030 /* IrrigationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrrigationSystem.swift; sourceTree = "<group>"; };
 		CEBBF7BB2606EDFE00BD9F13 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CEBBF7C02606EE0500BD9F13 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		CEBBF7C52606EE0C00BD9F13 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
@@ -195,6 +207,21 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		CE8306412608502F005CE030 /* SmartHomeDevices */ = {
+			isa = PBXGroup;
+			children = (
+				CEBE41F22606F52500E370AB /* SmartHomeDevice.swift */,
+				CEBE41F72606F87D00E370AB /* Lamp.swift */,
+				CEBE4208260706AC00E370AB /* ElectricalSocket.swift */,
+				CE83062426083CE7005CE030 /* AirConditioner.swift */,
+				CE83062E260848EF005CE030 /* Curtains.swift */,
+				CE83063626084DD8005CE030 /* Ventilator.swift */,
+				CE83064526085115005CE030 /* GarageDoor.swift */,
+				CE83064A26085533005CE030 /* IrrigationSystem.swift */,
+			);
+			path = SmartHomeDevices;
+			sourceTree = "<group>";
+		};
 		CEBBF7BA2606EDF600BD9F13 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,9 +259,8 @@
 		CEBE41F12606F51400E370AB /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				CEBE41F22606F52500E370AB /* SmartHomeDevice.swift */,
-				CEBE41F72606F87D00E370AB /* Lamp.swift */,
-				CEBE4208260706AC00E370AB /* ElectricalSocket.swift */,
+				CE8306412608502F005CE030 /* SmartHomeDevices */,
+				CE830629260841AF005CE030 /* TemperatureUnit.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -370,15 +396,21 @@
 			files = (
 				CE54A5B42605E15300352C46 /* MainScreenAssembly.swift in Sources */,
 				CEBBF7BC2606EDFE00BD9F13 /* MainView.swift in Sources */,
+				CE83062F260848EF005CE030 /* Curtains.swift in Sources */,
 				CE54A5BC2605E18D00352C46 /* NavigationControllerAssembly.swift in Sources */,
+				CE83064626085115005CE030 /* GarageDoor.swift in Sources */,
 				CEBBF7C12606EE0500BD9F13 /* MainPresenter.swift in Sources */,
 				CE54A5762605E0F400352C46 /* MainViewController.swift in Sources */,
 				CEBBF7D02606F08B00BD9F13 /* SmartHomeItemCollectionViewCell.swift in Sources */,
+				CE83064B26085533005CE030 /* IrrigationSystem.swift in Sources */,
 				CEBBF7CB2606EE1100BD9F13 /* MainRouter.swift in Sources */,
 				CEBE41F32606F52500E370AB /* SmartHomeDevice.swift in Sources */,
 				CEBE41E12606F3B100E370AB /* SmartHomeItemCollectionViewDataSource.swift in Sources */,
+				CE83063726084DD8005CE030 /* Ventilator.swift in Sources */,
 				CEBE41D92606F2FD00E370AB /* AppConstants.swift in Sources */,
 				CEBBF7C62606EE0C00BD9F13 /* MainInteractor.swift in Sources */,
+				CE83062526083CE7005CE030 /* AirConditioner.swift in Sources */,
+				CE83062A260841AF005CE030 /* TemperatureUnit.swift in Sources */,
 				CE54A5C12605E1D600352C46 /* TabBarControllerAssembly.swift in Sources */,
 				CEBE41E62606F3CD00E370AB /* SmartHomeItemCollectionViewDelegate.swift in Sources */,
 				CEBE4209260706AC00E370AB /* ElectricalSocket.swift in Sources */,

@@ -13,7 +13,7 @@ final class SmartHomeItemCollectionViewCell: UICollectionViewCell {
 
     private lazy var deviceImageView: UIImageView = {
         let myImageView = UIImageView()
-        myImageView.tintColor = .tertiarySystemBackground
+        myImageView.tintColor = .secondarySystemBackground
         return myImageView
     }()
 
@@ -40,7 +40,7 @@ final class SmartHomeItemCollectionViewCell: UICollectionViewCell {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.contentView.backgroundColor = .secondarySystemBackground
+        self.contentView.backgroundColor = .tertiarySystemBackground
         self.setupElements()
         self.setupLayer()
     }

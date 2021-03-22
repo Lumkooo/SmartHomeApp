@@ -30,7 +30,15 @@ enum AppConstants {
     // MARK: - Images
 
     enum Images {
-        static let lamp = UIImage(systemName: "lightbulb.fill") ?? UIImage()
-        static let electricalSocket = UIImage(systemName: "person.fill") ?? UIImage()
+        static let lamp = UIImage(named: "lamp") ?? UIImage()
+        static let electricalSocket = UIImage(named: "electricalSocket") ?? UIImage()
+        static let airConditioner = UIImage(named: "airConditioner") ?? UIImage()
+        static let curtains = UIImage(named: "curtains") ?? UIImage()
+        static let ventilator = UIImage(named: "ventilator") ?? UIImage()
+        static let garageDoor = UIImage(named: "garageDoor") ?? UIImage()
+        static let irrigationSystem = UIImage(named: "irrigationSystem") ?? UIImage()
+        static let heartFill = UIImage(systemName: "heart.fill") ?? UIImage()
+        static let arrowRight = UIImage(systemName: "arrow.right") ?? UIImage()
+
     }
 }

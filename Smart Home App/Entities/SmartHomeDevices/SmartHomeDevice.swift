@@ -12,7 +12,7 @@ protocol ISmartHomeDevice {
     func turnOff()
 }
 
-class SmartHomeDevice {
+class SmartHomeDevice: ISmartHomeDevice {
 
     // MARK: - Properties
 
@@ -30,11 +30,9 @@ class SmartHomeDevice {
         self.code = code
         self.image = image
     }
-}
 
-// MARK: - ISmartHomeDevice
+    // MARK: - ISmartHomeDevice
 
-extension SmartHomeDevice: ISmartHomeDevice {
     func turnOn() {
         self.isTurnedOn = true
     }

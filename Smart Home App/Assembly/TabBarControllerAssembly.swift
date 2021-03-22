@@ -33,6 +33,7 @@ enum TabBarControllerAssembly {
                                          image: Images.bagTabImage,
                                          selectedImage: Images.bagTabFilledImage)
         mainTab.tabBarItem = mainTabItem
+        mainTab.navigationItem.largeTitleDisplayMode = .always
 
         let controllers = [mainTab]
         tabBar.viewControllers = controllers

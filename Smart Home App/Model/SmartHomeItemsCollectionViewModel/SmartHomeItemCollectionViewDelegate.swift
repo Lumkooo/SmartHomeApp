@@ -31,5 +31,25 @@ extension SmartHomeItemCollectionViewDelegate: UICollectionViewDelegate {
                         didSelectItemAt indexPath: IndexPath) {
         self.delegate?.selectedCell(indexPath: indexPath)
     }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        contextMenuConfigurationForItemAt indexPath: IndexPath,
+                        point: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(identifier: indexPath as NSIndexPath, previewProvider: nil) { _ in
+
+            let addToLiked = UIAction(title: "Добавить в избранное",
+                                image: AppConstants.Images.heartFill) { action in
+                // TODO: - Добавление в избранные
+            }
+
+            let goToDevice = UIAction(title: "Перейти к устройству",
+                                image: AppConstants.Images.arrowRight) { action in
+                // TODO: - Переход к девайсу
+            }
+
+
+            return UIMenu(title: "", children: [goToDevice, addToLiked])
+        }
+    }
 }
 

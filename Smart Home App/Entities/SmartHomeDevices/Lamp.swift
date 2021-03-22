@@ -14,6 +14,13 @@ protocol ILamp {
 
 final class Lamp: SmartHomeDevice {
 
+    // MARK: - Constants
+
+    private enum Constants {
+        static let standardLightLevel = 50
+    }
+
+
     // MARK: - Properties
 
     // Допустимый уровень света от 0 до 100
@@ -31,8 +38,8 @@ final class Lamp: SmartHomeDevice {
 
     // MARK: - Init
 
-    init(name: String, code: String, lightLevel: Int) {
-        self.lightLevel = lightLevel
+    init(name: String, code: String) {
+        self.lightLevel = Constants.standardLightLevel
         super.init(name: name, code: code, image: AppConstants.Images.lamp)
     }
 }

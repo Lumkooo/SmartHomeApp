@@ -24,13 +24,13 @@ final class MainInteractor {
 
 extension MainInteractor: IMainInteractor {
     func loadInitData() {
-        let devices: [SmartHomeDevice] = [Lamp(name: "New Lamp", code: "94057465", lightLevel: 50),
-                                          Lamp(name: "One more Lamp", code: "94057465", lightLevel: 50),
-                                          Lamp(name: "Hello", code: "94057465", lightLevel: 50),
-                                          Lamp(name: "Hmmm", code: "94057465", lightLevel: 50),
-                                          Lamp(name: "Lier", code: "94057465", lightLevel: 50),
-                                          Lamp(name: "Okay", code: "94057465", lightLevel: 50),
-                                          ElectricalSocket(name: "Розетка", code: "13259954") ]
+        let devices: [SmartHomeDevice] = [Lamp(name: "Освещение", code: "94057465"),
+                                          ElectricalSocket(name: "Розетка", code: "13259954"),
+                                          AirConditioner(name: "Кондиционер", code: "94930534"),
+                                          Curtains(name: "Шторы", code: "12340895"),
+                                          Ventilator(name: "Вентилятор", code: "32146854"),
+                                          GarageDoor(name: "Ворота гаража", code: "12093621"),
+                                          IrrigationSystem(name: "Система полива", code: "21394031")]
         self.presenter?.prepareView(devices: devices)
     }
 }

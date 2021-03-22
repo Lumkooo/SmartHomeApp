@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
     init(presenter: IMainPresenter) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
+        self.title = "Список устройств"
     }
 
     required init?(coder: NSCoder) {

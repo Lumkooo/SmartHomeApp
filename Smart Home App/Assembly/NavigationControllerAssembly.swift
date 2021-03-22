@@ -9,6 +9,8 @@ import UIKit
 
 enum NavigationControllerAssembly {
     static func createNavigationVC(for vc: UIViewController) -> UINavigationController {
-        UINavigationController(rootViewController: vc)
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.navigationBar.prefersLargeTitles = true
+        return navigationController
     }
 }
