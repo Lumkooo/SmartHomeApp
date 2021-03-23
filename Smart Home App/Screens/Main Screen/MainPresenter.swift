@@ -30,6 +30,17 @@ final class MainPresenter {
 extension MainPresenter: IMainPresenter {
     func viewDidLoad(ui: IMainView) {
         self.ui = ui
+        self.ui?.goToDeviceAt = { [weak self] indexPath in
+            let dev = self?.interactor.getDevice(atIndexPath: indexPath)
+            guard let device = dev else {
+                assertionFailure("oops, can't get a deivce")
+                return
+            }
+            self?.router.showDevice(device)
+        }
+        self.ui?.cellTappedAt = { [weak self] indexPath in
+            self?.interactor.cellTappedAt(indexPath)
+        }
         self.interactor.loadInitData()
     }
 }
@@ -39,5 +50,9 @@ extension MainPresenter: IMainPresenter {
 extension MainPresenter: IMainInteractorOuter {
     func prepareView(devices: [SmartHomeDevice]) {
         self.ui?.prepareView(devices: devices)
+    }
+
+    func reloadView(devices: [SmartHomeDevice]) {
+        self.ui?.reloadView(devices: devices)
     }
 }

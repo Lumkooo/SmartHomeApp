@@ -9,6 +9,7 @@ import UIKit
 
 protocol IImagesCollectionViewDelegate: class {
     func selectedCell(indexPath: IndexPath)
+    func goToDevice(atIndexPath indexPath: IndexPath)
 }
 
 final class SmartHomeItemCollectionViewDelegate: NSObject {
@@ -45,6 +46,7 @@ extension SmartHomeItemCollectionViewDelegate: UICollectionViewDelegate {
             let goToDevice = UIAction(title: "Перейти к устройству",
                                 image: AppConstants.Images.arrowRight) { action in
                 // TODO: - Переход к девайсу
+                self.delegate?.goToDevice(atIndexPath: indexPath)
             }
 
 

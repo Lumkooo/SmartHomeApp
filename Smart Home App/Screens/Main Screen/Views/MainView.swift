@@ -8,7 +8,11 @@
 import UIKit
 
 protocol IMainView: AnyObject {
+    var goToDeviceAt: ((IndexPath) -> Void)? { get set }
+    var cellTappedAt: ((IndexPath) -> Void)? { get set }
+
     func prepareView(devices: [SmartHomeDevice])
+    func reloadView(devices: [SmartHomeDevice])
 }
 
 final class MainView: UIView {
@@ -34,6 +38,8 @@ final class MainView: UIView {
 
     private var collectionViewDataSource = SmartHomeItemCollectionViewDataSource()
     private var collectionViewDelegate: SmartHomeItemCollectionViewDelegate?
+    var goToDeviceAt: ((IndexPath) -> Void)?
+    var cellTappedAt: ((IndexPath) -> Void)?
 
     // MARK: - Init
 
@@ -52,6 +58,11 @@ final class MainView: UIView {
 extension MainView: IMainView {
     func prepareView(devices: [SmartHomeDevice]) {
         self.setupElements()
+        self.collectionViewDataSource.setData(devices: devices)
+        self.collectionView.reloadData()
+    }
+
+    func reloadView(devices: [SmartHomeDevice]) {
         self.collectionViewDataSource.setData(devices: devices)
         self.collectionView.reloadData()
     }
@@ -107,7 +118,11 @@ private extension MainView {
 }
 
 extension MainView: IImagesCollectionViewDelegate {
+    func goToDevice(atIndexPath indexPath: IndexPath) {
+        self.goToDeviceAt?(indexPath)
+    }
+
     func selectedCell(indexPath: IndexPath) {
-        print("Cell tapped at: \(indexPath)")
+        self.cellTappedAt?(indexPath)
     }
 }
