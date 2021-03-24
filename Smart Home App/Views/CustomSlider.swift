@@ -17,7 +17,6 @@ final class CustomSlider: UIView {
     // MARK: - Constants
 
     private enum Constants {
-        static let widthMultiplier: CGFloat = 0.4
         static let sliderMinimumValue: CGFloat = 0
         static let sliderMaximumValue: CGFloat = 100
     }
@@ -42,9 +41,18 @@ final class CustomSlider: UIView {
 
     var delegate: ICustomSlider?
     private lazy var customSliderViewTopAnchor = self.customSliderView.topAnchor.constraint(
-        equalTo: self.safeAreaLayoutGuide.topAnchor,
+        equalTo: self.topAnchor,
         constant: AppConstants.Constraints.normal)
     private var translationTemproraryValue: CGPoint = CGPoint(x: 0, y: 0)
+    override var isUserInteractionEnabled: Bool {
+        didSet {
+            if self.isUserInteractionEnabled {
+                self.setupPanGesture()
+            } else {
+                self.disablePanGesture()
+            }
+        }
+    }
 
     // MARK: - Init
 
@@ -52,7 +60,6 @@ final class CustomSlider: UIView {
         super.init(frame: .zero)
         self.backgroundColor = .clear
         self.setupElements()
-        self.setupPanGesture()
     }
 
     convenience init(sliderColor: UIColor, sliderBackgroundColor: UIColor) {
@@ -72,6 +79,19 @@ final class CustomSlider: UIView {
         let secondSlide = UIPanGestureRecognizer(target: self, action: #selector(self.handlePan(_:)))
         self.customSliderView.addGestureRecognizer(slide)
         self.customSliderBackgroundView.addGestureRecognizer(secondSlide)
+    }
+
+    private func disablePanGesture() {
+        if let gestures = self.customSliderView.gestureRecognizers {
+            for gesture in gestures {
+                self.customSliderView.removeGestureRecognizer(gesture)
+            }
+        }
+        if let gestures = self.customSliderBackgroundView.gestureRecognizers {
+            for gesture in gestures {
+                self.customSliderBackgroundView.removeGestureRecognizer(gesture)
+            }
+        }
     }
 
     @objc private func handlePan(_ gesture: UIPanGestureRecognizer? = nil) {
@@ -95,18 +115,6 @@ final class CustomSlider: UIView {
 
         let translationY = gesture.translation(in: self).y
 
-        // Проверка на граничные условия
-        if translationY < 0 {
-            gesture.setTranslation(CGPoint(x: 0, y: 0),
-                                   in: self)
-        } else if translationY >= self.safeAreaLayoutGuide.layoutFrame.height {
-            gesture.setTranslation(CGPoint(x: 0, y: self.safeAreaLayoutGuide.layoutFrame.height),
-                                   in: self)
-        }
-
-        self.customSliderViewTopAnchor.constant = translationY
-
-        // Расчет числового значения слайдера
         var sliderLevel = ((self.customSliderBackgroundView.frame.height - translationY) / self.customSliderBackgroundView.frame.height) * Constants.sliderMaximumValue
 
         // Обработка граничных условий
@@ -119,6 +127,41 @@ final class CustomSlider: UIView {
         // вызов метода sliderDidChangeValue у делегата
         self.delegate?.sliderDidChangeValue(customSlider: self,
                                             value: Int(sliderLevel))
+
+        // Проверка на граничные условия
+        if translationY < 0 {
+            gesture.setTranslation(CGPoint(x: 0, y: 0),
+                                   in: self)
+            return
+        } else if translationY >= self.customSliderBackgroundView.frame.height {
+            gesture.setTranslation(CGPoint(x: 0, y: self.customSliderBackgroundView.frame.height),
+                                   in: self)
+            return
+        }
+
+        self.customSliderViewTopAnchor.constant = translationY
+
+        // Расчет числового значения слайдера
+    }
+
+    // MARK: - Public method
+
+    /// Выставляет уровень слайдера к заданному level-у.
+    /// (Значение level должно быть в пределах от 0 до 100)
+    func setSliderLevel(level: Int) {
+
+        // Выход за пределы возможного уровня
+        if level < 0 || level > 100 {
+            return
+        }
+
+        // Находим нужное положение уровня на customSliderView
+        let translationValue = (Int(self.customSliderBackgroundView.frame.height) * (100-level))/100
+
+        // Выставляем translationTemproraryValue для дальнейшей работы со слайдером с этого места
+        // и выставляет верхний constraint customSliderView равным self.translationTemproraryValue.y
+        self.translationTemproraryValue = CGPoint(x: 0, y: translationValue)
+        self.customSliderViewTopAnchor.constant = self.translationTemproraryValue.y
     }
 }
 
@@ -134,16 +177,10 @@ private extension CustomSlider {
         self.customSliderBackgroundView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            self.customSliderBackgroundView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            self.customSliderBackgroundView.widthAnchor.constraint(
-                equalTo: self.widthAnchor,
-                multiplier: Constants.widthMultiplier),
-            self.customSliderBackgroundView.bottomAnchor.constraint(
-                equalTo: self.safeAreaLayoutGuide.bottomAnchor,
-                constant: -AppConstants.Constraints.normal),
-            self.customSliderBackgroundView.topAnchor.constraint(
-                equalTo: self.safeAreaLayoutGuide.topAnchor,
-                constant: AppConstants.Constraints.normal)
+            self.customSliderBackgroundView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.customSliderBackgroundView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.customSliderBackgroundView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            self.customSliderBackgroundView.topAnchor.constraint(equalTo: self.topAnchor)
         ])
         self.setupCustomSliderView()
     }

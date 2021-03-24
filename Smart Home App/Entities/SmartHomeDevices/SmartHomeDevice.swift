@@ -8,6 +8,7 @@
 import UIKit
 
 protocol ISmartHomeDevice {
+    func toggleDevice()
     func turnOn()
     func turnOff()
 }
@@ -39,5 +40,9 @@ class SmartHomeDevice: ISmartHomeDevice {
 
     func turnOff() {
         self.isTurnedOn = false
+    }
+
+    func toggleDevice() {
+        self.isTurnedOn = !self.isTurnedOn
     }
 }

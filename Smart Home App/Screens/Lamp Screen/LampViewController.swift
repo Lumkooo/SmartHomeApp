@@ -32,4 +32,9 @@ final class LampViewController: UIViewController {
         self.view = self.ui
         self.presenter.viewDidLoad(ui: ui)
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.presenter.viewDidAppear()
+    }
 }

@@ -60,11 +60,7 @@ private extension MainInteractor {
     // Переключает состояние устройства (включено/выключено)
     func toggleDeviceState( index: Int) {
         if self.devices.count > index {
-            if self.devices[index].isTurnedOn {
-                self.devices[index].turnOff()
-            } else {
-                self.devices[index].turnOn()
-            }
+            self.devices[index].toggleDevice()
         }
     }
 }

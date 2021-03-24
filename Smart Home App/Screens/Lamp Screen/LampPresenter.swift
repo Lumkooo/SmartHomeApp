@@ -9,6 +9,7 @@ import Foundation
 
 protocol ILampPresenter {
     func viewDidLoad(ui: ILampView)
+    func viewDidAppear()
 }
 
 final class LampPresenter {
@@ -32,12 +33,23 @@ final class LampPresenter {
 extension LampPresenter: ILampPresenter {
     func viewDidLoad(ui: ILampView) {
         self.ui = ui
-        
+        self.ui?.toggleLamp = { [weak self] in
+            self?.interactor.toggleLamp()
+        }
+        self.ui?.sliderDidChangeValue = { [weak self] newValue in
+            self?.interactor.setLightLevel(level: newValue)
+        }
+    }
+
+    func viewDidAppear() {
+        self.interactor.loadInitData()
     }
 }
 
 // MARK: - ILampInteractorOuter
 
 extension LampPresenter: ILampInteractorOuter {
-    
+    func prepareView(lamp: Lamp) {
+        self.ui?.prepareView(lamp: lamp)
+    }
 }

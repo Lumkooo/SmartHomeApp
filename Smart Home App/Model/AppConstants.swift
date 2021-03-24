@@ -39,6 +39,6 @@ enum AppConstants {
         static let irrigationSystem = UIImage(named: "irrigationSystem") ?? UIImage()
         static let heartFill = UIImage(systemName: "heart.fill") ?? UIImage()
         static let arrowRight = UIImage(systemName: "arrow.right") ?? UIImage()
-
+        static let power = UIImage(systemName: "power") ?? UIImage()
     }
 }
