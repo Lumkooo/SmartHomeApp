@@ -14,7 +14,6 @@ protocol IMainInteractor {
 }
 
 protocol IMainInteractorOuter: AnyObject {
-    func prepareView(devices: [SmartHomeDevice])
     func reloadView(devices: [SmartHomeDevice])
 }
 
@@ -37,8 +36,9 @@ final class MainInteractor {
 // MARK: - IMainInteractor
 
 extension MainInteractor: IMainInteractor {
+
     func loadInitData() {
-        self.presenter?.prepareView(devices: devices)
+        self.presenter?.reloadView(devices: self.devices)
     }
 
     func getDevice(atIndexPath indexPath: IndexPath) -> SmartHomeDevice? {

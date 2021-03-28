@@ -8,7 +8,7 @@
 import Foundation
 
 protocol IMainPresenter {
-    func viewDidLoad(ui: IMainView)
+    func viewDidAppear(ui: IMainView)
 }
 
 final class MainPresenter {
@@ -28,7 +28,8 @@ final class MainPresenter {
 // MARK: - IMainPresenter
 
 extension MainPresenter: IMainPresenter {
-    func viewDidLoad(ui: IMainView) {
+    
+    func viewDidAppear(ui: IMainView) {
         self.ui = ui
         self.ui?.goToDeviceAt = { [weak self] indexPath in
             let dev = self?.interactor.getDevice(atIndexPath: indexPath)
@@ -48,10 +49,6 @@ extension MainPresenter: IMainPresenter {
 // MARK: - IMainInteractorOuter
 
 extension MainPresenter: IMainInteractorOuter {
-    func prepareView(devices: [SmartHomeDevice]) {
-        self.ui?.prepareView(devices: devices)
-    }
-
     func reloadView(devices: [SmartHomeDevice]) {
         self.ui?.reloadView(devices: devices)
     }

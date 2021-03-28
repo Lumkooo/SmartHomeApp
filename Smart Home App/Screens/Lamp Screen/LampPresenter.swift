@@ -5,7 +5,7 @@
 //  Created by Андрей Шамин on 3/23/21.
 //
 
-import Foundation
+import UIKit
 
 protocol ILampPresenter {
     func viewDidLoad(ui: ILampView)
@@ -37,7 +37,10 @@ extension LampPresenter: ILampPresenter {
             self?.interactor.toggleLamp()
         }
         self.ui?.sliderDidChangeValue = { [weak self] newValue in
-            self?.interactor.setLightLevel(level: newValue)
+            self?.interactor.setLightLevel(newValue)
+        }
+        self.ui?.colorChangeButtonPressed = { [weak self] in
+            self?.interactor.colorChangeButtonPressed()
         }
     }
 
@@ -51,5 +54,17 @@ extension LampPresenter: ILampPresenter {
 extension LampPresenter: ILampInteractorOuter {
     func prepareView(lamp: Lamp) {
         self.ui?.prepareView(lamp: lamp)
+    }
+
+    func changeLightColorTo(_ color: UIColor) {
+        self.ui?.changeLightColorTo(color)
+    }
+
+    func changeLightLevelTo(_ level: Int) {
+        self.ui?.changeLightLevelTo(level)
+    }
+
+    func goToChangeColorVC(delegate: ColorChooserDelegate) {
+        self.router.showChangeColorVC(delegate: delegate)
     }
 }

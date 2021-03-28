@@ -5,16 +5,21 @@
 //  Created by Андрей Шамин on 3/23/21.
 //
 
-import Foundation
+import UIKit
 
 protocol ILampInteractor {
     func loadInitData()
     func toggleLamp()
-    func setLightLevel(level: Int)
+    func setLightLevel(_ level: Int)
+    func setLightColor(_ color: UIColor)
+    func colorChangeButtonPressed()
 }
 
 protocol ILampInteractorOuter: AnyObject {
     func prepareView(lamp: Lamp)
+    func changeLightColorTo(_ color: UIColor)
+    func changeLightLevelTo(_ level: Int)
+    func goToChangeColorVC(delegate: ColorChooserDelegate)
 }
 
 final class LampInteractor {
@@ -43,9 +48,18 @@ extension LampInteractor: ILampInteractor {
         self.prepareView()
     }
 
-    func setLightLevel(level: Int) {
+    func setLightLevel(_ level: Int) {
         self.lamp.changeLightLevelTo(level)
-        self.prepareView()
+        self.presenter?.changeLightLevelTo(level)
+    }
+
+    func setLightColor(_ color: UIColor) {
+        self.lamp.changeLightColorTo(color)
+        self.presenter?.changeLightColorTo(color)
+    }
+
+    func colorChangeButtonPressed() {
+        self.presenter?.goToChangeColorVC(delegate: self)
     }
 }
 
@@ -53,5 +67,13 @@ extension LampInteractor: ILampInteractor {
 private extension LampInteractor {
     func prepareView() {
         self.presenter?.prepareView(lamp: self.lamp)
+    }
+}
+
+// MARK: - ColorChooserDelegate
+
+extension LampInteractor: ColorChooserDelegate {
+    func colorDidChangeTo(_ color: UIColor) {
+        self.setLightColor(color)
     }
 }

@@ -10,8 +10,11 @@ import UIKit
 protocol ILampView: AnyObject {
     var toggleLamp: (() -> Void)? { get set }
     var sliderDidChangeValue: ((Int) -> Void)? { get set }
+    var colorChangeButtonPressed: (() -> Void)? { get set }
 
     func prepareView(lamp: Lamp)
+    func changeLightColorTo(_ color: UIColor)
+    func changeLightLevelTo(_ level: Int)
 }
 
 final class LampView: UIView, UITextViewDelegate {
@@ -21,23 +24,13 @@ final class LampView: UIView, UITextViewDelegate {
     private enum Constants {
         static let customSliderWidthMultiplier: CGFloat = 0.4
         static let lightLevelLabelFont = UIFont.systemFont(ofSize: 23, weight: .semibold)
+        static let lightColorFont = UIFont.systemFont(ofSize: 18, weight: .light)
+        static let changeLightColorButtonPreferredSymbolConfigationMultiplier: CGFloat = 0.75
     }
 
     // MARK: - Views
 
-    private lazy var lightLevelLabel: UILabel = {
-        let myLabel = UILabel()
-        myLabel.textColor = .label
-        myLabel.numberOfLines = 0
-        myLabel.textAlignment = .center
-        myLabel.font = Constants.lightLevelLabelFont
-        return myLabel
-    }()
-
-    private lazy var customSlider: CustomSlider = {
-        let myCustomSlider = CustomSlider()
-        return myCustomSlider
-    }()
+    private let customSlider = CustomSlider()
 
     private lazy var toggleStateButton: UIButton = {
         let myButton = UIButton()
@@ -50,17 +43,47 @@ final class LampView: UIView, UITextViewDelegate {
         return myButton
     }()
 
+    private lazy var lightColorLabel: UILabel = {
+        let myLabel = UILabel()
+        myLabel.textColor = .label
+        myLabel.numberOfLines = 0
+        myLabel.textAlignment = .center
+        myLabel.text = "Цвет:"
+        myLabel.font = Constants.lightColorFont
+        return myLabel
+    }()
+
+    private lazy var changeLightColorButton: UIButton = {
+        let myButton = UIButton()
+        myButton.backgroundColor = .label
+        myButton.tintColor = .white
+        myButton.setImage(AppConstants.Images.circleFill, for: .normal)
+        myButton.addTarget(self,
+                           action: #selector(self.changeLightColorButtonTapped),
+                           for: .touchUpInside)
+        return myButton
+    }()
+
+    private lazy var activityIndicatorView: UIActivityIndicatorView = {
+        let myActivityIndicatorView = UIActivityIndicatorView(style: .medium)
+        myActivityIndicatorView.color = .label
+        myActivityIndicatorView.hidesWhenStopped = true
+        myActivityIndicatorView.startAnimating()
+        return myActivityIndicatorView
+    }()
+
     // MARK: - Properties
 
     var toggleLamp: (() -> Void)?
     var sliderDidChangeValue: ((Int) -> Void)?
+    var colorChangeButtonPressed: (() -> Void)?
 
     // MARK: - Init
 
     init() {
         super.init(frame: .zero)
         self.backgroundColor = .systemBackground
-        self.setupElements()
+        self.setupActivityIndicatorView()
     }
 
     required init?(coder: NSCoder) {
@@ -72,6 +95,11 @@ final class LampView: UIView, UITextViewDelegate {
     override func layoutSubviews() {
         super.layoutSubviews()
         self.toggleStateButton.layer.cornerRadius = self.toggleStateButton.frame.width/2
+        self.changeLightColorButton.layer.cornerRadius = self.changeLightColorButton.frame.width/2
+
+        self.changeLightColorButton.setPreferredSymbolConfiguration(
+            .init(pointSize: self.changeLightColorButton.frame.width*Constants.changeLightColorButtonPreferredSymbolConfigationMultiplier),
+            forImageIn: .normal)
     }
 
     // MARK: - Обработка нажатий на кнопку
@@ -79,47 +107,66 @@ final class LampView: UIView, UITextViewDelegate {
     @objc private func toggleStateButtonTapped() {
         self.toggleLamp?()
     }
+
+    @objc private func changeLightColorButtonTapped() {
+        // TODO: - Смена цвета
+        self.colorChangeButtonPressed?()
+    }
 }
 
 // MARK: - ILampView
 
 extension LampView: ILampView {
     func prepareView(lamp: Lamp) {
-        self.customSlider.isUserInteractionEnabled = lamp.isTurnedOn
-        if lamp.isTurnedOn {
-            self.setLightLevel(level: lamp.lightLevel)
-        } else {
-            self.setLightLevelLabelText(isTurnedOn: lamp.isTurnedOn)
+        self.setupElements()
+        self.activityIndicatorView.stopAnimating()
+
+        // Не могу понять почему без хотя бы малейшего ожидания на customSlider
+        // не выставляется значение уровня...
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.001) {
+            self.customSlider.isUserInteractionEnabled = lamp.isTurnedOn
+            if lamp.isTurnedOn {
+                self.setLightLevel(level: lamp.lightLevel)
+            }
+            self.changeLightColorButton.isUserInteractionEnabled = lamp.isTurnedOn
+            self.setLightColor(color: lamp.lightColor)
         }
+    }
+
+    func changeLightColorTo(_ color: UIColor) {
+        self.setLightColor(color: color)
+    }
+
+    func changeLightLevelTo(_ level: Int) {
+        self.setLightLevel(level: level)
     }
 }
 
 // MARK: - UISetup
 
 private extension LampView {
-    func setupElements() {
-        self.setupLightLevelLabel()
-        self.setupCustomSlider()
-        self.setupToggleStateButton()
-    }
 
-    func setupLightLevelLabel() {
-        self.addSubview(self.lightLevelLabel)
-        self.lightLevelLabel.translatesAutoresizingMaskIntoConstraints = false
+    func setupActivityIndicatorView() {
+        self.addSubview(self.activityIndicatorView)
+        self.activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            self.lightLevelLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            self.lightLevelLabel.topAnchor.constraint(
-                equalTo: self.safeAreaLayoutGuide.topAnchor,
-                constant: AppConstants.Constraints.normal)
+            self.activityIndicatorView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            self.activityIndicatorView.centerXAnchor.constraint(equalTo: self.centerXAnchor)
         ])
+    }
+
+    func setupElements() {
+        self.setupCustomSlider()
+        self.setupToggleStateButton()
+        self.setupChangeLightColorButton()
+        self.setupLightColorLabel()
     }
 
     func setupCustomSlider() {
         self.addSubview(self.customSlider)
         self.customSlider.translatesAutoresizingMaskIntoConstraints = false
         self.customSlider.delegate = self
-
         
         NSLayoutConstraint.activate([
             self.customSlider.centerXAnchor.constraint(equalTo: self.centerXAnchor),
@@ -130,7 +177,7 @@ private extension LampView {
                 equalTo: self.safeAreaLayoutGuide.bottomAnchor,
                 constant: -AppConstants.Constraints.normal),
             self.customSlider.topAnchor.constraint(
-                equalTo: self.lightLevelLabel.bottomAnchor,
+                equalTo: self.safeAreaLayoutGuide.topAnchor,
                 constant: AppConstants.Constraints.normal)
         ])
     }
@@ -148,6 +195,38 @@ private extension LampView {
             self.toggleStateButton.heightAnchor.constraint(equalTo: self.toggleStateButton.widthAnchor)
         ])
     }
+
+    func setupChangeLightColorButton() {
+        self.addSubview(self.changeLightColorButton)
+        self.changeLightColorButton.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            self.changeLightColorButton.leadingAnchor.constraint(
+                equalTo: self.safeAreaLayoutGuide.leadingAnchor,
+                constant: AppConstants.Constraints.normal),
+            self.changeLightColorButton.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            self.changeLightColorButton.trailingAnchor.constraint(
+                equalTo: self.customSlider.leadingAnchor,
+                constant: -AppConstants.Constraints.normal),
+            self.changeLightColorButton.heightAnchor.constraint(equalTo: self.toggleStateButton.widthAnchor)
+        ])
+    }
+
+    func setupLightColorLabel() {
+        self.addSubview(self.lightColorLabel)
+        self.lightColorLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            self.lightColorLabel.leadingAnchor.constraint(
+                equalTo: self.safeAreaLayoutGuide.leadingAnchor,
+                constant: AppConstants.Constraints.normal),
+            self.lightColorLabel.trailingAnchor.constraint(
+                equalTo: self.customSlider.leadingAnchor,
+                constant: -AppConstants.Constraints.normal),
+            self.lightColorLabel.bottomAnchor.constraint(equalTo: self.changeLightColorButton.topAnchor,
+                                                         constant: -AppConstants.Constraints.normal)
+        ])
+    }
 }
 
 // MARK: - ICustomSlider
@@ -162,15 +241,13 @@ extension LampView: ICustomSlider {
 
 private extension LampView {
     func setLightLevel(level: Int) {
+        print("Size: ", self.customSlider.frame.height)
         self.customSlider.setSliderLevel(level: level)
-        self.setLightLevelLabelText(level: level)
     }
+}
 
-    func setLightLevelLabelText(level: Int = 0, isTurnedOn: Bool = true) {
-        if isTurnedOn {
-            self.lightLevelLabel.text = "Устройство включено!\nУровень яркости устройства:\n\(level)"
-        } else {
-            self.lightLevelLabel.text = "Устройство выключено!"
-        }
+private extension LampView {
+    func setLightColor(color: UIColor) {
+        self.changeLightColorButton.tintColor = color
     }
 }

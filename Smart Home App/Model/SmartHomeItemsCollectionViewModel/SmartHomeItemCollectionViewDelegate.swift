@@ -8,7 +8,6 @@
 import UIKit
 
 protocol IImagesCollectionViewDelegate: class {
-    func selectedCell(indexPath: IndexPath)
     func goToDevice(atIndexPath indexPath: IndexPath)
 }
 
@@ -16,11 +15,11 @@ final class SmartHomeItemCollectionViewDelegate: NSObject {
 
     // MARK: - Properties
 
-    private weak var delegate: IImagesCollectionViewDelegate?
+    private weak var delegate: (IImagesCollectionViewDelegate & ICustomCollectionViewDelegate)?
 
     // MARK: - Init
 
-    init(withDelegate delegate: IImagesCollectionViewDelegate) {
+    init(withDelegate delegate: (IImagesCollectionViewDelegate & ICustomCollectionViewDelegate)) {
         self.delegate = delegate
     }
 }
@@ -30,7 +29,7 @@ final class SmartHomeItemCollectionViewDelegate: NSObject {
 extension SmartHomeItemCollectionViewDelegate: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
-        self.delegate?.selectedCell(indexPath: indexPath)
+        self.delegate?.didSelectItemAt(indexPath: indexPath)
     }
 
     func collectionView(_ collectionView: UICollectionView,

@@ -29,6 +29,7 @@ final class LampViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.prefersLargeTitles = false
         self.view = self.ui
         self.presenter.viewDidLoad(ui: ui)
     }

@@ -38,8 +38,8 @@ extension SmartHomeItemCollectionViewDataSource: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: SmartHomeItemCollectionViewCell.reuseIdentifier,
-                for: indexPath) as? SmartHomeItemCollectionViewCell
+                withReuseIdentifier: SmartHomeDeviceCollectionViewCell.reuseIdentifier,
+                for: indexPath) as? SmartHomeDeviceCollectionViewCell
         else {
             fatalError("Can't dequeue reusable cell")
         }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SmartHomeItemCollectionViewCell: UICollectionViewCell {
+final class SmartHomeDeviceCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Views
 
@@ -63,7 +63,7 @@ final class SmartHomeItemCollectionViewCell: UICollectionViewCell {
 
 // MARK: - UISetup
 
-private extension SmartHomeItemCollectionViewCell {
+private extension SmartHomeDeviceCollectionViewCell {
     func setupElements() {
         self.setupDeviceImageView()
         self.setupDeviceLabel()

@@ -40,5 +40,7 @@ enum AppConstants {
         static let heartFill = UIImage(systemName: "heart.fill") ?? UIImage()
         static let arrowRight = UIImage(systemName: "arrow.right") ?? UIImage()
         static let power = UIImage(systemName: "power") ?? UIImage()
+        static let circleFill = UIImage(systemName: "circle.fill") ?? UIImage()
+        static let xmark = UIImage(systemName: "xmark") ?? UIImage()
     }
 }

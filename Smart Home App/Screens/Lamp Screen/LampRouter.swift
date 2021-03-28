@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ILampRouter {
-
+    func showChangeColorVC(delegate: ColorChooserDelegate)
 }
 
 final class LampRouter {
@@ -18,5 +18,9 @@ final class LampRouter {
 // MARK: - ILampRouter
 
 extension LampRouter: ILampRouter {
-    
+    func showChangeColorVC(delegate: ColorChooserDelegate) {
+        let vc = ColorChooserAssembly.createVC(delegate: delegate)
+        vc.modalPresentationStyle = .overFullScreen
+        self.vc?.navigationController?.present(vc, animated: false)
+    }
 }

@@ -20,6 +20,7 @@ class MainViewController: UIViewController {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
         self.title = "Список устройств"
+        self.view = self.ui
     }
 
     required init?(coder: NSCoder) {
@@ -27,11 +28,14 @@ class MainViewController: UIViewController {
     }
 
     // MARK: - VC Life cycle
-    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.view = self.ui
-        self.presenter.viewDidLoad(ui: ui)
+        self.presenter.viewDidAppear(ui: self.ui)
     }
 }
 

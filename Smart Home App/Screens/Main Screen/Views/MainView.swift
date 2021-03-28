@@ -11,7 +11,6 @@ protocol IMainView: AnyObject {
     var goToDeviceAt: ((IndexPath) -> Void)? { get set }
     var cellTappedAt: ((IndexPath) -> Void)? { get set }
 
-    func prepareView(devices: [SmartHomeDevice])
     func reloadView(devices: [SmartHomeDevice])
 }
 
@@ -29,11 +28,12 @@ final class MainView: UIView {
         let myCollectionView:UICollectionView = UICollectionView(
             frame: CGRect.zero,
             collectionViewLayout: UICollectionViewFlowLayout.init())
-        myCollectionView.register(SmartHomeItemCollectionViewCell.self,
-                                  forCellWithReuseIdentifier: SmartHomeItemCollectionViewCell.reuseIdentifier)
+        myCollectionView.register(SmartHomeDeviceCollectionViewCell.self,
+                                  forCellWithReuseIdentifier: SmartHomeDeviceCollectionViewCell.reuseIdentifier)
         myCollectionView.accessibilityIdentifier = "MainViewSmartHomeItemsCollectionView"
         return myCollectionView
     }()
+    
     // MARK: - Properties
 
     private var collectionViewDataSource = SmartHomeItemCollectionViewDataSource()
@@ -46,21 +46,25 @@ final class MainView: UIView {
     init() {
         super.init(frame: .zero)
         self.backgroundColor = .systemBackground
+        self.setupElements()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: - layoutSubviews
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let layout = self.setupCollectionViewLayout()
+        self.collectionView.setCollectionViewLayout(layout, animated: true)
     }
 }
 
 // MARK: - IMainView
 
 extension MainView: IMainView {
-    func prepareView(devices: [SmartHomeDevice]) {
-        self.setupElements()
-        self.collectionViewDataSource.setData(devices: devices)
-        self.collectionView.reloadData()
-    }
 
     func reloadView(devices: [SmartHomeDevice]) {
         self.collectionViewDataSource.setData(devices: devices)
@@ -76,8 +80,6 @@ private extension MainView {
     }
 
     func setupCollectionView() {
-        let layout = self.setupCollectionViewLayout()
-        self.collectionView.setCollectionViewLayout(layout, animated: true)
         self.collectionViewDelegate = SmartHomeItemCollectionViewDelegate(withDelegate: self)
         self.collectionView.delegate = self.collectionViewDelegate
         self.collectionView.dataSource = self.collectionViewDataSource
@@ -117,12 +119,18 @@ private extension MainView {
     }
 }
 
+// MARK: - IImagesCollectionViewDelegate
+
 extension MainView: IImagesCollectionViewDelegate {
     func goToDevice(atIndexPath indexPath: IndexPath) {
         self.goToDeviceAt?(indexPath)
     }
+}
 
-    func selectedCell(indexPath: IndexPath) {
+// MARK: - ICustomCollectionViewDelegate
+
+extension MainView: ICustomCollectionViewDelegate {
+    func didSelectItemAt(indexPath: IndexPath) {
         self.cellTappedAt?(indexPath)
     }
 }
