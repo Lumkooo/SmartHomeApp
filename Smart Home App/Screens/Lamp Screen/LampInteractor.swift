@@ -13,6 +13,7 @@ protocol ILampInteractor {
     func setLightLevel(_ level: Int)
     func setLightColor(_ color: UIColor)
     func colorChangeButtonPressed()
+    func getDeviceName() -> String
 }
 
 protocol ILampInteractorOuter: AnyObject {
@@ -60,6 +61,10 @@ extension LampInteractor: ILampInteractor {
 
     func colorChangeButtonPressed() {
         self.presenter?.goToChangeColorVC(delegate: self)
+    }
+
+    func getDeviceName() -> String {
+        return self.lamp.name
     }
 }
 

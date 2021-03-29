@@ -43,4 +43,10 @@ enum AppConstants {
         static let circleFill = UIImage(systemName: "circle.fill") ?? UIImage()
         static let xmark = UIImage(systemName: "xmark") ?? UIImage()
     }
+
+    // MARK: - Fonts
+
+    enum Fonts {
+        static let deviceLabel = UIFont.systemFont(ofSize: 15)
+    }
 }

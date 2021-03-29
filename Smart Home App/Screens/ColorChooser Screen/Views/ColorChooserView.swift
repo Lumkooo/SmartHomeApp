@@ -23,7 +23,7 @@ final class ColorChooserView: UIView {
         static let alphaMultiplier: CGFloat = 0.3
         static let containerViewWidthMultiplier: CGFloat = 0.75
         static let containerViewHeightMultiplier: CGFloat = 0.4
-        static let colorLabelFont = UIFont.systemFont(ofSize: 23, weight: .semibold)
+        static let colorLabelFont = UIFont.systemFont(ofSize: 23)
         static let animationDuration: Double = 0.5
         static let collectionViewItemWidth: CGFloat = 0.3
     }

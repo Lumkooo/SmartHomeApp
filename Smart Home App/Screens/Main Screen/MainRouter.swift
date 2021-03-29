@@ -12,22 +12,21 @@ protocol IMainRouter {
 }
 
 final class MainRouter {
+
+    // MARK: - Properties
+
     weak var vc: UIViewController?
+    private let devicesRouter = DevicesRouter()
 }
 
 // MARK: - IMainRouter
 
 extension MainRouter: IMainRouter {
     func showDevice(_ device: SmartHomeDevice) {
-        if device is Lamp {
-            guard let lamp = device as? Lamp else {
-                assertionFailure("Can't downcast device to lamp")
-                return
-            }
-            let vc = LampScreenAssembly.createVC(lamp: lamp)
-            self.vc?.navigationController?.pushViewController(vc, animated: true)
-        } else {
-            print("this isn't lamp")
+        guard let viewController = self.devicesRouter.getViewControllerFor(device: device) else {
+            assertionFailure("oops, error occured")
+            return
         }
+        self.vc?.navigationController?.pushViewController(viewController, animated: true)
     }
 }

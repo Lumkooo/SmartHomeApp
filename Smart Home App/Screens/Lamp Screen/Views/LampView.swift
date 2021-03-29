@@ -22,25 +22,29 @@ final class LampView: UIView, UITextViewDelegate {
     // MARK: - Constants
 
     private enum Constants {
-        static let customSliderWidthMultiplier: CGFloat = 0.4
-        static let lightLevelLabelFont = UIFont.systemFont(ofSize: 23, weight: .semibold)
-        static let lightColorFont = UIFont.systemFont(ofSize: 18, weight: .light)
-        static let changeLightColorButtonPreferredSymbolConfigationMultiplier: CGFloat = 0.75
+        static let customSliderWidthMultiplier: CGFloat = 0.35
     }
 
     // MARK: - Views
 
     private let customSlider = CustomSlider()
 
-    private lazy var toggleStateButton: UIButton = {
-        let myButton = UIButton()
-        myButton.backgroundColor = .label
-        myButton.tintColor = .systemBackground
-        myButton.setImage(AppConstants.Images.power, for: .normal)
-        myButton.addTarget(self,
+    private lazy var toggleStateLabel: UILabel = {
+        let myLabel = UILabel()
+        myLabel.textColor = .label
+        myLabel.textAlignment = .center
+        myLabel.font = AppConstants.Fonts.deviceLabel
+        return myLabel
+    }()
+
+    private lazy var toggleStateButton: RoundedButton = {
+        let myRoundedButton = RoundedButton(backgroundColor: .label,
+                                     tintColor: .systemBackground,
+                                     image: AppConstants.Images.power)
+        myRoundedButton.addTarget(self,
                            action: #selector(self.toggleStateButtonTapped),
                            for: .touchUpInside)
-        return myButton
+        return myRoundedButton
     }()
 
     private lazy var lightColorLabel: UILabel = {
@@ -49,19 +53,18 @@ final class LampView: UIView, UITextViewDelegate {
         myLabel.numberOfLines = 0
         myLabel.textAlignment = .center
         myLabel.text = "Цвет:"
-        myLabel.font = Constants.lightColorFont
+        myLabel.font = AppConstants.Fonts.deviceLabel
         return myLabel
     }()
 
-    private lazy var changeLightColorButton: UIButton = {
-        let myButton = UIButton()
-        myButton.backgroundColor = .label
-        myButton.tintColor = .white
-        myButton.setImage(AppConstants.Images.circleFill, for: .normal)
-        myButton.addTarget(self,
+    private lazy var changeLightColorButton: RoundedButton = {
+        let myRoundedButton = RoundedButton(backgroundColor: .label,
+                                     tintColor: .white,
+                                     image: AppConstants.Images.circleFill)
+        myRoundedButton.addTarget(self,
                            action: #selector(self.changeLightColorButtonTapped),
                            for: .touchUpInside)
-        return myButton
+        return myRoundedButton
     }()
 
     private lazy var activityIndicatorView: UIActivityIndicatorView = {
@@ -88,18 +91,6 @@ final class LampView: UIView, UITextViewDelegate {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    // MARK: - layoutSubviews
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        self.toggleStateButton.layer.cornerRadius = self.toggleStateButton.frame.width/2
-        self.changeLightColorButton.layer.cornerRadius = self.changeLightColorButton.frame.width/2
-
-        self.changeLightColorButton.setPreferredSymbolConfiguration(
-            .init(pointSize: self.changeLightColorButton.frame.width*Constants.changeLightColorButtonPreferredSymbolConfigationMultiplier),
-            forImageIn: .normal)
     }
 
     // MARK: - Обработка нажатий на кнопку
@@ -130,6 +121,7 @@ extension LampView: ILampView {
             }
             self.changeLightColorButton.isUserInteractionEnabled = lamp.isTurnedOn
             self.setLightColor(color: lamp.lightColor)
+            self.setLampState(lamp.isTurnedOn)
         }
     }
 
@@ -159,6 +151,7 @@ private extension LampView {
     func setupElements() {
         self.setupCustomSlider()
         self.setupToggleStateButton()
+        self.setupToggleStateLabel()
         self.setupChangeLightColorButton()
         self.setupLightColorLabel()
     }
@@ -196,6 +189,22 @@ private extension LampView {
         ])
     }
 
+    func setupToggleStateLabel() {
+        self.addSubview(self.toggleStateLabel)
+        self.toggleStateLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            self.toggleStateLabel.trailingAnchor.constraint(
+                equalTo: self.safeAreaLayoutGuide.trailingAnchor,
+                constant: -AppConstants.Constraints.quarter),
+            self.toggleStateLabel.leadingAnchor.constraint(
+                equalTo: self.customSlider.trailingAnchor,
+                constant: AppConstants.Constraints.quarter),
+            self.toggleStateLabel.bottomAnchor.constraint(equalTo: self.toggleStateButton.topAnchor,
+                                                         constant: -AppConstants.Constraints.normal)
+        ])
+    }
+
     func setupChangeLightColorButton() {
         self.addSubview(self.changeLightColorButton)
         self.changeLightColorButton.translatesAutoresizingMaskIntoConstraints = false
@@ -219,10 +228,10 @@ private extension LampView {
         NSLayoutConstraint.activate([
             self.lightColorLabel.leadingAnchor.constraint(
                 equalTo: self.safeAreaLayoutGuide.leadingAnchor,
-                constant: AppConstants.Constraints.normal),
+                constant: AppConstants.Constraints.quarter),
             self.lightColorLabel.trailingAnchor.constraint(
                 equalTo: self.customSlider.leadingAnchor,
-                constant: -AppConstants.Constraints.normal),
+                constant: -AppConstants.Constraints.quarter),
             self.lightColorLabel.bottomAnchor.constraint(equalTo: self.changeLightColorButton.topAnchor,
                                                          constant: -AppConstants.Constraints.normal)
         ])
@@ -241,7 +250,6 @@ extension LampView: ICustomSlider {
 
 private extension LampView {
     func setLightLevel(level: Int) {
-        print("Size: ", self.customSlider.frame.height)
         self.customSlider.setSliderLevel(level: level)
     }
 }
@@ -249,5 +257,10 @@ private extension LampView {
 private extension LampView {
     func setLightColor(color: UIColor) {
         self.changeLightColorButton.tintColor = color
+    }
+
+    func setLampState(_ state: Bool) {
+        let text = state ? "Включено!" : "Выключено!"
+        self.toggleStateLabel.text = text
     }
 }

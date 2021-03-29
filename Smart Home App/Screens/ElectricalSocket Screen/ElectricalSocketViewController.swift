@@ -1,22 +1,22 @@
 //
-//  LampViewController.swift
+//  ElectricalSocketViewController.swift
 //  Smart Home App
 //
-//  Created by Андрей Шамин on 3/23/21.
+//  Created by Андрей Шамин on 3/28/21.
 //
 
 import UIKit
 
-final class LampViewController: UIViewController {
+final class ElectricalSocketViewController: UIViewController {
 
     // MARK: - Properties
 
-    private let presenter: ILampPresenter
-    private let ui = LampView()
+    private let presenter: IElectricalSocketPresenter
+    private let ui = ElectricalSocketView()
 
     // MARK: - Init
 
-    init(presenter: ILampPresenter) {
+    init(presenter: IElectricalSocketPresenter) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
@@ -32,12 +32,7 @@ final class LampViewController: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = false
         self.view = self.ui
         self.setupVCTitle()
-        self.presenter.viewDidLoad(ui: ui)
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.presenter.viewDidAppear()
+        self.presenter.viewDidLoad(ui: self.ui)
     }
 
     private func setupVCTitle() {
@@ -45,3 +40,4 @@ final class LampViewController: UIViewController {
         self.title = deviceName
     }
 }
+

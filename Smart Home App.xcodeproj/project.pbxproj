@@ -14,6 +14,7 @@
 		CE17598E2609A555007AFDCA /* LampRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17598D2609A555007AFDCA /* LampRouter.swift */; };
 		CE1759962609A6E8007AFDCA /* LampScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1759952609A6E8007AFDCA /* LampScreenAssembly.swift */; };
 		CE2FB90A260A076C00D084BC /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FB909260A076C00D084BC /* CustomSlider.swift */; };
+		CE3B19E32611868600D39A41 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3B19E22611868600D39A41 /* RoundedButton.swift */; };
 		CE54A5722605E0F400352C46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5712605E0F400352C46 /* AppDelegate.swift */; };
 		CE54A5742605E0F400352C46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5732605E0F400352C46 /* SceneDelegate.swift */; };
 		CE54A5762605E0F400352C46 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5752605E0F400352C46 /* MainViewController.swift */; };
@@ -41,6 +42,13 @@
 		CEBE41F32606F52500E370AB /* SmartHomeDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE41F22606F52500E370AB /* SmartHomeDevice.swift */; };
 		CEBE41F82606F87D00E370AB /* Lamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE41F72606F87D00E370AB /* Lamp.swift */; };
 		CEBE4209260706AC00E370AB /* ElectricalSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE4208260706AC00E370AB /* ElectricalSocket.swift */; };
+		CED7A86426103B9200F61391 /* ElectricalSocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A86326103B9200F61391 /* ElectricalSocketViewController.swift */; };
+		CED7A86C26103B9900F61391 /* ElectricalSocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A86B26103B9900F61391 /* ElectricalSocketView.swift */; };
+		CED7A87126103B9F00F61391 /* ElectricalSocketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A87026103B9F00F61391 /* ElectricalSocketPresenter.swift */; };
+		CED7A87626103BA600F61391 /* ElectricalSocketInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A87526103BA600F61391 /* ElectricalSocketInteractor.swift */; };
+		CED7A87B26103BAC00F61391 /* ElectricalSocketRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A87A26103BAC00F61391 /* ElectricalSocketRouter.swift */; };
+		CED7A88026103E1B00F61391 /* ElectricalSocketAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A87F26103E1B00F61391 /* ElectricalSocketAssembly.swift */; };
+		CED7A88826103F6000F61391 /* DevicesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A88726103F6000F61391 /* DevicesRouter.swift */; };
 		CEE811DA260D7BDC00BB8DFD /* ColorChooserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE811D9260D7BDC00BB8DFD /* ColorChooserView.swift */; };
 		CEE811E4260D7DDF00BB8DFD /* ColorChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE811E3260D7DDF00BB8DFD /* ColorChooserViewController.swift */; };
 		CEE811E9260D7DE800BB8DFD /* ColorChooserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE811E8260D7DE800BB8DFD /* ColorChooserPresenter.swift */; };
@@ -78,6 +86,7 @@
 		CE17598D2609A555007AFDCA /* LampRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampRouter.swift; sourceTree = "<group>"; };
 		CE1759952609A6E8007AFDCA /* LampScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampScreenAssembly.swift; sourceTree = "<group>"; };
 		CE2FB909260A076C00D084BC /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		CE3B19E22611868600D39A41 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		CE54A56E2605E0F400352C46 /* Smart Home App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Home App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE54A5712605E0F400352C46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE54A5732605E0F400352C46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +120,13 @@
 		CEBE41F22606F52500E370AB /* SmartHomeDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHomeDevice.swift; sourceTree = "<group>"; };
 		CEBE41F72606F87D00E370AB /* Lamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lamp.swift; sourceTree = "<group>"; };
 		CEBE4208260706AC00E370AB /* ElectricalSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalSocket.swift; sourceTree = "<group>"; };
+		CED7A86326103B9200F61391 /* ElectricalSocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalSocketViewController.swift; sourceTree = "<group>"; };
+		CED7A86B26103B9900F61391 /* ElectricalSocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalSocketView.swift; sourceTree = "<group>"; };
+		CED7A87026103B9F00F61391 /* ElectricalSocketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalSocketPresenter.swift; sourceTree = "<group>"; };
+		CED7A87526103BA600F61391 /* ElectricalSocketInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalSocketInteractor.swift; sourceTree = "<group>"; };
+		CED7A87A26103BAC00F61391 /* ElectricalSocketRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalSocketRouter.swift; sourceTree = "<group>"; };
+		CED7A87F26103E1B00F61391 /* ElectricalSocketAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalSocketAssembly.swift; sourceTree = "<group>"; };
+		CED7A88726103F6000F61391 /* DevicesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesRouter.swift; sourceTree = "<group>"; };
 		CEE811D9260D7BDC00BB8DFD /* ColorChooserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChooserView.swift; sourceTree = "<group>"; };
 		CEE811E3260D7DDF00BB8DFD /* ColorChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChooserViewController.swift; sourceTree = "<group>"; };
 		CEE811E8260D7DE800BB8DFD /* ColorChooserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChooserPresenter.swift; sourceTree = "<group>"; };
@@ -154,6 +170,7 @@
 				CE54A5AB2605E12800352C46 /* Main Screen */,
 				CE17596B2609A4C6007AFDCA /* Lamp Screen */,
 				CEE811DE260D7DA000BB8DFD /* ColorChooser Screen */,
+				CED7A86126103B7900F61391 /* ElectricalSocket Screen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -259,6 +276,7 @@
 				CE54A5BB2605E18D00352C46 /* NavigationControllerAssembly.swift */,
 				CE1759952609A6E8007AFDCA /* LampScreenAssembly.swift */,
 				CEE811F7260D7F7900BB8DFD /* ColorChooserAssembly.swift */,
+				CED7A87F26103E1B00F61391 /* ElectricalSocketAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -302,6 +320,7 @@
 				CEBBF7CF2606F08B00BD9F13 /* SmartHomeDeviceCollectionViewCell.swift */,
 				CE2FB909260A076C00D084BC /* CustomSlider.swift */,
 				CEE81202260D83DD00BB8DFD /* ColorItemCollectionViewCell.swift */,
+				CE3B19E22611868600D39A41 /* RoundedButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -310,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				CEBE41D82606F2FD00E370AB /* AppConstants.swift */,
+				CED7A88726103F6000F61391 /* DevicesRouter.swift */,
 				CEBE41EA2606F3F700E370AB /* SmartHomeItemsCollectionViewModel */,
 				CEE81208260D869A00BB8DFD /* ColorItemCollectionViewModel */,
 				CEE8121B260D87A900BB8DFD /* Protocols */,
@@ -333,6 +353,26 @@
 				CE830629260841AF005CE030 /* TemperatureUnit.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		CED7A86126103B7900F61391 /* ElectricalSocket Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CED7A86226103B8800F61391 /* Views */,
+				CED7A86326103B9200F61391 /* ElectricalSocketViewController.swift */,
+				CED7A87026103B9F00F61391 /* ElectricalSocketPresenter.swift */,
+				CED7A87526103BA600F61391 /* ElectricalSocketInteractor.swift */,
+				CED7A87A26103BAC00F61391 /* ElectricalSocketRouter.swift */,
+			);
+			path = "ElectricalSocket Screen";
+			sourceTree = "<group>";
+		};
+		CED7A86226103B8800F61391 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CED7A86B26103B9900F61391 /* ElectricalSocketView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CEE811DE260D7DA000BB8DFD /* ColorChooser Screen */ = {
@@ -507,6 +547,7 @@
 				CEBBF7BC2606EDFE00BD9F13 /* MainView.swift in Sources */,
 				CEE811EE260D7DEE00BB8DFD /* ColorChooserInteractor.swift in Sources */,
 				CE17597C2609A506007AFDCA /* LampView.swift in Sources */,
+				CED7A87626103BA600F61391 /* ElectricalSocketInteractor.swift in Sources */,
 				CE83062F260848EF005CE030 /* Curtains.swift in Sources */,
 				CEE811E9260D7DE800BB8DFD /* ColorChooserPresenter.swift in Sources */,
 				CE1759962609A6E8007AFDCA /* LampScreenAssembly.swift in Sources */,
@@ -516,11 +557,15 @@
 				CE83064626085115005CE030 /* GarageDoor.swift in Sources */,
 				CEE81203260D83DD00BB8DFD /* ColorItemCollectionViewCell.swift in Sources */,
 				CEBBF7C12606EE0500BD9F13 /* MainPresenter.swift in Sources */,
+				CED7A86C26103B9900F61391 /* ElectricalSocketView.swift in Sources */,
+				CED7A86426103B9200F61391 /* ElectricalSocketViewController.swift in Sources */,
 				CE1759892609A550007AFDCA /* LampPresenter.swift in Sources */,
 				CEE811F3260D7DF300BB8DFD /* ColorChooserRouter.swift in Sources */,
 				CE54A5762605E0F400352C46 /* MainViewController.swift in Sources */,
 				CEBBF7D02606F08B00BD9F13 /* SmartHomeDeviceCollectionViewCell.swift in Sources */,
+				CED7A88026103E1B00F61391 /* ElectricalSocketAssembly.swift in Sources */,
 				CE83064B26085533005CE030 /* IrrigationSystem.swift in Sources */,
+				CED7A87126103B9F00F61391 /* ElectricalSocketPresenter.swift in Sources */,
 				CEBBF7CB2606EE1100BD9F13 /* MainRouter.swift in Sources */,
 				CEBE41F32606F52500E370AB /* SmartHomeDevice.swift in Sources */,
 				CEBE41E12606F3B100E370AB /* SmartHomeItemCollectionViewDataSource.swift in Sources */,
@@ -528,15 +573,18 @@
 				CEBE41D92606F2FD00E370AB /* AppConstants.swift in Sources */,
 				CE17598E2609A555007AFDCA /* LampRouter.swift in Sources */,
 				CEBBF7C62606EE0C00BD9F13 /* MainInteractor.swift in Sources */,
+				CED7A87B26103BAC00F61391 /* ElectricalSocketRouter.swift in Sources */,
 				CE83062526083CE7005CE030 /* AirConditioner.swift in Sources */,
 				CEE811E4260D7DDF00BB8DFD /* ColorChooserViewController.swift in Sources */,
 				CEE81212260D86AF00BB8DFD /* ColorItemCollectionViewDataSource.swift in Sources */,
+				CED7A88826103F6000F61391 /* DevicesRouter.swift in Sources */,
 				CE83062A260841AF005CE030 /* TemperatureUnit.swift in Sources */,
 				CE54A5C12605E1D600352C46 /* TabBarControllerAssembly.swift in Sources */,
 				CEBE41E62606F3CD00E370AB /* SmartHomeItemCollectionViewDelegate.swift in Sources */,
 				CEE811F8260D7F7900BB8DFD /* ColorChooserAssembly.swift in Sources */,
 				CEBE4209260706AC00E370AB /* ElectricalSocket.swift in Sources */,
 				CE54A5722605E0F400352C46 /* AppDelegate.swift in Sources */,
+				CE3B19E32611868600D39A41 /* RoundedButton.swift in Sources */,
 				CEE81217260D87A600BB8DFD /* ICustomCollectionViewDelegate.swift in Sources */,
 				CEBE41F82606F87D00E370AB /* Lamp.swift in Sources */,
 				CEE8120A260D86A800BB8DFD /* ColorItemCollectionViewDelegate.swift in Sources */,

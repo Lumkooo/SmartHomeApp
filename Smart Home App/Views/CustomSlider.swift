@@ -157,14 +157,11 @@ final class CustomSlider: UIView {
         // Находим нужное положение уровня на customSliderView
         let translationValue = (Int(self.customSliderBackgroundView.frame.height) * (100-level))/100
 
-        print("translationValue", translationValue)
         // Выставляем translationTemproraryValue для дальнейшей работы со слайдером с этого места
         // и выставляет верхний constraint customSliderView равным self.translationTemproraryValue.y
 
         self.translationTemproraryValue = CGPoint(x: 0, y: translationValue)
         self.customSliderViewTopAnchor.constant = self.translationTemproraryValue.y
-        print("self.customSliderBackgroundView.frame.height", self.customSliderBackgroundView.frame.height)
-        print("self.customSliderView.frame.height", self.customSliderView.frame.height)
     }
 }
 

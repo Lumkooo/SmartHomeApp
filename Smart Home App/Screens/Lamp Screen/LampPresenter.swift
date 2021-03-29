@@ -10,6 +10,7 @@ import UIKit
 protocol ILampPresenter {
     func viewDidLoad(ui: ILampView)
     func viewDidAppear()
+    func getDeviceName() -> String
 }
 
 final class LampPresenter {
@@ -46,6 +47,10 @@ extension LampPresenter: ILampPresenter {
 
     func viewDidAppear() {
         self.interactor.loadInitData()
+    }
+
+    func getDeviceName() -> String {
+        return self.interactor.getDeviceName()
     }
 }
 
