@@ -1,5 +1,5 @@
 //
-//  ElectricalSocketView.swift
+//  SimpleDeviceView.swift
 //  Smart Home App
 //
 //  Created by Андрей Шамин on 3/28/21.
@@ -7,14 +7,14 @@
 
 import UIKit
 
-protocol IElectricalSocketView: AnyObject {
+protocol ISimpleDeviceView: AnyObject {
     var toggleButtonTapped: (() -> Void)? { get set }
 
-    func prepareView(electricalSocket: ElectricalSocket)
+    func prepareView(device: SmartHomeDevice)
     func reloadState(_ newState: Bool)
 }
 
-final class ElectricalSocketView: UIView {
+final class SimpleDeviceView: UIView {
 
     // MARK: - Views
 
@@ -57,11 +57,11 @@ final class ElectricalSocketView: UIView {
     }
 }
 
-// MARK: - IElectricalSocketView
+// MARK: - ISimpleDeviceView
 
-extension ElectricalSocketView: IElectricalSocketView {
-    func prepareView(electricalSocket: ElectricalSocket) {
-        self.setupState(electricalSocket.isTurnedOn)
+extension SimpleDeviceView: ISimpleDeviceView {
+    func prepareView(device: SmartHomeDevice) {
+        self.setupState(device.isTurnedOn)
     }
 
     func reloadState(_ newState: Bool) {
@@ -71,7 +71,7 @@ extension ElectricalSocketView: IElectricalSocketView {
 
 // MARK: - UISetup
 
-private extension ElectricalSocketView {
+private extension SimpleDeviceView {
     func setupElements() {
         self.setupToggleStateButton()
         self.setupToggleStateLabel()
@@ -103,7 +103,7 @@ private extension ElectricalSocketView {
     }
 }
 
-private extension ElectricalSocketView {
+private extension SimpleDeviceView {
     func setupState(_ state: Bool) {
         let text = state ? "Включено!" : "Выключено!"
         self.toggleStateLabel.text = text

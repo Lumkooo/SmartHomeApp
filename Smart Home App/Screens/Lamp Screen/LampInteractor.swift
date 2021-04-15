@@ -21,6 +21,7 @@ protocol ILampInteractorOuter: AnyObject {
     func changeLightColorTo(_ color: UIColor)
     func changeLightLevelTo(_ level: Int)
     func goToChangeColorVC(delegate: ColorChooserDelegate)
+    func reloadLampInfo(lamp: Lamp)
 }
 
 final class LampInteractor {
@@ -41,12 +42,12 @@ final class LampInteractor {
 
 extension LampInteractor: ILampInteractor {
     func loadInitData() {
-        self.prepareView()
+        self.presenter?.prepareView(lamp: self.lamp)
     }
 
     func toggleLamp() {
         self.lamp.toggleDevice()
-        self.prepareView()
+        self.presenter?.reloadLampInfo(lamp: self.lamp)
     }
 
     func setLightLevel(_ level: Int) {
@@ -65,13 +66,6 @@ extension LampInteractor: ILampInteractor {
 
     func getDeviceName() -> String {
         return self.lamp.name
-    }
-}
-
-
-private extension LampInteractor {
-    func prepareView() {
-        self.presenter?.prepareView(lamp: self.lamp)
     }
 }
 

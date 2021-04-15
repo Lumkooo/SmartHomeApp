@@ -17,16 +17,20 @@ final class DevicesRouter {
             }
             let vc = LampScreenAssembly.createVC(lamp: lamp)
             return vc
-        } else if device is ElectricalSocket {
-            guard let electricalSocket = device as? ElectricalSocket else {
-                assertionFailure("Can't downcast device to electrical socket")
+        } else if device is AirConditioner {
+            guard let airConditioner = device as? AirConditioner else {
+                assertionFailure("Can't downcast device to lamp")
                 return nil
             }
-            let vc = ElectricalSocketAssembly.createVC(electricalSocket: electricalSocket)
+            let vc = AirConditionerAssembly.createVC(airConditioner: airConditioner)
             return vc
-        } else {
-            print("can't downcast yet")
+        } else if device is Curtains {
+            // TODO: - Curtains
             return nil
+        } else {
+            // Устройства, у которых нет детальной настройки - только включение/выключение
+            let vc = SimpleDeviceAssembly.createVC(device: device)
+            return vc
         }
     }
 }

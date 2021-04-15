@@ -31,6 +31,12 @@
 		CE83063726084DD8005CE030 /* Ventilator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83063626084DD8005CE030 /* Ventilator.swift */; };
 		CE83064626085115005CE030 /* GarageDoor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83064526085115005CE030 /* GarageDoor.swift */; };
 		CE83064B26085533005CE030 /* IrrigationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83064A26085533005CE030 /* IrrigationSystem.swift */; };
+		CEADBC6C261409DA000C4D97 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADBC6B261409DA000C4D97 /* ProfileView.swift */; };
+		CEADBC74261409E2000C4D97 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADBC73261409E2000C4D97 /* ProfileViewController.swift */; };
+		CEADBC79261409EB000C4D97 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADBC78261409EB000C4D97 /* ProfilePresenter.swift */; };
+		CEADBC7E261409F2000C4D97 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADBC7D261409F2000C4D97 /* ProfileInteractor.swift */; };
+		CEADBC83261409F8000C4D97 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADBC82261409F8000C4D97 /* ProfileRouter.swift */; };
+		CEADBC8826140C11000C4D97 /* ProfileVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADBC8726140C11000C4D97 /* ProfileVCAssembly.swift */; };
 		CEBBF7BC2606EDFE00BD9F13 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7BB2606EDFE00BD9F13 /* MainView.swift */; };
 		CEBBF7C12606EE0500BD9F13 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7C02606EE0500BD9F13 /* MainPresenter.swift */; };
 		CEBBF7C62606EE0C00BD9F13 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7C52606EE0C00BD9F13 /* MainInteractor.swift */; };
@@ -42,12 +48,11 @@
 		CEBE41F32606F52500E370AB /* SmartHomeDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE41F22606F52500E370AB /* SmartHomeDevice.swift */; };
 		CEBE41F82606F87D00E370AB /* Lamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE41F72606F87D00E370AB /* Lamp.swift */; };
 		CEBE4209260706AC00E370AB /* ElectricalSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE4208260706AC00E370AB /* ElectricalSocket.swift */; };
-		CED7A86426103B9200F61391 /* ElectricalSocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A86326103B9200F61391 /* ElectricalSocketViewController.swift */; };
-		CED7A86C26103B9900F61391 /* ElectricalSocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A86B26103B9900F61391 /* ElectricalSocketView.swift */; };
-		CED7A87126103B9F00F61391 /* ElectricalSocketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A87026103B9F00F61391 /* ElectricalSocketPresenter.swift */; };
-		CED7A87626103BA600F61391 /* ElectricalSocketInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A87526103BA600F61391 /* ElectricalSocketInteractor.swift */; };
-		CED7A87B26103BAC00F61391 /* ElectricalSocketRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A87A26103BAC00F61391 /* ElectricalSocketRouter.swift */; };
-		CED7A88026103E1B00F61391 /* ElectricalSocketAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A87F26103E1B00F61391 /* ElectricalSocketAssembly.swift */; };
+		CED7A86426103B9200F61391 /* SimpleDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A86326103B9200F61391 /* SimpleDeviceViewController.swift */; };
+		CED7A87126103B9F00F61391 /* SimpleDevicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A87026103B9F00F61391 /* SimpleDevicePresenter.swift */; };
+		CED7A87626103BA600F61391 /* SimpleDeviceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A87526103BA600F61391 /* SimpleDeviceInteractor.swift */; };
+		CED7A87B26103BAC00F61391 /* SimpleDeviceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A87A26103BAC00F61391 /* SimpleDeviceRouter.swift */; };
+		CED7A88026103E1B00F61391 /* SimpleDeviceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A87F26103E1B00F61391 /* SimpleDeviceAssembly.swift */; };
 		CED7A88826103F6000F61391 /* DevicesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A88726103F6000F61391 /* DevicesRouter.swift */; };
 		CEE811DA260D7BDC00BB8DFD /* ColorChooserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE811D9260D7BDC00BB8DFD /* ColorChooserView.swift */; };
 		CEE811E4260D7DDF00BB8DFD /* ColorChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE811E3260D7DDF00BB8DFD /* ColorChooserViewController.swift */; };
@@ -59,6 +64,13 @@
 		CEE8120A260D86A800BB8DFD /* ColorItemCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE81209260D86A800BB8DFD /* ColorItemCollectionViewDelegate.swift */; };
 		CEE81212260D86AF00BB8DFD /* ColorItemCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE81211260D86AF00BB8DFD /* ColorItemCollectionViewDataSource.swift */; };
 		CEE81217260D87A600BB8DFD /* ICustomCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE81216260D87A600BB8DFD /* ICustomCollectionViewDelegate.swift */; };
+		CEED9FA826254C91001D9DF4 /* AirConditionerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED9FA726254C91001D9DF4 /* AirConditionerView.swift */; };
+		CEED9FB026254C9B001D9DF4 /* AirConditionerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED9FAF26254C9B001D9DF4 /* AirConditionerViewController.swift */; };
+		CEED9FB526254CA4001D9DF4 /* AirConditionerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED9FB426254CA4001D9DF4 /* AirConditionerPresenter.swift */; };
+		CEED9FBA26254CAC001D9DF4 /* AirConditionerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED9FB926254CAC001D9DF4 /* AirConditionerInteractor.swift */; };
+		CEED9FBF26254CB1001D9DF4 /* AirConditionerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED9FBE26254CB1001D9DF4 /* AirConditionerRouter.swift */; };
+		CEED9FC426254FF2001D9DF4 /* AirConditionerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED9FC326254FF2001D9DF4 /* AirConditionerAssembly.swift */; };
+		CEF4F9142612C88C0003DD6C /* SimpleDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F9132612C88C0003DD6C /* SimpleDeviceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +121,12 @@
 		CE83063626084DD8005CE030 /* Ventilator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ventilator.swift; sourceTree = "<group>"; };
 		CE83064526085115005CE030 /* GarageDoor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageDoor.swift; sourceTree = "<group>"; };
 		CE83064A26085533005CE030 /* IrrigationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrrigationSystem.swift; sourceTree = "<group>"; };
+		CEADBC6B261409DA000C4D97 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		CEADBC73261409E2000C4D97 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CEADBC78261409EB000C4D97 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		CEADBC7D261409F2000C4D97 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		CEADBC82261409F8000C4D97 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		CEADBC8726140C11000C4D97 /* ProfileVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVCAssembly.swift; sourceTree = "<group>"; };
 		CEBBF7BB2606EDFE00BD9F13 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CEBBF7C02606EE0500BD9F13 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		CEBBF7C52606EE0C00BD9F13 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
@@ -120,12 +138,11 @@
 		CEBE41F22606F52500E370AB /* SmartHomeDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHomeDevice.swift; sourceTree = "<group>"; };
 		CEBE41F72606F87D00E370AB /* Lamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lamp.swift; sourceTree = "<group>"; };
 		CEBE4208260706AC00E370AB /* ElectricalSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalSocket.swift; sourceTree = "<group>"; };
-		CED7A86326103B9200F61391 /* ElectricalSocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalSocketViewController.swift; sourceTree = "<group>"; };
-		CED7A86B26103B9900F61391 /* ElectricalSocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalSocketView.swift; sourceTree = "<group>"; };
-		CED7A87026103B9F00F61391 /* ElectricalSocketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalSocketPresenter.swift; sourceTree = "<group>"; };
-		CED7A87526103BA600F61391 /* ElectricalSocketInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalSocketInteractor.swift; sourceTree = "<group>"; };
-		CED7A87A26103BAC00F61391 /* ElectricalSocketRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalSocketRouter.swift; sourceTree = "<group>"; };
-		CED7A87F26103E1B00F61391 /* ElectricalSocketAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalSocketAssembly.swift; sourceTree = "<group>"; };
+		CED7A86326103B9200F61391 /* SimpleDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDeviceViewController.swift; sourceTree = "<group>"; };
+		CED7A87026103B9F00F61391 /* SimpleDevicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDevicePresenter.swift; sourceTree = "<group>"; };
+		CED7A87526103BA600F61391 /* SimpleDeviceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDeviceInteractor.swift; sourceTree = "<group>"; };
+		CED7A87A26103BAC00F61391 /* SimpleDeviceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDeviceRouter.swift; sourceTree = "<group>"; };
+		CED7A87F26103E1B00F61391 /* SimpleDeviceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDeviceAssembly.swift; sourceTree = "<group>"; };
 		CED7A88726103F6000F61391 /* DevicesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesRouter.swift; sourceTree = "<group>"; };
 		CEE811D9260D7BDC00BB8DFD /* ColorChooserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChooserView.swift; sourceTree = "<group>"; };
 		CEE811E3260D7DDF00BB8DFD /* ColorChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChooserViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +154,13 @@
 		CEE81209260D86A800BB8DFD /* ColorItemCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorItemCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		CEE81211260D86AF00BB8DFD /* ColorItemCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorItemCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		CEE81216260D87A600BB8DFD /* ICustomCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICustomCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		CEED9FA726254C91001D9DF4 /* AirConditionerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionerView.swift; sourceTree = "<group>"; };
+		CEED9FAF26254C9B001D9DF4 /* AirConditionerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionerViewController.swift; sourceTree = "<group>"; };
+		CEED9FB426254CA4001D9DF4 /* AirConditionerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionerPresenter.swift; sourceTree = "<group>"; };
+		CEED9FB926254CAC001D9DF4 /* AirConditionerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionerInteractor.swift; sourceTree = "<group>"; };
+		CEED9FBE26254CB1001D9DF4 /* AirConditionerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionerRouter.swift; sourceTree = "<group>"; };
+		CEED9FC326254FF2001D9DF4 /* AirConditionerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionerAssembly.swift; sourceTree = "<group>"; };
+		CEF4F9132612C88C0003DD6C /* SimpleDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDeviceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,10 +191,12 @@
 		CE1759672609A4BD007AFDCA /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CEE811DE260D7DA000BB8DFD /* ColorChooser Screen */,
 				CE54A5AB2605E12800352C46 /* Main Screen */,
 				CE17596B2609A4C6007AFDCA /* Lamp Screen */,
-				CEE811DE260D7DA000BB8DFD /* ColorChooser Screen */,
-				CED7A86126103B7900F61391 /* ElectricalSocket Screen */,
+				CED7A86126103B7900F61391 /* SimpleDevice Screen */,
+				CEED9FA426254C79001D9DF4 /* AirConditioner Screen */,
+				CEADBC69261409B7000C4D97 /* Profile Screen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -276,7 +302,9 @@
 				CE54A5BB2605E18D00352C46 /* NavigationControllerAssembly.swift */,
 				CE1759952609A6E8007AFDCA /* LampScreenAssembly.swift */,
 				CEE811F7260D7F7900BB8DFD /* ColorChooserAssembly.swift */,
-				CED7A87F26103E1B00F61391 /* ElectricalSocketAssembly.swift */,
+				CED7A87F26103E1B00F61391 /* SimpleDeviceAssembly.swift */,
+				CEADBC8726140C11000C4D97 /* ProfileVCAssembly.swift */,
+				CEED9FC326254FF2001D9DF4 /* AirConditionerAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -304,6 +332,26 @@
 				CE83064A26085533005CE030 /* IrrigationSystem.swift */,
 			);
 			path = SmartHomeDevices;
+			sourceTree = "<group>";
+		};
+		CEADBC69261409B7000C4D97 /* Profile Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CEADBC6A261409C7000C4D97 /* Views */,
+				CEADBC73261409E2000C4D97 /* ProfileViewController.swift */,
+				CEADBC78261409EB000C4D97 /* ProfilePresenter.swift */,
+				CEADBC7D261409F2000C4D97 /* ProfileInteractor.swift */,
+				CEADBC82261409F8000C4D97 /* ProfileRouter.swift */,
+			);
+			path = "Profile Screen";
+			sourceTree = "<group>";
+		};
+		CEADBC6A261409C7000C4D97 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEADBC6B261409DA000C4D97 /* ProfileView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CEBBF7BA2606EDF600BD9F13 /* Views */ = {
@@ -355,22 +403,22 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		CED7A86126103B7900F61391 /* ElectricalSocket Screen */ = {
+		CED7A86126103B7900F61391 /* SimpleDevice Screen */ = {
 			isa = PBXGroup;
 			children = (
 				CED7A86226103B8800F61391 /* Views */,
-				CED7A86326103B9200F61391 /* ElectricalSocketViewController.swift */,
-				CED7A87026103B9F00F61391 /* ElectricalSocketPresenter.swift */,
-				CED7A87526103BA600F61391 /* ElectricalSocketInteractor.swift */,
-				CED7A87A26103BAC00F61391 /* ElectricalSocketRouter.swift */,
+				CED7A86326103B9200F61391 /* SimpleDeviceViewController.swift */,
+				CED7A87026103B9F00F61391 /* SimpleDevicePresenter.swift */,
+				CED7A87526103BA600F61391 /* SimpleDeviceInteractor.swift */,
+				CED7A87A26103BAC00F61391 /* SimpleDeviceRouter.swift */,
 			);
-			path = "ElectricalSocket Screen";
+			path = "SimpleDevice Screen";
 			sourceTree = "<group>";
 		};
 		CED7A86226103B8800F61391 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CED7A86B26103B9900F61391 /* ElectricalSocketView.swift */,
+				CEF4F9132612C88C0003DD6C /* SimpleDeviceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -410,6 +458,26 @@
 				CEE81216260D87A600BB8DFD /* ICustomCollectionViewDelegate.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CEED9FA426254C79001D9DF4 /* AirConditioner Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CEED9FA526254C84001D9DF4 /* Views */,
+				CEED9FAF26254C9B001D9DF4 /* AirConditionerViewController.swift */,
+				CEED9FB426254CA4001D9DF4 /* AirConditionerPresenter.swift */,
+				CEED9FB926254CAC001D9DF4 /* AirConditionerInteractor.swift */,
+				CEED9FBE26254CB1001D9DF4 /* AirConditionerRouter.swift */,
+			);
+			path = "AirConditioner Screen";
+			sourceTree = "<group>";
+		};
+		CEED9FA526254C84001D9DF4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEED9FA726254C91001D9DF4 /* AirConditionerView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -546,48 +614,60 @@
 				CE2FB90A260A076C00D084BC /* CustomSlider.swift in Sources */,
 				CEBBF7BC2606EDFE00BD9F13 /* MainView.swift in Sources */,
 				CEE811EE260D7DEE00BB8DFD /* ColorChooserInteractor.swift in Sources */,
+				CEED9FC426254FF2001D9DF4 /* AirConditionerAssembly.swift in Sources */,
 				CE17597C2609A506007AFDCA /* LampView.swift in Sources */,
-				CED7A87626103BA600F61391 /* ElectricalSocketInteractor.swift in Sources */,
+				CED7A87626103BA600F61391 /* SimpleDeviceInteractor.swift in Sources */,
+				CEED9FBF26254CB1001D9DF4 /* AirConditionerRouter.swift in Sources */,
 				CE83062F260848EF005CE030 /* Curtains.swift in Sources */,
 				CEE811E9260D7DE800BB8DFD /* ColorChooserPresenter.swift in Sources */,
 				CE1759962609A6E8007AFDCA /* LampScreenAssembly.swift in Sources */,
+				CEED9FB526254CA4001D9DF4 /* AirConditionerPresenter.swift in Sources */,
+				CEADBC7E261409F2000C4D97 /* ProfileInteractor.swift in Sources */,
 				CE54A5BC2605E18D00352C46 /* NavigationControllerAssembly.swift in Sources */,
 				CE1759742609A4DC007AFDCA /* LampViewController.swift in Sources */,
 				CE1759812609A548007AFDCA /* LampInteractor.swift in Sources */,
 				CE83064626085115005CE030 /* GarageDoor.swift in Sources */,
 				CEE81203260D83DD00BB8DFD /* ColorItemCollectionViewCell.swift in Sources */,
 				CEBBF7C12606EE0500BD9F13 /* MainPresenter.swift in Sources */,
-				CED7A86C26103B9900F61391 /* ElectricalSocketView.swift in Sources */,
-				CED7A86426103B9200F61391 /* ElectricalSocketViewController.swift in Sources */,
+				CED7A86426103B9200F61391 /* SimpleDeviceViewController.swift in Sources */,
+				CEED9FA826254C91001D9DF4 /* AirConditionerView.swift in Sources */,
 				CE1759892609A550007AFDCA /* LampPresenter.swift in Sources */,
 				CEE811F3260D7DF300BB8DFD /* ColorChooserRouter.swift in Sources */,
 				CE54A5762605E0F400352C46 /* MainViewController.swift in Sources */,
 				CEBBF7D02606F08B00BD9F13 /* SmartHomeDeviceCollectionViewCell.swift in Sources */,
-				CED7A88026103E1B00F61391 /* ElectricalSocketAssembly.swift in Sources */,
+				CEADBC8826140C11000C4D97 /* ProfileVCAssembly.swift in Sources */,
+				CED7A88026103E1B00F61391 /* SimpleDeviceAssembly.swift in Sources */,
+				CEADBC74261409E2000C4D97 /* ProfileViewController.swift in Sources */,
 				CE83064B26085533005CE030 /* IrrigationSystem.swift in Sources */,
-				CED7A87126103B9F00F61391 /* ElectricalSocketPresenter.swift in Sources */,
+				CED7A87126103B9F00F61391 /* SimpleDevicePresenter.swift in Sources */,
 				CEBBF7CB2606EE1100BD9F13 /* MainRouter.swift in Sources */,
 				CEBE41F32606F52500E370AB /* SmartHomeDevice.swift in Sources */,
+				CEADBC6C261409DA000C4D97 /* ProfileView.swift in Sources */,
 				CEBE41E12606F3B100E370AB /* SmartHomeItemCollectionViewDataSource.swift in Sources */,
 				CE83063726084DD8005CE030 /* Ventilator.swift in Sources */,
+				CEADBC83261409F8000C4D97 /* ProfileRouter.swift in Sources */,
 				CEBE41D92606F2FD00E370AB /* AppConstants.swift in Sources */,
 				CE17598E2609A555007AFDCA /* LampRouter.swift in Sources */,
 				CEBBF7C62606EE0C00BD9F13 /* MainInteractor.swift in Sources */,
-				CED7A87B26103BAC00F61391 /* ElectricalSocketRouter.swift in Sources */,
+				CEED9FBA26254CAC001D9DF4 /* AirConditionerInteractor.swift in Sources */,
+				CED7A87B26103BAC00F61391 /* SimpleDeviceRouter.swift in Sources */,
 				CE83062526083CE7005CE030 /* AirConditioner.swift in Sources */,
 				CEE811E4260D7DDF00BB8DFD /* ColorChooserViewController.swift in Sources */,
 				CEE81212260D86AF00BB8DFD /* ColorItemCollectionViewDataSource.swift in Sources */,
 				CED7A88826103F6000F61391 /* DevicesRouter.swift in Sources */,
 				CE83062A260841AF005CE030 /* TemperatureUnit.swift in Sources */,
 				CE54A5C12605E1D600352C46 /* TabBarControllerAssembly.swift in Sources */,
+				CEF4F9142612C88C0003DD6C /* SimpleDeviceView.swift in Sources */,
 				CEBE41E62606F3CD00E370AB /* SmartHomeItemCollectionViewDelegate.swift in Sources */,
 				CEE811F8260D7F7900BB8DFD /* ColorChooserAssembly.swift in Sources */,
 				CEBE4209260706AC00E370AB /* ElectricalSocket.swift in Sources */,
+				CEADBC79261409EB000C4D97 /* ProfilePresenter.swift in Sources */,
 				CE54A5722605E0F400352C46 /* AppDelegate.swift in Sources */,
 				CE3B19E32611868600D39A41 /* RoundedButton.swift in Sources */,
 				CEE81217260D87A600BB8DFD /* ICustomCollectionViewDelegate.swift in Sources */,
 				CEBE41F82606F87D00E370AB /* Lamp.swift in Sources */,
 				CEE8120A260D86A800BB8DFD /* ColorItemCollectionViewDelegate.swift in Sources */,
+				CEED9FB026254C9B001D9DF4 /* AirConditionerViewController.swift in Sources */,
 				CE54A5742605E0F400352C46 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

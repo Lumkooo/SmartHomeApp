@@ -25,6 +25,7 @@ enum AppConstants {
         static let borderWidth: CGFloat = 5
         static let shadowRadius: CGFloat = 6
         static let shadowOpacity: Float = 1
+        static let customSliderWidthMultiplier: CGFloat = 0.35
     }
 
     // MARK: - Images
@@ -48,5 +49,6 @@ enum AppConstants {
 
     enum Fonts {
         static let deviceLabel = UIFont.systemFont(ofSize: 15)
+        static let deviceSmallLabel = UIFont.systemFont(ofSize: 13)
     }
 }

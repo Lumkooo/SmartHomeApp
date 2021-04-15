@@ -1,0 +1,50 @@
+//
+//  SimpleDeviceInteractor.swift
+//  Smart Home App
+//
+//  Created by Андрей Шамин on 3/28/21.
+//
+
+import Foundation
+
+protocol ISimpleDeviceInteractor {
+    func loadInitData()
+    func getDeviceName() -> String
+    func toggleState()
+}
+
+protocol ISimpleDeviceInteractorOuter: AnyObject {
+    func prepareView(device: SmartHomeDevice)
+    func reloadState(_ newState: Bool)
+}
+
+final class SimpleDeviceInteractor {
+
+    // MARK: - Properties
+
+    weak var presenter: ISimpleDeviceInteractorOuter?
+    private let device: SmartHomeDevice
+
+    // MARK: - Init
+
+    init(device: SmartHomeDevice) {
+        self.device = device
+    }
+}
+
+// MARK: - ISimpleDeviceInteractor
+
+extension SimpleDeviceInteractor: ISimpleDeviceInteractor {
+    func loadInitData() {
+        self.presenter?.prepareView(device: self.device)
+    }
+
+    func getDeviceName() -> String {
+        return self.device.name
+    }
+
+    func toggleState() {
+        self.device.toggleDevice()
+        self.presenter?.reloadState(device.isTurnedOn)
+    }
+}

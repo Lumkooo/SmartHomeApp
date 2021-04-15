@@ -13,13 +13,9 @@ enum TabBarControllerAssembly {
         // MARK: - Images
 
         enum Images {
-            static let mapTabImage = UIImage(systemName: "map")
-            static let mapTabFilledImage = UIImage(systemName: "map.fill")
             static let mainTabImage = UIImage(systemName: "list.bullet")
             static let profileTabImage = UIImage(systemName: "person")
             static let profileTabFilledImage = UIImage(systemName: "person.fill")
-            static let bagTabImage = UIImage(systemName: "bag")
-            static let bagTabFilledImage = UIImage(systemName: "bag.fill")
         }
 
 
@@ -30,12 +26,21 @@ enum TabBarControllerAssembly {
         let mainViewController =  MainScreenAssembly.createVC()
         let mainTab = NavigationControllerAssembly.createNavigationVC(for: mainViewController)
         let mainTabItem = UITabBarItem(title: "Главная",
-                                         image: Images.bagTabImage,
-                                         selectedImage: Images.bagTabFilledImage)
+                                         image: Images.mainTabImage,
+                                         selectedImage: Images.mainTabImage)
         mainTab.tabBarItem = mainTabItem
         mainTab.navigationItem.largeTitleDisplayMode = .always
 
-        let controllers = [mainTab]
+        // MARK: - MainScreen
+
+        let profileViewController =  ProfileVCAssembly.createVC()
+        let profileTab = NavigationControllerAssembly.createNavigationVC(for: profileViewController)
+        let profileTabItem = UITabBarItem(title: "Профиль",
+                                         image: Images.profileTabImage,
+                                         selectedImage: Images.profileTabFilledImage)
+        profileTab.tabBarItem = profileTabItem
+
+        let controllers = [mainTab, profileTab]
         tabBar.viewControllers = controllers
 
         return tabBar

@@ -1,5 +1,5 @@
 //
-//  ElectricalSocketViewController.swift
+//  SimpleDeviceViewController.swift
 //  Smart Home App
 //
 //  Created by Андрей Шамин on 3/28/21.
@@ -7,16 +7,16 @@
 
 import UIKit
 
-final class ElectricalSocketViewController: UIViewController {
+final class SimpleDeviceViewController: UIViewController {
 
     // MARK: - Properties
 
-    private let presenter: IElectricalSocketPresenter
-    private let ui = ElectricalSocketView()
+    private let presenter: ISimpleDevicePresenter
+    private let ui = SimpleDeviceView()
 
     // MARK: - Init
 
-    init(presenter: IElectricalSocketPresenter) {
+    init(presenter: ISimpleDevicePresenter) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }

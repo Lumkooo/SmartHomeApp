@@ -1,28 +1,34 @@
 //
-//  LampView.swift
+//  AirConditionerView.swift
 //  Smart Home App
 //
-//  Created by Андрей Шамин on 3/23/21.
+//  Created by Андрей Шамин on 4/13/21.
 //
 
 import UIKit
 
-protocol ILampView: AnyObject {
-    var toggleLamp: (() -> Void)? { get set }
+protocol IAirConditionerView: AnyObject {
+    var toggleAirConditioner: (() -> Void)? { get set }
     var sliderDidChangeValue: ((Int) -> Void)? { get set }
-    var colorChangeButtonPressed: (() -> Void)? { get set }
 
-    func prepareView(lamp: Lamp)
-    func changeLampInfo(lamp: Lamp)
-    func changeLightColorTo(_ color: UIColor)
-    func changeLightLevelTo(_ level: Int)
+    func changeSliderValueTo(_ value: Int)
+    func prepareView(airConditioner: AirConditioner)
+    func changeAirConditionerInfo(airConditioner: AirConditioner)
 }
 
-final class LampView: UIView, UITextViewDelegate {
+final class AirConditionerView: UIView {
 
     // MARK: - Views
 
     private let customSlider = CustomSlider()
+    
+    private lazy var activityIndicatorView: UIActivityIndicatorView = {
+        let myActivityIndicatorView = UIActivityIndicatorView(style: .medium)
+        myActivityIndicatorView.color = .label
+        myActivityIndicatorView.hidesWhenStopped = true
+        myActivityIndicatorView.startAnimating()
+        return myActivityIndicatorView
+    }()
 
     private lazy var toggleStateLabel: UILabel = {
         let myLabel = UILabel()
@@ -42,39 +48,36 @@ final class LampView: UIView, UITextViewDelegate {
         return myRoundedButton
     }()
 
-    private lazy var lightColorLabel: UILabel = {
+    private let minimumTempratureLabel: UILabel = {
         let myLabel = UILabel()
         myLabel.textColor = .label
+        myLabel.font = AppConstants.Fonts.deviceLabel
         myLabel.numberOfLines = 0
-        myLabel.textAlignment = .center
-        myLabel.text = "Цвет:"
+        return myLabel
+    }()
+
+    private let maximumTempratureLabel: UILabel = {
+        let myLabel = UILabel()
+        myLabel.textColor = .label
         myLabel.font = AppConstants.Fonts.deviceLabel
         return myLabel
     }()
 
-    private lazy var changeLightColorButton: RoundedButton = {
-        let myRoundedButton = RoundedButton(backgroundColor: .label,
-                                     tintColor: .white,
-                                     image: AppConstants.Images.circleFill)
-        myRoundedButton.addTarget(self,
-                           action: #selector(self.changeLightColorButtonTapped),
-                           for: .touchUpInside)
-        return myRoundedButton
-    }()
-
-    private lazy var activityIndicatorView: UIActivityIndicatorView = {
-        let myActivityIndicatorView = UIActivityIndicatorView(style: .medium)
-        myActivityIndicatorView.color = .label
-        myActivityIndicatorView.hidesWhenStopped = true
-        myActivityIndicatorView.startAnimating()
-        return myActivityIndicatorView
+    private lazy var currentTempratureLabel: UILabel = {
+        let myLabel = UILabel()
+        myLabel.textColor = .label
+        myLabel.font = AppConstants.Fonts.deviceSmallLabel
+        myLabel.textAlignment = .center
+        myLabel.numberOfLines = 0
+        return myLabel
     }()
 
     // MARK: - Properties
 
-    var toggleLamp: (() -> Void)?
+    var toggleAirConditioner: (() -> Void)?
     var sliderDidChangeValue: ((Int) -> Void)?
-    var colorChangeButtonPressed: (() -> Void)?
+    private let tempraturePrefix: String = "Температура:\n"
+    private let tempratureSuffix: String = "°С"
 
     // MARK: - Init
 
@@ -91,52 +94,45 @@ final class LampView: UIView, UITextViewDelegate {
     // MARK: - Обработка нажатий на кнопку
 
     @objc private func toggleStateButtonTapped() {
-        self.toggleLamp?()
-    }
-
-    @objc private func changeLightColorButtonTapped() {
-        // TODO: - Смена цвета
-        self.colorChangeButtonPressed?()
+        self.toggleAirConditioner?()
     }
 }
 
-// MARK: - ILampView
+// MARK: - IAirConditionerView
 
-extension LampView: ILampView {
-    func prepareView(lamp: Lamp) {
+extension AirConditionerView: IAirConditionerView {
+    func prepareView(airConditioner: AirConditioner) {
         self.setupElements()
         self.activityIndicatorView.stopAnimating()
 
         // Не могу понять почему без хотя бы малейшего ожидания на customSlider
         // не выставляется значение уровня...
         DispatchQueue.main.asyncAfter(deadline: .now()+0.001) {
-            self.changeLampInfo(lamp: lamp)
+            self.changeAirConditionerInfo(airConditioner: airConditioner)
         }
+        self.minimumTempratureLabel.text = "\(airConditioner.minimumTemprature)°С"
+        self.maximumTempratureLabel.text = "\(airConditioner.maximumTemprature)°С"
     }
 
-    func changeLampInfo(lamp: Lamp) {
-        self.customSlider.isUserInteractionEnabled = lamp.isTurnedOn
-        if lamp.isTurnedOn {
-            self.setLightLevel(level: lamp.lightLevel)
+    func changeAirConditionerInfo(airConditioner: AirConditioner) {
+        self.customSlider.isUserInteractionEnabled = airConditioner.isTurnedOn
+        if airConditioner.isTurnedOn {
+            self.currentTempratureLabel.isHidden = false
+            self.setTempratureLevel(level: airConditioner.temperatureLevel)
+        } else {
+            self.currentTempratureLabel.isHidden = true
         }
-        self.changeLightColorButton.isUserInteractionEnabled = lamp.isTurnedOn
-        self.setLightColor(color: lamp.lightColor)
-        self.setLampState(lamp.isTurnedOn)
+        self.setAirConditionerState(airConditioner.isTurnedOn)
     }
 
-    func changeLightColorTo(_ color: UIColor) {
-        self.setLightColor(color: color)
-    }
-
-    func changeLightLevelTo(_ level: Int) {
-        self.setLightLevel(level: level)
+    func changeSliderValueTo(_ value: Int) {
+        self.setTempratureLevel(level: value)
     }
 }
 
 // MARK: - UISetup
 
-private extension LampView {
-
+private extension AirConditionerView {
     func setupActivityIndicatorView() {
         self.addSubview(self.activityIndicatorView)
         self.activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
@@ -151,15 +147,16 @@ private extension LampView {
         self.setupCustomSlider()
         self.setupToggleStateButton()
         self.setupToggleStateLabel()
-        self.setupChangeLightColorButton()
-        self.setupLightColorLabel()
+        self.setupMinimumTempratureLabel()
+        self.setupMaximumTempratureLabel()
+        self.setupCurrentTempratureLabel()
     }
 
     func setupCustomSlider() {
         self.addSubview(self.customSlider)
         self.customSlider.translatesAutoresizingMaskIntoConstraints = false
         self.customSlider.delegate = self
-        
+
         NSLayoutConstraint.activate([
             self.customSlider.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.customSlider.widthAnchor.constraint(
@@ -173,7 +170,7 @@ private extension LampView {
                 constant: AppConstants.Constraints.normal)
         ])
     }
-
+    
     func setupToggleStateButton() {
         self.addSubview(self.toggleStateButton)
         self.toggleStateButton.translatesAutoresizingMaskIntoConstraints = false
@@ -204,42 +201,47 @@ private extension LampView {
         ])
     }
 
-    func setupChangeLightColorButton() {
-        self.addSubview(self.changeLightColorButton)
-        self.changeLightColorButton.translatesAutoresizingMaskIntoConstraints = false
+    func setupMinimumTempratureLabel() {
+        self.addSubview(self.minimumTempratureLabel)
+        self.minimumTempratureLabel.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            self.changeLightColorButton.leadingAnchor.constraint(
-                equalTo: self.safeAreaLayoutGuide.leadingAnchor,
-                constant: AppConstants.Constraints.normal),
-            self.changeLightColorButton.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            self.changeLightColorButton.trailingAnchor.constraint(
-                equalTo: self.customSlider.leadingAnchor,
-                constant: -AppConstants.Constraints.normal),
-            self.changeLightColorButton.heightAnchor.constraint(equalTo: self.toggleStateButton.widthAnchor)
+            self.minimumTempratureLabel.bottomAnchor.constraint(equalTo: self.customSlider.bottomAnchor,
+                                                                constant: -AppConstants.Constraints.half),
+            self.minimumTempratureLabel.trailingAnchor.constraint(equalTo: self.customSlider.leadingAnchor,
+                                                                  constant: -AppConstants.Constraints.half)
         ])
     }
 
-    func setupLightColorLabel() {
-        self.addSubview(self.lightColorLabel)
-        self.lightColorLabel.translatesAutoresizingMaskIntoConstraints = false
+    func setupMaximumTempratureLabel() {
+        self.addSubview(self.maximumTempratureLabel)
+        self.maximumTempratureLabel.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            self.lightColorLabel.leadingAnchor.constraint(
-                equalTo: self.safeAreaLayoutGuide.leadingAnchor,
-                constant: AppConstants.Constraints.quarter),
-            self.lightColorLabel.trailingAnchor.constraint(
-                equalTo: self.customSlider.leadingAnchor,
-                constant: -AppConstants.Constraints.quarter),
-            self.lightColorLabel.bottomAnchor.constraint(equalTo: self.changeLightColorButton.topAnchor,
-                                                         constant: -AppConstants.Constraints.normal)
+            self.maximumTempratureLabel.topAnchor.constraint(equalTo: self.customSlider.topAnchor,
+                                                                constant: AppConstants.Constraints.half),
+            self.maximumTempratureLabel.trailingAnchor.constraint(equalTo: self.customSlider.leadingAnchor,
+                                                                  constant: -AppConstants.Constraints.half)
+        ])
+    }
+
+    func setupCurrentTempratureLabel() {
+        self.addSubview(self.currentTempratureLabel)
+        self.currentTempratureLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            self.currentTempratureLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor,
+                                                                 constant: AppConstants.Constraints.quarter),
+            self.currentTempratureLabel.trailingAnchor.constraint(equalTo: self.customSlider.leadingAnchor,
+                                                                  constant: -AppConstants.Constraints.quarter),
+            self.currentTempratureLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor)
         ])
     }
 }
 
 // MARK: - ICustomSlider
 
-extension LampView: ICustomSlider {
+extension AirConditionerView: ICustomSlider {
     func sliderDidChangeValue(customSlider: CustomSlider, value: Int) {
         self.sliderDidChangeValue?(value)
     }
@@ -247,19 +249,21 @@ extension LampView: ICustomSlider {
 
 // MARK: - Работа с кастомным слайдером
 
-private extension LampView {
-    func setLightLevel(level: Int) {
+private extension AirConditionerView {
+    func setTempratureLevel(level: Int) {
         self.customSlider.setSliderLevel(level: level)
-    }
-}
-
-private extension LampView {
-    func setLightColor(color: UIColor) {
-        self.changeLightColorButton.tintColor = color
+        let celsiumDegrees = self.temperatureLevelToTemprature(level)
+        self.currentTempratureLabel.text = self.tempraturePrefix+String(celsiumDegrees)+self.tempratureSuffix
     }
 
-    func setLampState(_ state: Bool) {
+    func setAirConditionerState(_ state: Bool) {
         let text = state ? "Включено!" : "Выключено!"
         self.toggleStateLabel.text = text
+    }
+
+    func temperatureLevelToTemprature(_ tempratureLevel: Int,
+                                      minimumTemperature: Int = 5,
+                                      maximumTemperature: Int = 35) -> Int {
+        return minimumTemperature + (tempratureLevel*(maximumTemperature-minimumTemperature))/100
     }
 }

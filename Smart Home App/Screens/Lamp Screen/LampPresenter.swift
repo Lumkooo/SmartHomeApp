@@ -72,4 +72,8 @@ extension LampPresenter: ILampInteractorOuter {
     func goToChangeColorVC(delegate: ColorChooserDelegate) {
         self.router.showChangeColorVC(delegate: delegate)
     }
+
+    func reloadLampInfo(lamp: Lamp) {
+        self.ui?.changeLampInfo(lamp: lamp)
+    }
 }
