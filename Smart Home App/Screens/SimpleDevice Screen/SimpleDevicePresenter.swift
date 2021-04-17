@@ -47,12 +47,12 @@ extension SimpleDevicePresenter: ISimpleDevicePresenter {
 // MARK: - ISimpleDeviceInteractorOuter
 
 extension SimpleDevicePresenter: ISimpleDeviceInteractorOuter {
-    func reloadState(_ newState: Bool) {
-        self.ui?.reloadState(newState)
-    }
-
     func prepareView(device: SmartHomeDevice) {
         self.ui?.prepareView(device: device)
+    }
+
+    func reloadStateOfDevice(_ device: SmartHomeDevice) {
+        self.ui?.reloadStateOfDevice(device)
     }
 }
 

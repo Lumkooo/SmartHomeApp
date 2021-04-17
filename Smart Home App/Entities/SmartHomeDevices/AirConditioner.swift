@@ -43,6 +43,14 @@ final class AirConditioner: SmartHomeDevice {
         self.temperatureLevel = Constants.comfortTempratureLevel
         super.init(name: name, code: code, image: AppConstants.Images.airConditioner)
     }
+
+    init(name: String, code: String, temperature: Int, temperatureLevel: Int) {
+        self.temperatureUnit = .celsius
+        self.temperature = temperature
+        self.temperatureLevel = temperatureLevel
+        super.init(name: name, code: code, image: AppConstants.Images.airConditioner)
+    }
+
 }
 
 // MARK: - IAirConditioner

@@ -11,7 +11,7 @@ protocol ISimpleDeviceView: AnyObject {
     var toggleButtonTapped: (() -> Void)? { get set }
 
     func prepareView(device: SmartHomeDevice)
-    func reloadState(_ newState: Bool)
+    func reloadStateOfDevice(_ device: SmartHomeDevice)
 }
 
 final class SimpleDeviceView: UIView {
@@ -61,11 +61,11 @@ final class SimpleDeviceView: UIView {
 
 extension SimpleDeviceView: ISimpleDeviceView {
     func prepareView(device: SmartHomeDevice) {
-        self.setupState(device.isTurnedOn)
+        self.setupStateOfDevice(device)
     }
 
-    func reloadState(_ newState: Bool) {
-        self.setupState(newState)
+    func reloadStateOfDevice(_ device: SmartHomeDevice) {
+        self.setupStateOfDevice(device)
     }
 }
 
@@ -104,8 +104,8 @@ private extension SimpleDeviceView {
 }
 
 private extension SimpleDeviceView {
-    func setupState(_ state: Bool) {
-        let text = state ? "Включено!" : "Выключено!"
+    func setupStateOfDevice(_ device: SmartHomeDevice) {
+        let text = device.isTurnedOn ? Localized("turnOn") : Localized("turnOff")
         self.toggleStateLabel.text = text
     }
 }

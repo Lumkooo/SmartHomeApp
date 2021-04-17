@@ -76,7 +76,7 @@ final class AirConditionerView: UIView {
 
     var toggleAirConditioner: (() -> Void)?
     var sliderDidChangeValue: ((Int) -> Void)?
-    private let tempraturePrefix: String = "Температура:\n"
+    private let tempraturePrefix: String = Localized("temperature")
     private let tempratureSuffix: String = "°С"
 
     // MARK: - Init
@@ -110,8 +110,8 @@ extension AirConditionerView: IAirConditionerView {
         DispatchQueue.main.asyncAfter(deadline: .now()+0.001) {
             self.changeAirConditionerInfo(airConditioner: airConditioner)
         }
-        self.minimumTempratureLabel.text = "\(airConditioner.minimumTemprature)°С"
-        self.maximumTempratureLabel.text = "\(airConditioner.maximumTemprature)°С"
+        self.minimumTempratureLabel.text = String(airConditioner.minimumTemprature) + self.tempratureSuffix
+        self.maximumTempratureLabel.text = String(airConditioner.maximumTemprature) + self.tempratureSuffix
     }
 
     func changeAirConditionerInfo(airConditioner: AirConditioner) {
@@ -253,11 +253,11 @@ private extension AirConditionerView {
     func setTempratureLevel(level: Int) {
         self.customSlider.setSliderLevel(level: level)
         let celsiumDegrees = self.temperatureLevelToTemprature(level)
-        self.currentTempratureLabel.text = self.tempraturePrefix+String(celsiumDegrees)+self.tempratureSuffix
+        self.currentTempratureLabel.text = self.tempraturePrefix+":\n"+String(celsiumDegrees)+self.tempratureSuffix
     }
 
     func setAirConditionerState(_ state: Bool) {
-        let text = state ? "Включено!" : "Выключено!"
+        let text = state ? Localized("turnOn") : Localized("turnOff")
         self.toggleStateLabel.text = text
     }
 

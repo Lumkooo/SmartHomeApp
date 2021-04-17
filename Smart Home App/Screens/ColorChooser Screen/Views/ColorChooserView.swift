@@ -43,7 +43,7 @@ final class ColorChooserView: UIView {
         myLabel.font = Constants.colorLabelFont
         myLabel.textAlignment = .center
         myLabel.textColor = .white
-        myLabel.text = "Выберете цвет свечения лампы:"
+        myLabel.text = Localized("chooseLampColor")
         myLabel.numberOfLines = 0
         return myLabel
     }()

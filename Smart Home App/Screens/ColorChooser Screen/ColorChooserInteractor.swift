@@ -48,7 +48,6 @@ extension ColorChooserInteractor: IColorChooserInteractor {
         if self.colors.count > index {
             let color = self.colors[index]
             self.delegate.colorDidChangeTo(color)
-            print("color is: ", color)
             self.presenter?.dismissVC()
         }
     }

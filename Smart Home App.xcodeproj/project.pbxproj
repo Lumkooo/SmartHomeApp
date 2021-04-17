@@ -29,7 +29,6 @@
 		CE83062A260841AF005CE030 /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE830629260841AF005CE030 /* TemperatureUnit.swift */; };
 		CE83062F260848EF005CE030 /* Curtains.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83062E260848EF005CE030 /* Curtains.swift */; };
 		CE83063726084DD8005CE030 /* Ventilator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83063626084DD8005CE030 /* Ventilator.swift */; };
-		CE83064626085115005CE030 /* GarageDoor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83064526085115005CE030 /* GarageDoor.swift */; };
 		CE83064B26085533005CE030 /* IrrigationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83064A26085533005CE030 /* IrrigationSystem.swift */; };
 		CEADBC6C261409DA000C4D97 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADBC6B261409DA000C4D97 /* ProfileView.swift */; };
 		CEADBC74261409E2000C4D97 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADBC73261409E2000C4D97 /* ProfileViewController.swift */; };
@@ -54,6 +53,14 @@
 		CED7A87B26103BAC00F61391 /* SimpleDeviceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A87A26103BAC00F61391 /* SimpleDeviceRouter.swift */; };
 		CED7A88026103E1B00F61391 /* SimpleDeviceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A87F26103E1B00F61391 /* SimpleDeviceAssembly.swift */; };
 		CED7A88826103F6000F61391 /* DevicesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A88726103F6000F61391 /* DevicesRouter.swift */; };
+		CEDB0BB4262A95D800F1B4DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEDB0BB6262A95D800F1B4DB /* Localizable.strings */; };
+		CEDB0BC2262A968400F1B4DB /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB0BC1262A968400F1B4DB /* Localized.swift */; };
+		CEDB0BCC262A9EDB00F1B4DB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB0BCB262A9EDB00F1B4DB /* MenuViewController.swift */; };
+		CEDB0BD2262A9EF300F1B4DB /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB0BD1262A9EF300F1B4DB /* MenuView.swift */; };
+		CEDB0BDA262A9EFA00F1B4DB /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB0BD9262A9EFA00F1B4DB /* MenuPresenter.swift */; };
+		CEDB0BDF262A9F0100F1B4DB /* MenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB0BDE262A9F0100F1B4DB /* MenuInteractor.swift */; };
+		CEDB0BE4262A9F0800F1B4DB /* MenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB0BE3262A9F0800F1B4DB /* MenuRouter.swift */; };
+		CEDB0BEC262AA1EB00F1B4DB /* MenuAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB0BEB262AA1EB00F1B4DB /* MenuAssembly.swift */; };
 		CEE811DA260D7BDC00BB8DFD /* ColorChooserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE811D9260D7BDC00BB8DFD /* ColorChooserView.swift */; };
 		CEE811E4260D7DDF00BB8DFD /* ColorChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE811E3260D7DDF00BB8DFD /* ColorChooserViewController.swift */; };
 		CEE811E9260D7DE800BB8DFD /* ColorChooserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE811E8260D7DE800BB8DFD /* ColorChooserPresenter.swift */; };
@@ -119,7 +126,6 @@
 		CE830629260841AF005CE030 /* TemperatureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUnit.swift; sourceTree = "<group>"; };
 		CE83062E260848EF005CE030 /* Curtains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curtains.swift; sourceTree = "<group>"; };
 		CE83063626084DD8005CE030 /* Ventilator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ventilator.swift; sourceTree = "<group>"; };
-		CE83064526085115005CE030 /* GarageDoor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageDoor.swift; sourceTree = "<group>"; };
 		CE83064A26085533005CE030 /* IrrigationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrrigationSystem.swift; sourceTree = "<group>"; };
 		CEADBC6B261409DA000C4D97 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CEADBC73261409E2000C4D97 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +150,18 @@
 		CED7A87A26103BAC00F61391 /* SimpleDeviceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDeviceRouter.swift; sourceTree = "<group>"; };
 		CED7A87F26103E1B00F61391 /* SimpleDeviceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDeviceAssembly.swift; sourceTree = "<group>"; };
 		CED7A88726103F6000F61391 /* DevicesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesRouter.swift; sourceTree = "<group>"; };
+		CEDB0BB5262A95D800F1B4DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CEDB0BBA262A95F000F1B4DB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CEDB0BBB262A95F000F1B4DB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CEDB0BBF262A962C00F1B4DB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CEDB0BC0262A962C00F1B4DB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CEDB0BC1262A968400F1B4DB /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
+		CEDB0BCB262A9EDB00F1B4DB /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		CEDB0BD1262A9EF300F1B4DB /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		CEDB0BD9262A9EFA00F1B4DB /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
+		CEDB0BDE262A9F0100F1B4DB /* MenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
+		CEDB0BE3262A9F0800F1B4DB /* MenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRouter.swift; sourceTree = "<group>"; };
+		CEDB0BEB262AA1EB00F1B4DB /* MenuAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAssembly.swift; sourceTree = "<group>"; };
 		CEE811D9260D7BDC00BB8DFD /* ColorChooserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChooserView.swift; sourceTree = "<group>"; };
 		CEE811E3260D7DDF00BB8DFD /* ColorChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChooserViewController.swift; sourceTree = "<group>"; };
 		CEE811E8260D7DE800BB8DFD /* ColorChooserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChooserPresenter.swift; sourceTree = "<group>"; };
@@ -191,6 +209,7 @@
 		CE1759672609A4BD007AFDCA /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CEDB0BCA262A9ECB00F1B4DB /* Menu Screen */,
 				CEE811DE260D7DA000BB8DFD /* ColorChooser Screen */,
 				CE54A5AB2605E12800352C46 /* Main Screen */,
 				CE17596B2609A4C6007AFDCA /* Lamp Screen */,
@@ -224,6 +243,7 @@
 		CE54A5652605E0F400352C46 = {
 			isa = PBXGroup;
 			children = (
+				CEDB0BB6262A95D800F1B4DB /* Localizable.strings */,
 				CE54A5702605E0F400352C46 /* Smart Home App */,
 				CE54A5872605E0F500352C46 /* Smart Home AppTests */,
 				CE54A5922605E0F500352C46 /* Smart Home AppUITests */,
@@ -305,6 +325,7 @@
 				CED7A87F26103E1B00F61391 /* SimpleDeviceAssembly.swift */,
 				CEADBC8726140C11000C4D97 /* ProfileVCAssembly.swift */,
 				CEED9FC326254FF2001D9DF4 /* AirConditionerAssembly.swift */,
+				CEDB0BEB262AA1EB00F1B4DB /* MenuAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -328,7 +349,6 @@
 				CE83062426083CE7005CE030 /* AirConditioner.swift */,
 				CE83062E260848EF005CE030 /* Curtains.swift */,
 				CE83063626084DD8005CE030 /* Ventilator.swift */,
-				CE83064526085115005CE030 /* GarageDoor.swift */,
 				CE83064A26085533005CE030 /* IrrigationSystem.swift */,
 			);
 			path = SmartHomeDevices;
@@ -376,6 +396,7 @@
 		CEBE41D72606F2EE00E370AB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CEDB0BC1262A968400F1B4DB /* Localized.swift */,
 				CEBE41D82606F2FD00E370AB /* AppConstants.swift */,
 				CED7A88726103F6000F61391 /* DevicesRouter.swift */,
 				CEBE41EA2606F3F700E370AB /* SmartHomeItemsCollectionViewModel */,
@@ -419,6 +440,26 @@
 			isa = PBXGroup;
 			children = (
 				CEF4F9132612C88C0003DD6C /* SimpleDeviceView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEDB0BCA262A9ECB00F1B4DB /* Menu Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CEDB0BD0262A9EED00F1B4DB /* Views */,
+				CEDB0BCB262A9EDB00F1B4DB /* MenuViewController.swift */,
+				CEDB0BD9262A9EFA00F1B4DB /* MenuPresenter.swift */,
+				CEDB0BDE262A9F0100F1B4DB /* MenuInteractor.swift */,
+				CEDB0BE3262A9F0800F1B4DB /* MenuRouter.swift */,
+			);
+			path = "Menu Screen";
+			sourceTree = "<group>";
+		};
+		CEDB0BD0262A9EED00F1B4DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEDB0BD1262A9EF300F1B4DB /* MenuView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -565,6 +606,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				fr,
 			);
 			mainGroup = CE54A5652605E0F400352C46;
 			productRefGroup = CE54A56F2605E0F400352C46 /* Products */;
@@ -584,6 +627,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE54A57E2605E0F500352C46 /* LaunchScreen.storyboard in Resources */,
+				CEDB0BB4262A95D800F1B4DB /* Localizable.strings in Resources */,
 				CE54A57B2605E0F500352C46 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,26 +665,31 @@
 				CE83062F260848EF005CE030 /* Curtains.swift in Sources */,
 				CEE811E9260D7DE800BB8DFD /* ColorChooserPresenter.swift in Sources */,
 				CE1759962609A6E8007AFDCA /* LampScreenAssembly.swift in Sources */,
+				CEDB0BCC262A9EDB00F1B4DB /* MenuViewController.swift in Sources */,
 				CEED9FB526254CA4001D9DF4 /* AirConditionerPresenter.swift in Sources */,
 				CEADBC7E261409F2000C4D97 /* ProfileInteractor.swift in Sources */,
 				CE54A5BC2605E18D00352C46 /* NavigationControllerAssembly.swift in Sources */,
 				CE1759742609A4DC007AFDCA /* LampViewController.swift in Sources */,
 				CE1759812609A548007AFDCA /* LampInteractor.swift in Sources */,
-				CE83064626085115005CE030 /* GarageDoor.swift in Sources */,
 				CEE81203260D83DD00BB8DFD /* ColorItemCollectionViewCell.swift in Sources */,
 				CEBBF7C12606EE0500BD9F13 /* MainPresenter.swift in Sources */,
 				CED7A86426103B9200F61391 /* SimpleDeviceViewController.swift in Sources */,
+				CEDB0BE4262A9F0800F1B4DB /* MenuRouter.swift in Sources */,
 				CEED9FA826254C91001D9DF4 /* AirConditionerView.swift in Sources */,
 				CE1759892609A550007AFDCA /* LampPresenter.swift in Sources */,
 				CEE811F3260D7DF300BB8DFD /* ColorChooserRouter.swift in Sources */,
 				CE54A5762605E0F400352C46 /* MainViewController.swift in Sources */,
 				CEBBF7D02606F08B00BD9F13 /* SmartHomeDeviceCollectionViewCell.swift in Sources */,
+				CEDB0BC2262A968400F1B4DB /* Localized.swift in Sources */,
 				CEADBC8826140C11000C4D97 /* ProfileVCAssembly.swift in Sources */,
 				CED7A88026103E1B00F61391 /* SimpleDeviceAssembly.swift in Sources */,
+				CEDB0BEC262AA1EB00F1B4DB /* MenuAssembly.swift in Sources */,
 				CEADBC74261409E2000C4D97 /* ProfileViewController.swift in Sources */,
 				CE83064B26085533005CE030 /* IrrigationSystem.swift in Sources */,
+				CEDB0BDF262A9F0100F1B4DB /* MenuInteractor.swift in Sources */,
 				CED7A87126103B9F00F61391 /* SimpleDevicePresenter.swift in Sources */,
 				CEBBF7CB2606EE1100BD9F13 /* MainRouter.swift in Sources */,
+				CEDB0BD2262A9EF300F1B4DB /* MenuView.swift in Sources */,
 				CEBE41F32606F52500E370AB /* SmartHomeDevice.swift in Sources */,
 				CEADBC6C261409DA000C4D97 /* ProfileView.swift in Sources */,
 				CEBE41E12606F3B100E370AB /* SmartHomeItemCollectionViewDataSource.swift in Sources */,
@@ -669,6 +718,7 @@
 				CEE8120A260D86A800BB8DFD /* ColorItemCollectionViewDelegate.swift in Sources */,
 				CEED9FB026254C9B001D9DF4 /* AirConditionerViewController.swift in Sources */,
 				CE54A5742605E0F400352C46 /* SceneDelegate.swift in Sources */,
+				CEDB0BDA262A9EFA00F1B4DB /* MenuPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,8 +758,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				CE54A57D2605E0F500352C46 /* Base */,
+				CEDB0BBA262A95F000F1B4DB /* ru */,
+				CEDB0BBF262A962C00F1B4DB /* fr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CEDB0BB6262A95D800F1B4DB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEDB0BB5262A95D800F1B4DB /* en */,
+				CEDB0BBB262A95F000F1B4DB /* ru */,
+				CEDB0BC0262A962C00F1B4DB /* fr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -719,6 +781,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -780,6 +843,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

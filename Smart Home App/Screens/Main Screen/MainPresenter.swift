@@ -9,6 +9,8 @@ import Foundation
 
 protocol IMainPresenter {
     func viewDidAppear(ui: IMainView)
+    func goToMenu(delegate: IMenuDelegate)
+    func moveContentBackAfterMenu()
 }
 
 final class MainPresenter {
@@ -43,6 +45,15 @@ extension MainPresenter: IMainPresenter {
             self?.interactor.cellTappedAt(indexPath)
         }
         self.interactor.loadInitData()
+    }
+
+    func goToMenu(delegate: IMenuDelegate) {
+        self.ui?.moveCollectionViewOnLeft()
+        self.router.showMenu(delegate: delegate)
+    }
+
+    func moveContentBackAfterMenu() {
+        self.ui?.moveContentBackAfterMenu()
     }
 }
 

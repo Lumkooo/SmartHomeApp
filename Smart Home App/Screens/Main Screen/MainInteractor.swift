@@ -27,10 +27,7 @@ final class MainInteractor {
                                       AirConditioner(name: "Кондиционер", code: "94930534"),
                                       Curtains(name: "Шторы", code: "12340895"),
                                       Ventilator(name: "Вентилятор", code: "32146854"),
-                                      GarageDoor(name: "Ворота гаража", code: "12093621"),
                                       IrrigationSystem(name: "Система полива", code: "21394031")]
-
-
 }
 
 // MARK: - IMainInteractor

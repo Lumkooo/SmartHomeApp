@@ -9,6 +9,7 @@ import UIKit
 
 protocol IMainRouter {
     func showDevice(_ device: SmartHomeDevice)
+    func showMenu(delegate: IMenuDelegate)
 }
 
 final class MainRouter {
@@ -28,5 +29,11 @@ extension MainRouter: IMainRouter {
             return
         }
         self.vc?.navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    func showMenu(delegate: IMenuDelegate) {
+        let menuVC = MenuAssembly.createVC(delegate: delegate)
+        menuVC.modalPresentationStyle = .overFullScreen
+        self.vc?.navigationController?.present(menuVC, animated: false)
     }
 }

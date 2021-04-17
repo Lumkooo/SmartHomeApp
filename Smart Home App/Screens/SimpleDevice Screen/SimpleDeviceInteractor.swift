@@ -15,7 +15,7 @@ protocol ISimpleDeviceInteractor {
 
 protocol ISimpleDeviceInteractorOuter: AnyObject {
     func prepareView(device: SmartHomeDevice)
-    func reloadState(_ newState: Bool)
+    func reloadStateOfDevice(_ device: SmartHomeDevice)
 }
 
 final class SimpleDeviceInteractor {
@@ -45,6 +45,6 @@ extension SimpleDeviceInteractor: ISimpleDeviceInteractor {
 
     func toggleState() {
         self.device.toggleDevice()
-        self.presenter?.reloadState(device.isTurnedOn)
+        self.presenter?.reloadStateOfDevice(self.device)
     }
 }

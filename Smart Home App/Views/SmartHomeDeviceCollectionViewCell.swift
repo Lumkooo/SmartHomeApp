@@ -56,7 +56,7 @@ final class SmartHomeDeviceCollectionViewCell: UICollectionViewCell {
         self.deviceLabel.text = device.name
         self.deviceImageView.image = device.image
 
-        self.deviceStateLabel.text = device.isTurnedOn ? "Включено" : "Отключено"
+        self.deviceStateLabel.text = device.isTurnedOn ? Localized("turnOn") : Localized("turnOff")
         self.deviceStateLabel.textColor = device.isTurnedOn ? UIColor.systemGreen : UIColor.label
     }
 }

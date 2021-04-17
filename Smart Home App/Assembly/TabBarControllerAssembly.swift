@@ -25,7 +25,7 @@ enum TabBarControllerAssembly {
 
         let mainViewController =  MainScreenAssembly.createVC()
         let mainTab = NavigationControllerAssembly.createNavigationVC(for: mainViewController)
-        let mainTabItem = UITabBarItem(title: "Главная",
+        let mainTabItem = UITabBarItem(title: Localized("general"),
                                          image: Images.mainTabImage,
                                          selectedImage: Images.mainTabImage)
         mainTab.tabBarItem = mainTabItem
@@ -35,7 +35,7 @@ enum TabBarControllerAssembly {
 
         let profileViewController =  ProfileVCAssembly.createVC()
         let profileTab = NavigationControllerAssembly.createNavigationVC(for: profileViewController)
-        let profileTabItem = UITabBarItem(title: "Профиль",
+        let profileTabItem = UITabBarItem(title: Localized("profile"),
                                          image: Images.profileTabImage,
                                          selectedImage: Images.profileTabFilledImage)
         profileTab.tabBarItem = profileTabItem

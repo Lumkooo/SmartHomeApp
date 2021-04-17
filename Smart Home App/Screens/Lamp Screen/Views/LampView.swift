@@ -47,7 +47,7 @@ final class LampView: UIView, UITextViewDelegate {
         myLabel.textColor = .label
         myLabel.numberOfLines = 0
         myLabel.textAlignment = .center
-        myLabel.text = "Цвет:"
+        myLabel.text = Localized("color")
         myLabel.font = AppConstants.Fonts.deviceLabel
         return myLabel
     }()
@@ -259,7 +259,7 @@ private extension LampView {
     }
 
     func setLampState(_ state: Bool) {
-        let text = state ? "Включено!" : "Выключено!"
+        let text = state ? Localized("turnOn") : Localized("turnOff")
         self.toggleStateLabel.text = text
     }
 }

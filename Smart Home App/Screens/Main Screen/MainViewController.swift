@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol IMenuDelegate {
+    func moveContentBackAfterMenu()
+}
+
 class MainViewController: UIViewController {
 
     // MARK: - Properties
@@ -19,8 +23,9 @@ class MainViewController: UIViewController {
     init(presenter: IMainPresenter) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
-        self.title = "Список устройств"
+        self.title = Localized("deviceList")
         self.view = self.ui
+        self.setupAddButton()
     }
 
     required init?(coder: NSCoder) {
@@ -31,11 +36,41 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.presenter.viewDidAppear(ui: self.ui)
     }
+
+    private func setupAddButton() {
+        var image = AppConstants.Images.menuImage
+        image = image.withRenderingMode(.alwaysOriginal)
+        let menu = UIBarButtonItem(image: image,
+                                   style:.plain,
+                                   target: self,
+                                   action: #selector(menuTapped))
+        self.navigationItem.setRightBarButton(menu, animated: true)
+    }
+
+    @objc private func menuTapped() {
+        self.presenter.goToMenu(delegate: self)
+        UIView.animate(withDuration: AppConstants.AnimationTime.menuAnimationTime) {
+            self.navigationController?.navigationBar.transform = CGAffineTransform(
+                translationX: -self.view.frame.width * AppConstants.Sizes.menuWidth,
+                y: 0)
+        }
+    }
 }
 
+extension MainViewController: IMenuDelegate {
+    func moveContentBackAfterMenu() {
+        self.presenter.moveContentBackAfterMenu()
+        UIView.animate(withDuration: AppConstants.AnimationTime.menuAnimationTime) {
+            self.navigationController?.navigationBar.transform = CGAffineTransform(
+                translationX: 0,
+                y: 0)
+        }
+    }
+}

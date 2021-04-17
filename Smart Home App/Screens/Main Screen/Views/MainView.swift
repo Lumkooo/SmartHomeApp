@@ -12,6 +12,8 @@ protocol IMainView: AnyObject {
     var cellTappedAt: ((IndexPath) -> Void)? { get set }
 
     func reloadView(devices: [SmartHomeDevice])
+    func moveCollectionViewOnLeft()
+    func moveContentBackAfterMenu()
 }
 
 final class MainView: UIView {
@@ -65,10 +67,25 @@ final class MainView: UIView {
 // MARK: - IMainView
 
 extension MainView: IMainView {
-
     func reloadView(devices: [SmartHomeDevice]) {
         self.collectionViewDataSource.setData(devices: devices)
         self.collectionView.reloadData()
+    }
+    
+    func moveCollectionViewOnLeft() {
+        UIView.animate(withDuration: AppConstants.AnimationTime.menuAnimationTime) {
+            self.collectionView.transform = CGAffineTransform(
+                translationX: -self.frame.width * AppConstants.Sizes.menuWidth,
+                y: 0)
+        }
+    }
+    
+    func moveContentBackAfterMenu() {
+        UIView.animate(withDuration: AppConstants.AnimationTime.menuAnimationTime) {
+            self.collectionView.transform = CGAffineTransform(
+                translationX: 0,
+                y: 0)
+        }
     }
 }
 
@@ -104,7 +121,7 @@ private extension MainView {
     func setupCollectionViewLayout() -> UICollectionViewFlowLayout {
         // Ширина ячейки равна ширине экрана, поделенная на два минус места для отступа ячеек
         // друг от друга
-        let itemWidth = self.frame.width / 2 - 2 * AppConstants.Constraints.normal
+        let itemWidth = self.frame.width / 2 - 1.5 * AppConstants.Constraints.normal
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         // Высота ячейки равна ширине, умноженной на константу

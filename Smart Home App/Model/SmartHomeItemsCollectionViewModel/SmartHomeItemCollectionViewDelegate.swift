@@ -37,12 +37,12 @@ extension SmartHomeItemCollectionViewDelegate: UICollectionViewDelegate {
                         point: CGPoint) -> UIContextMenuConfiguration? {
         return UIContextMenuConfiguration(identifier: indexPath as NSIndexPath, previewProvider: nil) { _ in
 
-            let addToLiked = UIAction(title: "Добавить в избранное",
+            let addToLiked = UIAction(title: Localized("addToLiked"),
                                 image: AppConstants.Images.heartFill) { action in
                 // TODO: - Добавление в избранные
             }
 
-            let goToDevice = UIAction(title: "Перейти к устройству",
+            let goToDevice = UIAction(title: Localized("goToDevice"),
                                 image: AppConstants.Images.arrowRight) { action in
                 // TODO: - Переход к девайсу
                 self.delegate?.goToDevice(atIndexPath: indexPath)

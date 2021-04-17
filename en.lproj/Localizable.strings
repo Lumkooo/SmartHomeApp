@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Smart Home App
+
+  Created by Андрей Шамин on 4/17/21.
+  
+*/
+
+"deviceList" = "Device list";
+"turnOn" = "On";
+"turnOff" = "Off";
+"general" = "General";
+"profile" = "Profile";
+"addToLiked" = "Add to liked";
+"goToDevice" = "Go to device";
+"chooseLampColor" = "Choose the color of the lamp glow";
+"color" = "Color";
+"temperature" = "Temperature";
