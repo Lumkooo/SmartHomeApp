@@ -19,3 +19,4 @@
 "loved" = "Liked";
 "lovedDevices" = "Liked devices";
 "removeFromLiked" = "Remove from liked";
+"noDevicesText" = "There are no devices to display here! You will see them here after adding.";

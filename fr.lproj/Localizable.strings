@@ -19,3 +19,4 @@
 "loved" = "Favoris";
 "lovedDevices" = "Appareils favoris";
 "removeFromLiked" = "Supprimer de vos favoris";
+"noDevicesText" = "Il n'y a aucun appareil à afficher ici! Vous les verrez ici après avoir été ajoutés.!";

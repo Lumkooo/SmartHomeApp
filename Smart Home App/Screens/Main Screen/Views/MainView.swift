@@ -36,6 +36,15 @@ final class MainView: UIView {
         myCollectionView.accessibilityIdentifier = "MainViewSmartHomeItemsCollectionView"
         return myCollectionView
     }()
+
+    private lazy var zeroDevicesLabel: UILabel = {
+        let myLabel = UILabel()
+        myLabel.font = AppConstants.Fonts.deviceLabel
+        myLabel.numberOfLines = 0
+        myLabel.text = Localized("noDevicesText")
+        myLabel.textAlignment = .center
+        return myLabel
+    }()
     
     // MARK: - Properties
 
@@ -73,6 +82,11 @@ extension MainView: IMainView {
         self.collectionViewDataSource.setData(devices: devices)
         self.collectionViewDelegate?.setData(devices: devices)
         self.collectionView.reloadData()
+        if devices.isEmpty {
+            self.setupZeroDevicesLabel()
+        } else {
+            self.zeroDevicesLabel.removeFromSuperview()
+        }
     }
     
     func moveCollectionViewOnLeft() {
@@ -136,6 +150,19 @@ private extension MainView {
                                            right: AppConstants.Constraints.normal)
         layout.minimumLineSpacing = AppConstants.Constraints.normal
         return layout
+    }
+
+    func setupZeroDevicesLabel() {
+        self.addSubview(zeroDevicesLabel)
+        self.zeroDevicesLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            self.zeroDevicesLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor,
+                                                           constant: AppConstants.Constraints.normal),
+            self.zeroDevicesLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor,
+                                                            constant: -AppConstants.Constraints.normal),
+            self.zeroDevicesLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+        ])
     }
 }
 
