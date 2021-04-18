@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         self.title = Localized("deviceList")
         self.view = self.ui
-        self.setupAddButton()
+        self.setupMenuButton()
     }
 
     required init?(coder: NSCoder) {
@@ -36,7 +36,6 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -44,7 +43,7 @@ class MainViewController: UIViewController {
         self.presenter.viewDidAppear(ui: self.ui)
     }
 
-    private func setupAddButton() {
+    private func setupMenuButton() {
         var image = AppConstants.Images.menuImage
         image = image.withRenderingMode(.alwaysOriginal)
         let menu = UIBarButtonItem(image: image,

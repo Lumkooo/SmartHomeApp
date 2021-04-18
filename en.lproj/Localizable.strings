@@ -16,3 +16,6 @@
 "chooseLampColor" = "Choose the color of the lamp glow";
 "color" = "Color";
 "temperature" = "Temperature";
+"loved" = "Liked";
+"lovedDevices" = "Liked devices";
+"removeFromLiked" = "Remove from liked";

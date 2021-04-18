@@ -10,37 +10,39 @@ import UIKit
 enum TabBarControllerAssembly {
     static func createTabBar() -> UITabBarController {
 
-        // MARK: - Images
-
-        enum Images {
-            static let mainTabImage = UIImage(systemName: "list.bullet")
-            static let profileTabImage = UIImage(systemName: "person")
-            static let profileTabFilledImage = UIImage(systemName: "person.fill")
-        }
-
-
         let tabBar = UITabBarController()
 
-        // MARK: - MainScreen
+        // MARK: - Loved Devices Screen
 
-        let mainViewController =  MainScreenAssembly.createVC()
+        let lovedDevicesViewController =  LovedDevicesAssembly.createVC()
+        let lovedDevicesTab = NavigationControllerAssembly.createNavigationVC(for: lovedDevicesViewController)
+        let lovedDevicesTabItem = UITabBarItem(title: Localized("loved"),
+                                               image: AppConstants.Images.heart,
+                                               selectedImage: AppConstants.Images.heartFill)
+        lovedDevicesTab.tabBarItem = lovedDevicesTabItem
+        lovedDevicesTab.navigationItem.largeTitleDisplayMode = .always
+
+        // MARK: - Main Screen
+
+        let mainViewController =  MainScreenAssembly.createVC(lovedDevicesDelegate: lovedDevicesViewController)
         let mainTab = NavigationControllerAssembly.createNavigationVC(for: mainViewController)
         let mainTabItem = UITabBarItem(title: Localized("general"),
-                                         image: Images.mainTabImage,
-                                         selectedImage: Images.mainTabImage)
+                                       image: AppConstants.Images.mainTabImage,
+                                       selectedImage: AppConstants.Images.mainTabImage)
         mainTab.tabBarItem = mainTabItem
         mainTab.navigationItem.largeTitleDisplayMode = .always
 
-        // MARK: - MainScreen
+
+        // MARK: - Profile Screen
 
         let profileViewController =  ProfileVCAssembly.createVC()
         let profileTab = NavigationControllerAssembly.createNavigationVC(for: profileViewController)
         let profileTabItem = UITabBarItem(title: Localized("profile"),
-                                         image: Images.profileTabImage,
-                                         selectedImage: Images.profileTabFilledImage)
+                                          image: AppConstants.Images.profileTabImage,
+                                          selectedImage: AppConstants.Images.profileTabFilledImage)
         profileTab.tabBarItem = profileTabItem
 
-        let controllers = [mainTab, profileTab]
+        let controllers = [mainTab, lovedDevicesTab, profileTab]
         tabBar.viewControllers = controllers
 
         return tabBar

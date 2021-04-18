@@ -16,3 +16,6 @@
 "chooseLampColor" = "Выберете цвет свечения лампы";
 "color" = "Цвет";
 "temperature" = "Температура";
+"loved" = "Избранное";
+"lovedDevices" = "Избранные устройства";
+"removeFromLiked" = "Убрать из избранных";

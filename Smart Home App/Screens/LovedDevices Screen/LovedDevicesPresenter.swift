@@ -1,37 +1,37 @@
 //
-//  MainPresenter.swift
+//  LovedDevicesPresenter.swift
 //  Smart Home App
 //
-//  Created by Андрей Шамин on 3/21/21.
+//  Created by Андрей Шамин on 4/18/21.
 //
 
 import Foundation
 
-protocol IMainPresenter {
-    func viewDidAppear(ui: IMainView)
-    func goToMenu(delegate: IMenuDelegate)
-    func moveContentBackAfterMenu()
+protocol ILovedDevicesPresenter {
+    func reloadData()
+    func viewDidLoad(ui: IMainView)
 }
 
-final class MainPresenter {
+final class LovedDevicesPresenter {
 
     // MARK: - Properties
 
+    private let interactor: ILovedDevicesInteractor
+    private let router: ILovedDevicesRouter
     private weak var ui: IMainView?
-    private let interactor: IMainInteractor
-    private let router: IMainRouter
 
-    init(interactor: IMainInteractor, router: IMainRouter) {
+    // MARK: - Init
+
+    init(interactor: ILovedDevicesInteractor, router: ILovedDevicesRouter) {
         self.interactor = interactor
         self.router = router
     }
 }
 
-// MARK: - IMainPresenter
+// MARK: - ILovedDevicesPresenter
 
-extension MainPresenter: IMainPresenter {
-    
-    func viewDidAppear(ui: IMainView) {
+extension LovedDevicesPresenter: ILovedDevicesPresenter {
+    func viewDidLoad(ui: IMainView) {
         self.ui = ui
         self.ui?.goToDeviceAt = { [weak self] indexPath in
             let dev = self?.interactor.getDevice(atIndexPath: indexPath)
@@ -50,19 +50,14 @@ extension MainPresenter: IMainPresenter {
         self.interactor.loadInitData()
     }
 
-    func goToMenu(delegate: IMenuDelegate) {
-        self.ui?.moveCollectionViewOnLeft()
-        self.router.showMenu(delegate: delegate)
-    }
-
-    func moveContentBackAfterMenu() {
-        self.ui?.moveContentBackAfterMenu()
+    func reloadData() {
+        self.interactor.reloadData()
     }
 }
 
-// MARK: - IMainInteractorOuter
+// MARK: - ILovedDevicesInteractorOuter
 
-extension MainPresenter: IMainInteractorOuter {
+extension LovedDevicesPresenter: ILovedDevicesInteractorOuter {
     func reloadView(devices: [SmartHomeDevice]) {
         self.ui?.reloadView(devices: devices)
     }

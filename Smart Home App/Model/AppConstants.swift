@@ -33,6 +33,12 @@ enum AppConstants {
     // MARK: - Images
 
     enum Images {
+        static let mainTabImage = UIImage(systemName: "list.bullet")
+        static let profileTabImage = UIImage(systemName: "person")
+        static let profileTabFilledImage = UIImage(systemName: "person.fill")
+        static let heart = UIImage(systemName: "heart") ?? UIImage()
+        static let heartFill = UIImage(systemName: "heart.fill") ?? UIImage()
+
         static let lamp = UIImage(named: "lamp") ?? UIImage()
         static let electricalSocket = UIImage(named: "electricalSocket") ?? UIImage()
         static let airConditioner = UIImage(named: "airConditioner") ?? UIImage()
@@ -40,12 +46,12 @@ enum AppConstants {
         static let ventilator = UIImage(named: "ventilator") ?? UIImage()
         static let garageDoor = UIImage(named: "garageDoor") ?? UIImage()
         static let irrigationSystem = UIImage(named: "irrigationSystem") ?? UIImage()
-        static let heartFill = UIImage(systemName: "heart.fill") ?? UIImage()
         static let arrowRight = UIImage(systemName: "arrow.right") ?? UIImage()
         static let power = UIImage(systemName: "power") ?? UIImage()
         static let circleFill = UIImage(systemName: "circle.fill") ?? UIImage()
         static let xmark = UIImage(systemName: "xmark") ?? UIImage()
         static let menuImage = UIImage(named: "menu_image") ?? UIImage()
+        static let heartSlashFill = UIImage(systemName: "heart.slash.fill") ?? UIImage()
     }
 
     // MARK: - Fonts

@@ -9,6 +9,7 @@ import UIKit
 
 protocol IMainView: AnyObject {
     var goToDeviceAt: ((IndexPath) -> Void)? { get set }
+    var toggleLikedState: ((IndexPath) -> Void)? { get set }
     var cellTappedAt: ((IndexPath) -> Void)? { get set }
 
     func reloadView(devices: [SmartHomeDevice])
@@ -42,6 +43,7 @@ final class MainView: UIView {
     private var collectionViewDelegate: SmartHomeItemCollectionViewDelegate?
     var goToDeviceAt: ((IndexPath) -> Void)?
     var cellTappedAt: ((IndexPath) -> Void)?
+    var toggleLikedState: ((IndexPath) -> Void)?
 
     // MARK: - Init
 
@@ -69,6 +71,7 @@ final class MainView: UIView {
 extension MainView: IMainView {
     func reloadView(devices: [SmartHomeDevice]) {
         self.collectionViewDataSource.setData(devices: devices)
+        self.collectionViewDelegate?.setData(devices: devices)
         self.collectionView.reloadData()
     }
     
@@ -139,6 +142,10 @@ private extension MainView {
 // MARK: - IImagesCollectionViewDelegate
 
 extension MainView: IImagesCollectionViewDelegate {
+    func toggleLikedState(atIndexPath indexPath: IndexPath) {
+        self.toggleLikedState?(indexPath)
+    }
+
     func goToDevice(atIndexPath indexPath: IndexPath) {
         self.goToDeviceAt?(indexPath)
     }

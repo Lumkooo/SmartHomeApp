@@ -16,3 +16,6 @@
 "chooseLampColor" = "Choisissez la couleur de la lueur de la lampe";
 "color" = "Couleur";
 "temperature" = "Température";
+"loved" = "Favoris";
+"lovedDevices" = "Appareils favoris";
+"removeFromLiked" = "Supprimer de vos favoris";

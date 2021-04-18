@@ -10,6 +10,7 @@ import Foundation
 protocol IMainInteractor {
     func loadInitData()
     func cellTappedAt(_ indexPath: IndexPath)
+    func toggleIsLikedState(atIndexPath indexPath: IndexPath)
     func getDevice(atIndexPath indexPath: IndexPath) -> SmartHomeDevice?
 }
 
@@ -22,12 +23,11 @@ final class MainInteractor {
     // MARK: - Properties
 
     weak var presenter: IMainInteractorOuter?
-    private let devices: [SmartHomeDevice] = [Lamp(name: "Освещение", code: "94057465"),
-                                      ElectricalSocket(name: "Розетка", code: "13259954"),
-                                      AirConditioner(name: "Кондиционер", code: "94930534"),
-                                      Curtains(name: "Шторы", code: "12340895"),
-                                      Ventilator(name: "Вентилятор", code: "32146854"),
-                                      IrrigationSystem(name: "Система полива", code: "21394031")]
+    private let lovedDevicesDelegate: ILovedDevicesDelegate
+
+    init(lovedDevicesDelegate: ILovedDevicesDelegate) {
+        self.lovedDevicesDelegate = lovedDevicesDelegate
+    }
 }
 
 // MARK: - IMainInteractor
@@ -35,29 +35,38 @@ final class MainInteractor {
 extension MainInteractor: IMainInteractor {
 
     func loadInitData() {
-        self.presenter?.reloadView(devices: self.devices)
+        self.presenter?.reloadView(devices: self.getDevices())
     }
 
     func getDevice(atIndexPath indexPath: IndexPath) -> SmartHomeDevice? {
-        if self.devices.count > indexPath.row {
-            return self.devices[indexPath.row]
-        } else {
-            return nil
-        }
+        DevicesManager.shared.getDevice(atIndex: indexPath.item)
     }
 
     func cellTappedAt(_ indexPath: IndexPath) {
         let index = indexPath.row
         self.toggleDeviceState(index: index)
-        self.presenter?.reloadView(devices: self.devices)
+        self.presenter?.reloadView(devices: self.getDevices())
+    }
+    
+    func toggleIsLikedState(atIndexPath indexPath: IndexPath) {
+        DevicesManager.shared.toggleIsLovedForDeviceAt(index: indexPath.item)
+        self.updateLovedDevicesScreen()
     }
 }
 
 private extension MainInteractor {
     // Переключает состояние устройства (включено/выключено)
-    func toggleDeviceState( index: Int) {
-        if self.devices.count > index {
-            self.devices[index].toggleDevice()
-        }
+    func toggleDeviceState(index: Int) {
+        DevicesManager.shared.toggleDeviceState(atIndex: index)
+        self.lovedDevicesDelegate.reloadData()
+    }
+
+    func getDevices() -> [SmartHomeDevice] {
+        return DevicesManager.shared.getDevices()
+    }
+
+    func updateLovedDevicesScreen() {
+        self.lovedDevicesDelegate.reloadData()
     }
 }
+
