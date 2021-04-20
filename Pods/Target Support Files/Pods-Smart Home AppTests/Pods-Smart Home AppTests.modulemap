@@ -1,0 +1,6 @@
+framework module Pods_Smart_Home_AppTests {
+  umbrella header "Pods-Smart Home AppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

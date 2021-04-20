@@ -20,3 +20,17 @@
 "lovedDevices" = "Liked devices";
 "removeFromLiked" = "Remove from liked";
 "noDevicesText" = "There are no devices to display here! You will see them here after adding.";
+"profile.guestText" = "You are not logged into your account\nCreate an account or log into an existing one";
+"register" = "Register";
+"loginButtonText" = "Login";
+"with" = "With:";
+"logedInAs" = "You are logged in as";
+"logout" = "Log out";
+"loginTitle" = "Login to your account";
+"password" = "Password";
+"repeatPassword" = "Repeat password";
+"done" = "Done";
+"fillEmailError" = "You must fill in the email field";
+"fillPasswordlError" = "You must fill in the password field";
+"secondPassswordError" = "It is necessary to fill in the second field with a password confirmation";
+"passwordNotTheSameError" = "Passwords must match";

@@ -28,6 +28,7 @@ enum AppConstants {
         static let customSliderWidthMultiplier: CGFloat = 0.35
         static let menuWidth: CGFloat = 0.8
         static let closeButtonSize: CGSize = CGSize(width: 50, height: 50)
+        static let smallCloseButtonSize: CGSize = CGSize(width: 30, height: 30)
     }
 
     // MARK: - Images
@@ -52,6 +53,9 @@ enum AppConstants {
         static let xmark = UIImage(systemName: "xmark") ?? UIImage()
         static let menuImage = UIImage(named: "menu_image") ?? UIImage()
         static let heartSlashFill = UIImage(systemName: "heart.slash.fill") ?? UIImage()
+        static let email = UIImage(named: "emailImage")
+        static let hidePasswordImage = UIImage(systemName: "eye.fill")
+        static let showPasswordImage = UIImage(systemName: "eye.slash.fill")
     }
 
     // MARK: - Fonts
@@ -59,11 +63,13 @@ enum AppConstants {
     enum Fonts {
         static let deviceLabel = UIFont.systemFont(ofSize: 15)
         static let deviceSmallLabel = UIFont.systemFont(ofSize: 13)
+        static let titleLabelFont = UIFont.systemFont(ofSize: 18)
     }
 
     // MARK: - Animation time
 
     enum AnimationTime {
         static let menuAnimationTime: Double = 0.5
+        static let keyboardAnimationDuration: Double = 0.25
     }
 }

@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21AE0B20AD7113BE8E58D6D6 /* Pods_Smart_Home_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D346AFCA5655355D44361C0E /* Pods_Smart_Home_App.framework */; };
+		56C64C4CF04A8DC3877DF572 /* Pods_Smart_Home_App_Smart_Home_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3786B04A3C822456A9189ED /* Pods_Smart_Home_App_Smart_Home_AppUITests.framework */; };
+		B91B1FFDFA92F8B0AB19C7CD /* Pods_Smart_Home_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0247962FE3964F7826E1819 /* Pods_Smart_Home_AppTests.framework */; };
 		CE0197AD262BEA7400BD9E2E /* LovedDevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0197AC262BEA7400BD9E2E /* LovedDevicesViewController.swift */; };
 		CE0197BE262BEAA300BD9E2E /* LovedDevicesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0197BD262BEAA300BD9E2E /* LovedDevicesPresenter.swift */; };
 		CE0197C3262BEAAA00BD9E2E /* LovedDevicesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0197C2262BEAAA00BD9E2E /* LovedDevicesInteractor.swift */; };
@@ -18,6 +21,8 @@
 		CE1759892609A550007AFDCA /* LampPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1759882609A550007AFDCA /* LampPresenter.swift */; };
 		CE17598E2609A555007AFDCA /* LampRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17598D2609A555007AFDCA /* LampRouter.swift */; };
 		CE1759962609A6E8007AFDCA /* LampScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1759952609A6E8007AFDCA /* LampScreenAssembly.swift */; };
+		CE24EA6B262F034900C3EBF6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24EA6A262F034900C3EBF6 /* CustomButton.swift */; };
+		CE24EA70262F039600C3EBF6 /* CustomCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24EA6F262F039600C3EBF6 /* CustomCloseButton.swift */; };
 		CE2FB90A260A076C00D084BC /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FB909260A076C00D084BC /* CustomSlider.swift */; };
 		CE3B19E32611868600D39A41 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3B19E22611868600D39A41 /* RoundedButton.swift */; };
 		CE54A5722605E0F400352C46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5712605E0F400352C46 /* AppDelegate.swift */; };
@@ -37,11 +42,6 @@
 		CE83064B26085533005CE030 /* IrrigationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83064A26085533005CE030 /* IrrigationSystem.swift */; };
 		CE97559A262BF51800864A55 /* DevicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975599262BF51800864A55 /* DevicesManager.swift */; };
 		CE97559F262BFAB900864A55 /* NSNotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97559E262BFAB800864A55 /* NSNotificationNameExtension.swift */; };
-		CEADBC6C261409DA000C4D97 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADBC6B261409DA000C4D97 /* ProfileView.swift */; };
-		CEADBC74261409E2000C4D97 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADBC73261409E2000C4D97 /* ProfileViewController.swift */; };
-		CEADBC79261409EB000C4D97 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADBC78261409EB000C4D97 /* ProfilePresenter.swift */; };
-		CEADBC7E261409F2000C4D97 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADBC7D261409F2000C4D97 /* ProfileInteractor.swift */; };
-		CEADBC83261409F8000C4D97 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADBC82261409F8000C4D97 /* ProfileRouter.swift */; };
 		CEADBC8826140C11000C4D97 /* ProfileVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADBC8726140C11000C4D97 /* ProfileVCAssembly.swift */; };
 		CEBBF7BC2606EDFE00BD9F13 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7BB2606EDFE00BD9F13 /* MainView.swift */; };
 		CEBBF7C12606EE0500BD9F13 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7C02606EE0500BD9F13 /* MainPresenter.swift */; };
@@ -54,6 +54,29 @@
 		CEBE41F32606F52500E370AB /* SmartHomeDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE41F22606F52500E370AB /* SmartHomeDevice.swift */; };
 		CEBE41F82606F87D00E370AB /* Lamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE41F72606F87D00E370AB /* Lamp.swift */; };
 		CEBE4209260706AC00E370AB /* ElectricalSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE4208260706AC00E370AB /* ElectricalSocket.swift */; };
+		CECEFB81262EFFF000D36004 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB6C262EFFF000D36004 /* ProfilePresenter.swift */; };
+		CECEFB82262EFFF000D36004 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB6D262EFFF000D36004 /* ProfileRouter.swift */; };
+		CECEFB83262EFFF000D36004 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB6F262EFFF000D36004 /* RegisterPresenter.swift */; };
+		CECEFB84262EFFF000D36004 /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB70262EFFF000D36004 /* RegisterRouter.swift */; };
+		CECEFB85262EFFF000D36004 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB71262EFFF000D36004 /* RegisterInteractor.swift */; };
+		CECEFB86262EFFF000D36004 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB73262EFFF000D36004 /* RegisterView.swift */; };
+		CECEFB87262EFFF000D36004 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB74262EFFF000D36004 /* RegisterViewController.swift */; };
+		CECEFB88262EFFF000D36004 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB75262EFFF000D36004 /* ProfileViewController.swift */; };
+		CECEFB89262EFFF000D36004 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB76262EFFF000D36004 /* ProfileInteractor.swift */; };
+		CECEFB8A262EFFF000D36004 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB78262EFFF000D36004 /* ProfileView.swift */; };
+		CECEFB8B262EFFF000D36004 /* ProfileViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB79262EFFF000D36004 /* ProfileViewTableViewCell.swift */; };
+		CECEFB8C262EFFF000D36004 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB7B262EFFF000D36004 /* LoginInteractor.swift */; };
+		CECEFB8D262EFFF000D36004 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB7C262EFFF000D36004 /* LoginViewController.swift */; };
+		CECEFB8E262EFFF000D36004 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB7E262EFFF000D36004 /* LoginView.swift */; };
+		CECEFB8F262EFFF000D36004 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB7F262EFFF000D36004 /* LoginPresenter.swift */; };
+		CECEFB90262EFFF000D36004 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB80262EFFF000D36004 /* LoginRouter.swift */; };
+		CECEFB98262F002800D36004 /* LoginEntitie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB97262F002800D36004 /* LoginEntitie.swift */; };
+		CECEFB9D262F005B00D36004 /* AlertAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB9C262F005B00D36004 /* AlertAssembly.swift */; };
+		CECEFBA2262F007500D36004 /* RegisterVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFBA1262F007500D36004 /* RegisterVCAssembly.swift */; };
+		CECEFBA7262F008200D36004 /* LoginVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFBA6262F008200D36004 /* LoginVCAssembly.swift */; };
+		CECEFBAD262F011F00D36004 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFBAC262F011F00D36004 /* FirebaseAuthManager.swift */; };
+		CECEFBB2262F013100D36004 /* FirebaseDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFBB1262F013100D36004 /* FirebaseDatabaseManager.swift */; };
+		CECEFBB7262F01F400D36004 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CECEFBB6262F01F400D36004 /* GoogleService-Info.plist */; };
 		CED7A86426103B9200F61391 /* SimpleDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A86326103B9200F61391 /* SimpleDeviceViewController.swift */; };
 		CED7A87126103B9F00F61391 /* SimpleDevicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A87026103B9F00F61391 /* SimpleDevicePresenter.swift */; };
 		CED7A87626103BA600F61391 /* SimpleDeviceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A87526103BA600F61391 /* SimpleDeviceInteractor.swift */; };
@@ -105,6 +128,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E711A0CE341CE547B2A8027 /* Pods-Smart Home App-Smart Home AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home App-Smart Home AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Smart Home App-Smart Home AppUITests/Pods-Smart Home App-Smart Home AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1242213ACD3FEBF47C16B0F9 /* Pods-Smart Home App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home App.release.xcconfig"; path = "Target Support Files/Pods-Smart Home App/Pods-Smart Home App.release.xcconfig"; sourceTree = "<group>"; };
+		147B41FE0E12A5E838C07E7F /* Pods-Smart Home App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home App.debug.xcconfig"; path = "Target Support Files/Pods-Smart Home App/Pods-Smart Home App.debug.xcconfig"; sourceTree = "<group>"; };
+		3415D42C9BBFE762D9883BD0 /* Pods-Smart Home AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home AppTests.release.xcconfig"; path = "Target Support Files/Pods-Smart Home AppTests/Pods-Smart Home AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		865C60C368DC63BAB1D35C6E /* Pods-Smart Home App-Smart Home AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home App-Smart Home AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Smart Home App-Smart Home AppUITests/Pods-Smart Home App-Smart Home AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B3786B04A3C822456A9189ED /* Pods_Smart_Home_App_Smart_Home_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Home_App_Smart_Home_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0247962FE3964F7826E1819 /* Pods_Smart_Home_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Home_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0197AC262BEA7400BD9E2E /* LovedDevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedDevicesViewController.swift; sourceTree = "<group>"; };
 		CE0197BD262BEAA300BD9E2E /* LovedDevicesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedDevicesPresenter.swift; sourceTree = "<group>"; };
 		CE0197C2262BEAAA00BD9E2E /* LovedDevicesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedDevicesInteractor.swift; sourceTree = "<group>"; };
@@ -116,6 +146,8 @@
 		CE1759882609A550007AFDCA /* LampPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampPresenter.swift; sourceTree = "<group>"; };
 		CE17598D2609A555007AFDCA /* LampRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampRouter.swift; sourceTree = "<group>"; };
 		CE1759952609A6E8007AFDCA /* LampScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampScreenAssembly.swift; sourceTree = "<group>"; };
+		CE24EA6A262F034900C3EBF6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		CE24EA6F262F039600C3EBF6 /* CustomCloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCloseButton.swift; sourceTree = "<group>"; };
 		CE2FB909260A076C00D084BC /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		CE3B19E22611868600D39A41 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		CE54A56E2605E0F400352C46 /* Smart Home App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Home App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,11 +173,6 @@
 		CE83064A26085533005CE030 /* IrrigationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrrigationSystem.swift; sourceTree = "<group>"; };
 		CE975599262BF51800864A55 /* DevicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesManager.swift; sourceTree = "<group>"; };
 		CE97559E262BFAB800864A55 /* NSNotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationNameExtension.swift; sourceTree = "<group>"; };
-		CEADBC6B261409DA000C4D97 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		CEADBC73261409E2000C4D97 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		CEADBC78261409EB000C4D97 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
-		CEADBC7D261409F2000C4D97 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
-		CEADBC82261409F8000C4D97 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		CEADBC8726140C11000C4D97 /* ProfileVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVCAssembly.swift; sourceTree = "<group>"; };
 		CEBBF7BB2606EDFE00BD9F13 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CEBBF7C02606EE0500BD9F13 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
@@ -158,6 +185,29 @@
 		CEBE41F22606F52500E370AB /* SmartHomeDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHomeDevice.swift; sourceTree = "<group>"; };
 		CEBE41F72606F87D00E370AB /* Lamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lamp.swift; sourceTree = "<group>"; };
 		CEBE4208260706AC00E370AB /* ElectricalSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalSocket.swift; sourceTree = "<group>"; };
+		CECEFB6C262EFFF000D36004 /* ProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		CECEFB6D262EFFF000D36004 /* ProfileRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		CECEFB6F262EFFF000D36004 /* RegisterPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		CECEFB70262EFFF000D36004 /* RegisterRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
+		CECEFB71262EFFF000D36004 /* RegisterInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
+		CECEFB73262EFFF000D36004 /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		CECEFB74262EFFF000D36004 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CECEFB75262EFFF000D36004 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CECEFB76262EFFF000D36004 /* ProfileInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		CECEFB78262EFFF000D36004 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		CECEFB79262EFFF000D36004 /* ProfileViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewTableViewCell.swift; sourceTree = "<group>"; };
+		CECEFB7B262EFFF000D36004 /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		CECEFB7C262EFFF000D36004 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CECEFB7E262EFFF000D36004 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CECEFB7F262EFFF000D36004 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		CECEFB80262EFFF000D36004 /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		CECEFB97262F002800D36004 /* LoginEntitie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntitie.swift; sourceTree = "<group>"; };
+		CECEFB9C262F005B00D36004 /* AlertAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAssembly.swift; sourceTree = "<group>"; };
+		CECEFBA1262F007500D36004 /* RegisterVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVCAssembly.swift; sourceTree = "<group>"; };
+		CECEFBA6262F008200D36004 /* LoginVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVCAssembly.swift; sourceTree = "<group>"; };
+		CECEFBAC262F011F00D36004 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		CECEFBB1262F013100D36004 /* FirebaseDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseManager.swift; sourceTree = "<group>"; };
+		CECEFBB6262F01F400D36004 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CED7A86326103B9200F61391 /* SimpleDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDeviceViewController.swift; sourceTree = "<group>"; };
 		CED7A87026103B9F00F61391 /* SimpleDevicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDevicePresenter.swift; sourceTree = "<group>"; };
 		CED7A87526103BA600F61391 /* SimpleDeviceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDeviceInteractor.swift; sourceTree = "<group>"; };
@@ -193,6 +243,8 @@
 		CEED9FBE26254CB1001D9DF4 /* AirConditionerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionerRouter.swift; sourceTree = "<group>"; };
 		CEED9FC326254FF2001D9DF4 /* AirConditionerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionerAssembly.swift; sourceTree = "<group>"; };
 		CEF4F9132612C88C0003DD6C /* SimpleDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDeviceView.swift; sourceTree = "<group>"; };
+		CF6F02D636BE02D6C3927E88 /* Pods-Smart Home AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Smart Home AppTests/Pods-Smart Home AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D346AFCA5655355D44361C0E /* Pods_Smart_Home_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Home_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +252,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21AE0B20AD7113BE8E58D6D6 /* Pods_Smart_Home_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +260,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B91B1FFDFA92F8B0AB19C7CD /* Pods_Smart_Home_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,12 +268,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56C64C4CF04A8DC3877DF572 /* Pods_Smart_Home_App_Smart_Home_AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6CD5355537F5E318C23C934A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				147B41FE0E12A5E838C07E7F /* Pods-Smart Home App.debug.xcconfig */,
+				1242213ACD3FEBF47C16B0F9 /* Pods-Smart Home App.release.xcconfig */,
+				865C60C368DC63BAB1D35C6E /* Pods-Smart Home App-Smart Home AppUITests.debug.xcconfig */,
+				0E711A0CE341CE547B2A8027 /* Pods-Smart Home App-Smart Home AppUITests.release.xcconfig */,
+				CF6F02D636BE02D6C3927E88 /* Pods-Smart Home AppTests.debug.xcconfig */,
+				3415D42C9BBFE762D9883BD0 /* Pods-Smart Home AppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C20B0BC5CEF6815F3AC6C438 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D346AFCA5655355D44361C0E /* Pods_Smart_Home_App.framework */,
+				B3786B04A3C822456A9189ED /* Pods_Smart_Home_App_Smart_Home_AppUITests.framework */,
+				C0247962FE3964F7826E1819 /* Pods_Smart_Home_AppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE0197AB262BEA5300BD9E2E /* LovedDevices Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,7 +318,7 @@
 				CE17596B2609A4C6007AFDCA /* Lamp Screen */,
 				CED7A86126103B7900F61391 /* SimpleDevice Screen */,
 				CEED9FA426254C79001D9DF4 /* AirConditioner Screen */,
-				CEADBC69261409B7000C4D97 /* Profile Screen */,
+				CECEFB6B262EFFF000D36004 /* Profile */,
 				CE0197AB262BEA5300BD9E2E /* LovedDevices Screen */,
 			);
 			path = Screens;
@@ -274,6 +352,8 @@
 				CE54A5872605E0F500352C46 /* Smart Home AppTests */,
 				CE54A5922605E0F500352C46 /* Smart Home AppUITests */,
 				CE54A56F2605E0F400352C46 /* Products */,
+				6CD5355537F5E318C23C934A /* Pods */,
+				C20B0BC5CEF6815F3AC6C438 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -353,6 +433,9 @@
 				CEED9FC326254FF2001D9DF4 /* AirConditionerAssembly.swift */,
 				CEDB0BEB262AA1EB00F1B4DB /* MenuAssembly.swift */,
 				CE0197CC262BEEEB00BD9E2E /* LovedDevicesAssembly.swift */,
+				CECEFB9C262F005B00D36004 /* AlertAssembly.swift */,
+				CECEFBA1262F007500D36004 /* RegisterVCAssembly.swift */,
+				CECEFBA6262F008200D36004 /* LoginVCAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -363,6 +446,7 @@
 				CE54A57A2605E0F500352C46 /* Assets.xcassets */,
 				CE54A57C2605E0F500352C46 /* LaunchScreen.storyboard */,
 				CE54A57F2605E0F500352C46 /* Info.plist */,
+				CECEFBB6262F01F400D36004 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -381,26 +465,6 @@
 			path = SmartHomeDevices;
 			sourceTree = "<group>";
 		};
-		CEADBC69261409B7000C4D97 /* Profile Screen */ = {
-			isa = PBXGroup;
-			children = (
-				CEADBC6A261409C7000C4D97 /* Views */,
-				CEADBC73261409E2000C4D97 /* ProfileViewController.swift */,
-				CEADBC78261409EB000C4D97 /* ProfilePresenter.swift */,
-				CEADBC7D261409F2000C4D97 /* ProfileInteractor.swift */,
-				CEADBC82261409F8000C4D97 /* ProfileRouter.swift */,
-			);
-			path = "Profile Screen";
-			sourceTree = "<group>";
-		};
-		CEADBC6A261409C7000C4D97 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				CEADBC6B261409DA000C4D97 /* ProfileView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		CEBBF7BA2606EDF600BD9F13 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,6 +480,8 @@
 				CE2FB909260A076C00D084BC /* CustomSlider.swift */,
 				CEE81202260D83DD00BB8DFD /* ColorItemCollectionViewCell.swift */,
 				CE3B19E22611868600D39A41 /* RoundedButton.swift */,
+				CE24EA6A262F034900C3EBF6 /* CustomButton.swift */,
+				CE24EA6F262F039600C3EBF6 /* CustomCloseButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -423,6 +489,7 @@
 		CEBE41D72606F2EE00E370AB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CECEFBAB262F011900D36004 /* Firebase */,
 				CEDB0BC1262A968400F1B4DB /* Localized.swift */,
 				CE975599262BF51800864A55 /* DevicesManager.swift */,
 				CE97559E262BFAB800864A55 /* NSNotificationNameExtension.swift */,
@@ -449,8 +516,81 @@
 			children = (
 				CE8306412608502F005CE030 /* SmartHomeDevices */,
 				CE830629260841AF005CE030 /* TemperatureUnit.swift */,
+				CECEFB97262F002800D36004 /* LoginEntitie.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		CECEFB6B262EFFF000D36004 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CECEFB7A262EFFF000D36004 /* Login */,
+				CECEFB6E262EFFF000D36004 /* Register */,
+				CECEFB77262EFFF000D36004 /* Views */,
+				CECEFB75262EFFF000D36004 /* ProfileViewController.swift */,
+				CECEFB6C262EFFF000D36004 /* ProfilePresenter.swift */,
+				CECEFB76262EFFF000D36004 /* ProfileInteractor.swift */,
+				CECEFB6D262EFFF000D36004 /* ProfileRouter.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CECEFB6E262EFFF000D36004 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				CECEFB72262EFFF000D36004 /* Views */,
+				CECEFB74262EFFF000D36004 /* RegisterViewController.swift */,
+				CECEFB6F262EFFF000D36004 /* RegisterPresenter.swift */,
+				CECEFB71262EFFF000D36004 /* RegisterInteractor.swift */,
+				CECEFB70262EFFF000D36004 /* RegisterRouter.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		CECEFB72262EFFF000D36004 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CECEFB73262EFFF000D36004 /* RegisterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CECEFB77262EFFF000D36004 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CECEFB78262EFFF000D36004 /* ProfileView.swift */,
+				CECEFB79262EFFF000D36004 /* ProfileViewTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CECEFB7A262EFFF000D36004 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CECEFB7D262EFFF000D36004 /* Views */,
+				CECEFB7C262EFFF000D36004 /* LoginViewController.swift */,
+				CECEFB7F262EFFF000D36004 /* LoginPresenter.swift */,
+				CECEFB7B262EFFF000D36004 /* LoginInteractor.swift */,
+				CECEFB80262EFFF000D36004 /* LoginRouter.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CECEFB7D262EFFF000D36004 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CECEFB7E262EFFF000D36004 /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CECEFBAB262F011900D36004 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				CECEFBAC262F011F00D36004 /* FirebaseAuthManager.swift */,
+				CECEFBB1262F013100D36004 /* FirebaseDatabaseManager.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		CED7A86126103B7900F61391 /* SimpleDevice Screen */ = {
@@ -557,9 +697,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE54A5982605E0F500352C46 /* Build configuration list for PBXNativeTarget "Smart Home App" */;
 			buildPhases = (
+				A924506431A07A2864F5E9A1 /* [CP] Check Pods Manifest.lock */,
 				CE54A56A2605E0F400352C46 /* Sources */,
 				CE54A56B2605E0F400352C46 /* Frameworks */,
 				CE54A56C2605E0F400352C46 /* Resources */,
+				EE4E36E962FFB25E348E9468 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -574,6 +716,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE54A59B2605E0F500352C46 /* Build configuration list for PBXNativeTarget "Smart Home AppTests" */;
 			buildPhases = (
+				B6E825CE124C41AC26979C54 /* [CP] Check Pods Manifest.lock */,
 				CE54A5802605E0F500352C46 /* Sources */,
 				CE54A5812605E0F500352C46 /* Frameworks */,
 				CE54A5822605E0F500352C46 /* Resources */,
@@ -592,9 +735,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE54A59E2605E0F500352C46 /* Build configuration list for PBXNativeTarget "Smart Home AppUITests" */;
 			buildPhases = (
+				C15CC0046FB6B80CBDC913DB /* [CP] Check Pods Manifest.lock */,
 				CE54A58B2605E0F500352C46 /* Sources */,
 				CE54A58C2605E0F500352C46 /* Frameworks */,
 				CE54A58D2605E0F500352C46 /* Resources */,
+				92466E4F0D4EEAEE3993C15F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -656,6 +801,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE54A57E2605E0F500352C46 /* LaunchScreen.storyboard in Resources */,
+				CECEFBB7262F01F400D36004 /* GoogleService-Info.plist in Resources */,
 				CEDB0BB4262A95D800F1B4DB /* Localizable.strings in Resources */,
 				CE54A57B2605E0F500352C46 /* Assets.xcassets in Resources */,
 			);
@@ -677,6 +823,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		92466E4F0D4EEAEE3993C15F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Home App-Smart Home AppUITests/Pods-Smart Home App-Smart Home AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Home App-Smart Home AppUITests/Pods-Smart Home App-Smart Home AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Smart Home App-Smart Home AppUITests/Pods-Smart Home App-Smart Home AppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A924506431A07A2864F5E9A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Smart Home App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6E825CE124C41AC26979C54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Smart Home AppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C15CC0046FB6B80CBDC913DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Smart Home App-Smart Home AppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE4E36E962FFB25E348E9468 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Home App/Pods-Smart Home App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Home App/Pods-Smart Home App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Smart Home App/Pods-Smart Home App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE54A56A2605E0F400352C46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -685,19 +934,24 @@
 				CEE811DA260D7BDC00BB8DFD /* ColorChooserView.swift in Sources */,
 				CE54A5B42605E15300352C46 /* MainScreenAssembly.swift in Sources */,
 				CE2FB90A260A076C00D084BC /* CustomSlider.swift in Sources */,
+				CECEFB98262F002800D36004 /* LoginEntitie.swift in Sources */,
 				CEBBF7BC2606EDFE00BD9F13 /* MainView.swift in Sources */,
 				CEE811EE260D7DEE00BB8DFD /* ColorChooserInteractor.swift in Sources */,
 				CEED9FC426254FF2001D9DF4 /* AirConditionerAssembly.swift in Sources */,
+				CECEFB88262EFFF000D36004 /* ProfileViewController.swift in Sources */,
 				CE17597C2609A506007AFDCA /* LampView.swift in Sources */,
 				CE97559F262BFAB900864A55 /* NSNotificationNameExtension.swift in Sources */,
 				CED7A87626103BA600F61391 /* SimpleDeviceInteractor.swift in Sources */,
+				CECEFB89262EFFF000D36004 /* ProfileInteractor.swift in Sources */,
 				CEED9FBF26254CB1001D9DF4 /* AirConditionerRouter.swift in Sources */,
 				CE83062F260848EF005CE030 /* Curtains.swift in Sources */,
+				CECEFB87262EFFF000D36004 /* RegisterViewController.swift in Sources */,
+				CECEFB83262EFFF000D36004 /* RegisterPresenter.swift in Sources */,
 				CEE811E9260D7DE800BB8DFD /* ColorChooserPresenter.swift in Sources */,
 				CE1759962609A6E8007AFDCA /* LampScreenAssembly.swift in Sources */,
 				CEDB0BCC262A9EDB00F1B4DB /* MenuViewController.swift in Sources */,
 				CEED9FB526254CA4001D9DF4 /* AirConditionerPresenter.swift in Sources */,
-				CEADBC7E261409F2000C4D97 /* ProfileInteractor.swift in Sources */,
+				CECEFB9D262F005B00D36004 /* AlertAssembly.swift in Sources */,
 				CE54A5BC2605E18D00352C46 /* NavigationControllerAssembly.swift in Sources */,
 				CE1759742609A4DC007AFDCA /* LampViewController.swift in Sources */,
 				CE1759812609A548007AFDCA /* LampInteractor.swift in Sources */,
@@ -706,29 +960,36 @@
 				CE0197AD262BEA7400BD9E2E /* LovedDevicesViewController.swift in Sources */,
 				CE97559A262BF51800864A55 /* DevicesManager.swift in Sources */,
 				CED7A86426103B9200F61391 /* SimpleDeviceViewController.swift in Sources */,
+				CECEFB8B262EFFF000D36004 /* ProfileViewTableViewCell.swift in Sources */,
 				CEDB0BE4262A9F0800F1B4DB /* MenuRouter.swift in Sources */,
+				CECEFB8E262EFFF000D36004 /* LoginView.swift in Sources */,
+				CECEFB84262EFFF000D36004 /* RegisterRouter.swift in Sources */,
 				CEED9FA826254C91001D9DF4 /* AirConditionerView.swift in Sources */,
 				CE1759892609A550007AFDCA /* LampPresenter.swift in Sources */,
 				CEE811F3260D7DF300BB8DFD /* ColorChooserRouter.swift in Sources */,
+				CECEFBAD262F011F00D36004 /* FirebaseAuthManager.swift in Sources */,
+				CECEFB8D262EFFF000D36004 /* LoginViewController.swift in Sources */,
 				CE54A5762605E0F400352C46 /* MainViewController.swift in Sources */,
+				CE24EA6B262F034900C3EBF6 /* CustomButton.swift in Sources */,
 				CEBBF7D02606F08B00BD9F13 /* SmartHomeDeviceCollectionViewCell.swift in Sources */,
 				CEDB0BC2262A968400F1B4DB /* Localized.swift in Sources */,
 				CEADBC8826140C11000C4D97 /* ProfileVCAssembly.swift in Sources */,
 				CED7A88026103E1B00F61391 /* SimpleDeviceAssembly.swift in Sources */,
 				CEDB0BEC262AA1EB00F1B4DB /* MenuAssembly.swift in Sources */,
-				CEADBC74261409E2000C4D97 /* ProfileViewController.swift in Sources */,
 				CE83064B26085533005CE030 /* IrrigationSystem.swift in Sources */,
 				CEDB0BDF262A9F0100F1B4DB /* MenuInteractor.swift in Sources */,
 				CED7A87126103B9F00F61391 /* SimpleDevicePresenter.swift in Sources */,
 				CEBBF7CB2606EE1100BD9F13 /* MainRouter.swift in Sources */,
 				CEDB0BD2262A9EF300F1B4DB /* MenuView.swift in Sources */,
+				CECEFB8F262EFFF000D36004 /* LoginPresenter.swift in Sources */,
+				CECEFB90262EFFF000D36004 /* LoginRouter.swift in Sources */,
+				CECEFB8A262EFFF000D36004 /* ProfileView.swift in Sources */,
 				CEBE41F32606F52500E370AB /* SmartHomeDevice.swift in Sources */,
-				CEADBC6C261409DA000C4D97 /* ProfileView.swift in Sources */,
 				CEBE41E12606F3B100E370AB /* SmartHomeItemCollectionViewDataSource.swift in Sources */,
 				CE83063726084DD8005CE030 /* Ventilator.swift in Sources */,
-				CEADBC83261409F8000C4D97 /* ProfileRouter.swift in Sources */,
 				CEBE41D92606F2FD00E370AB /* AppConstants.swift in Sources */,
 				CE0197C3262BEAAA00BD9E2E /* LovedDevicesInteractor.swift in Sources */,
+				CECEFBB2262F013100D36004 /* FirebaseDatabaseManager.swift in Sources */,
 				CE17598E2609A555007AFDCA /* LampRouter.swift in Sources */,
 				CEBBF7C62606EE0C00BD9F13 /* MainInteractor.swift in Sources */,
 				CEED9FBA26254CAC001D9DF4 /* AirConditionerInteractor.swift in Sources */,
@@ -737,22 +998,29 @@
 				CE0197BE262BEAA300BD9E2E /* LovedDevicesPresenter.swift in Sources */,
 				CE83062526083CE7005CE030 /* AirConditioner.swift in Sources */,
 				CEE811E4260D7DDF00BB8DFD /* ColorChooserViewController.swift in Sources */,
+				CE24EA70262F039600C3EBF6 /* CustomCloseButton.swift in Sources */,
 				CEE81212260D86AF00BB8DFD /* ColorItemCollectionViewDataSource.swift in Sources */,
 				CED7A88826103F6000F61391 /* DevicesRouter.swift in Sources */,
 				CE83062A260841AF005CE030 /* TemperatureUnit.swift in Sources */,
 				CE54A5C12605E1D600352C46 /* TabBarControllerAssembly.swift in Sources */,
 				CEF4F9142612C88C0003DD6C /* SimpleDeviceView.swift in Sources */,
 				CEBE41E62606F3CD00E370AB /* SmartHomeItemCollectionViewDelegate.swift in Sources */,
+				CECEFB8C262EFFF000D36004 /* LoginInteractor.swift in Sources */,
 				CEE811F8260D7F7900BB8DFD /* ColorChooserAssembly.swift in Sources */,
 				CEBE4209260706AC00E370AB /* ElectricalSocket.swift in Sources */,
-				CEADBC79261409EB000C4D97 /* ProfilePresenter.swift in Sources */,
 				CE54A5722605E0F400352C46 /* AppDelegate.swift in Sources */,
+				CECEFBA7262F008200D36004 /* LoginVCAssembly.swift in Sources */,
+				CECEFB86262EFFF000D36004 /* RegisterView.swift in Sources */,
 				CE0197CD262BEEEB00BD9E2E /* LovedDevicesAssembly.swift in Sources */,
 				CE3B19E32611868600D39A41 /* RoundedButton.swift in Sources */,
 				CEE81217260D87A600BB8DFD /* ICustomCollectionViewDelegate.swift in Sources */,
+				CECEFBA2262F007500D36004 /* RegisterVCAssembly.swift in Sources */,
 				CEBE41F82606F87D00E370AB /* Lamp.swift in Sources */,
+				CECEFB82262EFFF000D36004 /* ProfileRouter.swift in Sources */,
 				CEE8120A260D86A800BB8DFD /* ColorItemCollectionViewDelegate.swift in Sources */,
+				CECEFB81262EFFF000D36004 /* ProfilePresenter.swift in Sources */,
 				CEED9FB026254C9B001D9DF4 /* AirConditionerViewController.swift in Sources */,
+				CECEFB85262EFFF000D36004 /* RegisterInteractor.swift in Sources */,
 				CE54A5742605E0F400352C46 /* SceneDelegate.swift in Sources */,
 				CEDB0BDA262A9EFA00F1B4DB /* MenuPresenter.swift in Sources */,
 			);
@@ -933,6 +1201,7 @@
 		};
 		CE54A5992605E0F500352C46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 147B41FE0E12A5E838C07E7F /* Pods-Smart Home App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -952,6 +1221,7 @@
 		};
 		CE54A59A2605E0F500352C46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1242213ACD3FEBF47C16B0F9 /* Pods-Smart Home App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -971,6 +1241,7 @@
 		};
 		CE54A59C2605E0F500352C46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF6F02D636BE02D6C3927E88 /* Pods-Smart Home AppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -993,6 +1264,7 @@
 		};
 		CE54A59D2605E0F500352C46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3415D42C9BBFE762D9883BD0 /* Pods-Smart Home AppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1015,6 +1287,7 @@
 		};
 		CE54A59F2605E0F500352C46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 865C60C368DC63BAB1D35C6E /* Pods-Smart Home App-Smart Home AppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1035,6 +1308,7 @@
 		};
 		CE54A5A02605E0F500352C46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E711A0CE341CE547B2A8027 /* Pods-Smart Home App-Smart Home AppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
