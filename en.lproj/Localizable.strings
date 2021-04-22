@@ -24,7 +24,7 @@
 "register" = "Register";
 "loginButtonText" = "Login";
 "with" = "With:";
-"logedInAs" = "You are logged in as";
+"loggedInAs" = "You are logged in as";
 "logout" = "Log out";
 "loginTitle" = "Login to your account";
 "password" = "Password";

@@ -14,4 +14,12 @@ final class Ventilator: SmartHomeDevice {
     init(name: String, code: String) {
         super.init(name: name, code: code, image: AppConstants.Images.ventilator)
     }
+
+    init(name: String, code: String, isLoved: Bool, isTurnedOn: Bool) {
+        super.init(name: name,
+                   code: code,
+                   image: AppConstants.Images.ventilator,
+                   isLoved: isLoved,
+                   isTurnedOn: isTurnedOn)
+    }
 }

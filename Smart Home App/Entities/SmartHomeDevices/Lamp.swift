@@ -42,6 +42,21 @@ final class Lamp: SmartHomeDevice {
         self.lightLevel = Constants.standardLightLevel
         super.init(name: name, code: code, image: AppConstants.Images.lamp)
     }
+
+    init(name: String,
+         code: String,
+         lightLevel: Int,
+         lightColor: UIColor,
+         isLoved: Bool,
+         isTurnedOn: Bool) {
+        self.lightLevel = lightLevel
+        self.lightColor = lightColor
+        super.init(name: name,
+                   code: code,
+                   image: AppConstants.Images.lamp,
+                   isLoved: isLoved,
+                   isTurnedOn: isTurnedOn)
+    }
 }
 
 // MARK: ILamp

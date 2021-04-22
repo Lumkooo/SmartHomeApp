@@ -14,4 +14,12 @@ final class ElectricalSocket: SmartHomeDevice {
     init(name: String, code: String) {
         super.init(name: name, code: code, image: AppConstants.Images.electricalSocket)
     }
+
+    init(name: String, code: String, isLoved: Bool, isTurnedOn: Bool) {
+        super.init(name: name,
+                   code: code,
+                   image: AppConstants.Images.electricalSocket,
+                   isLoved: isLoved,
+                   isTurnedOn: isTurnedOn)
+    }
 }

@@ -47,9 +47,9 @@ final class ProfileView: UIView {
 
     private lazy var authorizedTopTitle: UILabel = {
         let myLabel = UILabel()
-        myLabel.textAlignment = .center
-        myLabel.numberOfLines = 3
-        myLabel.text = Localized("logedInAs")
+        myLabel.textAlignment = .natural
+        myLabel.numberOfLines = 0
+        myLabel.text = Localized("loggedInAs")
         myLabel.font = AppConstants.Fonts.titleLabelFont
         return myLabel
     }()
@@ -204,7 +204,7 @@ private extension ProfileView {
         NSLayoutConstraint.activate([
             self.authorizedTopTitle.topAnchor.constraint(
                 equalTo: self.authorizedView.topAnchor,
-                constant: AppConstants.Constraints.normal),
+                constant: AppConstants.Constraints.quarter),
             self.authorizedTopTitle.leadingAnchor.constraint(
                 equalTo: self.authorizedView.leadingAnchor,
                 constant: AppConstants.Constraints.normal),
@@ -352,7 +352,7 @@ extension ProfileView: IProfileView {
     func setupViewForAuthorizedUser(userEmail: String) {
         self.subviews.forEach { $0.removeFromSuperview() }
         self.setupAthorizedScreen()
-        self.authorizedTopTitle.text = Localized("logedInAs")+":\n\(userEmail)"
+        self.authorizedTopTitle.text = Localized("loggedInAs")+": \(userEmail)"
     }
 
     func setupViewForUnauthorizedUser() {

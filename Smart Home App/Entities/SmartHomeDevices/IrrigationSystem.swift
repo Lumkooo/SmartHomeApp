@@ -14,4 +14,12 @@ final class IrrigationSystem: SmartHomeDevice {
     init(name: String, code: String) {
         super.init(name: name, code: code, image: AppConstants.Images.irrigationSystem)
     }
+
+    init(name: String, code: String, isLoved: Bool, isTurnedOn: Bool) {
+        super.init(name: name,
+                   code: code,
+                   image: AppConstants.Images.irrigationSystem,
+                   isLoved: isLoved,
+                   isTurnedOn: isTurnedOn)
+    }
 }

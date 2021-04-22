@@ -107,6 +107,14 @@
 		CEED9FBA26254CAC001D9DF4 /* AirConditionerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED9FB926254CAC001D9DF4 /* AirConditionerInteractor.swift */; };
 		CEED9FBF26254CB1001D9DF4 /* AirConditionerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED9FBE26254CB1001D9DF4 /* AirConditionerRouter.swift */; };
 		CEED9FC426254FF2001D9DF4 /* AirConditionerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED9FC326254FF2001D9DF4 /* AirConditionerAssembly.swift */; };
+		CEF39A862631A48E00616628 /* LampFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF39A852631A48E00616628 /* LampFirebaseManager.swift */; };
+		CEF39A8E2631A52000616628 /* FirebaseDatabaseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF39A8D2631A52000616628 /* FirebaseDatabaseInfo.swift */; };
+		CEF39A962631A80800616628 /* UIColor Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF39A952631A80800616628 /* UIColor Extension.swift */; };
+		CEF39A9B2631ADA700616628 /* ElectricalSocketFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF39A9A2631ADA700616628 /* ElectricalSocketFirebaseManager.swift */; };
+		CEF39AA02631B20D00616628 /* AirConditionerFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF39A9F2631B20D00616628 /* AirConditionerFirebaseManager.swift */; };
+		CEF39AA82631B45D00616628 /* VentilatorFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF39AA72631B45D00616628 /* VentilatorFirebaseManager.swift */; };
+		CEF39AAD2631B50C00616628 /* IrrigationSystemFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF39AAC2631B50C00616628 /* IrrigationSystemFirebaseManager.swift */; };
+		CEF39AB22631B72300616628 /* CurtainsFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF39AB12631B72300616628 /* CurtainsFirebaseManager.swift */; };
 		CEF4F9142612C88C0003DD6C /* SimpleDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F9132612C88C0003DD6C /* SimpleDeviceView.swift */; };
 /* End PBXBuildFile section */
 
@@ -242,6 +250,14 @@
 		CEED9FB926254CAC001D9DF4 /* AirConditionerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionerInteractor.swift; sourceTree = "<group>"; };
 		CEED9FBE26254CB1001D9DF4 /* AirConditionerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionerRouter.swift; sourceTree = "<group>"; };
 		CEED9FC326254FF2001D9DF4 /* AirConditionerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionerAssembly.swift; sourceTree = "<group>"; };
+		CEF39A852631A48E00616628 /* LampFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampFirebaseManager.swift; sourceTree = "<group>"; };
+		CEF39A8D2631A52000616628 /* FirebaseDatabaseInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseInfo.swift; sourceTree = "<group>"; };
+		CEF39A952631A80800616628 /* UIColor Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor Extension.swift"; sourceTree = "<group>"; };
+		CEF39A9A2631ADA700616628 /* ElectricalSocketFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalSocketFirebaseManager.swift; sourceTree = "<group>"; };
+		CEF39A9F2631B20D00616628 /* AirConditionerFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionerFirebaseManager.swift; sourceTree = "<group>"; };
+		CEF39AA72631B45D00616628 /* VentilatorFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentilatorFirebaseManager.swift; sourceTree = "<group>"; };
+		CEF39AAC2631B50C00616628 /* IrrigationSystemFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrrigationSystemFirebaseManager.swift; sourceTree = "<group>"; };
+		CEF39AB12631B72300616628 /* CurtainsFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainsFirebaseManager.swift; sourceTree = "<group>"; };
 		CEF4F9132612C88C0003DD6C /* SimpleDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDeviceView.swift; sourceTree = "<group>"; };
 		CF6F02D636BE02D6C3927E88 /* Pods-Smart Home AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Smart Home AppTests/Pods-Smart Home AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D346AFCA5655355D44361C0E /* Pods_Smart_Home_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Home_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -498,6 +514,7 @@
 				CEBE41EA2606F3F700E370AB /* SmartHomeItemsCollectionViewModel */,
 				CEE81208260D869A00BB8DFD /* ColorItemCollectionViewModel */,
 				CEE8121B260D87A900BB8DFD /* Protocols */,
+				CEF39A952631A80800616628 /* UIColor Extension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -587,8 +604,10 @@
 		CECEFBAB262F011900D36004 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				CEF39A8D2631A52000616628 /* FirebaseDatabaseInfo.swift */,
 				CECEFBAC262F011F00D36004 /* FirebaseAuthManager.swift */,
 				CECEFBB1262F013100D36004 /* FirebaseDatabaseManager.swift */,
+				CEF39A842631A47600616628 /* Lamp Model */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -688,6 +707,19 @@
 				CEED9FA726254C91001D9DF4 /* AirConditionerView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CEF39A842631A47600616628 /* Lamp Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEF39A852631A48E00616628 /* LampFirebaseManager.swift */,
+				CEF39A9A2631ADA700616628 /* ElectricalSocketFirebaseManager.swift */,
+				CEF39A9F2631B20D00616628 /* AirConditionerFirebaseManager.swift */,
+				CEF39AA72631B45D00616628 /* VentilatorFirebaseManager.swift */,
+				CEF39AAC2631B50C00616628 /* IrrigationSystemFirebaseManager.swift */,
+				CEF39AB12631B72300616628 /* CurtainsFirebaseManager.swift */,
+			);
+			path = "Lamp Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -940,6 +972,7 @@
 				CEED9FC426254FF2001D9DF4 /* AirConditionerAssembly.swift in Sources */,
 				CECEFB88262EFFF000D36004 /* ProfileViewController.swift in Sources */,
 				CE17597C2609A506007AFDCA /* LampView.swift in Sources */,
+				CEF39A8E2631A52000616628 /* FirebaseDatabaseInfo.swift in Sources */,
 				CE97559F262BFAB900864A55 /* NSNotificationNameExtension.swift in Sources */,
 				CED7A87626103BA600F61391 /* SimpleDeviceInteractor.swift in Sources */,
 				CECEFB89262EFFF000D36004 /* ProfileInteractor.swift in Sources */,
@@ -959,6 +992,8 @@
 				CEBBF7C12606EE0500BD9F13 /* MainPresenter.swift in Sources */,
 				CE0197AD262BEA7400BD9E2E /* LovedDevicesViewController.swift in Sources */,
 				CE97559A262BF51800864A55 /* DevicesManager.swift in Sources */,
+				CEF39AB22631B72300616628 /* CurtainsFirebaseManager.swift in Sources */,
+				CEF39A9B2631ADA700616628 /* ElectricalSocketFirebaseManager.swift in Sources */,
 				CED7A86426103B9200F61391 /* SimpleDeviceViewController.swift in Sources */,
 				CECEFB8B262EFFF000D36004 /* ProfileViewTableViewCell.swift in Sources */,
 				CEDB0BE4262A9F0800F1B4DB /* MenuRouter.swift in Sources */,
@@ -969,20 +1004,24 @@
 				CEE811F3260D7DF300BB8DFD /* ColorChooserRouter.swift in Sources */,
 				CECEFBAD262F011F00D36004 /* FirebaseAuthManager.swift in Sources */,
 				CECEFB8D262EFFF000D36004 /* LoginViewController.swift in Sources */,
+				CEF39AA82631B45D00616628 /* VentilatorFirebaseManager.swift in Sources */,
 				CE54A5762605E0F400352C46 /* MainViewController.swift in Sources */,
 				CE24EA6B262F034900C3EBF6 /* CustomButton.swift in Sources */,
 				CEBBF7D02606F08B00BD9F13 /* SmartHomeDeviceCollectionViewCell.swift in Sources */,
 				CEDB0BC2262A968400F1B4DB /* Localized.swift in Sources */,
 				CEADBC8826140C11000C4D97 /* ProfileVCAssembly.swift in Sources */,
+				CEF39AAD2631B50C00616628 /* IrrigationSystemFirebaseManager.swift in Sources */,
 				CED7A88026103E1B00F61391 /* SimpleDeviceAssembly.swift in Sources */,
 				CEDB0BEC262AA1EB00F1B4DB /* MenuAssembly.swift in Sources */,
 				CE83064B26085533005CE030 /* IrrigationSystem.swift in Sources */,
+				CEF39A962631A80800616628 /* UIColor Extension.swift in Sources */,
 				CEDB0BDF262A9F0100F1B4DB /* MenuInteractor.swift in Sources */,
 				CED7A87126103B9F00F61391 /* SimpleDevicePresenter.swift in Sources */,
 				CEBBF7CB2606EE1100BD9F13 /* MainRouter.swift in Sources */,
 				CEDB0BD2262A9EF300F1B4DB /* MenuView.swift in Sources */,
 				CECEFB8F262EFFF000D36004 /* LoginPresenter.swift in Sources */,
 				CECEFB90262EFFF000D36004 /* LoginRouter.swift in Sources */,
+				CEF39A862631A48E00616628 /* LampFirebaseManager.swift in Sources */,
 				CECEFB8A262EFFF000D36004 /* ProfileView.swift in Sources */,
 				CEBE41F32606F52500E370AB /* SmartHomeDevice.swift in Sources */,
 				CEBE41E12606F3B100E370AB /* SmartHomeItemCollectionViewDataSource.swift in Sources */,
@@ -1013,6 +1052,7 @@
 				CECEFB86262EFFF000D36004 /* RegisterView.swift in Sources */,
 				CE0197CD262BEEEB00BD9E2E /* LovedDevicesAssembly.swift in Sources */,
 				CE3B19E32611868600D39A41 /* RoundedButton.swift in Sources */,
+				CEF39AA02631B20D00616628 /* AirConditionerFirebaseManager.swift in Sources */,
 				CEE81217260D87A600BB8DFD /* ICustomCollectionViewDelegate.swift in Sources */,
 				CECEFBA2262F007500D36004 /* RegisterVCAssembly.swift in Sources */,
 				CEBE41F82606F87D00E370AB /* Lamp.swift in Sources */,

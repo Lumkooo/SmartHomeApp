@@ -34,6 +34,19 @@ class SmartHomeDevice: ISmartHomeDevice {
         self.image = image
     }
 
+    init(name: String,
+         code: String,
+         image: UIImage,
+         isLoved: Bool,
+         isTurnedOn: Bool) {
+        self.name = name
+        self.code = code
+        self.image = image
+        self.isLoved = isLoved
+        self.isTurnedOn = isTurnedOn
+    }
+
+
     // MARK: - ISmartHomeDevice
 
     func turnOn() {

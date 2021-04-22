@@ -24,7 +24,7 @@
 "register" = "S'inscrire";
 "loginButtonText" = "Connexion";
 "with" = "Passant par:";
-"logedInAs" = "Vous êtes connecté en tant que";
+"loggedInAs" = "Vous êtes connecté en tant que";
 "logout" = "Se déconnecter";
 "loginTitle" = "Connectez-vous à votre compte";
 "password" = "Mot de passe";

@@ -24,6 +24,7 @@ final class MainInteractor {
 
     weak var presenter: IMainInteractorOuter?
     private let lovedDevicesDelegate: ILovedDevicesDelegate
+    private let firebaseManager = FirebaseDatabaseManager()
 
     init(lovedDevicesDelegate: ILovedDevicesDelegate) {
         self.lovedDevicesDelegate = lovedDevicesDelegate
@@ -35,7 +36,32 @@ final class MainInteractor {
 extension MainInteractor: IMainInteractor {
 
     func loadInitData() {
-        self.presenter?.reloadView(devices: self.getDevices())
+//        firebaseManager.saveAirConditioner(AirConditioner(name: "Кондиционер", code: "340-908-231"), completion: {
+//            print("DONE1")
+//        })
+//        firebaseManager.saveElectricalSocket(ElectricalSocket(name: "Розетка", code: "001-435-593")) {
+//            print("DONE2")
+//        }
+//        firebaseManager.saveAirConditioner(AirConditioner(name: "Кондиционер", code: "340-908-231"), completion: {
+//            print("DONE1")
+//        })
+//        firebaseManager.saveIrrigationSystemManager(IrrigationSystem(name: "Система полива", code: "211-112-142")) {
+//            print("DONE2")
+//        }
+//        firebaseManager.saveCurtains(Curtains(name: "Шторы", code: "539-031-324")) {
+//            print("DONE3")
+//        }
+//        firebaseManager.saveVentilator(Ventilator(name: "Вентилятор", code: "882-213-493")) {
+//            print("DONE4")
+//        }
+
+        firebaseManager.getDevices { (devices) in
+            self.presenter?.reloadView(devices: devices)
+        } errorCompletion: {
+
+        }
+//        self.presenter?.reloadView(devices: self.getDevices())
+
     }
 
     func getDevice(atIndexPath indexPath: IndexPath) -> SmartHomeDevice? {

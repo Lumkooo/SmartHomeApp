@@ -32,6 +32,16 @@ final class Curtains: SmartHomeDevice {
         super.init(name: name, code: code, image: AppConstants.Images.curtains)
     }
 
+    init(name: String, code: String, level: Int, isLoved: Bool, isTurnedOn: Bool) {
+        self.level = level
+        super.init(name: name,
+                   code: code,
+                   image: AppConstants.Images.curtains,
+                   isLoved: isLoved,
+                   isTurnedOn: isTurnedOn)
+    }
+
+
     // При выключении штор уровень штор изменяется к "наполовину закрыты"
     override func turnOff() {
         super.turnOff()
