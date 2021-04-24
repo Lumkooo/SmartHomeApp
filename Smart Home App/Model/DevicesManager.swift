@@ -17,6 +17,7 @@ final class DevicesManager {
 
     private var devices: [SmartHomeDevice]
     private var lovedDevices: [SmartHomeDevice]
+    private let firebaseManager = FirebaseDatabaseManager()
 
     init() {
         // TODO: - Загрузка из Firebase
@@ -54,8 +55,15 @@ final class DevicesManager {
         self.devices.append(device)
     }
 
-    func getDevices() -> [SmartHomeDevice] {
-        return self.devices
+    func getDevices(completion: @escaping (([SmartHomeDevice]) -> Void)) {
+        if self.devices.isEmpty {
+            firebaseManager.getDevices { (devices) in
+                self.devices = devices
+                completion(devices)
+            }
+        } else {
+            completion(self.devices)
+        }
     }
 
     func getDevice(atIndex index: Int) -> SmartHomeDevice? {

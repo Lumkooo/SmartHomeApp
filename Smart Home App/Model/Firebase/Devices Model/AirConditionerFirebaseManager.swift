@@ -10,10 +10,19 @@ import Firebase
 
 final class AirConditionerFirebaseManager: FirebaseDatabaseInfo {
 
+    // MARK: - Properties
+    
     private let catalog = "airConditioners"
+}
 
-    func saveAirConditioner(_ airConditioner: AirConditioner,
-                            completion: @escaping () -> Void) {
+// MARK: - IDevicesFirebaseManager
+
+extension AirConditionerFirebaseManager: IDevicesFirebaseManager {
+    func save(_ device: SmartHomeDevice,
+              completion: (() -> Void)? = nil) {
+        guard let airConditioner = device as? AirConditioner else {
+            return
+        }
         let reference = self.devicesRef.child(catalog).child("\(airConditioner.code)")
         
         reference.setValue(["name" : airConditioner.name,
@@ -22,11 +31,11 @@ final class AirConditionerFirebaseManager: FirebaseDatabaseInfo {
                             "temperatureLevel" : airConditioner.temperatureLevel,
                             "isLoved" : airConditioner.isLoved,
                             "isTurnedOn" : airConditioner.isTurnedOn])
-        completion()
+        completion?()
     }
 
-    func getAirConditioners(completion: @escaping ([AirConditioner]) -> Void,
-                              errorCompletion: @escaping () -> Void) {
+    func get(completion: @escaping ([SmartHomeDevice]) -> Void,
+             errorCompletion: @escaping () -> Void) {
         let reference = self.devicesRef.child(catalog)
         var airConditioners: [AirConditioner] = []
         reference.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -57,5 +66,20 @@ final class AirConditionerFirebaseManager: FirebaseDatabaseInfo {
             }
             completion(airConditioners)
         })
+    }
+
+    func removeWithCode(_ code: String,
+                        completion: @escaping () -> Void,
+                        errorCompletion: @escaping (Error) -> Void) {
+        let reference = self.devicesRef.child(self.catalog)
+        let deletingReference = reference.child(code)
+        deletingReference.removeValue { (error, ref) in
+            if let error = error {
+                errorCompletion(error)
+                return
+            } else if error == nil{
+                completion()
+            }
+        }
     }
 }

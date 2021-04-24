@@ -40,6 +40,7 @@
 		CE83062F260848EF005CE030 /* Curtains.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83062E260848EF005CE030 /* Curtains.swift */; };
 		CE83063726084DD8005CE030 /* Ventilator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83063626084DD8005CE030 /* Ventilator.swift */; };
 		CE83064B26085533005CE030 /* IrrigationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83064A26085533005CE030 /* IrrigationSystem.swift */; };
+		CE96C4EB2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96C4EA2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift */; };
 		CE97559A262BF51800864A55 /* DevicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975599262BF51800864A55 /* DevicesManager.swift */; };
 		CE97559F262BFAB900864A55 /* NSNotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97559E262BFAB800864A55 /* NSNotificationNameExtension.swift */; };
 		CEADBC8826140C11000C4D97 /* ProfileVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADBC8726140C11000C4D97 /* ProfileVCAssembly.swift */; };
@@ -179,6 +180,7 @@
 		CE83062E260848EF005CE030 /* Curtains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curtains.swift; sourceTree = "<group>"; };
 		CE83063626084DD8005CE030 /* Ventilator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ventilator.swift; sourceTree = "<group>"; };
 		CE83064A26085533005CE030 /* IrrigationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrrigationSystem.swift; sourceTree = "<group>"; };
+		CE96C4EA2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDevicesFirebaseManager.swift; sourceTree = "<group>"; };
 		CE975599262BF51800864A55 /* DevicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesManager.swift; sourceTree = "<group>"; };
 		CE97559E262BFAB800864A55 /* NSNotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationNameExtension.swift; sourceTree = "<group>"; };
 		CEADBC8726140C11000C4D97 /* ProfileVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVCAssembly.swift; sourceTree = "<group>"; };
@@ -505,12 +507,12 @@
 		CEBE41D72606F2EE00E370AB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CECEFBAB262F011900D36004 /* Firebase */,
 				CEDB0BC1262A968400F1B4DB /* Localized.swift */,
 				CE975599262BF51800864A55 /* DevicesManager.swift */,
 				CE97559E262BFAB800864A55 /* NSNotificationNameExtension.swift */,
 				CEBE41D82606F2FD00E370AB /* AppConstants.swift */,
 				CED7A88726103F6000F61391 /* DevicesRouter.swift */,
+				CECEFBAB262F011900D36004 /* Firebase */,
 				CEBE41EA2606F3F700E370AB /* SmartHomeItemsCollectionViewModel */,
 				CEE81208260D869A00BB8DFD /* ColorItemCollectionViewModel */,
 				CEE8121B260D87A900BB8DFD /* Protocols */,
@@ -607,7 +609,7 @@
 				CEF39A8D2631A52000616628 /* FirebaseDatabaseInfo.swift */,
 				CECEFBAC262F011F00D36004 /* FirebaseAuthManager.swift */,
 				CECEFBB1262F013100D36004 /* FirebaseDatabaseManager.swift */,
-				CEF39A842631A47600616628 /* Lamp Model */,
+				CEF39A842631A47600616628 /* Devices Model */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -685,6 +687,7 @@
 			isa = PBXGroup;
 			children = (
 				CEE81216260D87A600BB8DFD /* ICustomCollectionViewDelegate.swift */,
+				CE96C4EA2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -709,7 +712,7 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		CEF39A842631A47600616628 /* Lamp Model */ = {
+		CEF39A842631A47600616628 /* Devices Model */ = {
 			isa = PBXGroup;
 			children = (
 				CEF39A852631A48E00616628 /* LampFirebaseManager.swift */,
@@ -719,7 +722,7 @@
 				CEF39AAC2631B50C00616628 /* IrrigationSystemFirebaseManager.swift */,
 				CEF39AB12631B72300616628 /* CurtainsFirebaseManager.swift */,
 			);
-			path = "Lamp Model";
+			path = "Devices Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1047,6 +1050,7 @@
 				CECEFB8C262EFFF000D36004 /* LoginInteractor.swift in Sources */,
 				CEE811F8260D7F7900BB8DFD /* ColorChooserAssembly.swift in Sources */,
 				CEBE4209260706AC00E370AB /* ElectricalSocket.swift in Sources */,
+				CE96C4EB2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift in Sources */,
 				CE54A5722605E0F400352C46 /* AppDelegate.swift in Sources */,
 				CECEFBA7262F008200D36004 /* LoginVCAssembly.swift in Sources */,
 				CECEFB86262EFFF000D36004 /* RegisterView.swift in Sources */,

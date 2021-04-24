@@ -10,19 +10,28 @@ import Firebase
 
 final class IrrigationSystemFirebaseManager: FirebaseDatabaseInfo {
 
-    private let catalog = "irrigationSystems"
+    // MARK: - Properties
 
-    func saveIrrigationSystem(_ irrigationSystem: IrrigationSystem,
-                              completion: @escaping () -> Void) {
+    private let catalog = "irrigationSystems"
+}
+
+// MARK: - IDeviceFirebaseManager
+
+extension IrrigationSystemFirebaseManager: IDevicesFirebaseManager {
+    func save(_ device: SmartHomeDevice,
+              completion: (() -> Void)? = nil) {
+        guard let irrigationSystem = device as? IrrigationSystem else {
+            return
+        }
         let reference = self.devicesRef.child(catalog).child("\(irrigationSystem.code)")
         reference.setValue(["name" : irrigationSystem.name,
                             "code" : irrigationSystem.code,
                             "isLoved" : irrigationSystem.isLoved,
                             "isTurnedOn" : irrigationSystem.isTurnedOn])
-        completion()
+        completion?()
     }
 
-    func getIrrigationSystems(completion: @escaping ([IrrigationSystem]) -> Void,
+    func get(completion: @escaping ([SmartHomeDevice]) -> Void,
                               errorCompletion: @escaping () -> Void) {
         let reference = self.devicesRef.child(catalog)
         var irrigationSystems: [IrrigationSystem] = []
@@ -50,5 +59,20 @@ final class IrrigationSystemFirebaseManager: FirebaseDatabaseInfo {
             }
             completion(irrigationSystems)
         })
+    }
+
+    func removeWithCode(_ code: String,
+                        completion: @escaping () -> Void,
+                        errorCompletion: @escaping (Error) -> Void) {
+        let reference = self.devicesRef.child(self.catalog)
+        let deletingReference = reference.child(code)
+        deletingReference.removeValue { (error, ref) in
+            if let error = error {
+                errorCompletion(error)
+                return
+            } else if error == nil{
+                completion()
+            }
+        }
     }
 }

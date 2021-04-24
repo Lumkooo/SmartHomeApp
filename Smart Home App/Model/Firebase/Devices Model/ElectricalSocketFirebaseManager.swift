@@ -10,20 +10,28 @@ import Firebase
 
 final class ElectricalSocketFirebaseManager: FirebaseDatabaseInfo {
 
-    private let catalog = "electricalSockets"
+    // MARK: - Properties
 
-    func saveElectricalSocket(_ electricalSocket: ElectricalSocket,
-                              completion: @escaping () -> Void) {
+    private let catalog = "electricalSockets"
+}
+
+extension ElectricalSocketFirebaseManager: IDevicesFirebaseManager {
+
+    func save(_ device: SmartHomeDevice,
+              completion: (() -> Void)? = nil) {
+        guard let electricalSocket = device as? ElectricalSocket else {
+            return
+        }
         let reference = self.devicesRef.child(catalog).child("\(electricalSocket.code)")
         reference.setValue(["name" : electricalSocket.name,
                             "code" : electricalSocket.code,
                             "isLoved" : electricalSocket.isLoved,
                             "isTurnedOn" : electricalSocket.isTurnedOn])
-        completion()
+        completion?()
     }
 
-    func getElectricalSockets(completion: @escaping ([ElectricalSocket]) -> Void,
-                              errorCompletion: @escaping () -> Void) {
+    func get(completion: @escaping ([SmartHomeDevice]) -> Void,
+             errorCompletion: @escaping () -> Void) {
         let reference = self.devicesRef.child(catalog)
         var electricalSockets: [ElectricalSocket] = []
         reference.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -50,5 +58,20 @@ final class ElectricalSocketFirebaseManager: FirebaseDatabaseInfo {
             }
             completion(electricalSockets)
         })
+    }
+
+    func removeWithCode(_ code: String,
+                        completion: @escaping () -> Void,
+                        errorCompletion: @escaping (Error) -> Void) {
+        let reference = self.devicesRef.child(self.catalog)
+        let deletingReference = reference.child(code)
+        deletingReference.removeValue { (error, ref) in
+            if let error = error {
+                errorCompletion(error)
+                return
+            } else if error == nil{
+                completion()
+            }
+        }
     }
 }

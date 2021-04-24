@@ -9,22 +9,29 @@ import Foundation
 import Firebase
 
 final class CurtainsFirebaseManager: FirebaseDatabaseInfo {
-
+    
     private let catalog = "curtains"
+}
 
-    func saveCurtains(_ curtains: Curtains,
-                      completion: @escaping () -> Void) {
+// MARK: - IDevicesFirebaseManager
+
+extension CurtainsFirebaseManager: IDevicesFirebaseManager {
+    func save(_ device: SmartHomeDevice,
+              completion: (() -> Void)? = nil) {
+        guard let curtains = device as? Curtains else {
+            return
+        }
         let reference = self.devicesRef.child(catalog).child("\(curtains.code)")
         reference.setValue(["name" : curtains.name,
                             "code" : curtains.code,
                             "level" : curtains.level,
                             "isLoved" : curtains.isLoved,
                             "isTurnedOn" : curtains.isTurnedOn])
-        completion()
+        completion?()
     }
-
-    func getCurtains(completion: @escaping ([Curtains]) -> Void,
-                     errorCompletion: @escaping () -> Void) {
+    
+    func get(completion: @escaping ([SmartHomeDevice]) -> Void,
+             errorCompletion: @escaping () -> Void) {
         let reference = self.devicesRef.child(catalog)
         var curtains: [Curtains] = []
         reference.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -53,5 +60,20 @@ final class CurtainsFirebaseManager: FirebaseDatabaseInfo {
             }
             completion(curtains)
         })
+    }
+    
+    func removeWithCode(_ code: String,
+                        completion: @escaping () -> Void,
+                        errorCompletion: @escaping (Error) -> Void) {
+        let reference = self.devicesRef.child(self.catalog)
+        let deletingReference = reference.child(code)
+        deletingReference.removeValue { (error, ref) in
+            if let error = error {
+                errorCompletion(error)
+                return
+            } else if error == nil{
+                completion()
+            }
+        }
     }
 }

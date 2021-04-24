@@ -10,20 +10,28 @@ import Firebase
 
 final class VentilatorFirebaseManager: FirebaseDatabaseInfo {
 
+    // MARK: - Properties
+    
     private let catalog = "ventilators"
+}
 
-    func saveVentilator(_ ventilator: Ventilator,
-                        completion: @escaping () -> Void) {
+// MARK: - IDeviceFirebaeManager
+extension VentilatorFirebaseManager: IDevicesFirebaseManager {
+    func save(_ device: SmartHomeDevice,
+              completion: (() -> Void)? = nil) {
+        guard let ventilator = device as? Ventilator else {
+            return
+        }
         let reference = self.devicesRef.child(catalog).child("\(ventilator.code)")
         reference.setValue(["name" : ventilator.name,
                             "code" : ventilator.code,
                             "isLoved" : ventilator.isLoved,
                             "isTurnedOn" : ventilator.isTurnedOn])
-        completion()
+        completion?()
     }
 
-    func getVentilators(completion: @escaping ([Ventilator]) -> Void,
-                        errorCompletion: @escaping () -> Void) {
+    func get(completion: @escaping ([SmartHomeDevice]) -> Void,
+             errorCompletion: @escaping () -> Void) {
         let reference = self.devicesRef.child(catalog)
         var ventilators: [Ventilator] = []
         reference.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -50,5 +58,20 @@ final class VentilatorFirebaseManager: FirebaseDatabaseInfo {
             }
             completion(ventilators)
         })
+    }
+
+    func removeWithCode(_ code: String,
+                        completion: @escaping () -> Void,
+                        errorCompletion: @escaping (Error) -> Void) {
+        let reference = self.devicesRef.child(self.catalog)
+        let deletingReference = reference.child(code)
+        deletingReference.removeValue { (error, ref) in
+            if let error = error {
+                errorCompletion(error)
+                return
+            } else if error == nil{
+                completion()
+            }
+        }
     }
 }
