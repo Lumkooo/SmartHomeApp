@@ -11,6 +11,8 @@ protocol IAirConditionerInteractor {
     func loadInitData()
     func toggleAirConditioner()
     func setTemprature(_ newValue: Int)
+    func sliderDidEndGesture(withValue value: Int)
+    func saveData()
 }
 
 protocol IAirConditionerInteractorOuter: AnyObject {
@@ -25,6 +27,7 @@ final class AirConditionerInteractor {
 
     private let airConditioner: AirConditioner
     weak var presenter: IAirConditionerInteractorOuter?
+    private let firebaseManager = FirebaseDatabaseManager()
 
     // MARK: - Init
 
@@ -48,6 +51,15 @@ extension AirConditionerInteractor: IAirConditionerInteractor {
     func setTemprature(_ newValue: Int) {
         self.airConditioner.setTemperatureLevel(newValue)
         self.presenter?.changeTempratureTo(newValue)
+    }
+
+    func sliderDidEndGesture(withValue value: Int) {
+        self.setTemprature(value)
+        self.saveData()
+    }
+
+    func saveData() {
+        self.firebaseManager.saveDevice(self.airConditioner)
     }
 }
 

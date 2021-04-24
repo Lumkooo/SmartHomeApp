@@ -32,4 +32,9 @@ final class AirConditionerViewController: UIViewController {
         self.view = self.ui
         self.presenter.viewDidLoad(ui: self.ui)
     }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.presenter.saveData()
+    }
 }

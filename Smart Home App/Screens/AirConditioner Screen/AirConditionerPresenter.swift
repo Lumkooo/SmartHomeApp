@@ -9,6 +9,7 @@ import Foundation
 
 protocol IAirConditionerPresenter {
     func viewDidLoad(ui: IAirConditionerView)
+    func saveData()
 }
 
 final class AirConditionerPresenter {
@@ -39,7 +40,14 @@ extension AirConditionerPresenter: IAirConditionerPresenter {
         self.ui?.sliderDidChangeValue = { [weak self] newValue in
             self?.interactor.setTemprature(newValue)
         }
+        self.ui?.sliderDidEndGesture = { [weak self] newValue in
+            self?.interactor.sliderDidEndGesture(withValue: newValue)
+        }
         self.interactor.loadInitData()
+    }
+
+    func saveData() {
+        self.interactor.saveData()
     }
 }
 

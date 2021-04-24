@@ -10,6 +10,7 @@ import UIKit
 protocol ILampView: AnyObject {
     var toggleLamp: (() -> Void)? { get set }
     var sliderDidChangeValue: ((Int) -> Void)? { get set }
+    var sliderDidEndGesture: ((Int) -> Void)? { get set }
     var colorChangeButtonPressed: (() -> Void)? { get set }
 
     func prepareView(lamp: Lamp)
@@ -75,6 +76,7 @@ final class LampView: UIView, UITextViewDelegate {
     var toggleLamp: (() -> Void)?
     var sliderDidChangeValue: ((Int) -> Void)?
     var colorChangeButtonPressed: (() -> Void)?
+    var sliderDidEndGesture: ((Int) -> Void)?
 
     // MARK: - Init
 
@@ -240,6 +242,10 @@ private extension LampView {
 // MARK: - ICustomSlider
 
 extension LampView: ICustomSlider {
+    func sliderDidEndDragging(customSlider: CustomSlider, value: Int) {
+        self.sliderDidEndGesture?(value)
+    }
+
     func sliderDidChangeValue(customSlider: CustomSlider, value: Int) {
         self.sliderDidChangeValue?(value)
     }

@@ -10,6 +10,7 @@ import Foundation
 protocol ISimpleDevicePresenter {
     func getDeviceName() -> String
     func viewDidLoad(ui: ISimpleDeviceView)
+    func saveData()
 }
 
 final class SimpleDevicePresenter {
@@ -41,6 +42,10 @@ extension SimpleDevicePresenter: ISimpleDevicePresenter {
 
     func getDeviceName() -> String {
         return self.interactor.getDeviceName()
+    }
+
+    func saveData() {
+        self.interactor.saveData()
     }
 }
 

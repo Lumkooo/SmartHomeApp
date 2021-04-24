@@ -40,6 +40,11 @@ final class LampViewController: UIViewController {
         self.presenter.viewDidAppear()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.presenter.saveData()
+    }
+
     private func setupVCTitle() {
         let deviceName = self.presenter.getDeviceName()
         self.title = deviceName

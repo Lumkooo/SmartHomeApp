@@ -14,6 +14,8 @@ protocol ILampInteractor {
     func setLightColor(_ color: UIColor)
     func colorChangeButtonPressed()
     func getDeviceName() -> String
+    func saveData()
+    func sliderDidEndGesture(withValue value: Int)
 }
 
 protocol ILampInteractorOuter: AnyObject {
@@ -30,6 +32,7 @@ final class LampInteractor {
 
     weak var presenter: ILampInteractorOuter?
     private var lamp: Lamp
+    private let firebaseManager = FirebaseDatabaseManager()
 
     // MARK: - Init
 
@@ -66,6 +69,15 @@ extension LampInteractor: ILampInteractor {
 
     func getDeviceName() -> String {
         return self.lamp.name
+    }
+
+    func saveData() {
+        self.firebaseManager.saveDevice(self.lamp)
+    }
+
+    func sliderDidEndGesture(withValue value: Int) {
+        self.lamp.changeLightLevelTo(value)
+        self.saveData()
     }
 }
 

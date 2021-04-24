@@ -10,6 +10,7 @@ import UIKit
 protocol IAirConditionerView: AnyObject {
     var toggleAirConditioner: (() -> Void)? { get set }
     var sliderDidChangeValue: ((Int) -> Void)? { get set }
+    var sliderDidEndGesture: ((Int) -> Void)? { get set }
 
     func changeSliderValueTo(_ value: Int)
     func prepareView(airConditioner: AirConditioner)
@@ -76,6 +77,7 @@ final class AirConditionerView: UIView {
 
     var toggleAirConditioner: (() -> Void)?
     var sliderDidChangeValue: ((Int) -> Void)?
+    var sliderDidEndGesture: ((Int) -> Void)?
     private let tempraturePrefix: String = Localized("temperature")
     private let tempratureSuffix: String = "°С"
 
@@ -242,6 +244,10 @@ private extension AirConditionerView {
 // MARK: - ICustomSlider
 
 extension AirConditionerView: ICustomSlider {
+    func sliderDidEndDragging(customSlider: CustomSlider, value: Int) {
+        self.sliderDidEndGesture?(value)
+    }
+
     func sliderDidChangeValue(customSlider: CustomSlider, value: Int) {
         self.sliderDidChangeValue?(value)
     }

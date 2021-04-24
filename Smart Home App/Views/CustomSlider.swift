@@ -9,6 +9,7 @@ import UIKit
 
 protocol ICustomSlider {
     func sliderDidChangeValue(customSlider: CustomSlider, value: Int)
+    func sliderDidEndDragging(customSlider: CustomSlider, value: Int)
 }
 
 
@@ -43,6 +44,7 @@ final class CustomSlider: UIView {
     private lazy var customSliderViewTopAnchor = self.customSliderView.topAnchor.constraint(
         equalTo: self.topAnchor)
     private var translationTemproraryValue: CGPoint = CGPoint(x: 0, y: 0)
+    private(set) var sliderValue: Int = 0
     override var isUserInteractionEnabled: Bool {
         didSet {
             if self.isUserInteractionEnabled {
@@ -105,6 +107,7 @@ final class CustomSlider: UIView {
             // При завершении жеста необходимо запомнить текущее состояние, чтобы
             // потом продолжить с него
             self.translationTemproraryValue = gesture.translation(in: self)
+            self.delegate?.sliderDidEndDragging(customSlider: self, value: self.sliderValue)
         case .began:
             // Продолжаем с состояния, которое запомнили выше
             gesture.setTranslation(self.translationTemproraryValue, in: self)
@@ -128,7 +131,7 @@ final class CustomSlider: UIView {
         // вызов метода sliderDidChangeValue у делегата
         self.delegate?.sliderDidChangeValue(customSlider: self,
                                             value: Int(sliderLevel))
-
+        self.sliderValue = Int(sliderLevel)
         // Проверка на граничные условия
         if translationY < 0 {
             gesture.setTranslation(CGPoint(x: 0, y: 0),

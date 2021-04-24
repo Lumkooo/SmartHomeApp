@@ -11,6 +11,7 @@ protocol ISimpleDeviceInteractor {
     func loadInitData()
     func getDeviceName() -> String
     func toggleState()
+    func saveData()
 }
 
 protocol ISimpleDeviceInteractorOuter: AnyObject {
@@ -24,6 +25,7 @@ final class SimpleDeviceInteractor {
 
     weak var presenter: ISimpleDeviceInteractorOuter?
     private let device: SmartHomeDevice
+    private let firebaseManager = FirebaseDatabaseManager()
 
     // MARK: - Init
 
@@ -46,5 +48,9 @@ extension SimpleDeviceInteractor: ISimpleDeviceInteractor {
     func toggleState() {
         self.device.toggleDevice()
         self.presenter?.reloadStateOfDevice(self.device)
+    }
+
+    func saveData() {
+        self.firebaseManager.saveDevice(device)
     }
 }

@@ -25,8 +25,7 @@ final class FirebaseDatabaseManager: FirebaseDatabaseInfo {
 
 extension FirebaseDatabaseManager {
     func appendDevice(_ device: SmartHomeDevice,
-                      completion: @escaping () -> Void,
-                      errorCompletion: @escaping () -> Void) {
+                      completion: (() -> Void)? = nil) {
         let manager = self.getManagerForDevice(device)
         manager?.save(device, completion: completion)
     }
@@ -115,6 +114,11 @@ extension FirebaseDatabaseManager {
             manager?.save(device, completion: nil)
         }
     }
+
+    func saveDevice(_ device: SmartHomeDevice) {
+        let manager = self.getManagerForDevice(device)
+        manager?.save(device, completion: nil)
+    }
 }
 
 // MARK: - Private
@@ -124,15 +128,15 @@ private extension FirebaseDatabaseManager {
         if device is Lamp {
             return self.lampManager
         } else if device is ElectricalSocket {
-            return nil
+            return self.electricalSocketManager
         } else if device is AirConditioner {
-            return nil
+            return self.airConditionerManager
         } else if device is Curtains {
-            return nil
+            return self.curtainsManager
         } else if device is Ventilator {
-            return nil
+            return self.ventilatorManager
         } else if device is IrrigationSystem {
-            return nil
+            return self.irrigationSystemManager
         } else {
             return nil
         }

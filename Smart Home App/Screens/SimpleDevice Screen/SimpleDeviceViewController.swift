@@ -35,6 +35,13 @@ final class SimpleDeviceViewController: UIViewController {
         self.presenter.viewDidLoad(ui: self.ui)
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.presenter.saveData()
+    }
+
+    // MARK: - Private
+
     private func setupVCTitle() {
         let deviceName = self.presenter.getDeviceName()
         self.title = deviceName

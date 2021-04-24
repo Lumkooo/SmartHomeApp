@@ -15,20 +15,15 @@ final class DevicesManager {
 
     // MARK: - Properties
 
-    private var devices: [SmartHomeDevice]
-    private var lovedDevices: [SmartHomeDevice]
+    private var devices: [SmartHomeDevice] = []
+    private var lovedDevices: [SmartHomeDevice] = []
     private let firebaseManager = FirebaseDatabaseManager()
 
     init() {
-        // TODO: - Загрузка из Firebase
-        let devices: [SmartHomeDevice] = [Lamp(name: "Освещение", code: "94057465"),
-                                          ElectricalSocket(name: "Розетка", code: "13259954"),
-                                          AirConditioner(name: "Кондиционер", code: "94930534"),
-                                          Curtains(name: "Шторы", code: "12340895"),
-                                          Ventilator(name: "Вентилятор", code: "32146854"),
-                                          IrrigationSystem(name: "Система полива", code: "21394031")]
-        self.devices = devices
-        self.lovedDevices = devices.filter { $0.isLoved }
+        self.firebaseManager.getDevices { (devices) in
+            self.devices = devices
+            self.lovedDevices = devices.filter { $0.isLoved }
+        }
     }
 
     // MARK: - Public
@@ -37,6 +32,7 @@ final class DevicesManager {
         if self.devices.count > index {
             let device = self.devices[index]
             device.toggleIsLoved()
+            self.firebaseManager.saveDevice(device)
             if device.isLoved {
                 // Добавили в избранное
                 self.lovedDevices.append(device)
@@ -53,6 +49,7 @@ final class DevicesManager {
 
     func addDevice(device: SmartHomeDevice) {
         self.devices.append(device)
+        self.firebaseManager.appendDevice(device)
     }
 
     func getDevices(completion: @escaping (([SmartHomeDevice]) -> Void)) {
@@ -77,6 +74,8 @@ final class DevicesManager {
     func toggleDeviceState(atIndex index: Int) {
         if self.devices.count > index {
             self.devices[index].toggleDevice()
+            let device = devices[index]
+            self.firebaseManager.saveDevice(device)
         }
     }
 }
@@ -99,6 +98,8 @@ extension DevicesManager {
     func toggleLovedDeviceState(atIndex index: Int) {
         if self.lovedDevices.count > index {
             self.lovedDevices[index].toggleDevice()
+            let device = devices[index]
+            self.firebaseManager.saveDevice(device)
         }
     }
 
@@ -106,6 +107,8 @@ extension DevicesManager {
         if self.lovedDevices.count > index {
             self.lovedDevices[index].toggleIsLoved()
             self.lovedDevices.remove(at: index)
+            let device = devices[index]
+            self.firebaseManager.saveDevice(device)
         }
     }
 }

@@ -11,6 +11,7 @@ protocol ILampPresenter {
     func viewDidLoad(ui: ILampView)
     func viewDidAppear()
     func getDeviceName() -> String
+    func saveData()
 }
 
 final class LampPresenter {
@@ -40,6 +41,9 @@ extension LampPresenter: ILampPresenter {
         self.ui?.sliderDidChangeValue = { [weak self] newValue in
             self?.interactor.setLightLevel(newValue)
         }
+        self.ui?.sliderDidEndGesture = { [weak self] newValue in
+            self?.interactor.sliderDidEndGesture(withValue: newValue)
+        }
         self.ui?.colorChangeButtonPressed = { [weak self] in
             self?.interactor.colorChangeButtonPressed()
         }
@@ -51,6 +55,10 @@ extension LampPresenter: ILampPresenter {
 
     func getDeviceName() -> String {
         return self.interactor.getDeviceName()
+    }
+
+    func saveData() {
+        self.interactor.saveData()
     }
 }
 
