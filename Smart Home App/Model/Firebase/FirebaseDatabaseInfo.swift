@@ -16,7 +16,7 @@ class FirebaseDatabaseInfo {
             // Не должно быть ситуации, когда Auth.auth().currentUser?.uid был бы nil,
             // потому что на все экраны, где это используется можно пройти только авторизовавшись
             // однако на всякий случай:
-            assertionFailure("Can't take userUID")
+//            assertionFailure("Can't take userUID")
             return ""
         }
         return userUID

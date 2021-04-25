@@ -19,29 +19,22 @@ protocol ILovedDevicesInteractorOuter: AnyObject {
     func reloadView(devices: [SmartHomeDevice])
 }
 
-
 final class LovedDevicesInteractor {
 
     // MARK: - Properties
 
     weak var presenter: ILovedDevicesInteractorOuter?
-    private let devices: [SmartHomeDevice] = [Lamp(name: "Освещение", code: "94057465"),
-                                              ElectricalSocket(name: "Розетка", code: "13259954"),
-                                              AirConditioner(name: "Кондиционер", code: "94930534"),
-                                              Curtains(name: "Шторы", code: "12340895"),
-                                              Ventilator(name: "Вентилятор", code: "32146854"),
-                                              IrrigationSystem(name: "Система полива", code: "21394031")]
 }
 
 // MARK: - ILovedDevicesInteractor
 
 extension LovedDevicesInteractor: ILovedDevicesInteractor {
     func loadInitData() {
-        self.presenter?.reloadView(devices: self.getLovedDevices())
+        self.reloadView()
     }
 
     func reloadData() {
-        self.presenter?.reloadView(devices: self.getLovedDevices())
+        self.reloadView()
     }
 
     func getDevice(atIndexPath indexPath: IndexPath) -> SmartHomeDevice? {
@@ -51,12 +44,12 @@ extension LovedDevicesInteractor: ILovedDevicesInteractor {
     func cellTappedAt(_ indexPath: IndexPath) {
         let index = indexPath.item
         self.toggleDeviceState(index: index)
-        self.presenter?.reloadView(devices: self.getLovedDevices())
+        self.reloadView()
     }
 
     func toggleIsLikedState(atIndexPath indexPath: IndexPath) {
         DevicesManager.shared.toggleLovedDeviceIsLoved(atIndex: indexPath.item)
-        self.presenter?.reloadView(devices: self.getLovedDevices())
+        self.reloadView()
     }
 }
 
@@ -67,8 +60,12 @@ private extension LovedDevicesInteractor {
     }
 
     func getLovedDevices() -> [SmartHomeDevice] {
-        let devices = DevicesManager.shared.getLovedDevices()
-        return devices
+        return DevicesManager.shared.getLovedDevices()
+    }
+
+    func reloadView() {
+        let lovedDevices = self.getLovedDevices()
+        self.presenter?.reloadView(devices: lovedDevices)
     }
 }
 

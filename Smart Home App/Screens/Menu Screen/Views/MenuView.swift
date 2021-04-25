@@ -28,7 +28,7 @@ final class MenuView: UIView {
         let myButton = UIButton()
         myButton.setImage(AppConstants.Images.xmark,
                           for: .normal)
-        myButton.tintColor = .black
+        myButton.tintColor = .label
         myButton.addTarget(self, action: #selector(buttonSelector), for: .touchUpInside)
         return myButton
     }()

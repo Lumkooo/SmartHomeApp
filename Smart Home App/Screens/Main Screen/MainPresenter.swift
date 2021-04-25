@@ -11,6 +11,9 @@ protocol IMainPresenter {
     func viewDidAppear(ui: IMainView)
     func goToMenu(delegate: IMenuDelegate)
     func moveContentBackAfterMenu()
+    func userSignIn()
+    func userSignOut()
+    func addDeviceTapped()
 }
 
 final class MainPresenter {
@@ -58,11 +61,28 @@ extension MainPresenter: IMainPresenter {
     func moveContentBackAfterMenu() {
         self.ui?.moveContentBackAfterMenu()
     }
+
+    func userSignIn() {
+        self.interactor.userSignIn()
+    }
+
+    func userSignOut() {
+        self.interactor.userSignOut()
+    }
+
+    func addDeviceTapped() {
+        self.interactor.addDeviceTapped()
+    }
 }
 
 // MARK: - IMainInteractorOuter
 
 extension MainPresenter: IMainInteractorOuter {
+    func goToAddingDevice(delegate: IAddDeviceDelegate) {
+        self.router.showAddingVC(delegate: delegate)
+    }
+
+
     func reloadView(devices: [SmartHomeDevice]) {
         self.ui?.reloadView(devices: devices)
     }

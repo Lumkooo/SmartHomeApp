@@ -56,6 +56,7 @@ final class DevicesManager {
         if self.devices.isEmpty {
             firebaseManager.getDevices { (devices) in
                 self.devices = devices
+                self.lovedDevices = self.devices.filter { $0.isLoved }
                 completion(devices)
             }
         } else {
@@ -76,6 +77,43 @@ final class DevicesManager {
             self.devices[index].toggleDevice()
             let device = devices[index]
             self.firebaseManager.saveDevice(device)
+        }
+    }
+
+    func removeDevices() {
+        self.devices.removeAll()
+    }
+
+    func removeLovedDevices() {
+        self.lovedDevices.removeAll()
+    }
+
+    func createDevice(code: String, name: String) -> SmartHomeDevice? {
+        let firstDigit = code.first
+
+        switch firstDigit {
+        case "1":
+            return Lamp(name: name, code: code)
+        case "2":
+            return Lamp(name: name, code: code)
+        case "3":
+            return ElectricalSocket(name: name, code: code)
+        case "4":
+            return ElectricalSocket(name: name, code: code)
+        case "5":
+            return AirConditioner(name: name, code: code)
+        case "6":
+            return AirConditioner(name: name, code: code)
+        case "7":
+            return Curtains(name: name, code: code)
+        case "8":
+            return Curtains(name: name, code: code)
+        case "9":
+            return Ventilator(name: name, code: code)
+        case "0":
+            return IrrigationSystem(name: name, code: code)
+        default:
+            return nil
         }
     }
 }

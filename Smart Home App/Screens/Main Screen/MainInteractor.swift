@@ -12,10 +12,14 @@ protocol IMainInteractor {
     func cellTappedAt(_ indexPath: IndexPath)
     func toggleIsLikedState(atIndexPath indexPath: IndexPath)
     func getDevice(atIndexPath indexPath: IndexPath) -> SmartHomeDevice?
+    func userSignIn()
+    func userSignOut()
+    func addDeviceTapped()
 }
 
 protocol IMainInteractorOuter: AnyObject {
     func reloadView(devices: [SmartHomeDevice])
+    func goToAddingDevice(delegate: IAddDeviceDelegate)
 }
 
 final class MainInteractor {
@@ -35,9 +39,7 @@ final class MainInteractor {
 extension MainInteractor: IMainInteractor {
 
     func loadInitData() {
-        self.getDevices(completion: { (devices) in
-            self.presenter?.reloadView(devices: devices)
-        })
+        self.reloadView()
     }
 
     func getDevice(atIndexPath indexPath: IndexPath) -> SmartHomeDevice? {
@@ -47,14 +49,32 @@ extension MainInteractor: IMainInteractor {
     func cellTappedAt(_ indexPath: IndexPath) {
         let index = indexPath.row
         self.toggleDeviceState(index: index)
-        self.getDevices(completion: { (devices) in
-            self.presenter?.reloadView(devices: devices)
-        })
+        self.reloadView()
     }
     
     func toggleIsLikedState(atIndexPath indexPath: IndexPath) {
         DevicesManager.shared.toggleIsLovedForDeviceAt(index: indexPath.item)
         self.updateLovedDevicesScreen()
+    }
+
+    func userSignIn() {
+        self.getDevices(completion: { (devices) in
+            self.presenter?.reloadView(devices: devices)
+            self.lovedDevicesDelegate.reloadData()
+        })
+    }
+
+    func userSignOut() {
+        DevicesManager.shared.removeDevices()
+        DevicesManager.shared.removeLovedDevices()
+        self.getDevices(completion: { (devices) in
+            self.presenter?.reloadView(devices: devices)
+            self.lovedDevicesDelegate.reloadData()
+        })
+    }
+
+    func addDeviceTapped() {
+        self.presenter?.goToAddingDevice(delegate: self)
     }
 }
 
@@ -71,8 +91,21 @@ private extension MainInteractor {
         }
     }
 
+    func reloadView() {
+        self.getDevices { (devices) in
+            self.presenter?.reloadView(devices: devices)
+        }
+    }
+
     func updateLovedDevicesScreen() {
         self.lovedDevicesDelegate.reloadData()
     }
 }
 
+// MARK: - IAddDeviceDelegate
+
+extension MainInteractor: IAddDeviceDelegate {
+    func deviceAdded() {
+        self.reloadView()
+    }
+}

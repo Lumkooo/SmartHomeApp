@@ -9,10 +9,10 @@ import UIKit
 
 enum AlertAssembly {
     static func createSimpleAlert(withMessage message: String) -> UIAlertController {
-        let alert = UIAlertController(title: "Ошибка",
+        let alert = UIAlertController(title: Localized("error"),
                                       message: message,
                                       preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "Ok", style: .default)
+        let alertAction = UIAlertAction(title: Localized("ok"), style: .default)
         alert.addAction(alertAction)
         return alert
     }

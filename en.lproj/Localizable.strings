@@ -34,3 +34,12 @@
 "fillPasswordlError" = "You must fill in the password field";
 "secondPassswordError" = "It is necessary to fill in the second field with a password confirmation";
 "passwordNotTheSameError" = "Passwords must match";
+"deviceCodeText" = "Enter device code";
+"code" = "Code";
+"deviceNameText" = "Enter device name";
+"name" = "Name";
+"save" = "Save";
+"codeError" = "The code must be 9 characters";
+"nameError" = "You need to give the device a name";
+"error" = "Error";
+"ok" = "Ok";

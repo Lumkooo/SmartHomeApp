@@ -22,7 +22,7 @@ final class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = profileView
-        presenter.viewDidLoad(ui: self.profileView)
+        self.presenter.viewDidLoad(ui: self.profileView)
         self.title = Localized("profile")
     }
     

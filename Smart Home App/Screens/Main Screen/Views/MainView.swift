@@ -45,6 +45,15 @@ final class MainView: UIView {
         myLabel.textAlignment = .center
         return myLabel
     }()
+
+    private lazy var activityIndicatorView: UIActivityIndicatorView = {
+        let activityIndicatorView = UIActivityIndicatorView()
+        activityIndicatorView.style = .large
+        activityIndicatorView.color = .label
+        activityIndicatorView.hidesWhenStopped = true
+        activityIndicatorView.startAnimating()
+        return activityIndicatorView
+    }()
     
     // MARK: - Properties
 
@@ -60,6 +69,7 @@ final class MainView: UIView {
         super.init(frame: .zero)
         self.backgroundColor = .systemBackground
         self.setupElements()
+        self.setupActivityIndicatorView()
     }
 
     required init?(coder: NSCoder) {
@@ -82,6 +92,7 @@ extension MainView: IMainView {
         self.collectionViewDataSource.setData(devices: devices)
         self.collectionViewDelegate?.setData(devices: devices)
         self.collectionView.reloadData()
+        self.activityIndicatorView.stopAnimating()
         if devices.isEmpty {
             self.setupZeroDevicesLabel()
         } else {
@@ -103,6 +114,16 @@ extension MainView: IMainView {
                 translationX: 0,
                 y: 0)
         }
+    }
+
+    func setupActivityIndicatorView() {
+        self.addSubview(self.activityIndicatorView)
+        self.activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            self.activityIndicatorView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            self.activityIndicatorView.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+        ])
     }
 }
 

@@ -8,7 +8,7 @@
 import UIKit
 
 enum MainScreenAssembly {
-    static func createVC(lovedDevicesDelegate: ILovedDevicesDelegate) -> UIViewController {
+    static func createVC(lovedDevicesDelegate: ILovedDevicesDelegate) -> MainViewController {
 
         let router = MainRouter()
         let interactor = MainInteractor(lovedDevicesDelegate: lovedDevicesDelegate)

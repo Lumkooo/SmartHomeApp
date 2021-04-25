@@ -35,11 +35,21 @@
 		CE54A5B42605E15300352C46 /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5B32605E15200352C46 /* MainScreenAssembly.swift */; };
 		CE54A5BC2605E18D00352C46 /* NavigationControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5BB2605E18D00352C46 /* NavigationControllerAssembly.swift */; };
 		CE54A5C12605E1D600352C46 /* TabBarControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5C02605E1D600352C46 /* TabBarControllerAssembly.swift */; };
+		CE66682226350E350085DA12 /* ILovedDevicesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66682126350E350085DA12 /* ILovedDevicesDelegate.swift */; };
+		CE66682726350F490085DA12 /* IProfileDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66682626350F490085DA12 /* IProfileDelegate.swift */; };
+		CE66682E2635154B0085DA12 /* AddDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66682D2635154B0085DA12 /* AddDeviceView.swift */; };
+		CE666833263515560085DA12 /* AddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE666832263515560085DA12 /* AddDeviceViewController.swift */; };
+		CE666838263515600085DA12 /* AddDevicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE666837263515600085DA12 /* AddDevicePresenter.swift */; };
+		CE66683D263515680085DA12 /* AddDeviceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66683C263515680085DA12 /* AddDeviceInteractor.swift */; };
+		CE666842263515710085DA12 /* AddDeviceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE666841263515710085DA12 /* AddDeviceRouter.swift */; };
+		CE6668472635173E0085DA12 /* AddDeviceVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6668462635173E0085DA12 /* AddDeviceVCAssembly.swift */; };
+		CE66684C263523F90085DA12 /* String Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66684B263523F90085DA12 /* String Extension.swift */; };
 		CE83062526083CE7005CE030 /* AirConditioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83062426083CE7005CE030 /* AirConditioner.swift */; };
 		CE83062A260841AF005CE030 /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE830629260841AF005CE030 /* TemperatureUnit.swift */; };
 		CE83062F260848EF005CE030 /* Curtains.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83062E260848EF005CE030 /* Curtains.swift */; };
 		CE83063726084DD8005CE030 /* Ventilator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83063626084DD8005CE030 /* Ventilator.swift */; };
 		CE83064B26085533005CE030 /* IrrigationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83064A26085533005CE030 /* IrrigationSystem.swift */; };
+		CE854F1326352EC200E7AAA4 /* IAddDeviceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE854F1226352EC200E7AAA4 /* IAddDeviceDelegate.swift */; };
 		CE96C4EB2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96C4EA2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift */; };
 		CE97559A262BF51800864A55 /* DevicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975599262BF51800864A55 /* DevicesManager.swift */; };
 		CE97559F262BFAB900864A55 /* NSNotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97559E262BFAB800864A55 /* NSNotificationNameExtension.swift */; };
@@ -175,11 +185,21 @@
 		CE54A5B32605E15200352C46 /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
 		CE54A5BB2605E18D00352C46 /* NavigationControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerAssembly.swift; sourceTree = "<group>"; };
 		CE54A5C02605E1D600352C46 /* TabBarControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerAssembly.swift; sourceTree = "<group>"; };
+		CE66682126350E350085DA12 /* ILovedDevicesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILovedDevicesDelegate.swift; sourceTree = "<group>"; };
+		CE66682626350F490085DA12 /* IProfileDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IProfileDelegate.swift; sourceTree = "<group>"; };
+		CE66682D2635154B0085DA12 /* AddDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceView.swift; sourceTree = "<group>"; };
+		CE666832263515560085DA12 /* AddDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceViewController.swift; sourceTree = "<group>"; };
+		CE666837263515600085DA12 /* AddDevicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDevicePresenter.swift; sourceTree = "<group>"; };
+		CE66683C263515680085DA12 /* AddDeviceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceInteractor.swift; sourceTree = "<group>"; };
+		CE666841263515710085DA12 /* AddDeviceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceRouter.swift; sourceTree = "<group>"; };
+		CE6668462635173E0085DA12 /* AddDeviceVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceVCAssembly.swift; sourceTree = "<group>"; };
+		CE66684B263523F90085DA12 /* String Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String Extension.swift"; sourceTree = "<group>"; };
 		CE83062426083CE7005CE030 /* AirConditioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditioner.swift; sourceTree = "<group>"; };
 		CE830629260841AF005CE030 /* TemperatureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUnit.swift; sourceTree = "<group>"; };
 		CE83062E260848EF005CE030 /* Curtains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curtains.swift; sourceTree = "<group>"; };
 		CE83063626084DD8005CE030 /* Ventilator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ventilator.swift; sourceTree = "<group>"; };
 		CE83064A26085533005CE030 /* IrrigationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrrigationSystem.swift; sourceTree = "<group>"; };
+		CE854F1226352EC200E7AAA4 /* IAddDeviceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAddDeviceDelegate.swift; sourceTree = "<group>"; };
 		CE96C4EA2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDevicesFirebaseManager.swift; sourceTree = "<group>"; };
 		CE975599262BF51800864A55 /* DevicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesManager.swift; sourceTree = "<group>"; };
 		CE97559E262BFAB800864A55 /* NSNotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationNameExtension.swift; sourceTree = "<group>"; };
@@ -338,6 +358,7 @@
 				CEED9FA426254C79001D9DF4 /* AirConditioner Screen */,
 				CECEFB6B262EFFF000D36004 /* Profile */,
 				CE0197AB262BEA5300BD9E2E /* LovedDevices Screen */,
+				CE66682B2635152A0085DA12 /* AddDevice Screen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -454,6 +475,7 @@
 				CECEFB9C262F005B00D36004 /* AlertAssembly.swift */,
 				CECEFBA1262F007500D36004 /* RegisterVCAssembly.swift */,
 				CECEFBA6262F008200D36004 /* LoginVCAssembly.swift */,
+				CE6668462635173E0085DA12 /* AddDeviceVCAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -467,6 +489,35 @@
 				CECEFBB6262F01F400D36004 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE66682B2635152A0085DA12 /* AddDevice Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CE66682C263515410085DA12 /* Views */,
+				CE666832263515560085DA12 /* AddDeviceViewController.swift */,
+				CE666837263515600085DA12 /* AddDevicePresenter.swift */,
+				CE66683C263515680085DA12 /* AddDeviceInteractor.swift */,
+				CE666841263515710085DA12 /* AddDeviceRouter.swift */,
+			);
+			path = "AddDevice Screen";
+			sourceTree = "<group>";
+		};
+		CE66682C263515410085DA12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE66682D2635154B0085DA12 /* AddDeviceView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE666850263523FC0085DA12 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CEF39A952631A80800616628 /* UIColor Extension.swift */,
+				CE66684B263523F90085DA12 /* String Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CE8306412608502F005CE030 /* SmartHomeDevices */ = {
@@ -516,7 +567,7 @@
 				CEBE41EA2606F3F700E370AB /* SmartHomeItemsCollectionViewModel */,
 				CEE81208260D869A00BB8DFD /* ColorItemCollectionViewModel */,
 				CEE8121B260D87A900BB8DFD /* Protocols */,
-				CEF39A952631A80800616628 /* UIColor Extension.swift */,
+				CE666850263523FC0085DA12 /* Extensions */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -688,6 +739,9 @@
 			children = (
 				CEE81216260D87A600BB8DFD /* ICustomCollectionViewDelegate.swift */,
 				CE96C4EA2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift */,
+				CE66682126350E350085DA12 /* ILovedDevicesDelegate.swift */,
+				CE66682626350F490085DA12 /* IProfileDelegate.swift */,
+				CE854F1226352EC200E7AAA4 /* IAddDeviceDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -968,6 +1022,7 @@
 			files = (
 				CEE811DA260D7BDC00BB8DFD /* ColorChooserView.swift in Sources */,
 				CE54A5B42605E15300352C46 /* MainScreenAssembly.swift in Sources */,
+				CE66682E2635154B0085DA12 /* AddDeviceView.swift in Sources */,
 				CE2FB90A260A076C00D084BC /* CustomSlider.swift in Sources */,
 				CECEFB98262F002800D36004 /* LoginEntitie.swift in Sources */,
 				CEBBF7BC2606EDFE00BD9F13 /* MainView.swift in Sources */,
@@ -995,6 +1050,7 @@
 				CEBBF7C12606EE0500BD9F13 /* MainPresenter.swift in Sources */,
 				CE0197AD262BEA7400BD9E2E /* LovedDevicesViewController.swift in Sources */,
 				CE97559A262BF51800864A55 /* DevicesManager.swift in Sources */,
+				CE666842263515710085DA12 /* AddDeviceRouter.swift in Sources */,
 				CEF39AB22631B72300616628 /* CurtainsFirebaseManager.swift in Sources */,
 				CEF39A9B2631ADA700616628 /* ElectricalSocketFirebaseManager.swift in Sources */,
 				CED7A86426103B9200F61391 /* SimpleDeviceViewController.swift in Sources */,
@@ -1017,11 +1073,13 @@
 				CED7A88026103E1B00F61391 /* SimpleDeviceAssembly.swift in Sources */,
 				CEDB0BEC262AA1EB00F1B4DB /* MenuAssembly.swift in Sources */,
 				CE83064B26085533005CE030 /* IrrigationSystem.swift in Sources */,
+				CE66683D263515680085DA12 /* AddDeviceInteractor.swift in Sources */,
 				CEF39A962631A80800616628 /* UIColor Extension.swift in Sources */,
 				CEDB0BDF262A9F0100F1B4DB /* MenuInteractor.swift in Sources */,
 				CED7A87126103B9F00F61391 /* SimpleDevicePresenter.swift in Sources */,
 				CEBBF7CB2606EE1100BD9F13 /* MainRouter.swift in Sources */,
 				CEDB0BD2262A9EF300F1B4DB /* MenuView.swift in Sources */,
+				CE6668472635173E0085DA12 /* AddDeviceVCAssembly.swift in Sources */,
 				CECEFB8F262EFFF000D36004 /* LoginPresenter.swift in Sources */,
 				CECEFB90262EFFF000D36004 /* LoginRouter.swift in Sources */,
 				CEF39A862631A48E00616628 /* LampFirebaseManager.swift in Sources */,
@@ -1033,16 +1091,19 @@
 				CE0197C3262BEAAA00BD9E2E /* LovedDevicesInteractor.swift in Sources */,
 				CECEFBB2262F013100D36004 /* FirebaseDatabaseManager.swift in Sources */,
 				CE17598E2609A555007AFDCA /* LampRouter.swift in Sources */,
+				CE66682226350E350085DA12 /* ILovedDevicesDelegate.swift in Sources */,
 				CEBBF7C62606EE0C00BD9F13 /* MainInteractor.swift in Sources */,
 				CEED9FBA26254CAC001D9DF4 /* AirConditionerInteractor.swift in Sources */,
 				CED7A87B26103BAC00F61391 /* SimpleDeviceRouter.swift in Sources */,
 				CE0197C8262BEAB000BD9E2E /* LovedDevicesRouter.swift in Sources */,
 				CE0197BE262BEAA300BD9E2E /* LovedDevicesPresenter.swift in Sources */,
+				CE66684C263523F90085DA12 /* String Extension.swift in Sources */,
 				CE83062526083CE7005CE030 /* AirConditioner.swift in Sources */,
 				CEE811E4260D7DDF00BB8DFD /* ColorChooserViewController.swift in Sources */,
 				CE24EA70262F039600C3EBF6 /* CustomCloseButton.swift in Sources */,
 				CEE81212260D86AF00BB8DFD /* ColorItemCollectionViewDataSource.swift in Sources */,
 				CED7A88826103F6000F61391 /* DevicesRouter.swift in Sources */,
+				CE666833263515560085DA12 /* AddDeviceViewController.swift in Sources */,
 				CE83062A260841AF005CE030 /* TemperatureUnit.swift in Sources */,
 				CE54A5C12605E1D600352C46 /* TabBarControllerAssembly.swift in Sources */,
 				CEF4F9142612C88C0003DD6C /* SimpleDeviceView.swift in Sources */,
@@ -1052,6 +1113,8 @@
 				CEBE4209260706AC00E370AB /* ElectricalSocket.swift in Sources */,
 				CE96C4EB2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift in Sources */,
 				CE54A5722605E0F400352C46 /* AppDelegate.swift in Sources */,
+				CE66682726350F490085DA12 /* IProfileDelegate.swift in Sources */,
+				CE666838263515600085DA12 /* AddDevicePresenter.swift in Sources */,
 				CECEFBA7262F008200D36004 /* LoginVCAssembly.swift in Sources */,
 				CECEFB86262EFFF000D36004 /* RegisterView.swift in Sources */,
 				CE0197CD262BEEEB00BD9E2E /* LovedDevicesAssembly.swift in Sources */,
@@ -1064,6 +1127,7 @@
 				CEE8120A260D86A800BB8DFD /* ColorItemCollectionViewDelegate.swift in Sources */,
 				CECEFB81262EFFF000D36004 /* ProfilePresenter.swift in Sources */,
 				CEED9FB026254C9B001D9DF4 /* AirConditionerViewController.swift in Sources */,
+				CE854F1326352EC200E7AAA4 /* IAddDeviceDelegate.swift in Sources */,
 				CECEFB85262EFFF000D36004 /* RegisterInteractor.swift in Sources */,
 				CE54A5742605E0F400352C46 /* SceneDelegate.swift in Sources */,
 				CEDB0BDA262A9EFA00F1B4DB /* MenuPresenter.swift in Sources */,

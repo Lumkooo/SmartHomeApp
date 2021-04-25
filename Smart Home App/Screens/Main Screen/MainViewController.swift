@@ -26,6 +26,7 @@ class MainViewController: UIViewController {
         self.title = Localized("deviceList")
         self.view = self.ui
         self.setupMenuButton()
+        self.setupAddButton()
     }
 
     required init?(coder: NSCoder) {
@@ -44,12 +45,13 @@ class MainViewController: UIViewController {
     }
 
     private func setupMenuButton() {
-        var image = AppConstants.Images.menuImage
-        image = image.withRenderingMode(.alwaysOriginal)
+        let image = AppConstants.Images.menuImage
+//        image = image.withRenderingMode(.alwaysOriginal)
         let menu = UIBarButtonItem(image: image,
                                    style:.plain,
                                    target: self,
                                    action: #selector(menuTapped))
+        menu.tintColor = .label
         self.navigationItem.setRightBarButton(menu, animated: true)
     }
 
@@ -61,6 +63,18 @@ class MainViewController: UIViewController {
                 y: 0)
         }
     }
+
+    private func setupAddButton() {
+        let add = UIBarButtonItem(barButtonSystemItem: .add,
+                                  target: self,
+                                  action: #selector(addTapped))
+        add.tintColor = .label
+        self.navigationItem.setLeftBarButton(add, animated: true)
+    }
+
+    @objc private func addTapped() {
+        self.presenter.addDeviceTapped()
+    }
 }
 
 extension MainViewController: IMenuDelegate {
@@ -71,5 +85,16 @@ extension MainViewController: IMenuDelegate {
                 translationX: 0,
                 y: 0)
         }
+    }
+}
+
+
+extension MainViewController: IProfileDelegate {
+    func userSignIn() {
+        self.presenter.userSignIn()
+    }
+
+    func userSignOut() {
+        self.presenter.userSignOut()
     }
 }

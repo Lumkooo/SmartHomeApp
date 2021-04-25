@@ -30,8 +30,16 @@
 "password" = "Пароль";
 "repeatPassword" = "Повторите пароль";
 "done" = "Готово";
-
 "fillEmailError" = "Необходимо заполнить поле email";
 "fillPasswordlError" = "Необходимо заполнить поле с паролем";
 "secondPassswordError" = "Необходимо заполнить второе поле с подтверждением пароля";
 "passwordNotTheSameError" = "Пароли должны совпадать";
+"deviceCodeText" = "Введите код девайса";
+"code" = "Код";
+"deviceNameText" = "Введите имя девайса";
+"name" = "Имя";
+"save" = "Сохранить";
+"codeError" = "Код должен быть равен 9 символам";
+"nameError" = "Необходимо дать девайсу имя";
+"error" = "Ошибка";
+"ok" = "Ok";

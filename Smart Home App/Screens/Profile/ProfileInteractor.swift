@@ -25,6 +25,13 @@ final class ProfileInteractor {
     private var firebaseAuthManager = FirebaseAuthManager()
 //    private var firebaseDatabaseManager = FirebaseDatabaseManager()
     weak var presenter: IProfileInteractorOuter?
+    private let profileDelegate: IProfileDelegate
+
+    // MARK: - Init
+
+    init(profileDelegate: IProfileDelegate) {
+        self.profileDelegate = profileDelegate
+    }
 }
 
 // MARK: - IProfileInteractor
@@ -53,44 +60,16 @@ private extension ProfileInteractor {
             // Показываем view-профиль пользователя
             let userEmail = self.getUserEmail()
             self.presenter?.setupViewForAuthorizedUser(userEmail: userEmail)
-            self.setupNotification()
+            self.profileDelegate.userSignIn()
         } else {
             // Показываем view с кнопками регистрации/авторизации
             self.presenter?.setupViewForUnauthorizedUser()
+            self.profileDelegate.userSignOut()
         }
     }
     
     func getUserEmail() -> String {
         return firebaseAuthManager.userEmail
-    }
-
-    func setupNotification() {
-        // Вызывается в PurchasingScreen-е для обновления tableView истории заказов после совершения покупки
-//        NotificationCenter.default.addObserver(
-//            self,
-//            selector: #selector(refreshTableViewAfterNewOrders(_:)),
-//            name: NSNotification.Name(
-//                rawValue: AppConstants.NotificationNames.refreshProfileTableView),
-//            object: nil)
-    }
-    
-    
-    @objc func refreshTableViewAfterNewOrders(_ notification: Notification) {
-        // Для обновления TableView с предыдущими записями раз в секунду обращаемся к БД, чтобы узнать
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-            // Берем количество записей в БД
-//            self.firebaseDatabaseManager.getOrdersCount { (childrenCount) in
-//                // Сравниваем с количеством имеющихся записей и если количество записей различается
-//                if self.previousOrders.count != childrenCount {
-//                    // То берем записи из БД
-//                    self.getPreviousOrders { previousOrders in
-//                        timer.invalidate()
-//                        self.previousOrders = previousOrders
-//                        self.presenter?.reloadTableViewWithData(previousOrders: previousOrders)
-//                    }
-//                }
-//            }
-        }
     }
 }
 

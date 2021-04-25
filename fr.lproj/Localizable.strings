@@ -6,7 +6,7 @@
   
 */
 
-"deviceList" = "Liste des périphériques";
+"deviceList" = "Liste des appareils";
 "turnOn" = "Fonctionne";
 "turnOff" = "Éteint";
 "general" = "Général";
@@ -34,3 +34,12 @@
 "fillPasswordlError" = "Vous devez remplir le champ mot de passe";
 "secondPassswordError" = "Il est nécessaire de remplir le deuxième champ avec une confirmation de mot de passe";
 "passwordNotTheSameError" = "Les mots de passe doivent correspondre";
+"deviceCodeText" = "Entrez le code de l'appareil";
+"code" = "Le code";
+"deviceNameText" = "Entrez le nom de l'appareil";
+"name" = "Nom";
+"save" = "Garder";
+"codeError" = "Le code doit comporter 9 caractères";
+"nameError" = "Vous devez donner un nom à l'appareil";
+"error" = "Erreur";
+"ok" = "D'accord";

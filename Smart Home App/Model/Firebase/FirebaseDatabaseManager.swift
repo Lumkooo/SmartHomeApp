@@ -40,6 +40,11 @@ extension FirebaseDatabaseManager {
     }
 
     func getDevices(completion: @escaping ([SmartHomeDevice]) -> Void) {
+        if self.userUID.isEmpty {
+            completion([])
+            return
+        }
+
         var devices: [SmartHomeDevice] = []
         DispatchQueue.global().async {
             self.group.enter()

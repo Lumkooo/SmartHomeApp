@@ -35,7 +35,7 @@ enum TabBarControllerAssembly {
 
         // MARK: - Profile Screen
 
-        let profileViewController =  ProfileVCAssembly.createVC()
+        let profileViewController =  ProfileVCAssembly.createVC(profileDelegate: mainViewController)
         let profileTab = NavigationControllerAssembly.createNavigationVC(for: profileViewController)
         let profileTabItem = UITabBarItem(title: Localized("profile"),
                                           image: AppConstants.Images.profileTabImage,
