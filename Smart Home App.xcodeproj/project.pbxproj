@@ -53,6 +53,7 @@
 		CE96C4EB2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96C4EA2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift */; };
 		CE97559A262BF51800864A55 /* DevicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975599262BF51800864A55 /* DevicesManager.swift */; };
 		CE97559F262BFAB900864A55 /* NSNotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97559E262BFAB800864A55 /* NSNotificationNameExtension.swift */; };
+		CEA67C542639A122007E5428 /* EditableDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA67C532639A122007E5428 /* EditableDeviceViewController.swift */; };
 		CEADBC8826140C11000C4D97 /* ProfileVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADBC8726140C11000C4D97 /* ProfileVCAssembly.swift */; };
 		CEBBF7BC2606EDFE00BD9F13 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7BB2606EDFE00BD9F13 /* MainView.swift */; };
 		CEBBF7C12606EE0500BD9F13 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7C02606EE0500BD9F13 /* MainPresenter.swift */; };
@@ -203,6 +204,7 @@
 		CE96C4EA2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDevicesFirebaseManager.swift; sourceTree = "<group>"; };
 		CE975599262BF51800864A55 /* DevicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesManager.swift; sourceTree = "<group>"; };
 		CE97559E262BFAB800864A55 /* NSNotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationNameExtension.swift; sourceTree = "<group>"; };
+		CEA67C532639A122007E5428 /* EditableDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableDeviceViewController.swift; sourceTree = "<group>"; };
 		CEADBC8726140C11000C4D97 /* ProfileVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVCAssembly.swift; sourceTree = "<group>"; };
 		CEBBF7BB2606EDFE00BD9F13 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CEBBF7C02606EE0500BD9F13 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
@@ -534,6 +536,14 @@
 			path = SmartHomeDevices;
 			sourceTree = "<group>";
 		};
+		CEA67C522639A10A007E5428 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEA67C532639A122007E5428 /* EditableDeviceViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		CEBBF7BA2606EDF600BD9F13 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,6 +573,7 @@
 				CE97559E262BFAB800864A55 /* NSNotificationNameExtension.swift */,
 				CEBE41D82606F2FD00E370AB /* AppConstants.swift */,
 				CED7A88726103F6000F61391 /* DevicesRouter.swift */,
+				CEA67C522639A10A007E5428 /* ViewControllers */,
 				CECEFBAB262F011900D36004 /* Firebase */,
 				CEBE41EA2606F3F700E370AB /* SmartHomeItemsCollectionViewModel */,
 				CEE81208260D869A00BB8DFD /* ColorItemCollectionViewModel */,
@@ -1130,6 +1141,7 @@
 				CE854F1326352EC200E7AAA4 /* IAddDeviceDelegate.swift in Sources */,
 				CECEFB85262EFFF000D36004 /* RegisterInteractor.swift in Sources */,
 				CE54A5742605E0F400352C46 /* SceneDelegate.swift in Sources */,
+				CEA67C542639A122007E5428 /* EditableDeviceViewController.swift in Sources */,
 				CEDB0BDA262A9EFA00F1B4DB /* MenuPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

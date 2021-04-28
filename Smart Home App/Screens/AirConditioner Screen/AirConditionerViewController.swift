@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class AirConditionerViewController: UIViewController {
+final class AirConditionerViewController: EditableDeviceViewController {
 
     // MARK: - Properties
 
@@ -18,7 +18,7 @@ final class AirConditionerViewController: UIViewController {
 
     init(presenter: IAirConditionerPresenter) {
         self.presenter = presenter
-        super.init(nibName: nil, bundle: nil)
+        super.init()
     }
 
     required init?(coder: NSCoder) {
@@ -31,10 +31,24 @@ final class AirConditionerViewController: UIViewController {
         super.viewDidLoad()
         self.view = self.ui
         self.presenter.viewDidLoad(ui: self.ui)
+        let importAction = UIAction(title: "Import", image: UIImage(systemName: "folder")) { action in
+            print("Import")
+        }
+        let createAction = UIAction(title: "Create", image: UIImage(systemName: "square.and.pencil")) { action in
+            print("Create")
+        }
+        let actions = [importAction, createAction]
+        self.setupNavigationBarRightButton(actions: actions)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.presenter.saveData()
+    }
+
+    // MARK: - Private
+
+    @objc private func editButtonTapped() {
+        
     }
 }

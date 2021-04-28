@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class LampViewController: UIViewController {
+final class LampViewController: EditableDeviceViewController {
 
     // MARK: - Properties
 
@@ -18,7 +18,7 @@ final class LampViewController: UIViewController {
 
     init(presenter: ILampPresenter) {
         self.presenter = presenter
-        super.init(nibName: nil, bundle: nil)
+        super.init()
     }
 
     required init?(coder: NSCoder) {
@@ -33,6 +33,15 @@ final class LampViewController: UIViewController {
         self.view = self.ui
         self.setupVCTitle()
         self.presenter.viewDidLoad(ui: ui)
+
+        let importAction = UIAction(title: "Import", image: UIImage(systemName: "folder")) { action in
+            print("Import")
+        }
+        let createAction = UIAction(title: "Create", image: UIImage(systemName: "square.and.pencil")) { action in
+            print("Create")
+        }
+        let actions = [importAction, createAction]
+        self.setupNavigationBarRightButton(actions: actions)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -48,5 +57,9 @@ final class LampViewController: UIViewController {
     private func setupVCTitle() {
         let deviceName = self.presenter.getDeviceName()
         self.title = deviceName
+    }
+
+    @objc private func editButtonTapped() {
+
     }
 }

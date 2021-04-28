@@ -23,4 +23,5 @@ class FirebaseDatabaseInfo {
     }
     let databaseRef = Database.database().reference()
     lazy var devicesRef = self.databaseRef.child(self.userUID).child("devices")
+    lazy var createdDevicesDirectory = self.databaseRef.child("createdDevices")
 }

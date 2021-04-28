@@ -56,6 +56,7 @@ enum AppConstants {
         static let email = UIImage(named: "emailImage")
         static let hidePasswordImage = UIImage(systemName: "eye.fill")
         static let showPasswordImage = UIImage(systemName: "eye.slash.fill")
+        static let ellipsis = UIImage(systemName: "ellipsis")
     }
 
     // MARK: - Fonts

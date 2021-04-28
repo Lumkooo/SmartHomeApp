@@ -129,7 +129,7 @@ extension FirebaseDatabaseManager {
 // MARK: - Private
 
 private extension FirebaseDatabaseManager {
-    private func getManagerForDevice(_ device: SmartHomeDevice) -> IDevicesFirebaseManager? {
+    func getManagerForDevice(_ device: SmartHomeDevice) -> IDevicesFirebaseManager? {
         if device is Lamp {
             return self.lampManager
         } else if device is ElectricalSocket {
