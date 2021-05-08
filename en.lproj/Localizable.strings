@@ -44,3 +44,6 @@
 "error" = "Error";
 "ok" = "Ok";
 "menu" = "Menu";
+"getAppInfo" = "Get app info";
+"appInfo" = "This application was created in the course of the graduation work by a student of NSTU - Andrey Shamin";
+"sendError" = "Report a bug";

@@ -10,7 +10,7 @@ import UIKit
 enum TabBarControllerAssembly {
     static func createTabBar() -> UITabBarController {
 
-        let tabBar = UITabBarController()
+        let tabBarController = UITabBarController()
 
         // MARK: - Loved Devices Screen
 
@@ -43,8 +43,9 @@ enum TabBarControllerAssembly {
         profileTab.tabBarItem = profileTabItem
 
         let controllers = [mainTab, lovedDevicesTab, profileTab]
-        tabBar.viewControllers = controllers
+        tabBarController.viewControllers = controllers
+        tabBarController.tabBar.tintColor = .label
 
-        return tabBar
+        return tabBarController
     }
 }

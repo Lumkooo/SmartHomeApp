@@ -44,3 +44,6 @@
 "error" = "Erreur";
 "ok" = "D'accord";
 "menu" = "Menu";
+"getAppInfo" = "Information sur l'application";
+"appInfo" = "Cette application a été créée au cours du travail de fin d'études par un étudiant du NSTU - Andrey Shamin";
+"sendError" = "Signaler un bug";

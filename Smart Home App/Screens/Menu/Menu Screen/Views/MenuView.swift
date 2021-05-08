@@ -9,6 +9,8 @@ import UIKit
 
 protocol IMenuView: AnyObject {
     var closeButtonTapped: (() -> Void)? { get set }
+    var getAppInfoTapped: (() -> Void)? { get set }
+    var sendErrorTapped: (() -> Void)? { get set }
     var moveBackScreenContentBack: (() -> Void)? { get set }
 
     func slideView()
@@ -39,10 +41,34 @@ final class MenuView: UIView {
         return myView
     }()
 
+    private let getAppInfoButton: CustomButton = {
+        let myButton = CustomButton()
+        myButton.setTitle(Localized("getAppInfo"), for: .normal)
+        myButton.titleLabel?.minimumScaleFactor = 0.5
+        myButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        myButton.addTarget(self,
+                           action: #selector(getAppInfoTapped(gesture:)),
+                           for: .touchUpInside)
+        return myButton
+    }()
+
+    private let sendErrorButton: CustomButton = {
+        let myButton = CustomButton()
+        myButton.setTitle(Localized("sendError"), for: .normal)
+        myButton.titleLabel?.minimumScaleFactor = 0.5
+        myButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        myButton.addTarget(self,
+                           action: #selector(sendErrorTapped(gesture:)),
+                           for: .touchUpInside)
+        return myButton
+    }()
+
     // MARK: - Properties
 
     var closeButtonTapped: (() -> Void)?
     var moveBackScreenContentBack: (() -> Void)?
+    var getAppInfoTapped: (() -> Void)?
+    var sendErrorTapped: (() -> Void)?
 
     // MARK: - Init
 
@@ -60,28 +86,44 @@ final class MenuView: UIView {
     // MARK: - Обработка нажатия на кнопку
 
     @objc private func buttonSelector() {
-        self.hideMenu()
+        self.hideMenu {
+            self.closeButtonTapped?()
+        }
     }
 
     @objc func viewTapped(_ panRecognizer: UIPanGestureRecognizer) {
-        self.hideMenu()
+        self.hideMenu {
+            self.closeButtonTapped?()
+        }
     }
 
     // MARK: - Private
 
-    private func hideMenu() {
+    private func hideMenu(withAction action: (()-> Void)?) {
         self.moveBackScreenContentBack?()
         UIView.animate(withDuration: AppConstants.AnimationTime.menuAnimationTime) {
             self.backgroundColor = UIColor(white: 1, alpha: 0)
             self.slidingMenuView.transform = CGAffineTransform(translationX: 0, y: 0)
         } completion: { (bool) in
-            self.closeButtonTapped?()
+            action?()
         }
     }
 
     private func setupTapToClose() {
         let viewTap = UITapGestureRecognizer(target: self, action: #selector(viewTapped(_:)))
         self.tapToCloseView.addGestureRecognizer(viewTap)
+    }
+
+    @objc private func getAppInfoTapped(gesture: UIGestureRecognizer) {
+        self.hideMenu {
+            self.getAppInfoTapped?()
+        }
+    }
+
+    @objc private func sendErrorTapped(gesture: UIGestureRecognizer) {
+        self.hideMenu {
+            self.sendErrorTapped?()
+        }
     }
 }
 
@@ -104,6 +146,8 @@ private extension MenuView {
         self.setupSlidingMenuView()
         self.setupCloseButton()
         self.setupTapToCloseView()
+        self.setupGetAppInfoButton()
+        self.setupSendErorrButton()
     }
 
     func setupSlidingMenuView() {
@@ -145,4 +189,36 @@ private extension MenuView {
                                                        multiplier: 1-AppConstants.Sizes.menuWidth),
         ])
     }
+
+    func setupGetAppInfoButton() {
+        self.slidingMenuView.addSubview(self.getAppInfoButton)
+        self.getAppInfoButton.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            self.getAppInfoButton.leadingAnchor.constraint(equalTo: self.slidingMenuView.leadingAnchor,
+                                                           constant: AppConstants.Constraints.normal),
+            self.getAppInfoButton.trailingAnchor.constraint(equalTo: self.slidingMenuView.trailingAnchor,
+                                                           constant: -AppConstants.Constraints.normal),
+            self.getAppInfoButton.topAnchor.constraint(equalTo: self.closeButton.bottomAnchor,
+                                                           constant: AppConstants.Constraints.twice),
+            self.getAppInfoButton.heightAnchor.constraint(equalToConstant: AppConstants.Sizes.closeButtonSize.height)
+        ])
+    }
+
+
+    func setupSendErorrButton() {
+        self.slidingMenuView.addSubview(self.sendErrorButton)
+        self.sendErrorButton.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            self.sendErrorButton.leadingAnchor.constraint(equalTo: self.slidingMenuView.leadingAnchor,
+                                                           constant: AppConstants.Constraints.normal),
+            self.sendErrorButton.trailingAnchor.constraint(equalTo: self.slidingMenuView.trailingAnchor,
+                                                           constant: -AppConstants.Constraints.normal),
+            self.sendErrorButton.topAnchor.constraint(equalTo: self.getAppInfoButton.bottomAnchor,
+                                                           constant: AppConstants.Constraints.twice),
+            self.sendErrorButton.heightAnchor.constraint(equalTo: self.getAppInfoButton.heightAnchor)
+        ])
+    }
+
 }

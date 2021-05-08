@@ -11,6 +11,8 @@ protocol IMainRouter {
     func showDevice(_ device: SmartHomeDevice)
     func showMenu(delegate: IMenuDelegate)
     func showAddingVC(delegate: IAddDeviceDelegate)
+    func showAppInfo()
+    func showSendError()
 }
 
 final class MainRouter {
@@ -41,5 +43,17 @@ extension MainRouter: IMainRouter {
     func showAddingVC(delegate: IAddDeviceDelegate) {
         let addDeviceVC = AddDeviceVCAssembly.createVC(delegate: delegate)
         self.vc?.navigationController?.pushViewController(addDeviceVC, animated: true)
+    }
+
+    func showAppInfo() {
+        let appInfoVC = AppInfoVCAssembly.createVC()
+        appInfoVC.hidesBottomBarWhenPushed = true
+        self.vc?.navigationController?.pushViewController(appInfoVC, animated: true)
+    }
+
+    func showSendError() {
+        let sendErrorVC = SendErrorVCAssembly.createVC()
+        sendErrorVC.hidesBottomBarWhenPushed = true
+        self.vc?.navigationController?.pushViewController(sendErrorVC, animated: true)
     }
 }

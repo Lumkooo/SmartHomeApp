@@ -57,6 +57,11 @@ enum AppConstants {
         static let hidePasswordImage = UIImage(systemName: "eye.fill")
         static let showPasswordImage = UIImage(systemName: "eye.slash.fill")
         static let ellipsis = UIImage(systemName: "ellipsis")
+        static let infoCircle = UIImage(systemName: "info.circle")
+        static let pencil = UIImage(systemName: "pencil")
+
+        #warning("Подставить иконку приложения")
+        static let appIcon = UIImage(named: "")
     }
 
     // MARK: - Fonts

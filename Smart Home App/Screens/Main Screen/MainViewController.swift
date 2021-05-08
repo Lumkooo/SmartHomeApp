@@ -9,6 +9,8 @@ import UIKit
 
 protocol IMenuDelegate {
     func moveContentBackAfterMenu()
+    func goToAppInfo()
+    func goToSendError()
 }
 
 class MainViewController: UIViewController {
@@ -85,6 +87,14 @@ extension MainViewController: IMenuDelegate {
                 translationX: 0,
                 y: 0)
         }
+    }
+
+    func goToAppInfo() {
+        self.presenter.goToAppInfo()
+    }
+
+    func goToSendError() {
+        self.presenter.goToSendError()
     }
 }
 

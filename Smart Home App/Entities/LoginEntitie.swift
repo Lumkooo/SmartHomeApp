@@ -10,4 +10,6 @@ import Foundation
 struct LoginEntitie {
     let email: String
     let password: String
+
+    var devices: [SmartHomeDevice] = []
 }

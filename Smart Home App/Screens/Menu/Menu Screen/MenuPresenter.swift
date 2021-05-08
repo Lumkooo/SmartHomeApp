@@ -39,6 +39,15 @@ extension MenuPresenter: IMenuPresenter {
         self.ui?.closeButtonTapped = { [weak self] in
             self?.router.dismissMenu()
         }
+        self.ui?.getAppInfoTapped = { [weak self] in
+            self?.interactor.showAppInfo()
+            self?.router.dismissMenu()
+        }
+
+        self.ui?.sendErrorTapped = { [weak self] in
+            self?.interactor.showSendError()
+            self?.router.dismissMenu()
+        }
     }
 
     func viewDidAppear() {

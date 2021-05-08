@@ -9,6 +9,8 @@ import Foundation
 
 protocol IMenuInteractor {
     func moveContentBackAfterMenu()
+    func showAppInfo()
+    func showSendError()
 }
 
 protocol IMenuInteractorOuter: AnyObject {
@@ -34,5 +36,13 @@ final class MenuInteractor {
 extension MenuInteractor: IMenuInteractor {
     func moveContentBackAfterMenu() {
         self.delegate.moveContentBackAfterMenu()
+    }
+
+    func showAppInfo() {
+        self.delegate.goToAppInfo()
+    }
+
+    func showSendError() {
+        self.delegate.goToSendError()
     }
 }

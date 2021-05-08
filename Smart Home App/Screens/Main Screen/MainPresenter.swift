@@ -14,6 +14,8 @@ protocol IMainPresenter {
     func userSignIn()
     func userSignOut()
     func addDeviceTapped()
+    func goToAppInfo()
+    func goToSendError()
 }
 
 final class MainPresenter {
@@ -72,6 +74,14 @@ extension MainPresenter: IMainPresenter {
 
     func addDeviceTapped() {
         self.interactor.addDeviceTapped()
+    }
+
+    func goToAppInfo() {
+        self.router.showAppInfo()
+    }
+
+    func goToSendError() {
+        self.router.showSendError()
     }
 }
 

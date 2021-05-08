@@ -33,13 +33,20 @@ final class SimpleDeviceViewController: EditableDeviceViewController {
         self.view = self.ui
         self.setupVCTitle()
         self.presenter.viewDidLoad(ui: self.ui)
-        let importAction = UIAction(title: "Import", image: UIImage(systemName: "folder")) { action in
-            print("Import")
+        let getInfoAction = UIAction(title: "Get info!",
+                                     image: AppConstants.Images.infoCircle) { action in
+            print("Import!")
         }
-        let createAction = UIAction(title: "Create", image: UIImage(systemName: "square.and.pencil")) { action in
-            print("Create")
+        let renameAction = UIAction(title: "Rename!",
+                                    image: AppConstants.Images.pencil ) { action in
+            print("Rename!")
         }
-        let actions = [importAction, createAction]
+
+        let deleteAction = UIAction(title: "Delete!",
+                                    image: AppConstants.Images.xmark ) { action in
+            print("Delete!")
+        }
+        let actions = [getInfoAction, renameAction, deleteAction]
         self.setupNavigationBarRightButton(actions: actions)
     }
 
