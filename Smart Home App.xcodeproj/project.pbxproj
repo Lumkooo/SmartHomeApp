@@ -22,6 +22,8 @@
 		CE060C0E26464535005F9E89 /* SendErrorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060C0D26464535005F9E89 /* SendErrorInteractor.swift */; };
 		CE060C132646453B005F9E89 /* SendErrorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060C122646453B005F9E89 /* SendErrorRouter.swift */; };
 		CE060C18264646CA005F9E89 /* SendErrorVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060C17264646CA005F9E89 /* SendErrorVCAssembly.swift */; };
+		CE060C2A26465699005F9E89 /* UIView Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060C2926465699005F9E89 /* UIView Extension.swift */; };
+		CE060C2F26465DD3005F9E89 /* FirebaseErrorsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060C2E26465DD3005F9E89 /* FirebaseErrorsManager.swift */; };
 		CE1759742609A4DC007AFDCA /* LampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1759732609A4DC007AFDCA /* LampViewController.swift */; };
 		CE17597C2609A506007AFDCA /* LampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17597B2609A506007AFDCA /* LampView.swift */; };
 		CE1759812609A548007AFDCA /* LampInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1759802609A548007AFDCA /* LampInteractor.swift */; };
@@ -176,6 +178,12 @@
 		CE060C0D26464535005F9E89 /* SendErrorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendErrorInteractor.swift; sourceTree = "<group>"; };
 		CE060C122646453B005F9E89 /* SendErrorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendErrorRouter.swift; sourceTree = "<group>"; };
 		CE060C17264646CA005F9E89 /* SendErrorVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendErrorVCAssembly.swift; sourceTree = "<group>"; };
+		CE060C2926465699005F9E89 /* UIView Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView Extension.swift"; sourceTree = "<group>"; };
+		CE060C2E26465DD3005F9E89 /* FirebaseErrorsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseErrorsManager.swift; sourceTree = "<group>"; };
+		CE060C3326466198005F9E89 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		CE060C3426466199005F9E89 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		CE060C38264664B3005F9E89 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CE060C39264664B3005F9E89 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE1759732609A4DC007AFDCA /* LampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampViewController.swift; sourceTree = "<group>"; };
 		CE17597B2609A506007AFDCA /* LampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampView.swift; sourceTree = "<group>"; };
 		CE1759802609A548007AFDCA /* LampInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampInteractor.swift; sourceTree = "<group>"; };
@@ -576,6 +584,7 @@
 			children = (
 				CEF39A952631A80800616628 /* UIColor Extension.swift */,
 				CE66684B263523F90085DA12 /* String Extension.swift */,
+				CE060C2926465699005F9E89 /* UIView Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -727,6 +736,7 @@
 			isa = PBXGroup;
 			children = (
 				CEF39A8D2631A52000616628 /* FirebaseDatabaseInfo.swift */,
+				CE060C2E26465DD3005F9E89 /* FirebaseErrorsManager.swift */,
 				CECEFBAC262F011F00D36004 /* FirebaseAuthManager.swift */,
 				CECEFBB1262F013100D36004 /* FirebaseDatabaseManager.swift */,
 				CEF39A842631A47600616628 /* Devices Model */,
@@ -957,6 +967,8 @@
 				Base,
 				ru,
 				fr,
+				"zh-Hans",
+				it,
 			);
 			mainGroup = CE54A5652605E0F400352C46;
 			productRefGroup = CE54A56F2605E0F400352C46 /* Products */;
@@ -1207,6 +1219,8 @@
 				CE54A5722605E0F400352C46 /* AppDelegate.swift in Sources */,
 				CE66682726350F490085DA12 /* IProfileDelegate.swift in Sources */,
 				CE060BF82646451D005F9E89 /* SendErrorView.swift in Sources */,
+				CE060C2A26465699005F9E89 /* UIView Extension.swift in Sources */,
+				CE060C2F26465DD3005F9E89 /* FirebaseErrorsManager.swift in Sources */,
 				CE666838263515600085DA12 /* AddDevicePresenter.swift in Sources */,
 				CECEFBA7262F008200D36004 /* LoginVCAssembly.swift in Sources */,
 				CECEFB86262EFFF000D36004 /* RegisterView.swift in Sources */,
@@ -1268,6 +1282,8 @@
 				CE54A57D2605E0F500352C46 /* Base */,
 				CEDB0BBA262A95F000F1B4DB /* ru */,
 				CEDB0BBF262A962C00F1B4DB /* fr */,
+				CE060C3326466198005F9E89 /* zh-Hans */,
+				CE060C38264664B3005F9E89 /* it */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1278,6 +1294,8 @@
 				CEDB0BB5262A95D800F1B4DB /* en */,
 				CEDB0BBB262A95F000F1B4DB /* ru */,
 				CEDB0BC0262A962C00F1B4DB /* fr */,
+				CE060C3426466199005F9E89 /* zh-Hans */,
+				CE060C39264664B3005F9E89 /* it */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

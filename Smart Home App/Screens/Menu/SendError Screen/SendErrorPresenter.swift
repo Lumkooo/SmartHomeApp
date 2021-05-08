@@ -32,11 +32,16 @@ final class SendErrorPresenter {
 extension SendErrorPresenter: ISendErrorPresenter {
     func viewDidLoad(ui: ISendErrorView) {
         self.ui = ui
+        self.ui?.doneButtonTappedWith = { [weak self] (errorText) in
+            self?.interactor.sendError(errorText)
+        }
     }
 }
 
 // MARK: - ISendErrorInteractorOuter
 
 extension SendErrorPresenter: ISendErrorInteractorOuter {
-
+    func goToThanksAlert() {
+        self.router.showThanksAlert()
+    }
 }

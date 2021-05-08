@@ -31,5 +31,6 @@ final class SendErrorViewController: UIViewController {
         super.viewDidLoad()
         self.view = self.ui
         self.presenter.viewDidLoad(ui: self.ui)
+        self.navigationController?.navigationBar.prefersLargeTitles = false
     }
 }

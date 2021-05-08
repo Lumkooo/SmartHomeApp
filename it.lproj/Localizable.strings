@@ -1,0 +1,51 @@
+/* 
+  Localizable.strings
+  Smart Home App
+
+  Created by Андрей Шамин on 4/17/21.
+  
+*/
+
+"deviceList" = "Elenco dei dispositivi";
+"turnOn" = "Sopra";
+"turnOff" = "Off";
+"general" = "Generale";
+"profile" = "Profilo";
+"addToLiked" = "Aggiungi a Mi piace";
+"goToDevice" = "Vai al dispositivo";
+"chooseLampColor" = "Scegli il colore del bagliore della lampada";
+"color" = "Colore";
+"temperature" = "Temperatura";
+"loved" = "È piaciuto";
+"lovedDevices" = "Dispositivi piaciuti";
+"removeFromLiked" = "Rimuovi da Mi piace";
+"noDevicesText" = "Non ci sono dispositivi da visualizzare qui! Li vedrai qui dopo aver aggiunto.";
+"profile.guestText" = "Non sei connesso al tuo account \nCrea un account o accedi a uno esistente";
+"register" = "Registrati";
+"loginButtonText" = "Login";
+"with" = "Con:";
+"loggedInAs" = "Sei stato registrato come";
+"logout" = "Disconnettersi";
+"loginTitle" = "Accedi al tuo account";
+"password" = "Parola d'ordine";
+"repeatPassword" = "Ripeti la password";
+"done" = "Fatto";
+"fillEmailError" = "È necessario compilare il campo dell'email";
+"fillPasswordlError" = "Devi compilare il campo della password";
+"secondPassswordError" = "È necessario compilare il secondo campo con una password di conferma";
+"passwordNotTheSameError" = "Le password devono essere identiche";
+"deviceCodeText" = "Inserisci il codice del dispositivo";
+"code" = "Codice";
+"deviceNameText" = "Immettere il nome del dispositivo";
+"name" = "Nome";
+"save" = "Salva";
+"codeError" = "Il codice deve contenere 9 caratteri";
+"nameError" = "Devi dare un nome al dispositivo";
+"error" = "Errore";
+"ok" = "Ok";
+"menu" = "Menù";
+"getAppInfo" = "Ottieni informazioni sull'app";
+"appInfo" = "Questa applicazione è stata creata nel corso del lavoro di laurea da uno studente della NSTU - Andrey Shamin";
+"sendError" = "Segnalare un bug";
+"SendErrorPlaceholder" = "Se trovi degli errori, descrivili qui e proveremo a risolverli!";
+"thanksForSendingError" = "Grazie per aver migliorato questa app con noi!";

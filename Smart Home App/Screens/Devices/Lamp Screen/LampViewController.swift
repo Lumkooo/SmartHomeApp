@@ -29,7 +29,6 @@ final class LampViewController: EditableDeviceViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.prefersLargeTitles = false
         self.view = self.ui
         self.setupVCTitle()
         self.presenter.viewDidLoad(ui: ui)

@@ -1,0 +1,51 @@
+/* 
+  Localizable.strings
+  Smart Home App
+
+  Created by Андрей Шамин on 4/17/21.
+  
+*/
+
+"deviceList" = "设备列表";
+"turnOn" = "开启";
+"turnOff" = "关闭";
+"general" = "General";
+"profile" ="个人资料";
+"addToLiked" = "加入喜欢的";
+"goToDevice" = "前往装置";
+"chooseLampColor" = "前往装置";
+"color" = "颜色";
+"temperature" = "温度";
+"loved" = "喜欢了";
+"lovedDevices" = "喜欢的设备";
+"removeFromLiked" = "从喜欢的中删除";
+"noDevicesText" = "这里没有可显示的设备！ 添加后，您将在这里看到它们。";
+"profile.guestText" = "您尚未登录到帐户\ n创建一个帐户或登录到现有帐户";
+"register" = "登记";
+"loginButtonText" = "登录";
+"with" = "和：";
+"loggedInAs" = "您登录为";
+"logout" = "登出";
+"loginTitle" = "登录到您的帐户";
+"password" = "登录到您的帐户";
+"repeatPassword" = "重复输入密码";
+"done" = "完毕";
+"fillEmailError" = "您必须填写电子邮件字段";
+"fillPasswordlError" = "您必须填写密码字段";
+"secondPassswordError" = "必须在第二个字段中填写密码确认";
+"passwordNotTheSameError" = "密码必须匹配";
+"deviceCodeText" = "输入设备代码";
+"code" = "代码";
+"deviceNameText" = "输入设备名称";
+"name" = "名称";
+"save" = "保存";
+"codeError" = "验证码必须为9个字符";
+"nameError" = "您需要给设备起个名字";
+"error" = "错误";
+"ok" = "好的";
+"menu" = "菜单";
+"getAppInfo" = "获取应用信息";
+"appInfo" = "此应用程序是由NSTU的学生-Andrey Shamin在毕业作品过程中创建的";
+"sendError" = "报告错误";
+"SendErrorPlaceholder" = "如果发现任何错误，请在此处进行描述，我们将尝试对其进行修复！";
+"thanksForSendingError" = "感谢您与我们一起改善此应用程序！";

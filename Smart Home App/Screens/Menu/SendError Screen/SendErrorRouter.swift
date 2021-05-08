@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ISendErrorRouter {
-
+    func showThanksAlert()
 }
 
 final class SendErrorRouter {
@@ -21,5 +21,10 @@ final class SendErrorRouter {
 // MARK: - ISendErrorRouter
 
 extension SendErrorRouter: ISendErrorRouter {
-
+    func showThanksAlert() {
+        let alert = AlertAssembly.createSimpleAlert(withMessage: Localized("thanksForSendingError")) {
+            self.vc?.navigationController?.popViewController(animated: true)
+        }
+        self.vc?.navigationController?.present(alert, animated: true)
+    }
 }

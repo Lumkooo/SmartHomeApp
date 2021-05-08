@@ -47,3 +47,5 @@
 "getAppInfo" = "Information sur l'application";
 "appInfo" = "Cette application a été créée au cours du travail de fin d'études par un étudiant du NSTU - Andrey Shamin";
 "sendError" = "Signaler un bug";
+"SendErrorPlaceholder" = "Si vous trouvez une erreur, veuillez la décrire ici et nous essaierons de la corriger!";
+"thanksForSendingError" = "Merci d'avoir amélioré cette application avec nous!";

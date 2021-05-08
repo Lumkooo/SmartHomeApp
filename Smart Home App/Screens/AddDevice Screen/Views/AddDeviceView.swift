@@ -65,6 +65,10 @@ final class AddDeviceView: UIView {
     var codeError: (() -> Void)?
     var nameError: (() -> Void)?
     var save: ((_ name: String, _ code: String) -> Void)?
+    private var isKeyboardShowing = false
+    private var saveButtonBottomAnchor: NSLayoutConstraint!
+    private var saveButtonBottomAnchorWithKeyboard: NSLayoutConstraint!
+
 
     // MARK: - Init
 
@@ -74,6 +78,7 @@ final class AddDeviceView: UIView {
         self.setupElements()
         self.setupTapToClose()
         self.setupDelegates()
+        self.setupNotifications()
     }
     
     required init?(coder: NSCoder) {
@@ -91,11 +96,18 @@ extension AddDeviceView: IAddDeviceView {
 
 private extension AddDeviceView {
     func setupElements() {
+        self.setupSaveButtonAnchor()
         self.setupDeviceCodeLabel()
         self.setupDeviceCodeTextField()
         self.setupDeviceNameLabel()
         self.setupDeviceNameTextField()
         self.setupSaveButton()
+    }
+
+    func setupSaveButtonAnchor() {
+        self.saveButtonBottomAnchor = self.saveButton.bottomAnchor.constraint(
+            equalTo: self.safeAreaLayoutGuide.bottomAnchor,
+            constant: -AppConstants.Constraints.normal)
     }
 
     func setupDeviceCodeLabel() {
@@ -163,8 +175,7 @@ private extension AddDeviceView {
                                                      constant: AppConstants.Constraints.normal),
             self.saveButton.trailingAnchor.constraint(equalTo: self.trailingAnchor,
                                                      constant: -AppConstants.Constraints.normal),
-            self.saveButton.topAnchor.constraint(equalTo: self.deviceNameTextField.bottomAnchor,
-                                                 constant: AppConstants.Constraints.twice),
+            self.saveButtonBottomAnchor,
             self.saveButton.heightAnchor.constraint(equalToConstant: AppConstants.Sizes.closeButtonSize.height)
         ])
     }
@@ -245,6 +256,53 @@ extension AddDeviceView: UITextFieldDelegate {
             let lengthToReplace =  range.length
             let newLength = startingLength + lengthToAdd - lengthToReplace
             return newLength <= charsLimit
+        }
+    }
+}
+
+// MARK: - Работа с клавиатурой
+
+private extension AddDeviceView {
+    func setupNotifications() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillShow),
+            name:UIResponder.keyboardWillShowNotification,
+            object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillHide),
+            name:UIResponder.keyboardWillHideNotification,
+            object: nil)
+    }
+
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if !self.isKeyboardShowing {
+            if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+                let keyboardRectangle = keyboardFrame.cgRectValue
+                let keyboardHeight = keyboardRectangle.height
+                let anchorConstant = keyboardHeight - self.safeAreaInsets.bottom
+                self.saveButtonBottomAnchorWithKeyboard = self.saveButton.bottomAnchor.constraint(
+                    equalTo: self.safeAreaLayoutGuide.bottomAnchor,
+                    constant: -anchorConstant)
+                NSLayoutConstraint.deactivate([self.saveButtonBottomAnchor])
+                NSLayoutConstraint.activate([self.saveButtonBottomAnchorWithKeyboard])
+                UIView.animate(withDuration: AppConstants.AnimationTime.keyboardAnimationDuration) {
+                    self.layoutIfNeeded()
+                }
+                self.isKeyboardShowing = true
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.isKeyboardShowing {
+            NSLayoutConstraint.deactivate([self.saveButtonBottomAnchorWithKeyboard])
+            NSLayoutConstraint.activate([self.saveButtonBottomAnchor])
+            UIView.animate(withDuration: AppConstants.AnimationTime.keyboardAnimationDuration) {
+                self.layoutIfNeeded()
+            }
+            self.isKeyboardShowing = false
         }
     }
 }
