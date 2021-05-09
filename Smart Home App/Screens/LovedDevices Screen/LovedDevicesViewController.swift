@@ -33,6 +33,11 @@ final class LovedDevicesViewController: UIViewController {
         self.view = self.ui
         self.presenter.viewDidLoad(ui: self.ui)
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.presenter.viewDidAppear()
+    }
 }
 
 extension LovedDevicesViewController: ILovedDevicesDelegate {

@@ -49,3 +49,15 @@
 "sendError" = "Report a bug";
 "SendErrorPlaceholder" = "If you find any errors, please describe it here and we will try to fix it!";
 "thanksForSendingError" = "Thank you for making this app better with us!";
+"getInfo" = "Get info";
+"rename" = "Rename";
+"delete" = "Delete";
+"lamp" = "Lamp";
+"electricalSocket" = "Electrical socket";
+"airConditioner" = "Air codnitioner";
+"curtains" = "Curtains";
+"ventilator" = "Ventilator";
+"irrigationSystem" = "Irrigation system";
+"enterNewName" = "Enter new name";
+"cancel" = "Cancel";
+"deleteAlertText" = "Are you sure you want to remove this device?\n(This action cannot be undone)";

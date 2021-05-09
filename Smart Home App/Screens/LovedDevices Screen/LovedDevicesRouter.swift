@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ILovedDevicesRouter {
-    func showDevice(_ device: SmartHomeDevice)
+    func showDevice(_ device: SmartHomeDevice, delegate: IReloadAfterRemovedDevice)
 }
 
 final class LovedDevicesRouter {
@@ -22,8 +22,8 @@ final class LovedDevicesRouter {
 // MARK: - ILovedDevicesRouter
 
 extension LovedDevicesRouter: ILovedDevicesRouter {
-    func showDevice(_ device: SmartHomeDevice) {
-        guard let viewController = self.devicesRouter.getViewControllerFor(device: device) else {
+    func showDevice(_ device: SmartHomeDevice, delegate: IReloadAfterRemovedDevice) {
+        guard let viewController = self.devicesRouter.getViewControllerFor(device: device, delegate: delegate) else {
             assertionFailure("oops, error occured")
             return
         }

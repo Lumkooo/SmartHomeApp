@@ -80,6 +80,15 @@ final class DevicesManager {
         }
     }
 
+    func removeDevice(_ device: SmartHomeDevice) {
+        self.firebaseManager.removeDevice(device) {
+            self.devices.removeAll { $0.code == device.code }
+            self.lovedDevices.removeAll { $0.code == device.code }
+        } errorCompletion: { (error) in
+            assertionFailure("oops...Error")
+        }
+    }
+
     func removeDevices() {
         self.devices.removeAll()
     }

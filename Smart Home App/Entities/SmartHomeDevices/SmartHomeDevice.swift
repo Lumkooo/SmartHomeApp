@@ -64,6 +64,10 @@ class SmartHomeDevice: ISmartHomeDevice {
     func toggleIsLoved() {
         self.isLoved = !self.isLoved
     }
+
+    func changeName(_ newName: String) {
+        self.name = newName
+    }
 }
 
 extension SmartHomeDevice: Equatable {

@@ -13,6 +13,7 @@ protocol ILovedDevicesInteractor {
     func cellTappedAt(_ indexPath: IndexPath)
     func toggleIsLikedState(atIndexPath indexPath: IndexPath)
     func getDevice(atIndexPath indexPath: IndexPath) -> SmartHomeDevice?
+    func reloadAfterDeleting(device: SmartHomeDevice)
 }
 
 protocol ILovedDevicesInteractorOuter: AnyObject {
@@ -50,6 +51,10 @@ extension LovedDevicesInteractor: ILovedDevicesInteractor {
     func toggleIsLikedState(atIndexPath indexPath: IndexPath) {
         DevicesManager.shared.toggleLovedDeviceIsLoved(atIndex: indexPath.item)
         self.reloadView()
+    }
+
+    func reloadAfterDeleting(device: SmartHomeDevice) {
+        DevicesManager.shared.removeDevice(device)
     }
 }
 

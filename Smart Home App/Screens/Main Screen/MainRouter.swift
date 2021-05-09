@@ -8,7 +8,7 @@
 import UIKit
 
 protocol IMainRouter {
-    func showDevice(_ device: SmartHomeDevice)
+    func showDevice(_ device: SmartHomeDevice, delegate: IReloadAfterRemovedDevice)
     func showMenu(delegate: IMenuDelegate)
     func showAddingVC(delegate: IAddDeviceDelegate)
     func showAppInfo()
@@ -26,8 +26,8 @@ final class MainRouter {
 // MARK: - IMainRouter
 
 extension MainRouter: IMainRouter {
-    func showDevice(_ device: SmartHomeDevice) {
-        guard let viewController = self.devicesRouter.getViewControllerFor(device: device) else {
+    func showDevice(_ device: SmartHomeDevice, delegate: IReloadAfterRemovedDevice) {
+        guard let viewController = self.devicesRouter.getViewControllerFor(device: device, delegate: delegate) else {
             assertionFailure("oops, error occured")
             return
         }

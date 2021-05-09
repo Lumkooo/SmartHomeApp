@@ -9,7 +9,7 @@ import UIKit
 
 final class DevicesRouter {
 
-    func getViewControllerFor(device: SmartHomeDevice) -> UIViewController? {
+    func getViewControllerFor(device: SmartHomeDevice, delegate: IReloadAfterRemovedDevice) -> UIViewController? {
         if device is Lamp {
             guard let lamp = device as? Lamp else {
                 assertionFailure("Can't downcast device to lamp")
@@ -29,7 +29,7 @@ final class DevicesRouter {
             return nil
         } else {
             // Устройства, у которых нет детальной настройки - только включение/выключение
-            let vc = SimpleDeviceAssembly.createVC(device: device)
+            let vc = SimpleDeviceAssembly.createVC(device: device, delegate: delegate)
             return vc
         }
     }

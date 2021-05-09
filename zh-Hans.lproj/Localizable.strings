@@ -49,3 +49,15 @@
 "sendError" = "报告错误";
 "SendErrorPlaceholder" = "如果发现任何错误，请在此处进行描述，我们将尝试对其进行修复！";
 "thanksForSendingError" = "感谢您与我们一起改善此应用程序！";
+"getInfo" = "获取信息";
+"rename" = "改名";
+"delete" = "删除";
+"lamp" = "灯";
+"electricalSocket" = "电源插座";
+"airConditioner" = "冷气机";
+"curtains" = "幕布";
+"ventilator" = "呼吸机";
+"irrigationSystem" = "灌溉系统";
+"enterNewName" = "输入新名字";
+"cancel" = "取消";
+"deleteAlertText" = "您确定要删除此设备吗？\n（此操作无法撤消）";

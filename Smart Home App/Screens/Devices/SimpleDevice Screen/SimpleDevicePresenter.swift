@@ -11,6 +11,10 @@ protocol ISimpleDevicePresenter {
     func getDeviceName() -> String
     func viewDidLoad(ui: ISimpleDeviceView)
     func saveData()
+
+    func getInfo()
+    func rename()
+    func delete()
 }
 
 final class SimpleDevicePresenter {
@@ -47,6 +51,21 @@ extension SimpleDevicePresenter: ISimpleDevicePresenter {
     func saveData() {
         self.interactor.saveData()
     }
+
+    func getInfo() {
+        let device = self.interactor.getDevice()
+        self.router.showDeviceInfo(forDevice: device)
+    }
+
+    func rename() {
+        let device = self.interactor.getDevice()
+        self.router.showRenameVC(forDevice: device)
+    }
+
+    func delete() {
+        let device = self.interactor.getDevice()
+        self.router.showDeleteAlert(forDevice: device)
+    }
 }
 
 // MARK: - ISimpleDeviceInteractorOuter
@@ -59,5 +78,24 @@ extension SimpleDevicePresenter: ISimpleDeviceInteractorOuter {
     func reloadStateOfDevice(_ device: SmartHomeDevice) {
         self.ui?.reloadStateOfDevice(device)
     }
+
+    func goToPreviousVC() {
+        self.router.dismissVC()
+    }
 }
 
+// MARK: - ISimpleDeviceRouterOuter
+
+extension SimpleDevicePresenter: ISimpleDeviceRouterOuter {
+    func changeDeviceName(newName: String) {
+        self.interactor.changeDeviceName(newName)
+    }
+
+    func deleteDevice() {
+        self.interactor.deleteDevice()
+    }
+
+    func showAlertWith(message: String) {
+        self.router.showAlertWith(message: message)
+    }
+}

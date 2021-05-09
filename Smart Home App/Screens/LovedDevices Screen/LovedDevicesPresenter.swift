@@ -10,6 +10,7 @@ import Foundation
 protocol ILovedDevicesPresenter {
     func reloadData()
     func viewDidLoad(ui: IMainView)
+    func viewDidAppear()
 }
 
 final class LovedDevicesPresenter {
@@ -39,7 +40,9 @@ extension LovedDevicesPresenter: ILovedDevicesPresenter {
                 assertionFailure("oops, can't get a deivce")
                 return
             }
-            self?.router.showDevice(device)
+            if let self = self {
+                self.router.showDevice(device, delegate: self)
+            }
         }
         self.ui?.cellTappedAt = { [weak self] indexPath in
             self?.interactor.cellTappedAt(indexPath)
@@ -47,6 +50,10 @@ extension LovedDevicesPresenter: ILovedDevicesPresenter {
         self.ui?.toggleLikedState = { [weak self] indexPath in
             self?.interactor.toggleIsLikedState(atIndexPath: indexPath)
         }
+        self.interactor.loadInitData()
+    }
+
+    func viewDidAppear() {
         self.interactor.loadInitData()
     }
 
@@ -60,5 +67,14 @@ extension LovedDevicesPresenter: ILovedDevicesPresenter {
 extension LovedDevicesPresenter: ILovedDevicesInteractorOuter {
     func reloadView(devices: [SmartHomeDevice]) {
         self.ui?.reloadView(devices: devices)
+    }
+}
+
+
+// MARK: - IReloadAfterRemovedDevice
+
+extension LovedDevicesPresenter: IReloadAfterRemovedDevice {
+    func reloadAfterDelete(withDevice device: SmartHomeDevice) {
+        self.interactor.reloadAfterDeleting(device: device)
     }
 }

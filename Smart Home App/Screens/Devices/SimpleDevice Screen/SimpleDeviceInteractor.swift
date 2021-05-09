@@ -12,11 +12,16 @@ protocol ISimpleDeviceInteractor {
     func getDeviceName() -> String
     func toggleState()
     func saveData()
+    func getDevice() -> SmartHomeDevice
+    func changeDeviceName(_ newName: String)
+    func deleteDevice()
 }
 
 protocol ISimpleDeviceInteractorOuter: AnyObject {
     func prepareView(device: SmartHomeDevice)
     func reloadStateOfDevice(_ device: SmartHomeDevice)
+    func goToPreviousVC()
+    func showAlertWith(message: String)
 }
 
 final class SimpleDeviceInteractor {
@@ -26,11 +31,13 @@ final class SimpleDeviceInteractor {
     weak var presenter: ISimpleDeviceInteractorOuter?
     private let device: SmartHomeDevice
     private let firebaseManager = FirebaseDatabaseManager()
+    private let delegate: IReloadAfterRemovedDevice
 
     // MARK: - Init
 
-    init(device: SmartHomeDevice) {
+    init(device: SmartHomeDevice, delegate: IReloadAfterRemovedDevice) {
         self.device = device
+        self.delegate = delegate
     }
 }
 
@@ -51,6 +58,21 @@ extension SimpleDeviceInteractor: ISimpleDeviceInteractor {
     }
 
     func saveData() {
-        self.firebaseManager.saveDevice(device)
+        self.firebaseManager.saveDevice(self.device)
+    }
+
+    func getDevice() -> SmartHomeDevice {
+        return self.device
+    }
+
+    func changeDeviceName(_ newName: String) {
+        self.device.changeName(newName)
+        self.saveData()
+    }
+
+    func deleteDevice() {
+        
+        self.delegate.reloadAfterDelete(withDevice: self.device)
+        self.presenter?.goToPreviousVC()
     }
 }

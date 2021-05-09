@@ -49,3 +49,15 @@
 "sendError" = "Segnalare un bug";
 "SendErrorPlaceholder" = "Se trovi degli errori, descrivili qui e proveremo a risolverli!";
 "thanksForSendingError" = "Grazie per aver migliorato questa app con noi!";
+"getInfo" = "Ottenere informazioni";
+"rename" = "Rinominare";
+"delete" = "Elimina";
+"lamp" = "Lampada";
+"electricalSocket" = "Presa elettrica";
+"airConditioner" = "Condizionatore";
+"curtains" = "Le tende";
+"ventilator" = "Ventilatore";
+"irrigationSystem" = "Sistema di irrigazione";
+"enterNewName" = "Immettere un nuovo nome";
+"cancel" = "Annulla";
+"deleteAlertText" = "Sei sicuro di voler rimuovere questo dispositivo?\n(Questa azione non può essere annullata)";

@@ -62,6 +62,7 @@
 		CE96C4EB2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96C4EA2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift */; };
 		CE97559A262BF51800864A55 /* DevicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975599262BF51800864A55 /* DevicesManager.swift */; };
 		CE97559F262BFAB900864A55 /* NSNotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97559E262BFAB800864A55 /* NSNotificationNameExtension.swift */; };
+		CE97A3812647AC860067950A /* IReloadAfterRemovedDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97A3802647AC860067950A /* IReloadAfterRemovedDevice.swift */; };
 		CEA67C542639A122007E5428 /* EditableDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA67C532639A122007E5428 /* EditableDeviceViewController.swift */; };
 		CEADBC8826140C11000C4D97 /* ProfileVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADBC8726140C11000C4D97 /* ProfileVCAssembly.swift */; };
 		CEBBF7BC2606EDFE00BD9F13 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7BB2606EDFE00BD9F13 /* MainView.swift */; };
@@ -228,6 +229,7 @@
 		CE96C4EA2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDevicesFirebaseManager.swift; sourceTree = "<group>"; };
 		CE975599262BF51800864A55 /* DevicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesManager.swift; sourceTree = "<group>"; };
 		CE97559E262BFAB800864A55 /* NSNotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationNameExtension.swift; sourceTree = "<group>"; };
+		CE97A3802647AC860067950A /* IReloadAfterRemovedDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IReloadAfterRemovedDevice.swift; sourceTree = "<group>"; };
 		CEA67C532639A122007E5428 /* EditableDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableDeviceViewController.swift; sourceTree = "<group>"; };
 		CEADBC8726140C11000C4D97 /* ProfileVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVCAssembly.swift; sourceTree = "<group>"; };
 		CEBBF7BB2606EDFE00BD9F13 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -838,6 +840,7 @@
 				CE66682126350E350085DA12 /* ILovedDevicesDelegate.swift */,
 				CE66682626350F490085DA12 /* IProfileDelegate.swift */,
 				CE854F1226352EC200E7AAA4 /* IAddDeviceDelegate.swift */,
+				CE97A3802647AC860067950A /* IReloadAfterRemovedDevice.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1210,6 +1213,7 @@
 				CE666833263515560085DA12 /* AddDeviceViewController.swift in Sources */,
 				CE83062A260841AF005CE030 /* TemperatureUnit.swift in Sources */,
 				CE54A5C12605E1D600352C46 /* TabBarControllerAssembly.swift in Sources */,
+				CE97A3812647AC860067950A /* IReloadAfterRemovedDevice.swift in Sources */,
 				CEF4F9142612C88C0003DD6C /* SimpleDeviceView.swift in Sources */,
 				CEBE41E62606F3CD00E370AB /* SmartHomeItemCollectionViewDelegate.swift in Sources */,
 				CECEFB8C262EFFF000D36004 /* LoginInteractor.swift in Sources */,

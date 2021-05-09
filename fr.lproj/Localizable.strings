@@ -49,3 +49,15 @@
 "sendError" = "Signaler un bug";
 "SendErrorPlaceholder" = "Si vous trouvez une erreur, veuillez la décrire ici et nous essaierons de la corriger!";
 "thanksForSendingError" = "Merci d'avoir amélioré cette application avec nous!";
+"getInfo" = "Щbtenir des informations";
+"rename" = "Renommer";
+"delete" = "Effacer";
+"lamp" = "Lampe";
+"electricalSocket" = "Prise électrique";
+"airConditioner" = "Climatisation";
+"curtains" = "Des rideaux";
+"ventilator" = "Ventilateur";
+"irrigationSystem" = "Système d'irrigation";
+"enterNewName" = "Entrez un nouveau nom";
+"cancel" = "Annuler";
+"deleteAlertText" = "Voulez-vous vraiment supprimer cet appareil?\n(Cette action ne peut pas être annulée)";

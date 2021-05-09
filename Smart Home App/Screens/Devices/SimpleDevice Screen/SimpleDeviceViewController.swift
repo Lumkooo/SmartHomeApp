@@ -13,6 +13,7 @@ final class SimpleDeviceViewController: EditableDeviceViewController {
 
     private let presenter: ISimpleDevicePresenter
     private let ui = SimpleDeviceView()
+    private var isDeleting: Bool = false
 
     // MARK: - Init
 
@@ -33,18 +34,19 @@ final class SimpleDeviceViewController: EditableDeviceViewController {
         self.view = self.ui
         self.setupVCTitle()
         self.presenter.viewDidLoad(ui: self.ui)
-        let getInfoAction = UIAction(title: "Get info!",
+        let getInfoAction = UIAction(title: Localized("getInfo") ,
                                      image: AppConstants.Images.infoCircle) { action in
-            print("Import!")
+            self.presenter.getInfo()
         }
-        let renameAction = UIAction(title: "Rename!",
+        let renameAction = UIAction(title: Localized("rename"),
                                     image: AppConstants.Images.pencil ) { action in
-            print("Rename!")
+            self.presenter.rename()
         }
 
-        let deleteAction = UIAction(title: "Delete!",
+        let deleteAction = UIAction(title: Localized("delete"),
                                     image: AppConstants.Images.xmark ) { action in
-            print("Delete!")
+            self.presenter.delete()
+            self.isDeleting = true
         }
         let actions = [getInfoAction, renameAction, deleteAction]
         self.setupNavigationBarRightButton(actions: actions)
@@ -52,7 +54,9 @@ final class SimpleDeviceViewController: EditableDeviceViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.presenter.saveData()
+        if !isDeleting {
+            self.presenter.saveData()
+        }
     }
 
     // MARK: - Private

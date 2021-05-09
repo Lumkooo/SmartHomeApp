@@ -15,6 +15,7 @@ protocol IMainInteractor {
     func userSignIn()
     func userSignOut()
     func addDeviceTapped()
+    func reloadAfterDeleting(device: SmartHomeDevice)
 }
 
 protocol IMainInteractorOuter: AnyObject {
@@ -40,6 +41,10 @@ extension MainInteractor: IMainInteractor {
 
     func loadInitData() {
         self.reloadView()
+    }
+
+    func reloadAfterDeleting(device: SmartHomeDevice) {
+        DevicesManager.shared.removeDevice(device)
     }
 
     func getDevice(atIndexPath indexPath: IndexPath) -> SmartHomeDevice? {
