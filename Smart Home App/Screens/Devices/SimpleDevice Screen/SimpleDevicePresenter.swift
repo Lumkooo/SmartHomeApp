@@ -82,6 +82,10 @@ extension SimpleDevicePresenter: ISimpleDeviceInteractorOuter {
     func goToPreviousVC() {
         self.router.dismissVC()
     }
+
+    func showAlertWith(message: String) {
+        self.router.showAlertWith(message: message)
+    }
 }
 
 // MARK: - ISimpleDeviceRouterOuter
@@ -93,9 +97,5 @@ extension SimpleDevicePresenter: ISimpleDeviceRouterOuter {
 
     func deleteDevice() {
         self.interactor.deleteDevice()
-    }
-
-    func showAlertWith(message: String) {
-        self.router.showAlertWith(message: message)
     }
 }

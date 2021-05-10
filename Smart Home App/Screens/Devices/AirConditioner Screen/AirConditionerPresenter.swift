@@ -10,6 +10,10 @@ import Foundation
 protocol IAirConditionerPresenter {
     func viewDidLoad(ui: IAirConditionerView)
     func saveData()
+
+    func getInfo()
+    func rename()
+    func delete()
 }
 
 final class AirConditionerPresenter {
@@ -49,6 +53,21 @@ extension AirConditionerPresenter: IAirConditionerPresenter {
     func saveData() {
         self.interactor.saveData()
     }
+
+    func getInfo() {
+        let device = self.interactor.getDevice()
+        self.router.showDeviceInfo(forDevice: device)
+    }
+
+    func rename() {
+        let device = self.interactor.getDevice()
+        self.router.showRenameVC(forDevice: device)
+    }
+
+    func delete() {
+        let device = self.interactor.getDevice()
+        self.router.showDeleteAlert(forDevice: device)
+    }
 }
 
 // MARK: - IAirConditionerInteractorOuter
@@ -64,5 +83,25 @@ extension AirConditionerPresenter: IAirConditionerInteractorOuter {
 
     func reloadAirConditionerInfo(airConditioner: AirConditioner) {
         self.ui?.changeAirConditionerInfo(airConditioner: airConditioner)
+    }
+
+    func goToPreviousVC() {
+        self.router.dismissVC()
+    }
+
+    func showAlertWith(message: String) {
+        self.router.showAlertWith(message: message)
+    }
+}
+
+// MARK: - IAirConditionerRouterOuter
+
+extension AirConditionerPresenter: IAirConditionerRouterOuter {
+    func changeDeviceName(newName: String) {
+        self.interactor.changeDeviceName(newName)
+    }
+
+    func deleteDevice() {
+        self.interactor.deleteDevice()
     }
 }

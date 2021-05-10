@@ -15,14 +15,14 @@ final class DevicesRouter {
                 assertionFailure("Can't downcast device to lamp")
                 return nil
             }
-            let vc = LampScreenAssembly.createVC(lamp: lamp)
+            let vc = LampScreenAssembly.createVC(lamp: lamp, delegate: delegate)
             return vc
         } else if device is AirConditioner {
             guard let airConditioner = device as? AirConditioner else {
                 assertionFailure("Can't downcast device to lamp")
                 return nil
             }
-            let vc = AirConditionerAssembly.createVC(airConditioner: airConditioner)
+            let vc = AirConditionerAssembly.createVC(airConditioner: airConditioner, delegate: delegate)
             return vc
         } else if device is Curtains {
             // TODO: - Curtains

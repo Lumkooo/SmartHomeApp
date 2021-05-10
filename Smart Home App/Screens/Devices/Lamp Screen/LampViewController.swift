@@ -13,6 +13,7 @@ final class LampViewController: EditableDeviceViewController {
 
     private let presenter: ILampPresenter
     private let ui = LampView()
+    private var isDeleting: Bool = false
 
     // MARK: - Init
 
@@ -32,15 +33,7 @@ final class LampViewController: EditableDeviceViewController {
         self.view = self.ui
         self.setupVCTitle()
         self.presenter.viewDidLoad(ui: ui)
-
-        let importAction = UIAction(title: "Import", image: UIImage(systemName: "folder")) { action in
-            print("Import")
-        }
-        let createAction = UIAction(title: "Create", image: UIImage(systemName: "square.and.pencil")) { action in
-            print("Create")
-        }
-        let actions = [importAction, createAction]
-        self.setupNavigationBarRightButton(actions: actions)
+        self.setupNavigationBarButton()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -50,7 +43,9 @@ final class LampViewController: EditableDeviceViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.presenter.saveData()
+        if !isDeleting {
+            self.presenter.saveData()
+        }
     }
 
     private func setupVCTitle() {
@@ -58,7 +53,22 @@ final class LampViewController: EditableDeviceViewController {
         self.title = deviceName
     }
 
-    @objc private func editButtonTapped() {
+    private func setupNavigationBarButton() {
+        let getInfoAction = UIAction(title: Localized("getInfo") ,
+                                     image: AppConstants.Images.infoCircle) { action in
+            self.presenter.getInfo()
+        }
+        let renameAction = UIAction(title: Localized("rename"),
+                                    image: AppConstants.Images.pencil ) { action in
+            self.presenter.rename()
+        }
 
+        let deleteAction = UIAction(title: Localized("delete"),
+                                    image: AppConstants.Images.xmark ) { action in
+            self.presenter.delete()
+            self.isDeleting = true
+        }
+        let actions = [getInfoAction, renameAction, deleteAction]
+        self.setupNavigationBarRightButton(actions: actions)
     }
 }

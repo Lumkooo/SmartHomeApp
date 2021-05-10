@@ -16,6 +16,10 @@ protocol ILampInteractor {
     func getDeviceName() -> String
     func saveData()
     func sliderDidEndGesture(withValue value: Int)
+
+    func getDevice() -> SmartHomeDevice
+    func changeDeviceName(_ newName: String)
+    func deleteDevice()
 }
 
 protocol ILampInteractorOuter: AnyObject {
@@ -24,6 +28,8 @@ protocol ILampInteractorOuter: AnyObject {
     func changeLightLevelTo(_ level: Int)
     func goToChangeColorVC(delegate: ColorChooserDelegate)
     func reloadLampInfo(lamp: Lamp)
+    func goToPreviousVC()
+    func showAlertWith(message: String)
 }
 
 final class LampInteractor {
@@ -33,11 +39,13 @@ final class LampInteractor {
     weak var presenter: ILampInteractorOuter?
     private var lamp: Lamp
     private let firebaseManager = FirebaseDatabaseManager()
+    private let delegate: IReloadAfterRemovedDevice
 
     // MARK: - Init
 
-    init(lamp: Lamp) {
+    init(lamp: Lamp, delegate: IReloadAfterRemovedDevice) {
         self.lamp = lamp
+        self.delegate = delegate
     }
 }
 
@@ -78,6 +86,21 @@ extension LampInteractor: ILampInteractor {
     func sliderDidEndGesture(withValue value: Int) {
         self.lamp.changeLightLevelTo(value)
         self.saveData()
+    }
+
+    func getDevice() -> SmartHomeDevice {
+        return self.lamp
+    }
+
+    func changeDeviceName(_ newName: String) {
+        self.lamp.changeName(newName)
+        self.saveData()
+    }
+
+    func deleteDevice() {
+
+        self.delegate.reloadAfterDelete(withDevice: self.lamp)
+        self.presenter?.goToPreviousVC()
     }
 }
 

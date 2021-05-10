@@ -12,6 +12,10 @@ protocol ILampPresenter {
     func viewDidAppear()
     func getDeviceName() -> String
     func saveData()
+
+    func getInfo()
+    func rename()
+    func delete()
 }
 
 final class LampPresenter {
@@ -60,6 +64,21 @@ extension LampPresenter: ILampPresenter {
     func saveData() {
         self.interactor.saveData()
     }
+
+    func getInfo() {
+        let device = self.interactor.getDevice()
+        self.router.showDeviceInfo(forDevice: device)
+    }
+
+    func rename() {
+        let device = self.interactor.getDevice()
+        self.router.showRenameVC(forDevice: device)
+    }
+
+    func delete() {
+        let device = self.interactor.getDevice()
+        self.router.showDeleteAlert(forDevice: device)
+    }
 }
 
 // MARK: - ILampInteractorOuter
@@ -83,5 +102,25 @@ extension LampPresenter: ILampInteractorOuter {
 
     func reloadLampInfo(lamp: Lamp) {
         self.ui?.changeLampInfo(lamp: lamp)
+    }
+
+    func showAlertWith(message: String) {
+        self.router.showAlertWith(message: message)
+    }
+
+    func goToPreviousVC() {
+        self.router.dismissVC()
+    }
+}
+
+// MARK: - ILampRouterOuter
+
+extension LampPresenter: ILampRouterOuter {
+    func changeDeviceName(newName: String) {
+        self.interactor.changeDeviceName(newName)
+    }
+
+    func deleteDevice() {
+        self.interactor.deleteDevice()
     }
 }

@@ -34,22 +34,7 @@ final class SimpleDeviceViewController: EditableDeviceViewController {
         self.view = self.ui
         self.setupVCTitle()
         self.presenter.viewDidLoad(ui: self.ui)
-        let getInfoAction = UIAction(title: Localized("getInfo") ,
-                                     image: AppConstants.Images.infoCircle) { action in
-            self.presenter.getInfo()
-        }
-        let renameAction = UIAction(title: Localized("rename"),
-                                    image: AppConstants.Images.pencil ) { action in
-            self.presenter.rename()
-        }
-
-        let deleteAction = UIAction(title: Localized("delete"),
-                                    image: AppConstants.Images.xmark ) { action in
-            self.presenter.delete()
-            self.isDeleting = true
-        }
-        let actions = [getInfoAction, renameAction, deleteAction]
-        self.setupNavigationBarRightButton(actions: actions)
+        self.setupNavigationBarButton()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -66,8 +51,23 @@ final class SimpleDeviceViewController: EditableDeviceViewController {
         self.title = deviceName
     }
 
-    @objc private func editButtonTapped() {
-        
+    private func setupNavigationBarButton() {
+        let getInfoAction = UIAction(title: Localized("getInfo") ,
+                                     image: AppConstants.Images.infoCircle) { action in
+            self.presenter.getInfo()
+        }
+        let renameAction = UIAction(title: Localized("rename"),
+                                    image: AppConstants.Images.pencil ) { action in
+            self.presenter.rename()
+        }
+
+        let deleteAction = UIAction(title: Localized("delete"),
+                                    image: AppConstants.Images.xmark ) { action in
+            self.presenter.delete()
+            self.isDeleting = true
+        }
+        let actions = [getInfoAction, renameAction, deleteAction]
+        self.setupNavigationBarRightButton(actions: actions)
     }
 }
 

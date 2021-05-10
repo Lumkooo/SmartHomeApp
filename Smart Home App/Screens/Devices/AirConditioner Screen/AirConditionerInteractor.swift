@@ -13,12 +13,17 @@ protocol IAirConditionerInteractor {
     func setTemprature(_ newValue: Int)
     func sliderDidEndGesture(withValue value: Int)
     func saveData()
+    func getDevice() -> SmartHomeDevice
+    func changeDeviceName(_ newName: String)
+    func deleteDevice()
 }
 
 protocol IAirConditionerInteractorOuter: AnyObject {
     func prepareView(airCoditioner: AirConditioner)
     func changeTempratureTo(_ tempratureLevel: Int)
     func reloadAirConditionerInfo(airConditioner: AirConditioner)
+    func goToPreviousVC()
+    func showAlertWith(message: String)
 }
 
 final class AirConditionerInteractor {
@@ -28,11 +33,13 @@ final class AirConditionerInteractor {
     private let airConditioner: AirConditioner
     weak var presenter: IAirConditionerInteractorOuter?
     private let firebaseManager = FirebaseDatabaseManager()
+    private let delegate: IReloadAfterRemovedDevice
 
     // MARK: - Init
 
-    init(airConditioner: AirConditioner) {
+    init(airConditioner: AirConditioner, delegate: IReloadAfterRemovedDevice) {
         self.airConditioner = airConditioner
+        self.delegate = delegate
     }
 }
 
@@ -60,6 +67,21 @@ extension AirConditionerInteractor: IAirConditionerInteractor {
 
     func saveData() {
         self.firebaseManager.saveDevice(self.airConditioner)
+    }
+
+    func getDevice() -> SmartHomeDevice {
+        return self.airConditioner
+    }
+
+    func changeDeviceName(_ newName: String) {
+        self.airConditioner.changeName(newName)
+        self.saveData()
+    }
+
+    func deleteDevice() {
+
+        self.delegate.reloadAfterDelete(withDevice: self.airConditioner)
+        self.presenter?.goToPreviousVC()
     }
 }
 

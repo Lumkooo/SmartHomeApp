@@ -13,6 +13,7 @@ final class AirConditionerViewController: EditableDeviceViewController {
 
     private let ui = AirConditionerView()
     private let presenter: IAirConditionerPresenter
+    private var isDeleting: Bool = false
 
     // MARK: - Init
 
@@ -31,24 +32,34 @@ final class AirConditionerViewController: EditableDeviceViewController {
         super.viewDidLoad()
         self.view = self.ui
         self.presenter.viewDidLoad(ui: self.ui)
-        let importAction = UIAction(title: "Import", image: UIImage(systemName: "folder")) { action in
-            print("Import")
-        }
-        let createAction = UIAction(title: "Create", image: UIImage(systemName: "square.and.pencil")) { action in
-            print("Create")
-        }
-        let actions = [importAction, createAction]
-        self.setupNavigationBarRightButton(actions: actions)
+        self.setupNavigationBarButton()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.presenter.saveData()
+        if !isDeleting {
+            self.presenter.saveData()
+        }
     }
 
     // MARK: - Private
 
-    @objc private func editButtonTapped() {
-        
+    private func setupNavigationBarButton() {
+        let getInfoAction = UIAction(title: Localized("getInfo") ,
+                                     image: AppConstants.Images.infoCircle) { action in
+            self.presenter.getInfo()
+        }
+        let renameAction = UIAction(title: Localized("rename"),
+                                    image: AppConstants.Images.pencil ) { action in
+            self.presenter.rename()
+        }
+
+        let deleteAction = UIAction(title: Localized("delete"),
+                                    image: AppConstants.Images.xmark ) { action in
+            self.presenter.delete()
+            self.isDeleting = true
+        }
+        let actions = [getInfoAction, renameAction, deleteAction]
+        self.setupNavigationBarRightButton(actions: actions)
     }
 }
