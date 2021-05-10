@@ -44,6 +44,12 @@
 		CE54A5B42605E15300352C46 /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5B32605E15200352C46 /* MainScreenAssembly.swift */; };
 		CE54A5BC2605E18D00352C46 /* NavigationControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5BB2605E18D00352C46 /* NavigationControllerAssembly.swift */; };
 		CE54A5C12605E1D600352C46 /* TabBarControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5C02605E1D600352C46 /* TabBarControllerAssembly.swift */; };
+		CE5C52322648F1AE00FC7CE0 /* CurtainsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C52312648F1AE00FC7CE0 /* CurtainsView.swift */; };
+		CE5C52412648F1C000FC7CE0 /* CurtainsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C52402648F1C000FC7CE0 /* CurtainsViewController.swift */; };
+		CE5C52462648F1C600FC7CE0 /* CurtainsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C52452648F1C600FC7CE0 /* CurtainsPresenter.swift */; };
+		CE5C524B2648F1CC00FC7CE0 /* CurtainsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C524A2648F1CC00FC7CE0 /* CurtainsInteractor.swift */; };
+		CE5C52502648F1D200FC7CE0 /* CurtainsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C524F2648F1D200FC7CE0 /* CurtainsRouter.swift */; };
+		CE5C52552648F61B00FC7CE0 /* CurtainsVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C52542648F61B00FC7CE0 /* CurtainsVCAssembly.swift */; };
 		CE66682226350E350085DA12 /* ILovedDevicesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66682126350E350085DA12 /* ILovedDevicesDelegate.swift */; };
 		CE66682726350F490085DA12 /* IProfileDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66682626350F490085DA12 /* IProfileDelegate.swift */; };
 		CE66682E2635154B0085DA12 /* AddDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66682D2635154B0085DA12 /* AddDeviceView.swift */; };
@@ -211,6 +217,12 @@
 		CE54A5B32605E15200352C46 /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
 		CE54A5BB2605E18D00352C46 /* NavigationControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerAssembly.swift; sourceTree = "<group>"; };
 		CE54A5C02605E1D600352C46 /* TabBarControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerAssembly.swift; sourceTree = "<group>"; };
+		CE5C52312648F1AE00FC7CE0 /* CurtainsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainsView.swift; sourceTree = "<group>"; };
+		CE5C52402648F1C000FC7CE0 /* CurtainsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainsViewController.swift; sourceTree = "<group>"; };
+		CE5C52452648F1C600FC7CE0 /* CurtainsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainsPresenter.swift; sourceTree = "<group>"; };
+		CE5C524A2648F1CC00FC7CE0 /* CurtainsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainsInteractor.swift; sourceTree = "<group>"; };
+		CE5C524F2648F1D200FC7CE0 /* CurtainsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainsRouter.swift; sourceTree = "<group>"; };
+		CE5C52542648F61B00FC7CE0 /* CurtainsVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainsVCAssembly.swift; sourceTree = "<group>"; };
 		CE66682126350E350085DA12 /* ILovedDevicesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILovedDevicesDelegate.swift; sourceTree = "<group>"; };
 		CE66682626350F490085DA12 /* IProfileDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IProfileDelegate.swift; sourceTree = "<group>"; };
 		CE66682D2635154B0085DA12 /* AddDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceView.swift; sourceTree = "<group>"; };
@@ -410,6 +422,7 @@
 		CE060C2026464749005F9E89 /* Devices */ = {
 			isa = PBXGroup;
 			children = (
+				CE5C52302648F19E00FC7CE0 /* Curtains Screen */,
 				CE17596B2609A4C6007AFDCA /* Lamp Screen */,
 				CED7A86126103B7900F61391 /* SimpleDevice Screen */,
 				CEED9FA426254C79001D9DF4 /* AirConditioner Screen */,
@@ -530,14 +543,12 @@
 		CE54A5B22605E14500352C46 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
+				CE5C525C2648F66E00FC7CE0 /* Devices assembly */,
 				CE54A5C02605E1D600352C46 /* TabBarControllerAssembly.swift */,
 				CE54A5B32605E15200352C46 /* MainScreenAssembly.swift */,
 				CE54A5BB2605E18D00352C46 /* NavigationControllerAssembly.swift */,
-				CE1759952609A6E8007AFDCA /* LampScreenAssembly.swift */,
 				CEE811F7260D7F7900BB8DFD /* ColorChooserAssembly.swift */,
-				CED7A87F26103E1B00F61391 /* SimpleDeviceAssembly.swift */,
 				CEADBC8726140C11000C4D97 /* ProfileVCAssembly.swift */,
-				CEED9FC326254FF2001D9DF4 /* AirConditionerAssembly.swift */,
 				CEDB0BEB262AA1EB00F1B4DB /* MenuAssembly.swift */,
 				CE0197CC262BEEEB00BD9E2E /* LovedDevicesAssembly.swift */,
 				CECEFB9C262F005B00D36004 /* AlertAssembly.swift */,
@@ -559,6 +570,37 @@
 				CECEFBB6262F01F400D36004 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE5C52302648F19E00FC7CE0 /* Curtains Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CE5C52392648F1B000FC7CE0 /* Views */,
+				CE5C52402648F1C000FC7CE0 /* CurtainsViewController.swift */,
+				CE5C52452648F1C600FC7CE0 /* CurtainsPresenter.swift */,
+				CE5C524A2648F1CC00FC7CE0 /* CurtainsInteractor.swift */,
+				CE5C524F2648F1D200FC7CE0 /* CurtainsRouter.swift */,
+			);
+			path = "Curtains Screen";
+			sourceTree = "<group>";
+		};
+		CE5C52392648F1B000FC7CE0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE5C52312648F1AE00FC7CE0 /* CurtainsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE5C525C2648F66E00FC7CE0 /* Devices assembly */ = {
+			isa = PBXGroup;
+			children = (
+				CE1759952609A6E8007AFDCA /* LampScreenAssembly.swift */,
+				CED7A87F26103E1B00F61391 /* SimpleDeviceAssembly.swift */,
+				CE5C52542648F61B00FC7CE0 /* CurtainsVCAssembly.swift */,
+				CEED9FC326254FF2001D9DF4 /* AirConditionerAssembly.swift */,
+			);
+			path = "Devices assembly";
 			sourceTree = "<group>";
 		};
 		CE66682B2635152A0085DA12 /* AddDevice Screen */ = {
@@ -1182,6 +1224,7 @@
 				CEF39A962631A80800616628 /* UIColor Extension.swift in Sources */,
 				CEDB0BDF262A9F0100F1B4DB /* MenuInteractor.swift in Sources */,
 				CED7A87126103B9F00F61391 /* SimpleDevicePresenter.swift in Sources */,
+				CE5C52462648F1C600FC7CE0 /* CurtainsPresenter.swift in Sources */,
 				CEBBF7CB2606EE1100BD9F13 /* MainRouter.swift in Sources */,
 				CE060C132646453B005F9E89 /* SendErrorRouter.swift in Sources */,
 				CEDB0BD2262A9EF300F1B4DB /* MenuView.swift in Sources */,
@@ -1205,8 +1248,10 @@
 				CE0197C8262BEAB000BD9E2E /* LovedDevicesRouter.swift in Sources */,
 				CE0197BE262BEAA300BD9E2E /* LovedDevicesPresenter.swift in Sources */,
 				CE66684C263523F90085DA12 /* String Extension.swift in Sources */,
+				CE5C52502648F1D200FC7CE0 /* CurtainsRouter.swift in Sources */,
 				CE83062526083CE7005CE030 /* AirConditioner.swift in Sources */,
 				CEE811E4260D7DDF00BB8DFD /* ColorChooserViewController.swift in Sources */,
+				CE5C524B2648F1CC00FC7CE0 /* CurtainsInteractor.swift in Sources */,
 				CE24EA70262F039600C3EBF6 /* CustomCloseButton.swift in Sources */,
 				CEE81212260D86AF00BB8DFD /* ColorItemCollectionViewDataSource.swift in Sources */,
 				CED7A88826103F6000F61391 /* DevicesRouter.swift in Sources */,
@@ -1215,8 +1260,10 @@
 				CE54A5C12605E1D600352C46 /* TabBarControllerAssembly.swift in Sources */,
 				CE97A3812647AC860067950A /* IReloadAfterRemovedDevice.swift in Sources */,
 				CEF4F9142612C88C0003DD6C /* SimpleDeviceView.swift in Sources */,
+				CE5C52552648F61B00FC7CE0 /* CurtainsVCAssembly.swift in Sources */,
 				CEBE41E62606F3CD00E370AB /* SmartHomeItemCollectionViewDelegate.swift in Sources */,
 				CECEFB8C262EFFF000D36004 /* LoginInteractor.swift in Sources */,
+				CE5C52322648F1AE00FC7CE0 /* CurtainsView.swift in Sources */,
 				CEE811F8260D7F7900BB8DFD /* ColorChooserAssembly.swift in Sources */,
 				CEBE4209260706AC00E370AB /* ElectricalSocket.swift in Sources */,
 				CE96C4EB2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift in Sources */,
@@ -1239,6 +1286,7 @@
 				CEE8120A260D86A800BB8DFD /* ColorItemCollectionViewDelegate.swift in Sources */,
 				CECEFB81262EFFF000D36004 /* ProfilePresenter.swift in Sources */,
 				CE060C092646452F005F9E89 /* SendErrorPresenter.swift in Sources */,
+				CE5C52412648F1C000FC7CE0 /* CurtainsViewController.swift in Sources */,
 				CEED9FB026254C9B001D9DF4 /* AirConditionerViewController.swift in Sources */,
 				CE854F1326352EC200E7AAA4 /* IAddDeviceDelegate.swift in Sources */,
 				CECEFB85262EFFF000D36004 /* RegisterInteractor.swift in Sources */,

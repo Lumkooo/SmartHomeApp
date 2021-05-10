@@ -25,8 +25,12 @@ final class DevicesRouter {
             let vc = AirConditionerAssembly.createVC(airConditioner: airConditioner, delegate: delegate)
             return vc
         } else if device is Curtains {
-            // TODO: - Curtains
-            return nil
+            guard let curtains = device as? Curtains else {
+                assertionFailure("Can't downcast device to curtains")
+                return nil
+            }
+            let vc = CurtainsVCAssembly.createVC(curtains: curtains, delegate: delegate)
+            return vc
         } else {
             // Устройства, у которых нет детальной настройки - только включение/выключение
             let vc = SimpleDeviceAssembly.createVC(device: device, delegate: delegate)
