@@ -17,9 +17,9 @@
 "color" = "Couleur";
 "temperature" = "Température";
 "loved" = "Favoris";
-"lovedDevices" = "Appareils favoris";
+"lovedDevices" = "Favoris";
 "removeFromLiked" = "Supprimer de vos favoris";
-"noDevicesText" = "Il n'y a aucun appareil à afficher ici! Vous les verrez ici après avoir été ajoutés.!";
+"noDevicesText" = "Il n'y a aucun appareil à afficher ici! Vous les verrez ici après avoir été ajoutés!";
 "profile.guestText" = "Vous n'êtes pas connecté à votre compte\nCréez un compte ou connectez-vous à un compte existant";
 "register" = "S'inscrire";
 "loginButtonText" = "Connexion";

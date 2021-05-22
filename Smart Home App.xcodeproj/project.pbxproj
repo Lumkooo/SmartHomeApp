@@ -121,6 +121,13 @@
 		CEDB0BEC262AA1EB00F1B4DB /* MenuAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB0BEB262AA1EB00F1B4DB /* MenuAssembly.swift */; };
 		CEDBAF0C26463F8400DE2844 /* AppInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBAF0B26463F8400DE2844 /* AppInfoView.swift */; };
 		CEDBAF1826463F8F00DE2844 /* AppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBAF1726463F8F00DE2844 /* AppInfoViewController.swift */; };
+		CEE0B57C2658C1D400D0181A /* LampViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE0B57B2658C1D400D0181A /* LampViewControllerTest.swift */; };
+		CEE0B5832658C23700D0181A /* LampPresenter_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE0B5822658C23700D0181A /* LampPresenter_Test.swift */; };
+		CEE0B58B2658CAE300D0181A /* LampInteractor_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE0B58A2658CAE300D0181A /* LampInteractor_Test.swift */; };
+		CEE0B5902658CCC400D0181A /* LampPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE0B58F2658CCC400D0181A /* LampPresenterTest.swift */; };
+		CEE0B5952658CD0300D0181A /* LampRouter_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE0B5942658CD0300D0181A /* LampRouter_Test.swift */; };
+		CEE0B59A2658CDB700D0181A /* LampView_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE0B5992658CDB700D0181A /* LampView_Test.swift */; };
+		CEE0B5A22658D63700D0181A /* LampInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE0B5A12658D63700D0181A /* LampInteractorTest.swift */; };
 		CEE811DA260D7BDC00BB8DFD /* ColorChooserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE811D9260D7BDC00BB8DFD /* ColorChooserView.swift */; };
 		CEE811E4260D7DDF00BB8DFD /* ColorChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE811E3260D7DDF00BB8DFD /* ColorChooserViewController.swift */; };
 		CEE811E9260D7DE800BB8DFD /* ColorChooserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE811E8260D7DE800BB8DFD /* ColorChooserPresenter.swift */; };
@@ -298,6 +305,13 @@
 		CEDB0BEB262AA1EB00F1B4DB /* MenuAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAssembly.swift; sourceTree = "<group>"; };
 		CEDBAF0B26463F8400DE2844 /* AppInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoView.swift; sourceTree = "<group>"; };
 		CEDBAF1726463F8F00DE2844 /* AppInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoViewController.swift; sourceTree = "<group>"; };
+		CEE0B57B2658C1D400D0181A /* LampViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampViewControllerTest.swift; sourceTree = "<group>"; };
+		CEE0B5822658C23700D0181A /* LampPresenter_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampPresenter_Test.swift; sourceTree = "<group>"; };
+		CEE0B58A2658CAE300D0181A /* LampInteractor_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampInteractor_Test.swift; sourceTree = "<group>"; };
+		CEE0B58F2658CCC400D0181A /* LampPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampPresenterTest.swift; sourceTree = "<group>"; };
+		CEE0B5942658CD0300D0181A /* LampRouter_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampRouter_Test.swift; sourceTree = "<group>"; };
+		CEE0B5992658CDB700D0181A /* LampView_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampView_Test.swift; sourceTree = "<group>"; };
+		CEE0B5A12658D63700D0181A /* LampInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampInteractorTest.swift; sourceTree = "<group>"; };
 		CEE811D9260D7BDC00BB8DFD /* ColorChooserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChooserView.swift; sourceTree = "<group>"; };
 		CEE811E3260D7DDF00BB8DFD /* ColorChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChooserViewController.swift; sourceTree = "<group>"; };
 		CEE811E8260D7DE800BB8DFD /* ColorChooserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChooserPresenter.swift; sourceTree = "<group>"; };
@@ -505,7 +519,9 @@
 			isa = PBXGroup;
 			children = (
 				CE54A5882605E0F500352C46 /* Smart_Home_AppTests.swift */,
+				CEE0B5AB2658DBC200D0181A /* Lamp Screen Tests */,
 				CE54A58A2605E0F500352C46 /* Info.plist */,
+				CEE0B5802658C20800D0181A /* TestDoubles */,
 			);
 			path = "Smart Home AppTests";
 			sourceTree = "<group>";
@@ -843,6 +859,35 @@
 				CEDBAF0B26463F8400DE2844 /* AppInfoView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CEE0B5802658C20800D0181A /* TestDoubles */ = {
+			isa = PBXGroup;
+			children = (
+				CEE0B5812658C20E00D0181A /* Spies */,
+			);
+			path = TestDoubles;
+			sourceTree = "<group>";
+		};
+		CEE0B5812658C20E00D0181A /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				CEE0B5992658CDB700D0181A /* LampView_Test.swift */,
+				CEE0B5822658C23700D0181A /* LampPresenter_Test.swift */,
+				CEE0B58A2658CAE300D0181A /* LampInteractor_Test.swift */,
+				CEE0B5942658CD0300D0181A /* LampRouter_Test.swift */,
+			);
+			path = Spies;
+			sourceTree = "<group>";
+		};
+		CEE0B5AB2658DBC200D0181A /* Lamp Screen Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CEE0B57B2658C1D400D0181A /* LampViewControllerTest.swift */,
+				CEE0B58F2658CCC400D0181A /* LampPresenterTest.swift */,
+				CEE0B5A12658D63700D0181A /* LampInteractorTest.swift */,
+			);
+			path = "Lamp Screen Tests";
 			sourceTree = "<group>";
 		};
 		CEE811DE260D7DA000BB8DFD /* ColorChooser Screen */ = {
@@ -1300,7 +1345,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE0B5A22658D63700D0181A /* LampInteractorTest.swift in Sources */,
+				CEE0B58B2658CAE300D0181A /* LampInteractor_Test.swift in Sources */,
+				CEE0B57C2658C1D400D0181A /* LampViewControllerTest.swift in Sources */,
+				CEE0B59A2658CDB700D0181A /* LampView_Test.swift in Sources */,
+				CEE0B5832658C23700D0181A /* LampPresenter_Test.swift in Sources */,
 				CE54A5892605E0F500352C46 /* Smart_Home_AppTests.swift in Sources */,
+				CEE0B5952658CD0300D0181A /* LampRouter_Test.swift in Sources */,
+				CEE0B5902658CCC400D0181A /* LampPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

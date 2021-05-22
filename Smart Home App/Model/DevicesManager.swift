@@ -52,6 +52,10 @@ final class DevicesManager {
         self.firebaseManager.appendDevice(device)
     }
 
+    func saveDevice(_ device: SmartHomeDevice) {
+        self.firebaseManager.saveDevice(device)
+    }
+
     func getDevices(completion: @escaping (([SmartHomeDevice]) -> Void)) {
         if self.devices.isEmpty {
             firebaseManager.getDevices { (devices) in

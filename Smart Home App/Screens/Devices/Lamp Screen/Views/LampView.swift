@@ -97,7 +97,6 @@ final class LampView: UIView, UITextViewDelegate {
     }
 
     @objc private func changeLightColorButtonTapped() {
-        // TODO: - Смена цвета
         self.colorChangeButtonPressed?()
     }
 }

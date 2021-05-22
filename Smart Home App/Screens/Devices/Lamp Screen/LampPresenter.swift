@@ -24,7 +24,7 @@ final class LampPresenter {
 
     private let interactor: ILampInteractor
     private let router: ILampRouter
-    private weak var ui: ILampView?
+    private(set) weak var ui: ILampView?
 
     // MARK: - Init
 

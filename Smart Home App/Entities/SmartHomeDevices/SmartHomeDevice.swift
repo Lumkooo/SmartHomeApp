@@ -12,6 +12,7 @@ protocol ISmartHomeDevice {
     func turnOff()
     func toggleDevice()
     func toggleIsLoved()
+    func changeName(_ newName: String)
 }
 
 class SmartHomeDevice: ISmartHomeDevice {

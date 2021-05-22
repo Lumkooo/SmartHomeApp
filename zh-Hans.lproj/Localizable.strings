@@ -17,7 +17,7 @@
 "color" = "颜色";
 "temperature" = "温度";
 "loved" = "喜欢了";
-"lovedDevices" = "喜欢的设备";
+"lovedDevices" = "收藏夹";
 "removeFromLiked" = "从喜欢的中删除";
 "noDevicesText" = "这里没有可显示的设备！ 添加后，您将在这里看到它们。";
 "profile.guestText" = "您尚未登录到帐户\ n创建一个帐户或登录到现有帐户";

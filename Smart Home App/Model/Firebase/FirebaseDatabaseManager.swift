@@ -8,7 +8,7 @@
 import Foundation
 import Firebase
 
-final class FirebaseDatabaseManager: FirebaseDatabaseInfo {
+final class FirebaseDatabaseManager {
 
     // MARK: - Properties
 
@@ -40,7 +40,11 @@ extension FirebaseDatabaseManager {
     }
 
     func getDevices(completion: @escaping ([SmartHomeDevice]) -> Void) {
-        if self.userUID.isEmpty {
+        guard let userUID = Auth.auth().currentUser?.uid else {
+            return
+        }
+
+        if userUID.isEmpty {
             completion([])
             return
         }

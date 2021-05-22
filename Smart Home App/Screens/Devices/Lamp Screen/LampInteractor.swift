@@ -38,7 +38,6 @@ final class LampInteractor {
 
     weak var presenter: ILampInteractorOuter?
     private var lamp: Lamp
-    private let firebaseManager = FirebaseDatabaseManager()
     private let delegate: IReloadAfterRemovedDevice
 
     // MARK: - Init
@@ -80,7 +79,7 @@ extension LampInteractor: ILampInteractor {
     }
 
     func saveData() {
-        self.firebaseManager.saveDevice(self.lamp)
+        DevicesManager.shared.saveDevice(self.lamp)
     }
 
     func sliderDidEndGesture(withValue value: Int) {
