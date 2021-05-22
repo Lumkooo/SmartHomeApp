@@ -12,6 +12,7 @@ enum NavigationControllerAssembly {
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.navigationBar.tintColor = .label
         navigationController.navigationBar.prefersLargeTitles = prefersLargeTitles
+        navigationController.navigationBar.accessibilityIdentifier = "NavigationBarID"
         return navigationController
     }
 }

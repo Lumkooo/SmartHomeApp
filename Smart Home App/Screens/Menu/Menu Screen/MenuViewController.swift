@@ -19,6 +19,7 @@ final class MenuViewController: UIViewController {
     init(presenter: IMenuPresenter) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
+        self.navigationController?.navigationBar.backItem?.backBarButtonItem?.accessibilityIdentifier = "backButton"
     }
 
     required init?(coder: NSCoder) {

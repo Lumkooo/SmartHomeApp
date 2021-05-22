@@ -31,6 +31,7 @@ final class MenuView: UIView {
         myButton.setImage(AppConstants.Images.xmark,
                           for: .normal)
         myButton.tintColor = .label
+        myButton.accessibilityIdentifier = "CloseViewButton"
         myButton.addTarget(self, action: #selector(buttonSelector), for: .touchUpInside)
         return myButton
     }()
@@ -46,6 +47,7 @@ final class MenuView: UIView {
         myButton.setTitle(Localized("getAppInfo"), for: .normal)
         myButton.titleLabel?.minimumScaleFactor = 0.5
         myButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        myButton.accessibilityIdentifier = "getAppInfo"
         myButton.addTarget(self,
                            action: #selector(getAppInfoTapped(gesture:)),
                            for: .touchUpInside)
@@ -57,6 +59,7 @@ final class MenuView: UIView {
         myButton.setTitle(Localized("sendError"), for: .normal)
         myButton.titleLabel?.minimumScaleFactor = 0.5
         myButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        myButton.accessibilityIdentifier = "sendError"
         myButton.addTarget(self,
                            action: #selector(sendErrorTapped(gesture:)),
                            for: .touchUpInside)

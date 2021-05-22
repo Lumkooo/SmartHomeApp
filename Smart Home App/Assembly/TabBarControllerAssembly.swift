@@ -19,6 +19,7 @@ enum TabBarControllerAssembly {
         let lovedDevicesTabItem = UITabBarItem(title: Localized("loved"),
                                                image: AppConstants.Images.heart,
                                                selectedImage: AppConstants.Images.heartFill)
+        lovedDevicesTabItem.accessibilityIdentifier = "LovedTab"
         lovedDevicesTab.tabBarItem = lovedDevicesTabItem
         lovedDevicesTab.navigationItem.largeTitleDisplayMode = .always
 
@@ -29,6 +30,7 @@ enum TabBarControllerAssembly {
         let mainTabItem = UITabBarItem(title: Localized("general"),
                                        image: AppConstants.Images.mainTabImage,
                                        selectedImage: AppConstants.Images.mainTabImage)
+        mainTabItem.accessibilityIdentifier = "MainTab"
         mainTab.tabBarItem = mainTabItem
         mainTab.navigationItem.largeTitleDisplayMode = .always
 
@@ -40,11 +42,13 @@ enum TabBarControllerAssembly {
         let profileTabItem = UITabBarItem(title: Localized("profile"),
                                           image: AppConstants.Images.profileTabImage,
                                           selectedImage: AppConstants.Images.profileTabFilledImage)
+        profileTabItem.accessibilityIdentifier = "ProfileTab"
         profileTab.tabBarItem = profileTabItem
 
         let controllers = [mainTab, lovedDevicesTab, profileTab]
         tabBarController.viewControllers = controllers
         tabBarController.tabBar.tintColor = .label
+        tabBarController.tabBar.accessibilityIdentifier = "TabBarID"
 
         return tabBarController
     }

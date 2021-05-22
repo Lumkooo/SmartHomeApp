@@ -44,25 +44,29 @@ extension SmartHomeItemCollectionViewDelegate: UICollectionViewDelegate {
                         contextMenuConfigurationForItemAt indexPath: IndexPath,
                         point: CGPoint) -> UIContextMenuConfiguration? {
         if self.devices[indexPath.item].isLoved {
-            return UIContextMenuConfiguration(identifier: indexPath as NSIndexPath, previewProvider: nil) { _ in
-                
+            let contextMenu = UIContextMenuConfiguration(identifier: indexPath as NSIndexPath, previewProvider: nil) { _ in
+
                 let addToLiked = UIAction(title: Localized("removeFromLiked"),
                                           image: AppConstants.Images.heartSlashFill) { action in
                     // MARK: - Добавление в избранные
                     self.delegate?.toggleLikedState(atIndexPath: indexPath)
                 }
+                addToLiked.accessibilityIdentifier = "addToLikedUIActionButton"
                 let goToDevice = UIAction(title: Localized("goToDevice"),
                                           image: AppConstants.Images.arrowRight) { action in
                     // MARK: - Переход к девайсу
                     self.delegate?.goToDevice(atIndexPath: indexPath)
                 }
-                
-                
-                return UIMenu(title: "", children: [goToDevice, addToLiked])
+                goToDevice.accessibilityIdentifier = "goToDeviceUIActionButton"
+
+                let menu = UIMenu(title: "", children: [goToDevice, addToLiked])
+                menu.accessibilityIdentifier = "CollectionViewCellMenu"
+                return menu
             }
+            return contextMenu
         } else {
-            return UIContextMenuConfiguration(identifier: indexPath as NSIndexPath, previewProvider: nil) { _ in
-                
+            let contextMenu = UIContextMenuConfiguration(identifier: indexPath as NSIndexPath, previewProvider: nil) { _ in
+
                 let addToLiked = UIAction(title: Localized("addToLiked"),
                                           image: AppConstants.Images.heartFill) { action in
                     // MARK: - Добавление в избранные
@@ -73,10 +77,13 @@ extension SmartHomeItemCollectionViewDelegate: UICollectionViewDelegate {
                     // MARK: - Переход к девайсу
                     self.delegate?.goToDevice(atIndexPath: indexPath)
                 }
-                
-                
-                return UIMenu(title: "", children: [goToDevice, addToLiked])
+
+
+                let menu = UIMenu(title: "", children: [goToDevice, addToLiked])
+                menu.accessibilityIdentifier = "CollectionViewCellMenu"
+                return menu
             }
+            return contextMenu
         }
     }
 }

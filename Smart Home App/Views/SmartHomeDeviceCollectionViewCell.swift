@@ -14,12 +14,15 @@ final class SmartHomeDeviceCollectionViewCell: UICollectionViewCell {
     private lazy var deviceImageView: UIImageView = {
         let myImageView = UIImageView()
         myImageView.tintColor = .secondarySystemBackground
+        myImageView.accessibilityIdentifier = "collectionViewCellImageView"
         return myImageView
     }()
 
     private lazy var deviceLabel: UILabel = {
         let myLabel = UILabel()
-        myLabel.numberOfLines = 2
+        myLabel.numberOfLines = 1
+        myLabel.adjustsFontSizeToFitWidth = true
+        myLabel.minimumScaleFactor = 0.5
         myLabel.font = .systemFont(ofSize: 20, weight: .light)
         myLabel.textAlignment = .center
         return myLabel
@@ -43,6 +46,7 @@ final class SmartHomeDeviceCollectionViewCell: UICollectionViewCell {
         self.contentView.backgroundColor = .tertiarySystemBackground
         self.setupElements()
         self.setupLayer()
+        self.accessibilityIdentifier = "MainViewSmartHomeItemsCollectionViewCell"
     }
 
     required init?(coder: NSCoder) {

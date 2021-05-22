@@ -53,6 +53,7 @@ class MainViewController: UIViewController {
                                    style:.plain,
                                    target: self,
                                    action: #selector(menuTapped))
+        menu.accessibilityIdentifier = "MenuButtonIdentifier"
         menu.tintColor = .label
         self.navigationItem.setRightBarButton(menu, animated: true)
     }
@@ -71,6 +72,7 @@ class MainViewController: UIViewController {
                                   target: self,
                                   action: #selector(addTapped))
         add.tintColor = .label
+        add.accessibilityIdentifier = "AddButtonIdentifier"
         self.navigationItem.setLeftBarButton(add, animated: true)
     }
 
