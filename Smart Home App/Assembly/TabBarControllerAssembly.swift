@@ -10,33 +10,46 @@ import UIKit
 enum TabBarControllerAssembly {
     static func createTabBar() -> UITabBarController {
 
-        // MARK: - Images
+        let tabBarController = UITabBarController()
 
-        enum Images {
-            static let mapTabImage = UIImage(systemName: "map")
-            static let mapTabFilledImage = UIImage(systemName: "map.fill")
-            static let mainTabImage = UIImage(systemName: "list.bullet")
-            static let profileTabImage = UIImage(systemName: "person")
-            static let profileTabFilledImage = UIImage(systemName: "person.fill")
-            static let bagTabImage = UIImage(systemName: "bag")
-            static let bagTabFilledImage = UIImage(systemName: "bag.fill")
-        }
+        // MARK: - Loved Devices Screen
 
+        let lovedDevicesViewController =  LovedDevicesAssembly.createVC()
+        let lovedDevicesTab = NavigationControllerAssembly.createNavigationVC(for: lovedDevicesViewController)
+        let lovedDevicesTabItem = UITabBarItem(title: Localized("loved"),
+                                               image: AppConstants.Images.heart,
+                                               selectedImage: AppConstants.Images.heartFill)
+        lovedDevicesTabItem.accessibilityIdentifier = "LovedTab"
+        lovedDevicesTab.tabBarItem = lovedDevicesTabItem
+        lovedDevicesTab.navigationItem.largeTitleDisplayMode = .always
 
-        let tabBar = UITabBarController()
+        // MARK: - Main Screen
 
-        // MARK: - MainScreen
-
-        let mainViewController =  MainScreenAssembly.createVC()
+        let mainViewController =  MainScreenAssembly.createVC(lovedDevicesDelegate: lovedDevicesViewController)
         let mainTab = NavigationControllerAssembly.createNavigationVC(for: mainViewController)
-        let mainTabItem = UITabBarItem(title: "Главная",
-                                         image: Images.bagTabImage,
-                                         selectedImage: Images.bagTabFilledImage)
+        let mainTabItem = UITabBarItem(title: Localized("general"),
+                                       image: AppConstants.Images.mainTabImage,
+                                       selectedImage: AppConstants.Images.mainTabImage)
+        mainTabItem.accessibilityIdentifier = "MainTab"
         mainTab.tabBarItem = mainTabItem
+        mainTab.navigationItem.largeTitleDisplayMode = .always
 
-        let controllers = [mainTab]
-        tabBar.viewControllers = controllers
 
-        return tabBar
+        // MARK: - Profile Screen
+
+        let profileViewController =  ProfileVCAssembly.createVC(profileDelegate: mainViewController)
+        let profileTab = NavigationControllerAssembly.createNavigationVC(for: profileViewController)
+        let profileTabItem = UITabBarItem(title: Localized("profile"),
+                                          image: AppConstants.Images.profileTabImage,
+                                          selectedImage: AppConstants.Images.profileTabFilledImage)
+        profileTabItem.accessibilityIdentifier = "ProfileTab"
+        profileTab.tabBarItem = profileTabItem
+
+        let controllers = [mainTab, lovedDevicesTab, profileTab]
+        tabBarController.viewControllers = controllers
+        tabBarController.tabBar.tintColor = .label
+        tabBarController.tabBar.accessibilityIdentifier = "TabBarID"
+
+        return tabBarController
     }
 }

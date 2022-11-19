@@ -1,0 +1,63 @@
+/* 
+  Localizable.strings
+  Smart Home App
+
+  Created by Андрей Шамин on 4/17/21.
+  
+*/
+
+"deviceList" = "Liste des appareils";
+"turnOn" = "Fonctionne";
+"turnOff" = "Éteint";
+"general" = "Général";
+"profile" = "Profil";
+"addToLiked" = "Ajouter aux favoris";
+"goToDevice" = "Aller à l'appareil";
+"chooseLampColor" = "Choisissez la couleur de la lueur de la lampe";
+"color" = "Couleur";
+"temperature" = "Température";
+"loved" = "Favoris";
+"lovedDevices" = "Favoris";
+"removeFromLiked" = "Supprimer de vos favoris";
+"noDevicesText" = "Il n'y a aucun appareil à afficher ici! Vous les verrez ici après avoir été ajoutés!";
+"profile.guestText" = "Vous n'êtes pas connecté à votre compte\nCréez un compte ou connectez-vous à un compte existant";
+"register" = "S'inscrire";
+"loginButtonText" = "Connexion";
+"with" = "Passant par:";
+"loggedInAs" = "Vous êtes connecté en tant que";
+"logout" = "Se déconnecter";
+"loginTitle" = "Connectez-vous à votre compte";
+"password" = "Mot de passe";
+"repeatPassword" = "Répéter le mot de passe";
+"done" = "Fait";
+"fillEmailError" = "Vous devez remplir le champ email";
+"fillPasswordlError" = "Vous devez remplir le champ mot de passe";
+"secondPassswordError" = "Il est nécessaire de remplir le deuxième champ avec une confirmation de mot de passe";
+"passwordNotTheSameError" = "Les mots de passe doivent correspondre";
+"deviceCodeText" = "Entrez le code de l'appareil";
+"code" = "Le code";
+"deviceNameText" = "Entrez le nom de l'appareil";
+"name" = "Nom";
+"save" = "Garder";
+"codeError" = "Le code doit comporter 9 caractères";
+"nameError" = "Vous devez donner un nom à l'appareil";
+"error" = "Erreur";
+"ok" = "D'accord";
+"menu" = "Menu";
+"getAppInfo" = "Information sur l'application";
+"appInfo" = "Cette application a été créée au cours du travail de fin d'études par un étudiant du NSTU - Andrey Shamin";
+"sendError" = "Signaler un bug";
+"SendErrorPlaceholder" = "Si vous trouvez une erreur, veuillez la décrire ici et nous essaierons de la corriger!";
+"thanksForSendingError" = "Merci d'avoir amélioré cette application avec nous!";
+"getInfo" = "Щbtenir des informations";
+"rename" = "Renommer";
+"delete" = "Effacer";
+"lamp" = "Lampe";
+"electricalSocket" = "Prise électrique";
+"airConditioner" = "Climatisation";
+"curtains" = "Des rideaux";
+"ventilator" = "Ventilateur";
+"irrigationSystem" = "Système d'irrigation";
+"enterNewName" = "Entrez un nouveau nom";
+"cancel" = "Annuler";
+"deleteAlertText" = "Voulez-vous vraiment supprimer cet appareil?\n(Cette action ne peut pas être annulée)";

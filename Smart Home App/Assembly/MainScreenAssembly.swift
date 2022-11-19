@@ -8,8 +8,15 @@
 import UIKit
 
 enum MainScreenAssembly {
-    static func createVC() -> UIViewController {
-        let viewController = MainViewController()
+    static func createVC(lovedDevicesDelegate: ILovedDevicesDelegate) -> MainViewController {
+
+        let router = MainRouter()
+        let interactor = MainInteractor(lovedDevicesDelegate: lovedDevicesDelegate)
+        let presenter = MainPresenter(interactor: interactor, router: router)
+        let viewController = MainViewController(presenter: presenter)
+
+        router.vc = viewController
+        interactor.presenter = presenter
 
         return viewController
     }

@@ -1,0 +1,63 @@
+/* 
+  Localizable.strings
+  Smart Home App
+
+  Created by Андрей Шамин on 4/17/21.
+  
+*/
+
+"deviceList" = "Device list";
+"turnOn" = "On";
+"turnOff" = "Off";
+"general" = "General";
+"profile" = "Profile";
+"addToLiked" = "Add to liked";
+"goToDevice" = "Go to device";
+"chooseLampColor" = "Choose the color of the lamp glow";
+"color" = "Color";
+"temperature" = "Temperature";
+"loved" = "Liked";
+"lovedDevices" = "Liked";
+"removeFromLiked" = "Remove from liked";
+"noDevicesText" = "There are no devices to display here! You will see them here after adding.";
+"profile.guestText" = "You are not logged into your account\nCreate an account or log into an existing one";
+"register" = "Register";
+"loginButtonText" = "Login";
+"with" = "With:";
+"loggedInAs" = "You are logged in as";
+"logout" = "Log out";
+"loginTitle" = "Login to your account";
+"password" = "Password";
+"repeatPassword" = "Repeat password";
+"done" = "Done";
+"fillEmailError" = "You must fill in the email field";
+"fillPasswordlError" = "You must fill in the password field";
+"secondPassswordError" = "It is necessary to fill in the second field with a password confirmation";
+"passwordNotTheSameError" = "Passwords must match";
+"deviceCodeText" = "Enter device code";
+"code" = "Code";
+"deviceNameText" = "Enter device name";
+"name" = "Name";
+"save" = "Save";
+"codeError" = "The code must be 9 characters";
+"nameError" = "You need to give the device a name";
+"error" = "Error";
+"ok" = "Ok";
+"menu" = "Menu";
+"getAppInfo" = "Get app info";
+"appInfo" = "This application was created in the course of the graduation work by a student of NSTU - Andrey Shamin";
+"sendError" = "Report a bug";
+"SendErrorPlaceholder" = "If you find any errors, please describe it here and we will try to fix it!";
+"thanksForSendingError" = "Thank you for making this app better with us!";
+"getInfo" = "Get info";
+"rename" = "Rename";
+"delete" = "Delete";
+"lamp" = "Lamp";
+"electricalSocket" = "Electrical socket";
+"airConditioner" = "Air codnitioner";
+"curtains" = "Curtains";
+"ventilator" = "Ventilator";
+"irrigationSystem" = "Irrigation system";
+"enterNewName" = "Enter new name";
+"cancel" = "Cancel";
+"deleteAlertText" = "Are you sure you want to remove this device?\n(This action cannot be undone)";

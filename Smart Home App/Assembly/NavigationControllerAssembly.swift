@@ -8,7 +8,11 @@
 import UIKit
 
 enum NavigationControllerAssembly {
-    static func createNavigationVC(for vc: UIViewController) -> UINavigationController {
-        UINavigationController(rootViewController: vc)
+    static func createNavigationVC(for vc: UIViewController, prefersLargeTitles: Bool = true) -> UINavigationController {
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.navigationBar.tintColor = .label
+        navigationController.navigationBar.prefersLargeTitles = prefersLargeTitles
+        navigationController.navigationBar.accessibilityIdentifier = "NavigationBarID"
+        return navigationController
     }
 }

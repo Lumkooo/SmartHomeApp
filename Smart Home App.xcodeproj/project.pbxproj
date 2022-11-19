@@ -3,10 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21AE0B20AD7113BE8E58D6D6 /* Pods_Smart_Home_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D346AFCA5655355D44361C0E /* Pods_Smart_Home_App.framework */; };
+		56C64C4CF04A8DC3877DF572 /* Pods_Smart_Home_App_Smart_Home_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3786B04A3C822456A9189ED /* Pods_Smart_Home_App_Smart_Home_AppUITests.framework */; };
+		B91B1FFDFA92F8B0AB19C7CD /* Pods_Smart_Home_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0247962FE3964F7826E1819 /* Pods_Smart_Home_AppTests.framework */; };
+		CE0197AD262BEA7400BD9E2E /* LovedDevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0197AC262BEA7400BD9E2E /* LovedDevicesViewController.swift */; };
+		CE0197BE262BEAA300BD9E2E /* LovedDevicesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0197BD262BEAA300BD9E2E /* LovedDevicesPresenter.swift */; };
+		CE0197C3262BEAAA00BD9E2E /* LovedDevicesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0197C2262BEAAA00BD9E2E /* LovedDevicesInteractor.swift */; };
+		CE0197C8262BEAB000BD9E2E /* LovedDevicesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0197C7262BEAB000BD9E2E /* LovedDevicesRouter.swift */; };
+		CE0197CD262BEEEB00BD9E2E /* LovedDevicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0197CC262BEEEB00BD9E2E /* LovedDevicesAssembly.swift */; };
+		CE060BF226464290005F9E89 /* AppInfoVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060BF126464290005F9E89 /* AppInfoVCAssembly.swift */; };
+		CE060BF82646451D005F9E89 /* SendErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060BF72646451D005F9E89 /* SendErrorView.swift */; };
+		CE060C0426464528005F9E89 /* SendErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060C0326464528005F9E89 /* SendErrorViewController.swift */; };
+		CE060C092646452F005F9E89 /* SendErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060C082646452F005F9E89 /* SendErrorPresenter.swift */; };
+		CE060C0E26464535005F9E89 /* SendErrorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060C0D26464535005F9E89 /* SendErrorInteractor.swift */; };
+		CE060C132646453B005F9E89 /* SendErrorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060C122646453B005F9E89 /* SendErrorRouter.swift */; };
+		CE060C18264646CA005F9E89 /* SendErrorVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060C17264646CA005F9E89 /* SendErrorVCAssembly.swift */; };
+		CE060C2A26465699005F9E89 /* UIView Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060C2926465699005F9E89 /* UIView Extension.swift */; };
+		CE060C2F26465DD3005F9E89 /* FirebaseErrorsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060C2E26465DD3005F9E89 /* FirebaseErrorsManager.swift */; };
+		CE1759742609A4DC007AFDCA /* LampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1759732609A4DC007AFDCA /* LampViewController.swift */; };
+		CE17597C2609A506007AFDCA /* LampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17597B2609A506007AFDCA /* LampView.swift */; };
+		CE1759812609A548007AFDCA /* LampInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1759802609A548007AFDCA /* LampInteractor.swift */; };
+		CE1759892609A550007AFDCA /* LampPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1759882609A550007AFDCA /* LampPresenter.swift */; };
+		CE17598E2609A555007AFDCA /* LampRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17598D2609A555007AFDCA /* LampRouter.swift */; };
+		CE1759962609A6E8007AFDCA /* LampScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1759952609A6E8007AFDCA /* LampScreenAssembly.swift */; };
+		CE24EA6B262F034900C3EBF6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24EA6A262F034900C3EBF6 /* CustomButton.swift */; };
+		CE24EA70262F039600C3EBF6 /* CustomCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24EA6F262F039600C3EBF6 /* CustomCloseButton.swift */; };
+		CE2FB90A260A076C00D084BC /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FB909260A076C00D084BC /* CustomSlider.swift */; };
+		CE3B19E32611868600D39A41 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3B19E22611868600D39A41 /* RoundedButton.swift */; };
 		CE54A5722605E0F400352C46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5712605E0F400352C46 /* AppDelegate.swift */; };
 		CE54A5742605E0F400352C46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5732605E0F400352C46 /* SceneDelegate.swift */; };
 		CE54A5762605E0F400352C46 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5752605E0F400352C46 /* MainViewController.swift */; };
@@ -17,6 +44,115 @@
 		CE54A5B42605E15300352C46 /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5B32605E15200352C46 /* MainScreenAssembly.swift */; };
 		CE54A5BC2605E18D00352C46 /* NavigationControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5BB2605E18D00352C46 /* NavigationControllerAssembly.swift */; };
 		CE54A5C12605E1D600352C46 /* TabBarControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54A5C02605E1D600352C46 /* TabBarControllerAssembly.swift */; };
+		CE5C52322648F1AE00FC7CE0 /* CurtainsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C52312648F1AE00FC7CE0 /* CurtainsView.swift */; };
+		CE5C52412648F1C000FC7CE0 /* CurtainsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C52402648F1C000FC7CE0 /* CurtainsViewController.swift */; };
+		CE5C52462648F1C600FC7CE0 /* CurtainsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C52452648F1C600FC7CE0 /* CurtainsPresenter.swift */; };
+		CE5C524B2648F1CC00FC7CE0 /* CurtainsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C524A2648F1CC00FC7CE0 /* CurtainsInteractor.swift */; };
+		CE5C52502648F1D200FC7CE0 /* CurtainsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C524F2648F1D200FC7CE0 /* CurtainsRouter.swift */; };
+		CE5C52552648F61B00FC7CE0 /* CurtainsVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C52542648F61B00FC7CE0 /* CurtainsVCAssembly.swift */; };
+		CE66682226350E350085DA12 /* ILovedDevicesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66682126350E350085DA12 /* ILovedDevicesDelegate.swift */; };
+		CE66682726350F490085DA12 /* IProfileDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66682626350F490085DA12 /* IProfileDelegate.swift */; };
+		CE66682E2635154B0085DA12 /* AddDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66682D2635154B0085DA12 /* AddDeviceView.swift */; };
+		CE666833263515560085DA12 /* AddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE666832263515560085DA12 /* AddDeviceViewController.swift */; };
+		CE666838263515600085DA12 /* AddDevicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE666837263515600085DA12 /* AddDevicePresenter.swift */; };
+		CE66683D263515680085DA12 /* AddDeviceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66683C263515680085DA12 /* AddDeviceInteractor.swift */; };
+		CE666842263515710085DA12 /* AddDeviceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE666841263515710085DA12 /* AddDeviceRouter.swift */; };
+		CE6668472635173E0085DA12 /* AddDeviceVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6668462635173E0085DA12 /* AddDeviceVCAssembly.swift */; };
+		CE66684C263523F90085DA12 /* String Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66684B263523F90085DA12 /* String Extension.swift */; };
+		CE83062526083CE7005CE030 /* AirConditioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83062426083CE7005CE030 /* AirConditioner.swift */; };
+		CE83062A260841AF005CE030 /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE830629260841AF005CE030 /* TemperatureUnit.swift */; };
+		CE83062F260848EF005CE030 /* Curtains.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83062E260848EF005CE030 /* Curtains.swift */; };
+		CE83063726084DD8005CE030 /* Ventilator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83063626084DD8005CE030 /* Ventilator.swift */; };
+		CE83064B26085533005CE030 /* IrrigationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83064A26085533005CE030 /* IrrigationSystem.swift */; };
+		CE854F1326352EC200E7AAA4 /* IAddDeviceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE854F1226352EC200E7AAA4 /* IAddDeviceDelegate.swift */; };
+		CE96C4EB2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96C4EA2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift */; };
+		CE97559A262BF51800864A55 /* DevicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975599262BF51800864A55 /* DevicesManager.swift */; };
+		CE97559F262BFAB900864A55 /* NSNotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97559E262BFAB800864A55 /* NSNotificationNameExtension.swift */; };
+		CE97A3812647AC860067950A /* IReloadAfterRemovedDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97A3802647AC860067950A /* IReloadAfterRemovedDevice.swift */; };
+		CEA67C542639A122007E5428 /* EditableDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA67C532639A122007E5428 /* EditableDeviceViewController.swift */; };
+		CEADBC8826140C11000C4D97 /* ProfileVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADBC8726140C11000C4D97 /* ProfileVCAssembly.swift */; };
+		CEBBF7BC2606EDFE00BD9F13 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7BB2606EDFE00BD9F13 /* MainView.swift */; };
+		CEBBF7C12606EE0500BD9F13 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7C02606EE0500BD9F13 /* MainPresenter.swift */; };
+		CEBBF7C62606EE0C00BD9F13 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7C52606EE0C00BD9F13 /* MainInteractor.swift */; };
+		CEBBF7CB2606EE1100BD9F13 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7CA2606EE1100BD9F13 /* MainRouter.swift */; };
+		CEBBF7D02606F08B00BD9F13 /* SmartHomeDeviceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBF7CF2606F08B00BD9F13 /* SmartHomeDeviceCollectionViewCell.swift */; };
+		CEBE41D92606F2FD00E370AB /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE41D82606F2FD00E370AB /* AppConstants.swift */; };
+		CEBE41E12606F3B100E370AB /* SmartHomeItemCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE41E02606F3B100E370AB /* SmartHomeItemCollectionViewDataSource.swift */; };
+		CEBE41E62606F3CD00E370AB /* SmartHomeItemCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE41E52606F3CD00E370AB /* SmartHomeItemCollectionViewDelegate.swift */; };
+		CEBE41F32606F52500E370AB /* SmartHomeDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE41F22606F52500E370AB /* SmartHomeDevice.swift */; };
+		CEBE41F82606F87D00E370AB /* Lamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE41F72606F87D00E370AB /* Lamp.swift */; };
+		CEBE4209260706AC00E370AB /* ElectricalSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE4208260706AC00E370AB /* ElectricalSocket.swift */; };
+		CECEFB81262EFFF000D36004 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB6C262EFFF000D36004 /* ProfilePresenter.swift */; };
+		CECEFB82262EFFF000D36004 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB6D262EFFF000D36004 /* ProfileRouter.swift */; };
+		CECEFB83262EFFF000D36004 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB6F262EFFF000D36004 /* RegisterPresenter.swift */; };
+		CECEFB84262EFFF000D36004 /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB70262EFFF000D36004 /* RegisterRouter.swift */; };
+		CECEFB85262EFFF000D36004 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB71262EFFF000D36004 /* RegisterInteractor.swift */; };
+		CECEFB86262EFFF000D36004 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB73262EFFF000D36004 /* RegisterView.swift */; };
+		CECEFB87262EFFF000D36004 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB74262EFFF000D36004 /* RegisterViewController.swift */; };
+		CECEFB88262EFFF000D36004 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB75262EFFF000D36004 /* ProfileViewController.swift */; };
+		CECEFB89262EFFF000D36004 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB76262EFFF000D36004 /* ProfileInteractor.swift */; };
+		CECEFB8A262EFFF000D36004 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB78262EFFF000D36004 /* ProfileView.swift */; };
+		CECEFB8B262EFFF000D36004 /* ProfileViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB79262EFFF000D36004 /* ProfileViewTableViewCell.swift */; };
+		CECEFB8C262EFFF000D36004 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB7B262EFFF000D36004 /* LoginInteractor.swift */; };
+		CECEFB8D262EFFF000D36004 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB7C262EFFF000D36004 /* LoginViewController.swift */; };
+		CECEFB8E262EFFF000D36004 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB7E262EFFF000D36004 /* LoginView.swift */; };
+		CECEFB8F262EFFF000D36004 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB7F262EFFF000D36004 /* LoginPresenter.swift */; };
+		CECEFB90262EFFF000D36004 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB80262EFFF000D36004 /* LoginRouter.swift */; };
+		CECEFB98262F002800D36004 /* LoginEntitie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB97262F002800D36004 /* LoginEntitie.swift */; };
+		CECEFB9D262F005B00D36004 /* AlertAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFB9C262F005B00D36004 /* AlertAssembly.swift */; };
+		CECEFBA2262F007500D36004 /* RegisterVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFBA1262F007500D36004 /* RegisterVCAssembly.swift */; };
+		CECEFBA7262F008200D36004 /* LoginVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFBA6262F008200D36004 /* LoginVCAssembly.swift */; };
+		CECEFBAD262F011F00D36004 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFBAC262F011F00D36004 /* FirebaseAuthManager.swift */; };
+		CECEFBB2262F013100D36004 /* FirebaseDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEFBB1262F013100D36004 /* FirebaseDatabaseManager.swift */; };
+		CECEFBB7262F01F400D36004 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CECEFBB6262F01F400D36004 /* GoogleService-Info.plist */; };
+		CED7A86426103B9200F61391 /* SimpleDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A86326103B9200F61391 /* SimpleDeviceViewController.swift */; };
+		CED7A87126103B9F00F61391 /* SimpleDevicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A87026103B9F00F61391 /* SimpleDevicePresenter.swift */; };
+		CED7A87626103BA600F61391 /* SimpleDeviceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A87526103BA600F61391 /* SimpleDeviceInteractor.swift */; };
+		CED7A87B26103BAC00F61391 /* SimpleDeviceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A87A26103BAC00F61391 /* SimpleDeviceRouter.swift */; };
+		CED7A88026103E1B00F61391 /* SimpleDeviceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A87F26103E1B00F61391 /* SimpleDeviceAssembly.swift */; };
+		CED7A88826103F6000F61391 /* DevicesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A88726103F6000F61391 /* DevicesRouter.swift */; };
+		CEDB0BB4262A95D800F1B4DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEDB0BB6262A95D800F1B4DB /* Localizable.strings */; };
+		CEDB0BC2262A968400F1B4DB /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB0BC1262A968400F1B4DB /* Localized.swift */; };
+		CEDB0BCC262A9EDB00F1B4DB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB0BCB262A9EDB00F1B4DB /* MenuViewController.swift */; };
+		CEDB0BD2262A9EF300F1B4DB /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB0BD1262A9EF300F1B4DB /* MenuView.swift */; };
+		CEDB0BDA262A9EFA00F1B4DB /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB0BD9262A9EFA00F1B4DB /* MenuPresenter.swift */; };
+		CEDB0BDF262A9F0100F1B4DB /* MenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB0BDE262A9F0100F1B4DB /* MenuInteractor.swift */; };
+		CEDB0BE4262A9F0800F1B4DB /* MenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB0BE3262A9F0800F1B4DB /* MenuRouter.swift */; };
+		CEDB0BEC262AA1EB00F1B4DB /* MenuAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB0BEB262AA1EB00F1B4DB /* MenuAssembly.swift */; };
+		CEDBAF0C26463F8400DE2844 /* AppInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBAF0B26463F8400DE2844 /* AppInfoView.swift */; };
+		CEDBAF1826463F8F00DE2844 /* AppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBAF1726463F8F00DE2844 /* AppInfoViewController.swift */; };
+		CEE0B57C2658C1D400D0181A /* LampViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE0B57B2658C1D400D0181A /* LampViewControllerTest.swift */; };
+		CEE0B5832658C23700D0181A /* LampPresenter_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE0B5822658C23700D0181A /* LampPresenter_Test.swift */; };
+		CEE0B58B2658CAE300D0181A /* LampInteractor_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE0B58A2658CAE300D0181A /* LampInteractor_Test.swift */; };
+		CEE0B5902658CCC400D0181A /* LampPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE0B58F2658CCC400D0181A /* LampPresenterTest.swift */; };
+		CEE0B5952658CD0300D0181A /* LampRouter_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE0B5942658CD0300D0181A /* LampRouter_Test.swift */; };
+		CEE0B59A2658CDB700D0181A /* LampView_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE0B5992658CDB700D0181A /* LampView_Test.swift */; };
+		CEE0B5A22658D63700D0181A /* LampInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE0B5A12658D63700D0181A /* LampInteractorTest.swift */; };
+		CEE811DA260D7BDC00BB8DFD /* ColorChooserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE811D9260D7BDC00BB8DFD /* ColorChooserView.swift */; };
+		CEE811E4260D7DDF00BB8DFD /* ColorChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE811E3260D7DDF00BB8DFD /* ColorChooserViewController.swift */; };
+		CEE811E9260D7DE800BB8DFD /* ColorChooserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE811E8260D7DE800BB8DFD /* ColorChooserPresenter.swift */; };
+		CEE811EE260D7DEE00BB8DFD /* ColorChooserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE811ED260D7DEE00BB8DFD /* ColorChooserInteractor.swift */; };
+		CEE811F3260D7DF300BB8DFD /* ColorChooserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE811F2260D7DF300BB8DFD /* ColorChooserRouter.swift */; };
+		CEE811F8260D7F7900BB8DFD /* ColorChooserAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE811F7260D7F7900BB8DFD /* ColorChooserAssembly.swift */; };
+		CEE81203260D83DD00BB8DFD /* ColorItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE81202260D83DD00BB8DFD /* ColorItemCollectionViewCell.swift */; };
+		CEE8120A260D86A800BB8DFD /* ColorItemCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE81209260D86A800BB8DFD /* ColorItemCollectionViewDelegate.swift */; };
+		CEE81212260D86AF00BB8DFD /* ColorItemCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE81211260D86AF00BB8DFD /* ColorItemCollectionViewDataSource.swift */; };
+		CEE81217260D87A600BB8DFD /* ICustomCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE81216260D87A600BB8DFD /* ICustomCollectionViewDelegate.swift */; };
+		CEED9FA826254C91001D9DF4 /* AirConditionerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED9FA726254C91001D9DF4 /* AirConditionerView.swift */; };
+		CEED9FB026254C9B001D9DF4 /* AirConditionerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED9FAF26254C9B001D9DF4 /* AirConditionerViewController.swift */; };
+		CEED9FB526254CA4001D9DF4 /* AirConditionerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED9FB426254CA4001D9DF4 /* AirConditionerPresenter.swift */; };
+		CEED9FBA26254CAC001D9DF4 /* AirConditionerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED9FB926254CAC001D9DF4 /* AirConditionerInteractor.swift */; };
+		CEED9FBF26254CB1001D9DF4 /* AirConditionerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED9FBE26254CB1001D9DF4 /* AirConditionerRouter.swift */; };
+		CEED9FC426254FF2001D9DF4 /* AirConditionerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED9FC326254FF2001D9DF4 /* AirConditionerAssembly.swift */; };
+		CEF39A862631A48E00616628 /* LampFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF39A852631A48E00616628 /* LampFirebaseManager.swift */; };
+		CEF39A8E2631A52000616628 /* FirebaseDatabaseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF39A8D2631A52000616628 /* FirebaseDatabaseInfo.swift */; };
+		CEF39A962631A80800616628 /* UIColor Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF39A952631A80800616628 /* UIColor Extension.swift */; };
+		CEF39A9B2631ADA700616628 /* ElectricalSocketFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF39A9A2631ADA700616628 /* ElectricalSocketFirebaseManager.swift */; };
+		CEF39AA02631B20D00616628 /* AirConditionerFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF39A9F2631B20D00616628 /* AirConditionerFirebaseManager.swift */; };
+		CEF39AA82631B45D00616628 /* VentilatorFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF39AA72631B45D00616628 /* VentilatorFirebaseManager.swift */; };
+		CEF39AAD2631B50C00616628 /* IrrigationSystemFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF39AAC2631B50C00616628 /* IrrigationSystemFirebaseManager.swift */; };
+		CEF39AB22631B72300616628 /* CurtainsFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF39AB12631B72300616628 /* CurtainsFirebaseManager.swift */; };
+		CEF4F9142612C88C0003DD6C /* SimpleDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F9132612C88C0003DD6C /* SimpleDeviceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +173,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E711A0CE341CE547B2A8027 /* Pods-Smart Home App-Smart Home AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home App-Smart Home AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Smart Home App-Smart Home AppUITests/Pods-Smart Home App-Smart Home AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1242213ACD3FEBF47C16B0F9 /* Pods-Smart Home App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home App.release.xcconfig"; path = "Target Support Files/Pods-Smart Home App/Pods-Smart Home App.release.xcconfig"; sourceTree = "<group>"; };
+		147B41FE0E12A5E838C07E7F /* Pods-Smart Home App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home App.debug.xcconfig"; path = "Target Support Files/Pods-Smart Home App/Pods-Smart Home App.debug.xcconfig"; sourceTree = "<group>"; };
+		3415D42C9BBFE762D9883BD0 /* Pods-Smart Home AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home AppTests.release.xcconfig"; path = "Target Support Files/Pods-Smart Home AppTests/Pods-Smart Home AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		865C60C368DC63BAB1D35C6E /* Pods-Smart Home App-Smart Home AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home App-Smart Home AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Smart Home App-Smart Home AppUITests/Pods-Smart Home App-Smart Home AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B3786B04A3C822456A9189ED /* Pods_Smart_Home_App_Smart_Home_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Home_App_Smart_Home_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0247962FE3964F7826E1819 /* Pods_Smart_Home_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Home_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0197AC262BEA7400BD9E2E /* LovedDevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedDevicesViewController.swift; sourceTree = "<group>"; };
+		CE0197BD262BEAA300BD9E2E /* LovedDevicesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedDevicesPresenter.swift; sourceTree = "<group>"; };
+		CE0197C2262BEAAA00BD9E2E /* LovedDevicesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedDevicesInteractor.swift; sourceTree = "<group>"; };
+		CE0197C7262BEAB000BD9E2E /* LovedDevicesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedDevicesRouter.swift; sourceTree = "<group>"; };
+		CE0197CC262BEEEB00BD9E2E /* LovedDevicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedDevicesAssembly.swift; sourceTree = "<group>"; };
+		CE060BF126464290005F9E89 /* AppInfoVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoVCAssembly.swift; sourceTree = "<group>"; };
+		CE060BF72646451D005F9E89 /* SendErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendErrorView.swift; sourceTree = "<group>"; };
+		CE060C0326464528005F9E89 /* SendErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendErrorViewController.swift; sourceTree = "<group>"; };
+		CE060C082646452F005F9E89 /* SendErrorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendErrorPresenter.swift; sourceTree = "<group>"; };
+		CE060C0D26464535005F9E89 /* SendErrorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendErrorInteractor.swift; sourceTree = "<group>"; };
+		CE060C122646453B005F9E89 /* SendErrorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendErrorRouter.swift; sourceTree = "<group>"; };
+		CE060C17264646CA005F9E89 /* SendErrorVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendErrorVCAssembly.swift; sourceTree = "<group>"; };
+		CE060C2926465699005F9E89 /* UIView Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView Extension.swift"; sourceTree = "<group>"; };
+		CE060C2E26465DD3005F9E89 /* FirebaseErrorsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseErrorsManager.swift; sourceTree = "<group>"; };
+		CE060C3326466198005F9E89 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		CE060C3426466199005F9E89 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		CE060C38264664B3005F9E89 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CE060C39264664B3005F9E89 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE1759732609A4DC007AFDCA /* LampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampViewController.swift; sourceTree = "<group>"; };
+		CE17597B2609A506007AFDCA /* LampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampView.swift; sourceTree = "<group>"; };
+		CE1759802609A548007AFDCA /* LampInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampInteractor.swift; sourceTree = "<group>"; };
+		CE1759882609A550007AFDCA /* LampPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampPresenter.swift; sourceTree = "<group>"; };
+		CE17598D2609A555007AFDCA /* LampRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampRouter.swift; sourceTree = "<group>"; };
+		CE1759952609A6E8007AFDCA /* LampScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampScreenAssembly.swift; sourceTree = "<group>"; };
+		CE24EA6A262F034900C3EBF6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		CE24EA6F262F039600C3EBF6 /* CustomCloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCloseButton.swift; sourceTree = "<group>"; };
+		CE2FB909260A076C00D084BC /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		CE3B19E22611868600D39A41 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		CE54A56E2605E0F400352C46 /* Smart Home App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Home App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE54A5712605E0F400352C46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE54A5732605E0F400352C46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +224,121 @@
 		CE54A5B32605E15200352C46 /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
 		CE54A5BB2605E18D00352C46 /* NavigationControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerAssembly.swift; sourceTree = "<group>"; };
 		CE54A5C02605E1D600352C46 /* TabBarControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerAssembly.swift; sourceTree = "<group>"; };
+		CE5C52312648F1AE00FC7CE0 /* CurtainsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainsView.swift; sourceTree = "<group>"; };
+		CE5C52402648F1C000FC7CE0 /* CurtainsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainsViewController.swift; sourceTree = "<group>"; };
+		CE5C52452648F1C600FC7CE0 /* CurtainsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainsPresenter.swift; sourceTree = "<group>"; };
+		CE5C524A2648F1CC00FC7CE0 /* CurtainsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainsInteractor.swift; sourceTree = "<group>"; };
+		CE5C524F2648F1D200FC7CE0 /* CurtainsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainsRouter.swift; sourceTree = "<group>"; };
+		CE5C52542648F61B00FC7CE0 /* CurtainsVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainsVCAssembly.swift; sourceTree = "<group>"; };
+		CE66682126350E350085DA12 /* ILovedDevicesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILovedDevicesDelegate.swift; sourceTree = "<group>"; };
+		CE66682626350F490085DA12 /* IProfileDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IProfileDelegate.swift; sourceTree = "<group>"; };
+		CE66682D2635154B0085DA12 /* AddDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceView.swift; sourceTree = "<group>"; };
+		CE666832263515560085DA12 /* AddDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceViewController.swift; sourceTree = "<group>"; };
+		CE666837263515600085DA12 /* AddDevicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDevicePresenter.swift; sourceTree = "<group>"; };
+		CE66683C263515680085DA12 /* AddDeviceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceInteractor.swift; sourceTree = "<group>"; };
+		CE666841263515710085DA12 /* AddDeviceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceRouter.swift; sourceTree = "<group>"; };
+		CE6668462635173E0085DA12 /* AddDeviceVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceVCAssembly.swift; sourceTree = "<group>"; };
+		CE66684B263523F90085DA12 /* String Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String Extension.swift"; sourceTree = "<group>"; };
+		CE83062426083CE7005CE030 /* AirConditioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditioner.swift; sourceTree = "<group>"; };
+		CE830629260841AF005CE030 /* TemperatureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUnit.swift; sourceTree = "<group>"; };
+		CE83062E260848EF005CE030 /* Curtains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curtains.swift; sourceTree = "<group>"; };
+		CE83063626084DD8005CE030 /* Ventilator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ventilator.swift; sourceTree = "<group>"; };
+		CE83064A26085533005CE030 /* IrrigationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrrigationSystem.swift; sourceTree = "<group>"; };
+		CE854F1226352EC200E7AAA4 /* IAddDeviceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAddDeviceDelegate.swift; sourceTree = "<group>"; };
+		CE96C4EA2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDevicesFirebaseManager.swift; sourceTree = "<group>"; };
+		CE975599262BF51800864A55 /* DevicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesManager.swift; sourceTree = "<group>"; };
+		CE97559E262BFAB800864A55 /* NSNotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationNameExtension.swift; sourceTree = "<group>"; };
+		CE97A3802647AC860067950A /* IReloadAfterRemovedDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IReloadAfterRemovedDevice.swift; sourceTree = "<group>"; };
+		CEA67C532639A122007E5428 /* EditableDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableDeviceViewController.swift; sourceTree = "<group>"; };
+		CEADBC8726140C11000C4D97 /* ProfileVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVCAssembly.swift; sourceTree = "<group>"; };
+		CEBBF7BB2606EDFE00BD9F13 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CEBBF7C02606EE0500BD9F13 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		CEBBF7C52606EE0C00BD9F13 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		CEBBF7CA2606EE1100BD9F13 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		CEBBF7CF2606F08B00BD9F13 /* SmartHomeDeviceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHomeDeviceCollectionViewCell.swift; sourceTree = "<group>"; };
+		CEBE41D82606F2FD00E370AB /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		CEBE41E02606F3B100E370AB /* SmartHomeItemCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHomeItemCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		CEBE41E52606F3CD00E370AB /* SmartHomeItemCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHomeItemCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		CEBE41F22606F52500E370AB /* SmartHomeDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHomeDevice.swift; sourceTree = "<group>"; };
+		CEBE41F72606F87D00E370AB /* Lamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lamp.swift; sourceTree = "<group>"; };
+		CEBE4208260706AC00E370AB /* ElectricalSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalSocket.swift; sourceTree = "<group>"; };
+		CECEFB6C262EFFF000D36004 /* ProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		CECEFB6D262EFFF000D36004 /* ProfileRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		CECEFB6F262EFFF000D36004 /* RegisterPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		CECEFB70262EFFF000D36004 /* RegisterRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
+		CECEFB71262EFFF000D36004 /* RegisterInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
+		CECEFB73262EFFF000D36004 /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		CECEFB74262EFFF000D36004 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CECEFB75262EFFF000D36004 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CECEFB76262EFFF000D36004 /* ProfileInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		CECEFB78262EFFF000D36004 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		CECEFB79262EFFF000D36004 /* ProfileViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewTableViewCell.swift; sourceTree = "<group>"; };
+		CECEFB7B262EFFF000D36004 /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		CECEFB7C262EFFF000D36004 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CECEFB7E262EFFF000D36004 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CECEFB7F262EFFF000D36004 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		CECEFB80262EFFF000D36004 /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		CECEFB97262F002800D36004 /* LoginEntitie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntitie.swift; sourceTree = "<group>"; };
+		CECEFB9C262F005B00D36004 /* AlertAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAssembly.swift; sourceTree = "<group>"; };
+		CECEFBA1262F007500D36004 /* RegisterVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVCAssembly.swift; sourceTree = "<group>"; };
+		CECEFBA6262F008200D36004 /* LoginVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVCAssembly.swift; sourceTree = "<group>"; };
+		CECEFBAC262F011F00D36004 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		CECEFBB1262F013100D36004 /* FirebaseDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseManager.swift; sourceTree = "<group>"; };
+		CECEFBB6262F01F400D36004 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CED7A86326103B9200F61391 /* SimpleDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDeviceViewController.swift; sourceTree = "<group>"; };
+		CED7A87026103B9F00F61391 /* SimpleDevicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDevicePresenter.swift; sourceTree = "<group>"; };
+		CED7A87526103BA600F61391 /* SimpleDeviceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDeviceInteractor.swift; sourceTree = "<group>"; };
+		CED7A87A26103BAC00F61391 /* SimpleDeviceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDeviceRouter.swift; sourceTree = "<group>"; };
+		CED7A87F26103E1B00F61391 /* SimpleDeviceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDeviceAssembly.swift; sourceTree = "<group>"; };
+		CED7A88726103F6000F61391 /* DevicesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesRouter.swift; sourceTree = "<group>"; };
+		CEDB0BB5262A95D800F1B4DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CEDB0BBA262A95F000F1B4DB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CEDB0BBB262A95F000F1B4DB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CEDB0BBF262A962C00F1B4DB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CEDB0BC0262A962C00F1B4DB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CEDB0BC1262A968400F1B4DB /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
+		CEDB0BCB262A9EDB00F1B4DB /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		CEDB0BD1262A9EF300F1B4DB /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		CEDB0BD9262A9EFA00F1B4DB /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
+		CEDB0BDE262A9F0100F1B4DB /* MenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
+		CEDB0BE3262A9F0800F1B4DB /* MenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRouter.swift; sourceTree = "<group>"; };
+		CEDB0BEB262AA1EB00F1B4DB /* MenuAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAssembly.swift; sourceTree = "<group>"; };
+		CEDBAF0B26463F8400DE2844 /* AppInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoView.swift; sourceTree = "<group>"; };
+		CEDBAF1726463F8F00DE2844 /* AppInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoViewController.swift; sourceTree = "<group>"; };
+		CEE0B57B2658C1D400D0181A /* LampViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampViewControllerTest.swift; sourceTree = "<group>"; };
+		CEE0B5822658C23700D0181A /* LampPresenter_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampPresenter_Test.swift; sourceTree = "<group>"; };
+		CEE0B58A2658CAE300D0181A /* LampInteractor_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampInteractor_Test.swift; sourceTree = "<group>"; };
+		CEE0B58F2658CCC400D0181A /* LampPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampPresenterTest.swift; sourceTree = "<group>"; };
+		CEE0B5942658CD0300D0181A /* LampRouter_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampRouter_Test.swift; sourceTree = "<group>"; };
+		CEE0B5992658CDB700D0181A /* LampView_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampView_Test.swift; sourceTree = "<group>"; };
+		CEE0B5A12658D63700D0181A /* LampInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampInteractorTest.swift; sourceTree = "<group>"; };
+		CEE811D9260D7BDC00BB8DFD /* ColorChooserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChooserView.swift; sourceTree = "<group>"; };
+		CEE811E3260D7DDF00BB8DFD /* ColorChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChooserViewController.swift; sourceTree = "<group>"; };
+		CEE811E8260D7DE800BB8DFD /* ColorChooserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChooserPresenter.swift; sourceTree = "<group>"; };
+		CEE811ED260D7DEE00BB8DFD /* ColorChooserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChooserInteractor.swift; sourceTree = "<group>"; };
+		CEE811F2260D7DF300BB8DFD /* ColorChooserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChooserRouter.swift; sourceTree = "<group>"; };
+		CEE811F7260D7F7900BB8DFD /* ColorChooserAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChooserAssembly.swift; sourceTree = "<group>"; };
+		CEE81202260D83DD00BB8DFD /* ColorItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		CEE81209260D86A800BB8DFD /* ColorItemCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorItemCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		CEE81211260D86AF00BB8DFD /* ColorItemCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorItemCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		CEE81216260D87A600BB8DFD /* ICustomCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICustomCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		CEED9FA726254C91001D9DF4 /* AirConditionerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionerView.swift; sourceTree = "<group>"; };
+		CEED9FAF26254C9B001D9DF4 /* AirConditionerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionerViewController.swift; sourceTree = "<group>"; };
+		CEED9FB426254CA4001D9DF4 /* AirConditionerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionerPresenter.swift; sourceTree = "<group>"; };
+		CEED9FB926254CAC001D9DF4 /* AirConditionerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionerInteractor.swift; sourceTree = "<group>"; };
+		CEED9FBE26254CB1001D9DF4 /* AirConditionerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionerRouter.swift; sourceTree = "<group>"; };
+		CEED9FC326254FF2001D9DF4 /* AirConditionerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionerAssembly.swift; sourceTree = "<group>"; };
+		CEF39A852631A48E00616628 /* LampFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampFirebaseManager.swift; sourceTree = "<group>"; };
+		CEF39A8D2631A52000616628 /* FirebaseDatabaseInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseInfo.swift; sourceTree = "<group>"; };
+		CEF39A952631A80800616628 /* UIColor Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor Extension.swift"; sourceTree = "<group>"; };
+		CEF39A9A2631ADA700616628 /* ElectricalSocketFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalSocketFirebaseManager.swift; sourceTree = "<group>"; };
+		CEF39A9F2631B20D00616628 /* AirConditionerFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionerFirebaseManager.swift; sourceTree = "<group>"; };
+		CEF39AA72631B45D00616628 /* VentilatorFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentilatorFirebaseManager.swift; sourceTree = "<group>"; };
+		CEF39AAC2631B50C00616628 /* IrrigationSystemFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrrigationSystemFirebaseManager.swift; sourceTree = "<group>"; };
+		CEF39AB12631B72300616628 /* CurtainsFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainsFirebaseManager.swift; sourceTree = "<group>"; };
+		CEF4F9132612C88C0003DD6C /* SimpleDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDeviceView.swift; sourceTree = "<group>"; };
+		CF6F02D636BE02D6C3927E88 /* Pods-Smart Home AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Smart Home AppTests/Pods-Smart Home AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D346AFCA5655355D44361C0E /* Pods_Smart_Home_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Home_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +346,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21AE0B20AD7113BE8E58D6D6 /* Pods_Smart_Home_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +354,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B91B1FFDFA92F8B0AB19C7CD /* Pods_Smart_Home_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,19 +362,132 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56C64C4CF04A8DC3877DF572 /* Pods_Smart_Home_App_Smart_Home_AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6CD5355537F5E318C23C934A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				147B41FE0E12A5E838C07E7F /* Pods-Smart Home App.debug.xcconfig */,
+				1242213ACD3FEBF47C16B0F9 /* Pods-Smart Home App.release.xcconfig */,
+				865C60C368DC63BAB1D35C6E /* Pods-Smart Home App-Smart Home AppUITests.debug.xcconfig */,
+				0E711A0CE341CE547B2A8027 /* Pods-Smart Home App-Smart Home AppUITests.release.xcconfig */,
+				CF6F02D636BE02D6C3927E88 /* Pods-Smart Home AppTests.debug.xcconfig */,
+				3415D42C9BBFE762D9883BD0 /* Pods-Smart Home AppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C20B0BC5CEF6815F3AC6C438 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D346AFCA5655355D44361C0E /* Pods_Smart_Home_App.framework */,
+				B3786B04A3C822456A9189ED /* Pods_Smart_Home_App_Smart_Home_AppUITests.framework */,
+				C0247962FE3964F7826E1819 /* Pods_Smart_Home_AppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE0197AB262BEA5300BD9E2E /* LovedDevices Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CE0197AC262BEA7400BD9E2E /* LovedDevicesViewController.swift */,
+				CE0197BD262BEAA300BD9E2E /* LovedDevicesPresenter.swift */,
+				CE0197C2262BEAAA00BD9E2E /* LovedDevicesInteractor.swift */,
+				CE0197C7262BEAB000BD9E2E /* LovedDevicesRouter.swift */,
+			);
+			path = "LovedDevices Screen";
+			sourceTree = "<group>";
+		};
+		CE060BF626464509005F9E89 /* SendError Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CE060BFF26464520005F9E89 /* Views */,
+				CE060C0326464528005F9E89 /* SendErrorViewController.swift */,
+				CE060C082646452F005F9E89 /* SendErrorPresenter.swift */,
+				CE060C0D26464535005F9E89 /* SendErrorInteractor.swift */,
+				CE060C122646453B005F9E89 /* SendErrorRouter.swift */,
+			);
+			path = "SendError Screen";
+			sourceTree = "<group>";
+		};
+		CE060BFF26464520005F9E89 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE060BF72646451D005F9E89 /* SendErrorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE060C1C2646473A005F9E89 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				CE060BF626464509005F9E89 /* SendError Screen */,
+				CEDBAF0A26463F7300DE2844 /* AppInfo Screen */,
+				CEDB0BCA262A9ECB00F1B4DB /* Menu Screen */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		CE060C2026464749005F9E89 /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				CE5C52302648F19E00FC7CE0 /* Curtains Screen */,
+				CE17596B2609A4C6007AFDCA /* Lamp Screen */,
+				CED7A86126103B7900F61391 /* SimpleDevice Screen */,
+				CEED9FA426254C79001D9DF4 /* AirConditioner Screen */,
+			);
+			path = Devices;
+			sourceTree = "<group>";
+		};
+		CE1759672609A4BD007AFDCA /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CE060C1C2646473A005F9E89 /* Menu */,
+				CE060C2026464749005F9E89 /* Devices */,
+				CEE811DE260D7DA000BB8DFD /* ColorChooser Screen */,
+				CE54A5AB2605E12800352C46 /* Main Screen */,
+				CECEFB6B262EFFF000D36004 /* Profile */,
+				CE0197AB262BEA5300BD9E2E /* LovedDevices Screen */,
+				CE66682B2635152A0085DA12 /* AddDevice Screen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		CE17596B2609A4C6007AFDCA /* Lamp Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CE1759722609A4CE007AFDCA /* Views */,
+				CE1759732609A4DC007AFDCA /* LampViewController.swift */,
+				CE1759882609A550007AFDCA /* LampPresenter.swift */,
+				CE1759802609A548007AFDCA /* LampInteractor.swift */,
+				CE17598D2609A555007AFDCA /* LampRouter.swift */,
+			);
+			path = "Lamp Screen";
+			sourceTree = "<group>";
+		};
+		CE1759722609A4CE007AFDCA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE17597B2609A506007AFDCA /* LampView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		CE54A5652605E0F400352C46 = {
 			isa = PBXGroup;
 			children = (
+				CEDB0BB6262A95D800F1B4DB /* Localizable.strings */,
 				CE54A5702605E0F400352C46 /* Smart Home App */,
 				CE54A5872605E0F500352C46 /* Smart Home AppTests */,
 				CE54A5922605E0F500352C46 /* Smart Home AppUITests */,
 				CE54A56F2605E0F400352C46 /* Products */,
+				6CD5355537F5E318C23C934A /* Pods */,
+				C20B0BC5CEF6815F3AC6C438 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,10 +506,11 @@
 			children = (
 				CE54A5B22605E14500352C46 /* Assembly */,
 				CE54A5A72605E11F00352C46 /* App */,
-				CE54A5AB2605E12800352C46 /* Main Screen */,
-				CE54A57A2605E0F500352C46 /* Assets.xcassets */,
-				CE54A57C2605E0F500352C46 /* LaunchScreen.storyboard */,
-				CE54A57F2605E0F500352C46 /* Info.plist */,
+				CEBBF7D42606F09000BD9F13 /* Views */,
+				CEBE41F12606F51400E370AB /* Entities */,
+				CEBE41D72606F2EE00E370AB /* Model */,
+				CE1759672609A4BD007AFDCA /* Screens */,
+				CE54A5CB2605E4FC00352C46 /* Resources */,
 			);
 			path = "Smart Home App";
 			sourceTree = "<group>";
@@ -117,7 +519,9 @@
 			isa = PBXGroup;
 			children = (
 				CE54A5882605E0F500352C46 /* Smart_Home_AppTests.swift */,
+				CEE0B5AB2658DBC200D0181A /* Lamp Screen Tests */,
 				CE54A58A2605E0F500352C46 /* Info.plist */,
+				CEE0B5802658C20800D0181A /* TestDoubles */,
 			);
 			path = "Smart Home AppTests";
 			sourceTree = "<group>";
@@ -143,7 +547,11 @@
 		CE54A5AB2605E12800352C46 /* Main Screen */ = {
 			isa = PBXGroup;
 			children = (
+				CEBBF7BA2606EDF600BD9F13 /* Views */,
 				CE54A5752605E0F400352C46 /* MainViewController.swift */,
+				CEBBF7C02606EE0500BD9F13 /* MainPresenter.swift */,
+				CEBBF7C52606EE0C00BD9F13 /* MainInteractor.swift */,
+				CEBBF7CA2606EE1100BD9F13 /* MainRouter.swift */,
 			);
 			path = "Main Screen";
 			sourceTree = "<group>";
@@ -151,11 +559,410 @@
 		CE54A5B22605E14500352C46 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
+				CE5C525C2648F66E00FC7CE0 /* Devices assembly */,
 				CE54A5C02605E1D600352C46 /* TabBarControllerAssembly.swift */,
 				CE54A5B32605E15200352C46 /* MainScreenAssembly.swift */,
 				CE54A5BB2605E18D00352C46 /* NavigationControllerAssembly.swift */,
+				CEE811F7260D7F7900BB8DFD /* ColorChooserAssembly.swift */,
+				CEADBC8726140C11000C4D97 /* ProfileVCAssembly.swift */,
+				CEDB0BEB262AA1EB00F1B4DB /* MenuAssembly.swift */,
+				CE0197CC262BEEEB00BD9E2E /* LovedDevicesAssembly.swift */,
+				CECEFB9C262F005B00D36004 /* AlertAssembly.swift */,
+				CECEFBA1262F007500D36004 /* RegisterVCAssembly.swift */,
+				CECEFBA6262F008200D36004 /* LoginVCAssembly.swift */,
+				CE6668462635173E0085DA12 /* AddDeviceVCAssembly.swift */,
+				CE060BF126464290005F9E89 /* AppInfoVCAssembly.swift */,
+				CE060C17264646CA005F9E89 /* SendErrorVCAssembly.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		CE54A5CB2605E4FC00352C46 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE54A57A2605E0F500352C46 /* Assets.xcassets */,
+				CE54A57C2605E0F500352C46 /* LaunchScreen.storyboard */,
+				CE54A57F2605E0F500352C46 /* Info.plist */,
+				CECEFBB6262F01F400D36004 /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE5C52302648F19E00FC7CE0 /* Curtains Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CE5C52392648F1B000FC7CE0 /* Views */,
+				CE5C52402648F1C000FC7CE0 /* CurtainsViewController.swift */,
+				CE5C52452648F1C600FC7CE0 /* CurtainsPresenter.swift */,
+				CE5C524A2648F1CC00FC7CE0 /* CurtainsInteractor.swift */,
+				CE5C524F2648F1D200FC7CE0 /* CurtainsRouter.swift */,
+			);
+			path = "Curtains Screen";
+			sourceTree = "<group>";
+		};
+		CE5C52392648F1B000FC7CE0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE5C52312648F1AE00FC7CE0 /* CurtainsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE5C525C2648F66E00FC7CE0 /* Devices assembly */ = {
+			isa = PBXGroup;
+			children = (
+				CE1759952609A6E8007AFDCA /* LampScreenAssembly.swift */,
+				CED7A87F26103E1B00F61391 /* SimpleDeviceAssembly.swift */,
+				CE5C52542648F61B00FC7CE0 /* CurtainsVCAssembly.swift */,
+				CEED9FC326254FF2001D9DF4 /* AirConditionerAssembly.swift */,
+			);
+			path = "Devices assembly";
+			sourceTree = "<group>";
+		};
+		CE66682B2635152A0085DA12 /* AddDevice Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CE66682C263515410085DA12 /* Views */,
+				CE666832263515560085DA12 /* AddDeviceViewController.swift */,
+				CE666837263515600085DA12 /* AddDevicePresenter.swift */,
+				CE66683C263515680085DA12 /* AddDeviceInteractor.swift */,
+				CE666841263515710085DA12 /* AddDeviceRouter.swift */,
+			);
+			path = "AddDevice Screen";
+			sourceTree = "<group>";
+		};
+		CE66682C263515410085DA12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE66682D2635154B0085DA12 /* AddDeviceView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE666850263523FC0085DA12 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CEF39A952631A80800616628 /* UIColor Extension.swift */,
+				CE66684B263523F90085DA12 /* String Extension.swift */,
+				CE060C2926465699005F9E89 /* UIView Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE8306412608502F005CE030 /* SmartHomeDevices */ = {
+			isa = PBXGroup;
+			children = (
+				CEBE41F22606F52500E370AB /* SmartHomeDevice.swift */,
+				CEBE41F72606F87D00E370AB /* Lamp.swift */,
+				CEBE4208260706AC00E370AB /* ElectricalSocket.swift */,
+				CE83062426083CE7005CE030 /* AirConditioner.swift */,
+				CE83062E260848EF005CE030 /* Curtains.swift */,
+				CE83063626084DD8005CE030 /* Ventilator.swift */,
+				CE83064A26085533005CE030 /* IrrigationSystem.swift */,
+			);
+			path = SmartHomeDevices;
+			sourceTree = "<group>";
+		};
+		CEA67C522639A10A007E5428 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEA67C532639A122007E5428 /* EditableDeviceViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CEBBF7BA2606EDF600BD9F13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEBBF7BB2606EDFE00BD9F13 /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEBBF7D42606F09000BD9F13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEBBF7CF2606F08B00BD9F13 /* SmartHomeDeviceCollectionViewCell.swift */,
+				CE2FB909260A076C00D084BC /* CustomSlider.swift */,
+				CEE81202260D83DD00BB8DFD /* ColorItemCollectionViewCell.swift */,
+				CE3B19E22611868600D39A41 /* RoundedButton.swift */,
+				CE24EA6A262F034900C3EBF6 /* CustomButton.swift */,
+				CE24EA6F262F039600C3EBF6 /* CustomCloseButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEBE41D72606F2EE00E370AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEDB0BC1262A968400F1B4DB /* Localized.swift */,
+				CE975599262BF51800864A55 /* DevicesManager.swift */,
+				CE97559E262BFAB800864A55 /* NSNotificationNameExtension.swift */,
+				CEBE41D82606F2FD00E370AB /* AppConstants.swift */,
+				CED7A88726103F6000F61391 /* DevicesRouter.swift */,
+				CEA67C522639A10A007E5428 /* ViewControllers */,
+				CECEFBAB262F011900D36004 /* Firebase */,
+				CEBE41EA2606F3F700E370AB /* SmartHomeItemsCollectionViewModel */,
+				CEE81208260D869A00BB8DFD /* ColorItemCollectionViewModel */,
+				CEE8121B260D87A900BB8DFD /* Protocols */,
+				CE666850263523FC0085DA12 /* Extensions */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEBE41EA2606F3F700E370AB /* SmartHomeItemsCollectionViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CEBE41E02606F3B100E370AB /* SmartHomeItemCollectionViewDataSource.swift */,
+				CEBE41E52606F3CD00E370AB /* SmartHomeItemCollectionViewDelegate.swift */,
+			);
+			path = SmartHomeItemsCollectionViewModel;
+			sourceTree = "<group>";
+		};
+		CEBE41F12606F51400E370AB /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CE8306412608502F005CE030 /* SmartHomeDevices */,
+				CE830629260841AF005CE030 /* TemperatureUnit.swift */,
+				CECEFB97262F002800D36004 /* LoginEntitie.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		CECEFB6B262EFFF000D36004 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CECEFB7A262EFFF000D36004 /* Login */,
+				CECEFB6E262EFFF000D36004 /* Register */,
+				CECEFB77262EFFF000D36004 /* Views */,
+				CECEFB75262EFFF000D36004 /* ProfileViewController.swift */,
+				CECEFB6C262EFFF000D36004 /* ProfilePresenter.swift */,
+				CECEFB76262EFFF000D36004 /* ProfileInteractor.swift */,
+				CECEFB6D262EFFF000D36004 /* ProfileRouter.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CECEFB6E262EFFF000D36004 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				CECEFB72262EFFF000D36004 /* Views */,
+				CECEFB74262EFFF000D36004 /* RegisterViewController.swift */,
+				CECEFB6F262EFFF000D36004 /* RegisterPresenter.swift */,
+				CECEFB71262EFFF000D36004 /* RegisterInteractor.swift */,
+				CECEFB70262EFFF000D36004 /* RegisterRouter.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		CECEFB72262EFFF000D36004 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CECEFB73262EFFF000D36004 /* RegisterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CECEFB77262EFFF000D36004 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CECEFB78262EFFF000D36004 /* ProfileView.swift */,
+				CECEFB79262EFFF000D36004 /* ProfileViewTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CECEFB7A262EFFF000D36004 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CECEFB7D262EFFF000D36004 /* Views */,
+				CECEFB7C262EFFF000D36004 /* LoginViewController.swift */,
+				CECEFB7F262EFFF000D36004 /* LoginPresenter.swift */,
+				CECEFB7B262EFFF000D36004 /* LoginInteractor.swift */,
+				CECEFB80262EFFF000D36004 /* LoginRouter.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CECEFB7D262EFFF000D36004 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CECEFB7E262EFFF000D36004 /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CECEFBAB262F011900D36004 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				CEF39A8D2631A52000616628 /* FirebaseDatabaseInfo.swift */,
+				CE060C2E26465DD3005F9E89 /* FirebaseErrorsManager.swift */,
+				CECEFBAC262F011F00D36004 /* FirebaseAuthManager.swift */,
+				CECEFBB1262F013100D36004 /* FirebaseDatabaseManager.swift */,
+				CEF39A842631A47600616628 /* Devices Model */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		CED7A86126103B7900F61391 /* SimpleDevice Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CED7A86226103B8800F61391 /* Views */,
+				CED7A86326103B9200F61391 /* SimpleDeviceViewController.swift */,
+				CED7A87026103B9F00F61391 /* SimpleDevicePresenter.swift */,
+				CED7A87526103BA600F61391 /* SimpleDeviceInteractor.swift */,
+				CED7A87A26103BAC00F61391 /* SimpleDeviceRouter.swift */,
+			);
+			path = "SimpleDevice Screen";
+			sourceTree = "<group>";
+		};
+		CED7A86226103B8800F61391 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEF4F9132612C88C0003DD6C /* SimpleDeviceView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEDB0BCA262A9ECB00F1B4DB /* Menu Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CEDB0BD0262A9EED00F1B4DB /* Views */,
+				CEDB0BCB262A9EDB00F1B4DB /* MenuViewController.swift */,
+				CEDB0BD9262A9EFA00F1B4DB /* MenuPresenter.swift */,
+				CEDB0BDE262A9F0100F1B4DB /* MenuInteractor.swift */,
+				CEDB0BE3262A9F0800F1B4DB /* MenuRouter.swift */,
+			);
+			path = "Menu Screen";
+			sourceTree = "<group>";
+		};
+		CEDB0BD0262A9EED00F1B4DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEDB0BD1262A9EF300F1B4DB /* MenuView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEDBAF0A26463F7300DE2844 /* AppInfo Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CEDBAF1026463F8600DE2844 /* Views */,
+				CEDBAF1726463F8F00DE2844 /* AppInfoViewController.swift */,
+			);
+			path = "AppInfo Screen";
+			sourceTree = "<group>";
+		};
+		CEDBAF1026463F8600DE2844 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEDBAF0B26463F8400DE2844 /* AppInfoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEE0B5802658C20800D0181A /* TestDoubles */ = {
+			isa = PBXGroup;
+			children = (
+				CEE0B5812658C20E00D0181A /* Spies */,
+			);
+			path = TestDoubles;
+			sourceTree = "<group>";
+		};
+		CEE0B5812658C20E00D0181A /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				CEE0B5992658CDB700D0181A /* LampView_Test.swift */,
+				CEE0B5822658C23700D0181A /* LampPresenter_Test.swift */,
+				CEE0B58A2658CAE300D0181A /* LampInteractor_Test.swift */,
+				CEE0B5942658CD0300D0181A /* LampRouter_Test.swift */,
+			);
+			path = Spies;
+			sourceTree = "<group>";
+		};
+		CEE0B5AB2658DBC200D0181A /* Lamp Screen Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CEE0B57B2658C1D400D0181A /* LampViewControllerTest.swift */,
+				CEE0B58F2658CCC400D0181A /* LampPresenterTest.swift */,
+				CEE0B5A12658D63700D0181A /* LampInteractorTest.swift */,
+			);
+			path = "Lamp Screen Tests";
+			sourceTree = "<group>";
+		};
+		CEE811DE260D7DA000BB8DFD /* ColorChooser Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CEE811DF260D7DA900BB8DFD /* Views */,
+				CEE811E3260D7DDF00BB8DFD /* ColorChooserViewController.swift */,
+				CEE811E8260D7DE800BB8DFD /* ColorChooserPresenter.swift */,
+				CEE811ED260D7DEE00BB8DFD /* ColorChooserInteractor.swift */,
+				CEE811F2260D7DF300BB8DFD /* ColorChooserRouter.swift */,
+			);
+			path = "ColorChooser Screen";
+			sourceTree = "<group>";
+		};
+		CEE811DF260D7DA900BB8DFD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEE811D9260D7BDC00BB8DFD /* ColorChooserView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEE81208260D869A00BB8DFD /* ColorItemCollectionViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CEE81209260D86A800BB8DFD /* ColorItemCollectionViewDelegate.swift */,
+				CEE81211260D86AF00BB8DFD /* ColorItemCollectionViewDataSource.swift */,
+			);
+			path = ColorItemCollectionViewModel;
+			sourceTree = "<group>";
+		};
+		CEE8121B260D87A900BB8DFD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CEE81216260D87A600BB8DFD /* ICustomCollectionViewDelegate.swift */,
+				CE96C4EA2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift */,
+				CE66682126350E350085DA12 /* ILovedDevicesDelegate.swift */,
+				CE66682626350F490085DA12 /* IProfileDelegate.swift */,
+				CE854F1226352EC200E7AAA4 /* IAddDeviceDelegate.swift */,
+				CE97A3802647AC860067950A /* IReloadAfterRemovedDevice.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CEED9FA426254C79001D9DF4 /* AirConditioner Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CEED9FA526254C84001D9DF4 /* Views */,
+				CEED9FAF26254C9B001D9DF4 /* AirConditionerViewController.swift */,
+				CEED9FB426254CA4001D9DF4 /* AirConditionerPresenter.swift */,
+				CEED9FB926254CAC001D9DF4 /* AirConditionerInteractor.swift */,
+				CEED9FBE26254CB1001D9DF4 /* AirConditionerRouter.swift */,
+			);
+			path = "AirConditioner Screen";
+			sourceTree = "<group>";
+		};
+		CEED9FA526254C84001D9DF4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEED9FA726254C91001D9DF4 /* AirConditionerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEF39A842631A47600616628 /* Devices Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEF39A852631A48E00616628 /* LampFirebaseManager.swift */,
+				CEF39A9A2631ADA700616628 /* ElectricalSocketFirebaseManager.swift */,
+				CEF39A9F2631B20D00616628 /* AirConditionerFirebaseManager.swift */,
+				CEF39AA72631B45D00616628 /* VentilatorFirebaseManager.swift */,
+				CEF39AAC2631B50C00616628 /* IrrigationSystemFirebaseManager.swift */,
+				CEF39AB12631B72300616628 /* CurtainsFirebaseManager.swift */,
+			);
+			path = "Devices Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,9 +972,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE54A5982605E0F500352C46 /* Build configuration list for PBXNativeTarget "Smart Home App" */;
 			buildPhases = (
+				A924506431A07A2864F5E9A1 /* [CP] Check Pods Manifest.lock */,
 				CE54A56A2605E0F400352C46 /* Sources */,
 				CE54A56B2605E0F400352C46 /* Frameworks */,
 				CE54A56C2605E0F400352C46 /* Resources */,
+				EE4E36E962FFB25E348E9468 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,6 +991,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE54A59B2605E0F500352C46 /* Build configuration list for PBXNativeTarget "Smart Home AppTests" */;
 			buildPhases = (
+				B6E825CE124C41AC26979C54 /* [CP] Check Pods Manifest.lock */,
 				CE54A5802605E0F500352C46 /* Sources */,
 				CE54A5812605E0F500352C46 /* Frameworks */,
 				CE54A5822605E0F500352C46 /* Resources */,
@@ -200,9 +1010,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE54A59E2605E0F500352C46 /* Build configuration list for PBXNativeTarget "Smart Home AppUITests" */;
 			buildPhases = (
+				C15CC0046FB6B80CBDC913DB /* [CP] Check Pods Manifest.lock */,
 				CE54A58B2605E0F500352C46 /* Sources */,
 				CE54A58C2605E0F500352C46 /* Frameworks */,
 				CE54A58D2605E0F500352C46 /* Resources */,
+				92466E4F0D4EEAEE3993C15F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,6 +1055,10 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				fr,
+				"zh-Hans",
+				it,
 			);
 			mainGroup = CE54A5652605E0F400352C46;
 			productRefGroup = CE54A56F2605E0F400352C46 /* Products */;
@@ -262,6 +1078,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE54A57E2605E0F500352C46 /* LaunchScreen.storyboard in Resources */,
+				CECEFBB7262F01F400D36004 /* GoogleService-Info.plist in Resources */,
+				CEDB0BB4262A95D800F1B4DB /* Localizable.strings in Resources */,
 				CE54A57B2605E0F500352C46 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,17 +1100,244 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		92466E4F0D4EEAEE3993C15F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Home App-Smart Home AppUITests/Pods-Smart Home App-Smart Home AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Home App-Smart Home AppUITests/Pods-Smart Home App-Smart Home AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Smart Home App-Smart Home AppUITests/Pods-Smart Home App-Smart Home AppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A924506431A07A2864F5E9A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Smart Home App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6E825CE124C41AC26979C54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Smart Home AppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C15CC0046FB6B80CBDC913DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Smart Home App-Smart Home AppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE4E36E962FFB25E348E9468 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Home App/Pods-Smart Home App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Home App/Pods-Smart Home App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Smart Home App/Pods-Smart Home App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE54A56A2605E0F400352C46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE811DA260D7BDC00BB8DFD /* ColorChooserView.swift in Sources */,
 				CE54A5B42605E15300352C46 /* MainScreenAssembly.swift in Sources */,
+				CE66682E2635154B0085DA12 /* AddDeviceView.swift in Sources */,
+				CE2FB90A260A076C00D084BC /* CustomSlider.swift in Sources */,
+				CECEFB98262F002800D36004 /* LoginEntitie.swift in Sources */,
+				CEBBF7BC2606EDFE00BD9F13 /* MainView.swift in Sources */,
+				CEE811EE260D7DEE00BB8DFD /* ColorChooserInteractor.swift in Sources */,
+				CEED9FC426254FF2001D9DF4 /* AirConditionerAssembly.swift in Sources */,
+				CECEFB88262EFFF000D36004 /* ProfileViewController.swift in Sources */,
+				CE060BF226464290005F9E89 /* AppInfoVCAssembly.swift in Sources */,
+				CE17597C2609A506007AFDCA /* LampView.swift in Sources */,
+				CEF39A8E2631A52000616628 /* FirebaseDatabaseInfo.swift in Sources */,
+				CE97559F262BFAB900864A55 /* NSNotificationNameExtension.swift in Sources */,
+				CED7A87626103BA600F61391 /* SimpleDeviceInteractor.swift in Sources */,
+				CECEFB89262EFFF000D36004 /* ProfileInteractor.swift in Sources */,
+				CEED9FBF26254CB1001D9DF4 /* AirConditionerRouter.swift in Sources */,
+				CE83062F260848EF005CE030 /* Curtains.swift in Sources */,
+				CECEFB87262EFFF000D36004 /* RegisterViewController.swift in Sources */,
+				CECEFB83262EFFF000D36004 /* RegisterPresenter.swift in Sources */,
+				CEE811E9260D7DE800BB8DFD /* ColorChooserPresenter.swift in Sources */,
+				CE1759962609A6E8007AFDCA /* LampScreenAssembly.swift in Sources */,
+				CEDB0BCC262A9EDB00F1B4DB /* MenuViewController.swift in Sources */,
+				CEED9FB526254CA4001D9DF4 /* AirConditionerPresenter.swift in Sources */,
+				CECEFB9D262F005B00D36004 /* AlertAssembly.swift in Sources */,
 				CE54A5BC2605E18D00352C46 /* NavigationControllerAssembly.swift in Sources */,
+				CE1759742609A4DC007AFDCA /* LampViewController.swift in Sources */,
+				CE1759812609A548007AFDCA /* LampInteractor.swift in Sources */,
+				CEE81203260D83DD00BB8DFD /* ColorItemCollectionViewCell.swift in Sources */,
+				CEBBF7C12606EE0500BD9F13 /* MainPresenter.swift in Sources */,
+				CEDBAF1826463F8F00DE2844 /* AppInfoViewController.swift in Sources */,
+				CE0197AD262BEA7400BD9E2E /* LovedDevicesViewController.swift in Sources */,
+				CE97559A262BF51800864A55 /* DevicesManager.swift in Sources */,
+				CE666842263515710085DA12 /* AddDeviceRouter.swift in Sources */,
+				CEF39AB22631B72300616628 /* CurtainsFirebaseManager.swift in Sources */,
+				CE060C0426464528005F9E89 /* SendErrorViewController.swift in Sources */,
+				CEF39A9B2631ADA700616628 /* ElectricalSocketFirebaseManager.swift in Sources */,
+				CED7A86426103B9200F61391 /* SimpleDeviceViewController.swift in Sources */,
+				CECEFB8B262EFFF000D36004 /* ProfileViewTableViewCell.swift in Sources */,
+				CEDB0BE4262A9F0800F1B4DB /* MenuRouter.swift in Sources */,
+				CECEFB8E262EFFF000D36004 /* LoginView.swift in Sources */,
+				CECEFB84262EFFF000D36004 /* RegisterRouter.swift in Sources */,
+				CEED9FA826254C91001D9DF4 /* AirConditionerView.swift in Sources */,
+				CE1759892609A550007AFDCA /* LampPresenter.swift in Sources */,
+				CEE811F3260D7DF300BB8DFD /* ColorChooserRouter.swift in Sources */,
+				CECEFBAD262F011F00D36004 /* FirebaseAuthManager.swift in Sources */,
+				CECEFB8D262EFFF000D36004 /* LoginViewController.swift in Sources */,
+				CEF39AA82631B45D00616628 /* VentilatorFirebaseManager.swift in Sources */,
 				CE54A5762605E0F400352C46 /* MainViewController.swift in Sources */,
+				CE24EA6B262F034900C3EBF6 /* CustomButton.swift in Sources */,
+				CEBBF7D02606F08B00BD9F13 /* SmartHomeDeviceCollectionViewCell.swift in Sources */,
+				CEDB0BC2262A968400F1B4DB /* Localized.swift in Sources */,
+				CE060C18264646CA005F9E89 /* SendErrorVCAssembly.swift in Sources */,
+				CEADBC8826140C11000C4D97 /* ProfileVCAssembly.swift in Sources */,
+				CEF39AAD2631B50C00616628 /* IrrigationSystemFirebaseManager.swift in Sources */,
+				CED7A88026103E1B00F61391 /* SimpleDeviceAssembly.swift in Sources */,
+				CEDB0BEC262AA1EB00F1B4DB /* MenuAssembly.swift in Sources */,
+				CE83064B26085533005CE030 /* IrrigationSystem.swift in Sources */,
+				CE66683D263515680085DA12 /* AddDeviceInteractor.swift in Sources */,
+				CEF39A962631A80800616628 /* UIColor Extension.swift in Sources */,
+				CEDB0BDF262A9F0100F1B4DB /* MenuInteractor.swift in Sources */,
+				CED7A87126103B9F00F61391 /* SimpleDevicePresenter.swift in Sources */,
+				CE5C52462648F1C600FC7CE0 /* CurtainsPresenter.swift in Sources */,
+				CEBBF7CB2606EE1100BD9F13 /* MainRouter.swift in Sources */,
+				CE060C132646453B005F9E89 /* SendErrorRouter.swift in Sources */,
+				CEDB0BD2262A9EF300F1B4DB /* MenuView.swift in Sources */,
+				CE6668472635173E0085DA12 /* AddDeviceVCAssembly.swift in Sources */,
+				CECEFB8F262EFFF000D36004 /* LoginPresenter.swift in Sources */,
+				CECEFB90262EFFF000D36004 /* LoginRouter.swift in Sources */,
+				CEF39A862631A48E00616628 /* LampFirebaseManager.swift in Sources */,
+				CECEFB8A262EFFF000D36004 /* ProfileView.swift in Sources */,
+				CEBE41F32606F52500E370AB /* SmartHomeDevice.swift in Sources */,
+				CEDBAF0C26463F8400DE2844 /* AppInfoView.swift in Sources */,
+				CEBE41E12606F3B100E370AB /* SmartHomeItemCollectionViewDataSource.swift in Sources */,
+				CE83063726084DD8005CE030 /* Ventilator.swift in Sources */,
+				CEBE41D92606F2FD00E370AB /* AppConstants.swift in Sources */,
+				CE0197C3262BEAAA00BD9E2E /* LovedDevicesInteractor.swift in Sources */,
+				CECEFBB2262F013100D36004 /* FirebaseDatabaseManager.swift in Sources */,
+				CE17598E2609A555007AFDCA /* LampRouter.swift in Sources */,
+				CE66682226350E350085DA12 /* ILovedDevicesDelegate.swift in Sources */,
+				CEBBF7C62606EE0C00BD9F13 /* MainInteractor.swift in Sources */,
+				CEED9FBA26254CAC001D9DF4 /* AirConditionerInteractor.swift in Sources */,
+				CED7A87B26103BAC00F61391 /* SimpleDeviceRouter.swift in Sources */,
+				CE0197C8262BEAB000BD9E2E /* LovedDevicesRouter.swift in Sources */,
+				CE0197BE262BEAA300BD9E2E /* LovedDevicesPresenter.swift in Sources */,
+				CE66684C263523F90085DA12 /* String Extension.swift in Sources */,
+				CE5C52502648F1D200FC7CE0 /* CurtainsRouter.swift in Sources */,
+				CE83062526083CE7005CE030 /* AirConditioner.swift in Sources */,
+				CEE811E4260D7DDF00BB8DFD /* ColorChooserViewController.swift in Sources */,
+				CE5C524B2648F1CC00FC7CE0 /* CurtainsInteractor.swift in Sources */,
+				CE24EA70262F039600C3EBF6 /* CustomCloseButton.swift in Sources */,
+				CEE81212260D86AF00BB8DFD /* ColorItemCollectionViewDataSource.swift in Sources */,
+				CED7A88826103F6000F61391 /* DevicesRouter.swift in Sources */,
+				CE666833263515560085DA12 /* AddDeviceViewController.swift in Sources */,
+				CE83062A260841AF005CE030 /* TemperatureUnit.swift in Sources */,
 				CE54A5C12605E1D600352C46 /* TabBarControllerAssembly.swift in Sources */,
+				CE97A3812647AC860067950A /* IReloadAfterRemovedDevice.swift in Sources */,
+				CEF4F9142612C88C0003DD6C /* SimpleDeviceView.swift in Sources */,
+				CE5C52552648F61B00FC7CE0 /* CurtainsVCAssembly.swift in Sources */,
+				CEBE41E62606F3CD00E370AB /* SmartHomeItemCollectionViewDelegate.swift in Sources */,
+				CECEFB8C262EFFF000D36004 /* LoginInteractor.swift in Sources */,
+				CE5C52322648F1AE00FC7CE0 /* CurtainsView.swift in Sources */,
+				CEE811F8260D7F7900BB8DFD /* ColorChooserAssembly.swift in Sources */,
+				CEBE4209260706AC00E370AB /* ElectricalSocket.swift in Sources */,
+				CE96C4EB2633CBAD0023DFF8 /* IDevicesFirebaseManager.swift in Sources */,
 				CE54A5722605E0F400352C46 /* AppDelegate.swift in Sources */,
+				CE66682726350F490085DA12 /* IProfileDelegate.swift in Sources */,
+				CE060BF82646451D005F9E89 /* SendErrorView.swift in Sources */,
+				CE060C2A26465699005F9E89 /* UIView Extension.swift in Sources */,
+				CE060C2F26465DD3005F9E89 /* FirebaseErrorsManager.swift in Sources */,
+				CE666838263515600085DA12 /* AddDevicePresenter.swift in Sources */,
+				CECEFBA7262F008200D36004 /* LoginVCAssembly.swift in Sources */,
+				CECEFB86262EFFF000D36004 /* RegisterView.swift in Sources */,
+				CE0197CD262BEEEB00BD9E2E /* LovedDevicesAssembly.swift in Sources */,
+				CE3B19E32611868600D39A41 /* RoundedButton.swift in Sources */,
+				CEF39AA02631B20D00616628 /* AirConditionerFirebaseManager.swift in Sources */,
+				CEE81217260D87A600BB8DFD /* ICustomCollectionViewDelegate.swift in Sources */,
+				CECEFBA2262F007500D36004 /* RegisterVCAssembly.swift in Sources */,
+				CEBE41F82606F87D00E370AB /* Lamp.swift in Sources */,
+				CE060C0E26464535005F9E89 /* SendErrorInteractor.swift in Sources */,
+				CECEFB82262EFFF000D36004 /* ProfileRouter.swift in Sources */,
+				CEE8120A260D86A800BB8DFD /* ColorItemCollectionViewDelegate.swift in Sources */,
+				CECEFB81262EFFF000D36004 /* ProfilePresenter.swift in Sources */,
+				CE060C092646452F005F9E89 /* SendErrorPresenter.swift in Sources */,
+				CE5C52412648F1C000FC7CE0 /* CurtainsViewController.swift in Sources */,
+				CEED9FB026254C9B001D9DF4 /* AirConditionerViewController.swift in Sources */,
+				CE854F1326352EC200E7AAA4 /* IAddDeviceDelegate.swift in Sources */,
+				CECEFB85262EFFF000D36004 /* RegisterInteractor.swift in Sources */,
 				CE54A5742605E0F400352C46 /* SceneDelegate.swift in Sources */,
+				CEA67C542639A122007E5428 /* EditableDeviceViewController.swift in Sources */,
+				CEDB0BDA262A9EFA00F1B4DB /* MenuPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +1345,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE0B5A22658D63700D0181A /* LampInteractorTest.swift in Sources */,
+				CEE0B58B2658CAE300D0181A /* LampInteractor_Test.swift in Sources */,
+				CEE0B57C2658C1D400D0181A /* LampViewControllerTest.swift in Sources */,
+				CEE0B59A2658CDB700D0181A /* LampView_Test.swift in Sources */,
+				CEE0B5832658C23700D0181A /* LampPresenter_Test.swift in Sources */,
 				CE54A5892605E0F500352C46 /* Smart_Home_AppTests.swift in Sources */,
+				CEE0B5952658CD0300D0181A /* LampRouter_Test.swift in Sources */,
+				CEE0B5902658CCC400D0181A /* LampPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,8 +1384,24 @@
 			isa = PBXVariantGroup;
 			children = (
 				CE54A57D2605E0F500352C46 /* Base */,
+				CEDB0BBA262A95F000F1B4DB /* ru */,
+				CEDB0BBF262A962C00F1B4DB /* fr */,
+				CE060C3326466198005F9E89 /* zh-Hans */,
+				CE060C38264664B3005F9E89 /* it */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CEDB0BB6262A95D800F1B4DB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEDB0BB5262A95D800F1B4DB /* en */,
+				CEDB0BBB262A95F000F1B4DB /* ru */,
+				CEDB0BC0262A962C00F1B4DB /* fr */,
+				CE060C3426466199005F9E89 /* zh-Hans */,
+				CE060C39264664B3005F9E89 /* it */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -343,6 +1411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -404,6 +1473,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -457,12 +1527,13 @@
 		};
 		CE54A5992605E0F500352C46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 147B41FE0E12A5E838C07E7F /* Pods-Smart Home App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DB9UTG3H5X;
-				INFOPLIST_FILE = "Smart Home App/Info.plist";
+				INFOPLIST_FILE = "Smart Home App/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -476,12 +1547,13 @@
 		};
 		CE54A59A2605E0F500352C46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1242213ACD3FEBF47C16B0F9 /* Pods-Smart Home App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DB9UTG3H5X;
-				INFOPLIST_FILE = "Smart Home App/Info.plist";
+				INFOPLIST_FILE = "Smart Home App/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -495,6 +1567,7 @@
 		};
 		CE54A59C2605E0F500352C46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF6F02D636BE02D6C3927E88 /* Pods-Smart Home AppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -517,6 +1590,7 @@
 		};
 		CE54A59D2605E0F500352C46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3415D42C9BBFE762D9883BD0 /* Pods-Smart Home AppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -539,6 +1613,7 @@
 		};
 		CE54A59F2605E0F500352C46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 865C60C368DC63BAB1D35C6E /* Pods-Smart Home App-Smart Home AppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -559,6 +1634,7 @@
 		};
 		CE54A5A02605E0F500352C46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E711A0CE341CE547B2A8027 /* Pods-Smart Home App-Smart Home AppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
